@@ -94,6 +94,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Option.designer.vb">
+      <DependentUpon>Option.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Option.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store.designer.vb">
+      <DependentUpon>Store.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Store.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tires.designer.vb">
+      <DependentUpon>Tires.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tires.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmSplash.resx">
@@ -104,6 +122,15 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Option.resx">
+      <DependentUpon>Option.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store.resx">
+      <DependentUpon>Store.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tires.resx">
+      <DependentUpon>Tires.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
