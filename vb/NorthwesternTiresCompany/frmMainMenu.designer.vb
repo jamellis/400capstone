@@ -37,7 +37,7 @@ Partial Class frmMainMenu
         Me.btnStores.Name = "btnStores"
         Me.btnStores.Size = New System.Drawing.Size(140, 30)
         Me.btnStores.TabIndex = 17
-        Me.btnStores.Text = "Stores"
+        Me.btnStores.Text = "&Stores"
         Me.btnStores.UseVisualStyleBackColor = True
         '
         'btnExit
@@ -48,7 +48,7 @@ Partial Class frmMainMenu
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(80, 30)
         Me.btnExit.TabIndex = 16
-        Me.btnExit.Text = "Exit"
+        Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'btnTires
@@ -58,7 +58,7 @@ Partial Class frmMainMenu
         Me.btnTires.Name = "btnTires"
         Me.btnTires.Size = New System.Drawing.Size(140, 30)
         Me.btnTires.TabIndex = 15
-        Me.btnTires.Text = "Tires"
+        Me.btnTires.Text = "&Tires"
         Me.btnTires.UseVisualStyleBackColor = True
         '
         'lblTitle
