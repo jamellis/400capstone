@@ -49,7 +49,7 @@ Partial Class frmSplash
         '
         Me.lblTop.AutoSize = True
         Me.lblTop.BackColor = System.Drawing.Color.Transparent
-        Me.lblTop.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.lblTop.ForeColor = System.Drawing.Color.White
         Me.lblTop.Location = New System.Drawing.Point(108, 27)
         Me.lblTop.Name = "lblTop"
         Me.lblTop.Size = New System.Drawing.Size(407, 34)
@@ -61,12 +61,12 @@ Partial Class frmSplash
         '
         Me.lblBottom.AutoSize = True
         Me.lblBottom.BackColor = System.Drawing.Color.Transparent
-        Me.lblBottom.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.lblBottom.ForeColor = System.Drawing.Color.White
         Me.lblBottom.Location = New System.Drawing.Point(97, 300)
         Me.lblBottom.Name = "lblBottom"
         Me.lblBottom.Size = New System.Drawing.Size(429, 68)
         Me.lblBottom.TabIndex = 2
-        Me.lblBottom.Text = "We have the Tires and Wheels" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "your looking for"
+        Me.lblBottom.Text = "We have the Tires and Wheels" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "you're looking for"
         Me.lblBottom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmSplash
