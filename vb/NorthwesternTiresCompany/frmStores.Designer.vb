@@ -247,7 +247,7 @@ Partial Class frmStores
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 25)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 25)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         Me.BindingNavigatorCountItem.Visible = False
@@ -268,7 +268,7 @@ Partial Class frmStores
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(33, 25)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(32, 25)
         Me.BindingNavigatorMoveFirstItem.Text = "First"
         Me.BindingNavigatorMoveFirstItem.Visible = False
         '
@@ -278,7 +278,7 @@ Partial Class frmStores
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(56, 25)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(52, 25)
         Me.BindingNavigatorMovePreviousItem.Text = "Previous"
         Me.BindingNavigatorMovePreviousItem.Visible = False
         '
@@ -310,7 +310,7 @@ Partial Class frmStores
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(35, 25)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(34, 25)
         Me.BindingNavigatorMoveNextItem.Text = "Next"
         Me.BindingNavigatorMoveNextItem.Visible = False
         '
@@ -320,7 +320,7 @@ Partial Class frmStores
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(32, 25)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(31, 25)
         Me.BindingNavigatorMoveLastItem.Text = "Last"
         Me.BindingNavigatorMoveLastItem.Visible = False
         '

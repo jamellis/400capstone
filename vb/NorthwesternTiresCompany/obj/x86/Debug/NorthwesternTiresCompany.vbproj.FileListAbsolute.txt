@@ -17,3 +17,7 @@ D:\Documents\School\Linfield\Summer 2012\COMP 400\400capstone\vb\NorthwesternTir
 D:\Documents\School\Linfield\Summer 2012\COMP 400\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.exe
 D:\Documents\School\Linfield\Summer 2012\COMP 400\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.xml
 D:\Documents\School\Linfield\Summer 2012\COMP 400\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.pdb
+C:\Users\Morgan\Documents\GitHub\400capstone\vb\NorthwesternTiresCompany\bin\Debug\NorthwesternTiresCompany.exe.config
+C:\Users\Morgan\Documents\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.exe
+C:\Users\Morgan\Documents\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.xml
+C:\Users\Morgan\Documents\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.pdb

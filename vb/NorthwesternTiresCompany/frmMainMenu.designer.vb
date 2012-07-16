@@ -73,10 +73,10 @@ Partial Class frmMainMenu
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.tires
+        Me.PictureBox1.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.Wheel___Tire
         Me.PictureBox1.Location = New System.Drawing.Point(48, 81)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(330, 370)
+        Me.PictureBox1.Size = New System.Drawing.Size(312, 403)
         Me.PictureBox1.TabIndex = 18
         Me.PictureBox1.TabStop = False
         '

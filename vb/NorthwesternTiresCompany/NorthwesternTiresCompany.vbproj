@@ -162,6 +162,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Wheel &amp; Tire.jpg" />
     <Content Include="tires.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
