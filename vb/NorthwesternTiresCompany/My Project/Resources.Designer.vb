@@ -60,16 +60,23 @@ Namespace My.Resources
             End Set
         End Property
         
-        Friend ReadOnly Property tires() As System.Drawing.Bitmap
+        Friend ReadOnly Property nwtires_logo() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("tires", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("nwtires_logo", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         
-        Friend ReadOnly Property Wheel___Tire() As System.Drawing.Bitmap
+        Friend ReadOnly Property rinconlogo2() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Wheel & Tire", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("rinconlogo2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property tires() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("tires", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

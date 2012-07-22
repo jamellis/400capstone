@@ -26,17 +26,18 @@ Partial Class frmMainMenu
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnTires = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pctMainMenu = New System.Windows.Forms.PictureBox()
+        CType(Me.pctMainMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnStores
         '
         Me.btnStores.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnStores.Location = New System.Drawing.Point(457, 167)
+        Me.btnStores.Location = New System.Drawing.Point(609, 206)
+        Me.btnStores.Margin = New System.Windows.Forms.Padding(4)
         Me.btnStores.Name = "btnStores"
-        Me.btnStores.Size = New System.Drawing.Size(140, 30)
+        Me.btnStores.Size = New System.Drawing.Size(187, 37)
         Me.btnStores.TabIndex = 17
         Me.btnStores.Text = "&Stores"
         Me.btnStores.UseVisualStyleBackColor = True
@@ -45,9 +46,10 @@ Partial Class frmMainMenu
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(592, 470)
+        Me.btnExit.Location = New System.Drawing.Point(789, 578)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(80, 30)
+        Me.btnExit.Size = New System.Drawing.Size(107, 37)
         Me.btnExit.TabIndex = 16
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
@@ -55,9 +57,10 @@ Partial Class frmMainMenu
         'btnTires
         '
         Me.btnTires.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTires.Location = New System.Drawing.Point(457, 107)
+        Me.btnTires.Location = New System.Drawing.Point(609, 132)
+        Me.btnTires.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTires.Name = "btnTires"
-        Me.btnTires.Size = New System.Drawing.Size(140, 30)
+        Me.btnTires.Size = New System.Drawing.Size(187, 37)
         Me.btnTires.TabIndex = 15
         Me.btnTires.Text = "&Tires"
         Me.btnTires.UseVisualStyleBackColor = True
@@ -66,46 +69,49 @@ Partial Class frmMainMenu
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(283, 11)
+        Me.lblTitle.Location = New System.Drawing.Point(377, 14)
+        Me.lblTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(118, 24)
+        Me.lblTitle.Size = New System.Drawing.Size(154, 32)
         Me.lblTitle.TabIndex = 9
         Me.lblTitle.Text = "Main Menu"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.Wheel___Tire
-        Me.PictureBox1.Location = New System.Drawing.Point(48, 81)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(312, 403)
-        Me.PictureBox1.TabIndex = 18
-        Me.PictureBox1.TabStop = False
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(392, 471)
+        Me.Button1.Location = New System.Drawing.Point(523, 580)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(90, 28)
+        Me.Button1.Size = New System.Drawing.Size(120, 34)
         Me.Button1.TabIndex = 19
         Me.Button1.Text = "Log Out"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'pctMainMenu
+        '
+        Me.pctMainMenu.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.tires
+        Me.pctMainMenu.Location = New System.Drawing.Point(55, 103)
+        Me.pctMainMenu.Name = "pctMainMenu"
+        Me.pctMainMenu.Size = New System.Drawing.Size(323, 362)
+        Me.pctMainMenu.TabIndex = 20
+        Me.pctMainMenu.TabStop = False
+        '
         'frmMainMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(684, 512)
+        Me.ClientSize = New System.Drawing.Size(912, 630)
+        Me.Controls.Add(Me.pctMainMenu)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnStores)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnTires)
         Me.Controls.Add(Me.lblTitle)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmMainMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main Menu"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pctMainMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -114,6 +120,6 @@ Partial Class frmMainMenu
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents btnTires As System.Windows.Forms.Button
     Friend WithEvents lblTitle As System.Windows.Forms.Label
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents pctMainMenu As System.Windows.Forms.PictureBox
 End Class
