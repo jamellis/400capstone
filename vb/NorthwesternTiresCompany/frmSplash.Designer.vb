@@ -40,7 +40,7 @@ Partial Class frmSplash
         Me.lblSplash.Location = New System.Drawing.Point(105, 643)
         Me.lblSplash.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.lblSplash.Name = "lblSplash"
-        Me.lblSplash.Size = New System.Drawing.Size(616, 55)
+        Me.lblSplash.Size = New System.Drawing.Size(766, 69)
         Me.lblSplash.TabIndex = 0
         Me.lblSplash.Text = "Temp text for splash screen"
         '
@@ -61,7 +61,7 @@ Partial Class frmSplash
         'pctRincon
         '
         Me.pctRincon.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.rinconlogo2
-        Me.pctRincon.Location = New System.Drawing.Point(153, 234)
+        Me.pctRincon.Location = New System.Drawing.Point(158, 235)
         Me.pctRincon.Name = "pctRincon"
         Me.pctRincon.Size = New System.Drawing.Size(419, 122)
         Me.pctRincon.TabIndex = 4
@@ -73,7 +73,7 @@ Partial Class frmSplash
         Me.Label1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(113, 158)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(475, 32)
+        Me.Label1.Size = New System.Drawing.Size(551, 38)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "This is a secure system. You must have legal access in order to access it. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "All " & _
     "violators will be prosecuted to the fullest extent of the law."
@@ -85,7 +85,7 @@ Partial Class frmSplash
         Me.Label2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(63, 393)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(588, 32)
+        Me.Label2.Size = New System.Drawing.Size(679, 38)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Copyright Rincon Consulting,  2012. All Rights Reserved. No parts of this applica" & _
     "tion may be" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "reverse engineered or used in any form without permission from Rinc" & _
@@ -94,9 +94,9 @@ Partial Class frmSplash
         '
         'frmSplash
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(18.0!, 34.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(22.0!, 43.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(714, 454)
+        Me.ClientSize = New System.Drawing.Size(784, 454)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
