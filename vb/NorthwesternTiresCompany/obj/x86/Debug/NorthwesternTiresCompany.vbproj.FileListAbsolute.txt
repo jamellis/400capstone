@@ -38,3 +38,19 @@ C:\Users\jellis\Documents\GitHub\400capstone\vb\NorthwesternTiresCompany\bin\Deb
 C:\Users\jellis\Documents\GitHub\400capstone\vb\NorthwesternTiresCompany\bin\Debug\NorthwesternTiresCompany.pdb
 C:\Users\jellis\Documents\GitHub\400capstone\vb\NorthwesternTiresCompany\bin\Debug\NorthwesternTiresCompany.xml
 C:\Users\jellis\Documents\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.Resources.resources
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\bin\Debug\NorthwesternTiresCompany.exe.config
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.exe
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.xml
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.pdb
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\bin\Debug\NorthwesternTiresCompany.exe
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\bin\Debug\NorthwesternTiresCompany.pdb
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\bin\Debug\NorthwesternTiresCompany.xml
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\ResolveAssemblyReference.cache
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.frmLogin.resources
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.frmSplash.resources
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.frmStores.resources
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.frmTires.resources
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.Resources.resources
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\NorthwesternTiresCompany.frmMainMenu.resources
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\GenerateResource.read.1.tlog
+Z:\COMP 400\GitHub\400capstone\vb\NorthwesternTiresCompany\obj\x86\Debug\GenerateResource.write.1.tlog

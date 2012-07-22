@@ -27,8 +27,8 @@ Partial Class frmSplash
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pctRincon = New System.Windows.Forms.PictureBox()
-        Me.txtLaw = New System.Windows.Forms.TextBox()
-        Me.txtCopyright = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pctRincon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -40,7 +40,7 @@ Partial Class frmSplash
         Me.lblSplash.Location = New System.Drawing.Point(105, 643)
         Me.lblSplash.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.lblSplash.Name = "lblSplash"
-        Me.lblSplash.Size = New System.Drawing.Size(766, 69)
+        Me.lblSplash.Size = New System.Drawing.Size(616, 55)
         Me.lblSplash.TabIndex = 0
         Me.lblSplash.Text = "Temp text for splash screen"
         '
@@ -52,7 +52,7 @@ Partial Class frmSplash
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.nwtires_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(224, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(215, 30)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(295, 90)
         Me.PictureBox1.TabIndex = 5
@@ -61,43 +61,45 @@ Partial Class frmSplash
         'pctRincon
         '
         Me.pctRincon.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.rinconlogo2
-        Me.pctRincon.Location = New System.Drawing.Point(162, 216)
+        Me.pctRincon.Location = New System.Drawing.Point(153, 234)
         Me.pctRincon.Name = "pctRincon"
         Me.pctRincon.Size = New System.Drawing.Size(419, 122)
         Me.pctRincon.TabIndex = 4
         Me.pctRincon.TabStop = False
         '
-        'txtLaw
+        'Label1
         '
-        Me.txtLaw.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLaw.Location = New System.Drawing.Point(12, 134)
-        Me.txtLaw.Multiline = True
-        Me.txtLaw.Name = "txtLaw"
-        Me.txtLaw.Size = New System.Drawing.Size(690, 50)
-        Me.txtLaw.TabIndex = 6
-        Me.txtLaw.Text = "This is a secure system. You must have legal access in order to access it. All vi" & _
-    "olators will be prosecuted to the fullest extent of the law."
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(113, 158)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(475, 32)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "This is a secure system. You must have legal access in order to access it. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "All " & _
+    "violators will be prosecuted to the fullest extent of the law."
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'txtCopyright
+        'Label2
         '
-        Me.txtCopyright.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCopyright.Location = New System.Drawing.Point(12, 370)
-        Me.txtCopyright.Multiline = True
-        Me.txtCopyright.Name = "txtCopyright"
-        Me.txtCopyright.Size = New System.Drawing.Size(690, 70)
-        Me.txtCopyright.TabIndex = 7
-        Me.txtCopyright.Text = "Copyright Rincon Consulting,  2012. All Rights Reserved. No parts of this applica" & _
-    "tion may be reverse engineered or used in any form without permission from Rinco" & _
-    "n Consulting."
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(63, 393)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(588, 32)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Copyright Rincon Consulting,  2012. All Rights Reserved. No parts of this applica" & _
+    "tion may be" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "reverse engineered or used in any form without permission from Rinc" & _
+    "on Consulting."
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmSplash
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(22.0!, 43.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(18.0!, 34.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(714, 454)
         Me.ControlBox = False
-        Me.Controls.Add(Me.txtCopyright)
-        Me.Controls.Add(Me.txtLaw)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.pctRincon)
         Me.Controls.Add(Me.lblSplash)
@@ -118,7 +120,7 @@ Partial Class frmSplash
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents pctRincon As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents txtLaw As System.Windows.Forms.TextBox
-    Friend WithEvents txtCopyright As System.Windows.Forms.TextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
 End Class
