@@ -10,8 +10,12 @@
         If Login Is Nothing Then
             MsgBox("Incorrect Username or Password")
         Else
+            txtUserID.Text = ""
+            txtPassword.Text = ""
+            txtUserID.Focus()
             frmMainMenu.Show()
             Me.Hide()
         End If
     End Sub
+
 End Class
