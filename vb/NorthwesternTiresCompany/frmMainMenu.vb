@@ -19,4 +19,34 @@
         frmLogin.Show()
         Me.Hide()
     End Sub
+
+    Private Sub btnInventorySearch_Click(sender As System.Object, e As System.EventArgs) Handles btnInventorySearch.Click
+        frmInventorySearch.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnInventoryMaintain_Click(sender As System.Object, e As System.EventArgs) Handles btnInventoryMaintain.Click
+        frmInventoryMaintain.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnSales_Click(sender As System.Object, e As System.EventArgs) Handles btnSales.Click
+        frmSales.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnReports_Click(sender As System.Object, e As System.EventArgs) Handles btnReports.Click
+        frmReport.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnEmployee_Click(sender As System.Object, e As System.EventArgs) Handles btnEmployee.Click
+        frmEmployee.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnPO_Click(sender As System.Object, e As System.EventArgs) Handles btnPO.Click
+        frmPo.Show()
+        Me.Hide()
+    End Sub
 End Class

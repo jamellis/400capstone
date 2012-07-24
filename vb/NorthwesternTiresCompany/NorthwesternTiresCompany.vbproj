@@ -77,10 +77,46 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>comp400_2012DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmEmployee.Designer.vb">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventoryMaintain.Designer.vb">
+      <DependentUpon>frmInventoryMaintain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventoryMaintain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventorySearch.Designer.vb">
+      <DependentUpon>frmInventorySearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventorySearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPo.Designer.vb">
+      <DependentUpon>frmPo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.vb">
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSales.Designer.vb">
+      <DependentUpon>frmSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSales.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSplash.vb">
