@@ -164,6 +164,9 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPo.resx">
+      <DependentUpon>frmPo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.vb</DependentUpon>
     </EmbeddedResource>
