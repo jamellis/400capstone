@@ -15,13 +15,15 @@
         Me.Hide()
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub btnLogOut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLogOut.Click
         frmLogin.Show()
         Me.Hide()
     End Sub
 
     Private Sub btnInventorySearch_Click(sender As System.Object, e As System.EventArgs) Handles btnInventorySearch.Click
-        frmInventorySearch.Show()
+        Dim InventorySearchForm As New frmInventorySearch
+
+        InventorySearchForm.Show()
         Me.Hide()
     End Sub
 

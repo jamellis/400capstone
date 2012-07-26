@@ -30,6 +30,7 @@ Partial Class frmLogin
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.EmployeeTableAdapter1 = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.employeeTableAdapter()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblInstructions
@@ -38,9 +39,9 @@ Partial Class frmLogin
         Me.lblInstructions.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInstructions.Location = New System.Drawing.Point(44, 28)
         Me.lblInstructions.Name = "lblInstructions"
-        Me.lblInstructions.Size = New System.Drawing.Size(279, 36)
+        Me.lblInstructions.Size = New System.Drawing.Size(283, 36)
         Me.lblInstructions.TabIndex = 0
-        Me.lblInstructions.Text = "Please type your UserID and Password" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "and click Login. Click Exit to cancel."
+        Me.lblInstructions.Text = "Please type your User ID and Password" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "and click Login. Click Exit to cancel."
         '
         'txtUserID
         '
@@ -104,6 +105,16 @@ Partial Class frmLogin
         '
         Me.EmployeeTableAdapter1.ClearBeforeFill = True
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(123, 185)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(132, 36)
+        Me.Button1.TabIndex = 7
+        Me.Button1.Text = "Easy login"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmLogin
         '
         Me.AcceptButton = Me.btnLogin
@@ -111,6 +122,7 @@ Partial Class frmLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnExit
         Me.ClientSize = New System.Drawing.Size(373, 287)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.lblPassword)
@@ -133,4 +145,5 @@ Partial Class frmLogin
     Friend WithEvents btnLogin As System.Windows.Forms.Button
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents EmployeeTableAdapter1 As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.employeeTableAdapter
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

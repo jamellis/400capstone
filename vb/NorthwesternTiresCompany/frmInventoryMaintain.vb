@@ -34,4 +34,5 @@
         frmMainMenu.Show()
         Me.Hide()
     End Sub
+
 End Class

@@ -77,6 +77,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>comp400_2012DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="comp400_2012DataSet.vb">
+      <DependentUpon>comp400_2012DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmEmployee.Designer.vb">
       <DependentUpon>frmEmployee.vb</DependentUpon>
     </Compile>
@@ -161,6 +164,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmInventoryMaintain.resx">
+      <DependentUpon>frmInventoryMaintain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventorySearch.resx">
+      <DependentUpon>frmInventorySearch.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +221,7 @@
   <ItemGroup>
     <None Include="Resources\rinconlogo2.jpg" />
     <None Include="Resources\nwtires_logo.gif" />
+    <None Include="Resources\nwtires_logo_sm.gif" />
     <Content Include="tires.png" />
   </ItemGroup>
   <ItemGroup />

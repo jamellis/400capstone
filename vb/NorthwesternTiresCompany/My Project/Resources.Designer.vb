@@ -67,6 +67,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property nwtires_logo_sm() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("nwtires_logo_sm", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property rinconlogo2() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("rinconlogo2", resourceCulture)
