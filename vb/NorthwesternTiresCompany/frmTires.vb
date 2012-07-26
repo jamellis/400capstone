@@ -5,8 +5,10 @@
     End Sub
 
     Private Sub btnBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBack.Click
-        frmMainMenu.Show()
-        Me.Hide()
+        Dim MainMenuForm As New frmMainMenu
+
+        MainMenuForm.Show()
+        Me.Close()
     End Sub
 
     Private Sub TireBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TireBindingNavigatorSaveItem.Click

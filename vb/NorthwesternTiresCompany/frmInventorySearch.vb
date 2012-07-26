@@ -7,7 +7,7 @@
     Private Sub btnBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBack.Click
         Dim MainMenuForm As New frmMainMenu
         MainMenuForm.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub frmInventorySearch_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

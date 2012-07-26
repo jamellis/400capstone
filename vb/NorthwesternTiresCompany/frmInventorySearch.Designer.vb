@@ -37,9 +37,17 @@ Partial Class frmInventorySearch
         Me.lblStep1 = New System.Windows.Forms.Label()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Comp400_2012DataSet = New NorthwesternTiresCompany.comp400_2012DataSet()
+        Me.TireCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ManufacturerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ManufacturerSizeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RetailPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TireQtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StoreNbrDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.InventoryNbrDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.InvSearchBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Comp4002012DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Comp400_2012DataSet = New NorthwesternTiresCompany.comp400_2012DataSet()
         Me.lblStep2 = New System.Windows.Forms.Label()
         Me.TireCodeTextBox = New System.Windows.Forms.TextBox()
         Me.ManufacturerTextBox = New System.Windows.Forms.TextBox()
@@ -50,14 +58,6 @@ Partial Class frmInventorySearch
         Me.StoreNbrTextBox = New System.Windows.Forms.TextBox()
         Me.InvSearchTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.invSearchTableAdapter()
         Me.TableAdapterManager = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager()
-        Me.TireCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ManufacturerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ManufacturerSizeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RetailPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TireQtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.StoreNbrDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.InventoryNbrDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         TireCodeLabel = New System.Windows.Forms.Label()
         ManufacturerLabel = New System.Windows.Forms.Label()
         DescriptionLabel = New System.Windows.Forms.Label()
@@ -66,16 +66,16 @@ Partial Class frmInventorySearch
         TireQtyLabel = New System.Windows.Forms.Label()
         StoreNbrLabel = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvSearchBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Comp4002012DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TireCodeLabel
         '
         TireCodeLabel.AutoSize = True
         TireCodeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TireCodeLabel.Location = New System.Drawing.Point(18, 311)
+        TireCodeLabel.Location = New System.Drawing.Point(18, 343)
         TireCodeLabel.Name = "TireCodeLabel"
         TireCodeLabel.Size = New System.Drawing.Size(74, 17)
         TireCodeLabel.TabIndex = 28
@@ -85,7 +85,7 @@ Partial Class frmInventorySearch
         '
         ManufacturerLabel.AutoSize = True
         ManufacturerLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ManufacturerLabel.Location = New System.Drawing.Point(18, 337)
+        ManufacturerLabel.Location = New System.Drawing.Point(18, 369)
         ManufacturerLabel.Name = "ManufacturerLabel"
         ManufacturerLabel.Size = New System.Drawing.Size(96, 17)
         ManufacturerLabel.TabIndex = 30
@@ -95,7 +95,7 @@ Partial Class frmInventorySearch
         '
         DescriptionLabel.AutoSize = True
         DescriptionLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DescriptionLabel.Location = New System.Drawing.Point(18, 363)
+        DescriptionLabel.Location = New System.Drawing.Point(18, 395)
         DescriptionLabel.Name = "DescriptionLabel"
         DescriptionLabel.Size = New System.Drawing.Size(83, 17)
         DescriptionLabel.TabIndex = 32
@@ -105,7 +105,7 @@ Partial Class frmInventorySearch
         '
         ManufacturerSizeLabel.AutoSize = True
         ManufacturerSizeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ManufacturerSizeLabel.Location = New System.Drawing.Point(356, 311)
+        ManufacturerSizeLabel.Location = New System.Drawing.Point(356, 343)
         ManufacturerSizeLabel.Name = "ManufacturerSizeLabel"
         ManufacturerSizeLabel.Size = New System.Drawing.Size(68, 17)
         ManufacturerSizeLabel.TabIndex = 34
@@ -115,7 +115,7 @@ Partial Class frmInventorySearch
         '
         RetailPriceLabel.AutoSize = True
         RetailPriceLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RetailPriceLabel.Location = New System.Drawing.Point(356, 337)
+        RetailPriceLabel.Location = New System.Drawing.Point(356, 369)
         RetailPriceLabel.Name = "RetailPriceLabel"
         RetailPriceLabel.Size = New System.Drawing.Size(44, 17)
         RetailPriceLabel.TabIndex = 36
@@ -125,7 +125,7 @@ Partial Class frmInventorySearch
         '
         TireQtyLabel.AutoSize = True
         TireQtyLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TireQtyLabel.Location = New System.Drawing.Point(356, 363)
+        TireQtyLabel.Location = New System.Drawing.Point(356, 395)
         TireQtyLabel.Name = "TireQtyLabel"
         TireQtyLabel.Size = New System.Drawing.Size(65, 17)
         TireQtyLabel.TabIndex = 38
@@ -135,7 +135,7 @@ Partial Class frmInventorySearch
         '
         StoreNbrLabel.AutoSize = True
         StoreNbrLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        StoreNbrLabel.Location = New System.Drawing.Point(356, 389)
+        StoreNbrLabel.Location = New System.Drawing.Point(356, 421)
         StoreNbrLabel.Name = "StoreNbrLabel"
         StoreNbrLabel.Size = New System.Drawing.Size(46, 17)
         StoreNbrLabel.TabIndex = 40
@@ -215,105 +215,6 @@ Partial Class frmInventorySearch
         Me.DataGridView1.Size = New System.Drawing.Size(660, 172)
         Me.DataGridView1.TabIndex = 27
         '
-        'Comp400_2012DataSet
-        '
-        Me.Comp400_2012DataSet.DataSetName = "comp400_2012DataSet"
-        Me.Comp400_2012DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'InvSearchBindingSource
-        '
-        Me.InvSearchBindingSource.DataMember = "invSearch"
-        Me.InvSearchBindingSource.DataSource = Me.Comp4002012DataSetBindingSource
-        '
-        'Comp4002012DataSetBindingSource
-        '
-        Me.Comp4002012DataSetBindingSource.DataSource = Me.Comp400_2012DataSet
-        Me.Comp4002012DataSetBindingSource.Position = 0
-        '
-        'lblStep2
-        '
-        Me.lblStep2.AutoSize = True
-        Me.lblStep2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStep2.Location = New System.Drawing.Point(246, 106)
-        Me.lblStep2.Name = "lblStep2"
-        Me.lblStep2.Size = New System.Drawing.Size(193, 17)
-        Me.lblStep2.TabIndex = 28
-        Me.lblStep2.Text = "Step 2: Click line to select tire"
-        '
-        'TireCodeTextBox
-        '
-        Me.TireCodeTextBox.Location = New System.Drawing.Point(119, 308)
-        Me.TireCodeTextBox.Name = "TireCodeTextBox"
-        Me.TireCodeTextBox.Size = New System.Drawing.Size(70, 20)
-        Me.TireCodeTextBox.TabIndex = 29
-        '
-        'ManufacturerTextBox
-        '
-        Me.ManufacturerTextBox.Location = New System.Drawing.Point(119, 334)
-        Me.ManufacturerTextBox.Name = "ManufacturerTextBox"
-        Me.ManufacturerTextBox.Size = New System.Drawing.Size(180, 20)
-        Me.ManufacturerTextBox.TabIndex = 31
-        '
-        'DescriptionTextBox
-        '
-        Me.DescriptionTextBox.Location = New System.Drawing.Point(119, 360)
-        Me.DescriptionTextBox.Multiline = True
-        Me.DescriptionTextBox.Name = "DescriptionTextBox"
-        Me.DescriptionTextBox.Size = New System.Drawing.Size(180, 64)
-        Me.DescriptionTextBox.TabIndex = 33
-        '
-        'ManufacturerSizeTextBox
-        '
-        Me.ManufacturerSizeTextBox.Location = New System.Drawing.Point(457, 308)
-        Me.ManufacturerSizeTextBox.Name = "ManufacturerSizeTextBox"
-        Me.ManufacturerSizeTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.ManufacturerSizeTextBox.TabIndex = 35
-        '
-        'RetailPriceTextBox
-        '
-        Me.RetailPriceTextBox.Location = New System.Drawing.Point(457, 334)
-        Me.RetailPriceTextBox.Name = "RetailPriceTextBox"
-        Me.RetailPriceTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.RetailPriceTextBox.TabIndex = 37
-        '
-        'TireQtyTextBox
-        '
-        Me.TireQtyTextBox.Location = New System.Drawing.Point(457, 360)
-        Me.TireQtyTextBox.Name = "TireQtyTextBox"
-        Me.TireQtyTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.TireQtyTextBox.TabIndex = 39
-        '
-        'StoreNbrTextBox
-        '
-        Me.StoreNbrTextBox.Location = New System.Drawing.Point(457, 386)
-        Me.StoreNbrTextBox.Name = "StoreNbrTextBox"
-        Me.StoreNbrTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.StoreNbrTextBox.TabIndex = 41
-        '
-        'InvSearchTableAdapter
-        '
-        Me.InvSearchTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.customerTableAdapter = Nothing
-        Me.TableAdapterManager.dealerTableAdapter = Nothing
-        Me.TableAdapterManager.employeeTableAdapter = Nothing
-        Me.TableAdapterManager.inventoryTableAdapter = Nothing
-        Me.TableAdapterManager.purchaseOrderDetailTableAdapter = Nothing
-        Me.TableAdapterManager.purchaseOrderTableAdapter = Nothing
-        Me.TableAdapterManager.retailOrderDetailTableAdapter = Nothing
-        Me.TableAdapterManager.retailOrderTableAdapter = Nothing
-        Me.TableAdapterManager.storeTableAdapter = Nothing
-        Me.TableAdapterManager.tireTableAdapter = Nothing
-        Me.TableAdapterManager.transferOrderDetailTableAdapter = Nothing
-        Me.TableAdapterManager.transferOrderTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.wholesaleOrderDetailTableAdapter = Nothing
-        Me.TableAdapterManager.wholesaleOrderTableAdapter = Nothing
-        '
         'TireCodeDataGridViewTextBoxColumn
         '
         Me.TireCodeDataGridViewTextBoxColumn.DataPropertyName = "tireCode"
@@ -377,6 +278,105 @@ Partial Class frmInventorySearch
         Me.InventoryNbrDataGridViewTextBoxColumn.ReadOnly = True
         Me.InventoryNbrDataGridViewTextBoxColumn.Visible = False
         '
+        'InvSearchBindingSource
+        '
+        Me.InvSearchBindingSource.DataMember = "invSearch"
+        Me.InvSearchBindingSource.DataSource = Me.Comp4002012DataSetBindingSource
+        '
+        'Comp4002012DataSetBindingSource
+        '
+        Me.Comp4002012DataSetBindingSource.DataSource = Me.Comp400_2012DataSet
+        Me.Comp4002012DataSetBindingSource.Position = 0
+        '
+        'Comp400_2012DataSet
+        '
+        Me.Comp400_2012DataSet.DataSetName = "comp400_2012DataSet"
+        Me.Comp400_2012DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'lblStep2
+        '
+        Me.lblStep2.AutoSize = True
+        Me.lblStep2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStep2.Location = New System.Drawing.Point(246, 106)
+        Me.lblStep2.Name = "lblStep2"
+        Me.lblStep2.Size = New System.Drawing.Size(193, 17)
+        Me.lblStep2.TabIndex = 28
+        Me.lblStep2.Text = "Step 2: Click line to select tire"
+        '
+        'TireCodeTextBox
+        '
+        Me.TireCodeTextBox.Location = New System.Drawing.Point(119, 340)
+        Me.TireCodeTextBox.Name = "TireCodeTextBox"
+        Me.TireCodeTextBox.Size = New System.Drawing.Size(70, 20)
+        Me.TireCodeTextBox.TabIndex = 29
+        '
+        'ManufacturerTextBox
+        '
+        Me.ManufacturerTextBox.Location = New System.Drawing.Point(119, 366)
+        Me.ManufacturerTextBox.Name = "ManufacturerTextBox"
+        Me.ManufacturerTextBox.Size = New System.Drawing.Size(180, 20)
+        Me.ManufacturerTextBox.TabIndex = 31
+        '
+        'DescriptionTextBox
+        '
+        Me.DescriptionTextBox.Location = New System.Drawing.Point(119, 392)
+        Me.DescriptionTextBox.Multiline = True
+        Me.DescriptionTextBox.Name = "DescriptionTextBox"
+        Me.DescriptionTextBox.Size = New System.Drawing.Size(180, 64)
+        Me.DescriptionTextBox.TabIndex = 33
+        '
+        'ManufacturerSizeTextBox
+        '
+        Me.ManufacturerSizeTextBox.Location = New System.Drawing.Point(457, 340)
+        Me.ManufacturerSizeTextBox.Name = "ManufacturerSizeTextBox"
+        Me.ManufacturerSizeTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.ManufacturerSizeTextBox.TabIndex = 35
+        '
+        'RetailPriceTextBox
+        '
+        Me.RetailPriceTextBox.Location = New System.Drawing.Point(457, 366)
+        Me.RetailPriceTextBox.Name = "RetailPriceTextBox"
+        Me.RetailPriceTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.RetailPriceTextBox.TabIndex = 37
+        '
+        'TireQtyTextBox
+        '
+        Me.TireQtyTextBox.Location = New System.Drawing.Point(457, 392)
+        Me.TireQtyTextBox.Name = "TireQtyTextBox"
+        Me.TireQtyTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.TireQtyTextBox.TabIndex = 39
+        '
+        'StoreNbrTextBox
+        '
+        Me.StoreNbrTextBox.Location = New System.Drawing.Point(457, 418)
+        Me.StoreNbrTextBox.Name = "StoreNbrTextBox"
+        Me.StoreNbrTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.StoreNbrTextBox.TabIndex = 41
+        '
+        'InvSearchTableAdapter
+        '
+        Me.InvSearchTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.customerTableAdapter = Nothing
+        Me.TableAdapterManager.dealerTableAdapter = Nothing
+        Me.TableAdapterManager.employeeTableAdapter = Nothing
+        Me.TableAdapterManager.inventoryTableAdapter = Nothing
+        Me.TableAdapterManager.purchaseOrderDetailTableAdapter = Nothing
+        Me.TableAdapterManager.purchaseOrderTableAdapter = Nothing
+        Me.TableAdapterManager.retailOrderDetailTableAdapter = Nothing
+        Me.TableAdapterManager.retailOrderTableAdapter = Nothing
+        Me.TableAdapterManager.storeTableAdapter = Nothing
+        Me.TableAdapterManager.tireTableAdapter = Nothing
+        Me.TableAdapterManager.transferOrderDetailTableAdapter = Nothing
+        Me.TableAdapterManager.transferOrderTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.wholesaleOrderDetailTableAdapter = Nothing
+        Me.TableAdapterManager.wholesaleOrderTableAdapter = Nothing
+        '
         'frmInventorySearch
         '
         Me.AcceptButton = Me.btnSearch
@@ -409,9 +409,9 @@ Partial Class frmInventorySearch
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmInventorySearch"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InvSearchBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Comp4002012DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

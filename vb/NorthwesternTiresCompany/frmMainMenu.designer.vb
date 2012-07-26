@@ -33,8 +33,8 @@ Partial Class frmMainMenu
         Me.btnEmployee = New System.Windows.Forms.Button()
         Me.btnReports = New System.Windows.Forms.Button()
         Me.btnPO = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pctMainLogo = New System.Windows.Forms.PictureBox()
+        CType(Me.pctMainLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnStores
@@ -154,22 +154,22 @@ Partial Class frmMainMenu
         Me.btnPO.Text = "&PO"
         Me.btnPO.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'pctMainLogo
         '
-        Me.PictureBox1.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.nwtires_logo_sm
-        Me.PictureBox1.Location = New System.Drawing.Point(226, 47)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(232, 73)
-        Me.PictureBox1.TabIndex = 26
-        Me.PictureBox1.TabStop = False
+        Me.pctMainLogo.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.nwtires_logo_sm
+        Me.pctMainLogo.Location = New System.Drawing.Point(226, 47)
+        Me.pctMainLogo.Margin = New System.Windows.Forms.Padding(2)
+        Me.pctMainLogo.Name = "pctMainLogo"
+        Me.pctMainLogo.Size = New System.Drawing.Size(232, 73)
+        Me.pctMainLogo.TabIndex = 26
+        Me.pctMainLogo.TabStop = False
         '
         'frmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 512)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.pctMainLogo)
         Me.Controls.Add(Me.btnPO)
         Me.Controls.Add(Me.btnReports)
         Me.Controls.Add(Me.btnEmployee)
@@ -184,7 +184,7 @@ Partial Class frmMainMenu
         Me.Name = "frmMainMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main Menu"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pctMainLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -200,5 +200,5 @@ Partial Class frmMainMenu
     Friend WithEvents btnEmployee As System.Windows.Forms.Button
     Friend WithEvents btnReports As System.Windows.Forms.Button
     Friend WithEvents btnPO As System.Windows.Forms.Button
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents pctMainLogo As System.Windows.Forms.PictureBox
 End Class

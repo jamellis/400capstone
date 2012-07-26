@@ -6,7 +6,7 @@
 
     Private Sub btnBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBack.Click
         frmMainMenu.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub StoreBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StoreBindingNavigatorSaveItem.Click

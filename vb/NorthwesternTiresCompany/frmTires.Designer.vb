@@ -60,12 +60,14 @@ Partial Class frmTires
         Me.WholesalePriceTextBox = New System.Windows.Forms.TextBox()
         Me.RetailPriceTextBox = New System.Windows.Forms.TextBox()
         Me.TireDataGridView = New System.Windows.Forms.DataGridView()
+        Me.TireBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dealerPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.wholesaleCost = New System.Windows.Forms.DataGridViewTextBoxColumn()
         TireCodeLabel = New System.Windows.Forms.Label()
         DescriptionLabel = New System.Windows.Forms.Label()
         ManufacturerLabel = New System.Windows.Forms.Label()
@@ -77,6 +79,7 @@ Partial Class frmTires
         CType(Me.TireBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TireBindingNavigator.SuspendLayout()
         CType(Me.TireDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TireBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TireCodeLabel
@@ -182,10 +185,21 @@ Partial Class frmTires
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.customerTableAdapter = Nothing
+        Me.TableAdapterManager.dealerTableAdapter = Nothing
+        Me.TableAdapterManager.employeeTableAdapter = Nothing
         Me.TableAdapterManager.inventoryTableAdapter = Nothing
+        Me.TableAdapterManager.purchaseOrderDetailTableAdapter = Nothing
+        Me.TableAdapterManager.purchaseOrderTableAdapter = Nothing
+        Me.TableAdapterManager.retailOrderDetailTableAdapter = Nothing
+        Me.TableAdapterManager.retailOrderTableAdapter = Nothing
         Me.TableAdapterManager.storeTableAdapter = Nothing
         Me.TableAdapterManager.tireTableAdapter = Me.TireTableAdapter
+        Me.TableAdapterManager.transferOrderDetailTableAdapter = Nothing
+        Me.TableAdapterManager.transferOrderTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.wholesaleOrderDetailTableAdapter = Nothing
+        Me.TableAdapterManager.wholesaleOrderTableAdapter = Nothing
         '
         'TireBindingNavigator
         '
@@ -221,7 +235,7 @@ Partial Class frmTires
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 25)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 25)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         Me.BindingNavigatorCountItem.Visible = False
@@ -242,7 +256,7 @@ Partial Class frmTires
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(32, 25)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(33, 25)
         Me.BindingNavigatorMoveFirstItem.Text = "First"
         Me.BindingNavigatorMoveFirstItem.Visible = False
         '
@@ -252,7 +266,7 @@ Partial Class frmTires
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(52, 25)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(56, 25)
         Me.BindingNavigatorMovePreviousItem.Text = "Previous"
         Me.BindingNavigatorMovePreviousItem.Visible = False
         '
@@ -284,7 +298,7 @@ Partial Class frmTires
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(34, 25)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(35, 25)
         Me.BindingNavigatorMoveNextItem.Text = "Next"
         Me.BindingNavigatorMoveNextItem.Visible = False
         '
@@ -294,7 +308,7 @@ Partial Class frmTires
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(31, 25)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(32, 25)
         Me.BindingNavigatorMoveLastItem.Text = "Last"
         Me.BindingNavigatorMoveLastItem.Visible = False
         '
@@ -383,12 +397,17 @@ Partial Class frmTires
         '
         Me.TireDataGridView.AutoGenerateColumns = False
         Me.TireDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TireDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.TireDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn6, Me.dealerPrice, Me.wholesaleCost})
         Me.TireDataGridView.DataSource = Me.TireBindingSource
         Me.TireDataGridView.Location = New System.Drawing.Point(12, 147)
         Me.TireDataGridView.Name = "TireDataGridView"
         Me.TireDataGridView.Size = New System.Drawing.Size(660, 305)
         Me.TireDataGridView.TabIndex = 33
+        '
+        'TireBindingSource1
+        '
+        Me.TireBindingSource1.DataMember = "tire"
+        Me.TireBindingSource1.DataSource = Me.Comp400_2012DataSet
         '
         'DataGridViewTextBoxColumn1
         '
@@ -402,7 +421,7 @@ Partial Class frmTires
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "description"
         Me.DataGridViewTextBoxColumn2.HeaderText = "Description"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 156
+        Me.DataGridViewTextBoxColumn2.Width = 150
         '
         'DataGridViewTextBoxColumn3
         '
@@ -415,13 +434,7 @@ Partial Class frmTires
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "manufacturerSize"
         Me.DataGridViewTextBoxColumn4.HeaderText = "Tire Size"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "wholesalePrice"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Wholesale Price"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.Width = 90
+        Me.DataGridViewTextBoxColumn4.Width = 80
         '
         'DataGridViewTextBoxColumn6
         '
@@ -429,6 +442,18 @@ Partial Class frmTires
         Me.DataGridViewTextBoxColumn6.HeaderText = "Retail Price"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.Width = 90
+        '
+        'dealerPrice
+        '
+        Me.dealerPrice.DataPropertyName = "dealerPrice"
+        Me.dealerPrice.HeaderText = "Dealer Price"
+        Me.dealerPrice.Name = "dealerPrice"
+        '
+        'wholesaleCost
+        '
+        Me.wholesaleCost.DataPropertyName = "wholesaleCost"
+        Me.wholesaleCost.HeaderText = "Wholesale Cost"
+        Me.wholesaleCost.Name = "wholesaleCost"
         '
         'frmTires
         '
@@ -461,6 +486,7 @@ Partial Class frmTires
         Me.TireBindingNavigator.ResumeLayout(False)
         Me.TireBindingNavigator.PerformLayout()
         CType(Me.TireDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TireBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -495,10 +521,13 @@ Partial Class frmTires
     Friend WithEvents WholesalePriceTextBox As System.Windows.Forms.TextBox
     Friend WithEvents RetailPriceTextBox As System.Windows.Forms.TextBox
     Friend WithEvents TireDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dealerPrice As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents wholesaleCost As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TireBindingSource1 As System.Windows.Forms.BindingSource
 End Class

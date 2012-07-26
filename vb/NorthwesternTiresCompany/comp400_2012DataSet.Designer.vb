@@ -9038,8 +9038,8 @@ Namespace comp400_2012DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT tireCode, description, manufacturer, manufacturerSize, retailPrice, dealer"& _ 
-                "Price, wholesaleCost FROM tire"
+            Me._commandCollection(0).CommandText = "SELECT        tireCode, description, manufacturer, manufacturerSize, retailPrice,"& _ 
+                " dealerPrice, wholesaleCost"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tire"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
