@@ -39,7 +39,6 @@ Partial Class frmEmployee
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.EmployeeIdLabel = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
         Me.EmpDataGridView = New System.Windows.Forms.DataGridView()
         Me.EmployeeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -52,15 +51,13 @@ Partial Class frmEmployee
         Me.Comp4002012DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Comp400_2012DataSet = New NorthwesternTiresCompany.comp400_2012DataSet()
         Me.EmployeeTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.employeeTableAdapter()
-        Me.BtnLogout = New System.Windows.Forms.Button()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnAdd = New System.Windows.Forms.Button()
         Me.BtnDelete = New System.Windows.Forms.Button()
-        Me.BtnExit = New System.Windows.Forms.Button()
-        Me.BtnMain = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnBack = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Comp4002012DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -178,10 +175,10 @@ Partial Class frmEmployee
         'lblEmp
         '
         Me.lblEmp.AutoSize = True
-        Me.lblEmp.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmp.Location = New System.Drawing.Point(333, 110)
+        Me.lblEmp.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmp.Location = New System.Drawing.Point(329, 25)
         Me.lblEmp.Name = "lblEmp"
-        Me.lblEmp.Size = New System.Drawing.Size(113, 24)
+        Me.lblEmp.Size = New System.Drawing.Size(121, 24)
         Me.lblEmp.TabIndex = 14
         Me.lblEmp.Text = "Employees"
         '
@@ -219,20 +216,11 @@ Partial Class frmEmployee
         Me.GroupBox1.Controls.Add(Me.TextBox3)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 138)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 53)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(746, 113)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
-        '
-        'LogoPictureBox
-        '
-        Me.LogoPictureBox.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.nwtires_logo
-        Me.LogoPictureBox.Location = New System.Drawing.Point(243, 12)
-        Me.LogoPictureBox.Name = "LogoPictureBox"
-        Me.LogoPictureBox.Size = New System.Drawing.Size(293, 94)
-        Me.LogoPictureBox.TabIndex = 16
-        Me.LogoPictureBox.TabStop = False
         '
         'EmpDataGridView
         '
@@ -240,7 +228,7 @@ Partial Class frmEmployee
         Me.EmpDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.EmpDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EmployeeIDDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.UserIDDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.StoreNbrDataGridViewTextBoxColumn, Me.UserSecurityLevelDataGridViewTextBoxColumn})
         Me.EmpDataGridView.DataSource = Me.EmployeeBindingSource
-        Me.EmpDataGridView.Location = New System.Drawing.Point(17, 268)
+        Me.EmpDataGridView.Location = New System.Drawing.Point(17, 183)
         Me.EmpDataGridView.Name = "EmpDataGridView"
         Me.EmpDataGridView.Size = New System.Drawing.Size(745, 326)
         Me.EmpDataGridView.TabIndex = 17
@@ -306,24 +294,13 @@ Partial Class frmEmployee
         '
         Me.EmployeeTableAdapter.ClearBeforeFill = True
         '
-        'BtnLogout
-        '
-        Me.BtnLogout.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLogout.ForeColor = System.Drawing.Color.Red
-        Me.BtnLogout.Location = New System.Drawing.Point(17, 615)
-        Me.BtnLogout.Name = "BtnLogout"
-        Me.BtnLogout.Size = New System.Drawing.Size(75, 31)
-        Me.BtnLogout.TabIndex = 18
-        Me.BtnLogout.Text = "Log&Out"
-        Me.BtnLogout.UseVisualStyleBackColor = True
-        '
         'BtnEdit
         '
         Me.BtnEdit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEdit.ForeColor = System.Drawing.Color.Red
-        Me.BtnEdit.Location = New System.Drawing.Point(299, 615)
+        Me.BtnEdit.Location = New System.Drawing.Point(244, 524)
         Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.Size = New System.Drawing.Size(75, 31)
+        Me.BtnEdit.Size = New System.Drawing.Size(90, 30)
         Me.BtnEdit.TabIndex = 19
         Me.BtnEdit.Text = "&Edit"
         Me.BtnEdit.UseVisualStyleBackColor = True
@@ -332,9 +309,9 @@ Partial Class frmEmployee
         '
         Me.BtnAdd.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAdd.ForeColor = System.Drawing.Color.Red
-        Me.BtnAdd.Location = New System.Drawing.Point(380, 615)
+        Me.BtnAdd.Location = New System.Drawing.Point(341, 524)
         Me.BtnAdd.Name = "BtnAdd"
-        Me.BtnAdd.Size = New System.Drawing.Size(75, 31)
+        Me.BtnAdd.Size = New System.Drawing.Size(90, 30)
         Me.BtnAdd.TabIndex = 20
         Me.BtnAdd.Text = "&Add"
         Me.BtnAdd.UseVisualStyleBackColor = True
@@ -343,55 +320,52 @@ Partial Class frmEmployee
         '
         Me.BtnDelete.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnDelete.ForeColor = System.Drawing.Color.Red
-        Me.BtnDelete.Location = New System.Drawing.Point(461, 615)
+        Me.BtnDelete.Location = New System.Drawing.Point(437, 524)
         Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(75, 31)
+        Me.BtnDelete.Size = New System.Drawing.Size(90, 30)
         Me.BtnDelete.TabIndex = 21
         Me.BtnDelete.Text = "&Delete"
         Me.BtnDelete.UseVisualStyleBackColor = True
         '
-        'BtnExit
+        'btnExit
         '
-        Me.BtnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExit.ForeColor = System.Drawing.Color.Red
-        Me.BtnExit.Location = New System.Drawing.Point(686, 615)
-        Me.BtnExit.Name = "BtnExit"
-        Me.BtnExit.Size = New System.Drawing.Size(75, 31)
-        Me.BtnExit.TabIndex = 22
-        Me.BtnExit.Text = "E&xit"
-        Me.BtnExit.UseVisualStyleBackColor = True
+        Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.ForeColor = System.Drawing.Color.Red
+        Me.btnExit.Location = New System.Drawing.Point(672, 524)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(90, 30)
+        Me.btnExit.TabIndex = 22
+        Me.btnExit.Text = "E&xit"
+        Me.btnExit.UseVisualStyleBackColor = True
         '
-        'BtnMain
+        'btnBack
         '
-        Me.BtnMain.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnMain.ForeColor = System.Drawing.Color.Red
-        Me.BtnMain.Location = New System.Drawing.Point(98, 615)
-        Me.BtnMain.Name = "BtnMain"
-        Me.BtnMain.Size = New System.Drawing.Size(97, 31)
-        Me.BtnMain.TabIndex = 23
-        Me.BtnMain.Text = "Main&Menu"
-        Me.BtnMain.UseVisualStyleBackColor = True
+        Me.btnBack.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBack.ForeColor = System.Drawing.Color.Red
+        Me.btnBack.Location = New System.Drawing.Point(16, 524)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(90, 30)
+        Me.btnBack.TabIndex = 23
+        Me.btnBack.Text = "&Back"
+        Me.btnBack.UseVisualStyleBackColor = True
         '
         'frmEmployee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(778, 658)
-        Me.Controls.Add(Me.BtnMain)
-        Me.Controls.Add(Me.BtnExit)
+        Me.Controls.Add(Me.btnBack)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.BtnDelete)
         Me.Controls.Add(Me.BtnAdd)
         Me.Controls.Add(Me.BtnEdit)
-        Me.Controls.Add(Me.BtnLogout)
         Me.Controls.Add(Me.EmpDataGridView)
-        Me.Controls.Add(Me.LogoPictureBox)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lblEmp)
         Me.Name = "frmEmployee"
         Me.Text = "frmEmployee"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Comp4002012DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -416,7 +390,6 @@ Partial Class frmEmployee
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents EmployeeIdLabel As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents LogoPictureBox As System.Windows.Forms.PictureBox
     Friend WithEvents EmpDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents Comp4002012DataSetBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Comp400_2012DataSet As NorthwesternTiresCompany.comp400_2012DataSet
@@ -429,11 +402,10 @@ Partial Class frmEmployee
     Friend WithEvents PasswordDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents StoreNbrDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents UserSecurityLevelDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents BtnLogout As System.Windows.Forms.Button
     Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
     Friend WithEvents BtnEdit As System.Windows.Forms.Button
     Friend WithEvents BtnAdd As System.Windows.Forms.Button
     Friend WithEvents BtnDelete As System.Windows.Forms.Button
-    Friend WithEvents BtnExit As System.Windows.Forms.Button
-    Friend WithEvents BtnMain As System.Windows.Forms.Button
+    Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents btnBack As System.Windows.Forms.Button
 End Class

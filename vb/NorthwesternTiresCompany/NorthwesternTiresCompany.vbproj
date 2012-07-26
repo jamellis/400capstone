@@ -165,6 +165,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmEmployee.resx">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInventoryMaintain.resx">
       <DependentUpon>frmInventoryMaintain.vb</DependentUpon>
     </EmbeddedResource>

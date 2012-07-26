@@ -60,7 +60,6 @@ Partial Class frmTires
         Me.WholesalePriceTextBox = New System.Windows.Forms.TextBox()
         Me.RetailPriceTextBox = New System.Windows.Forms.TextBox()
         Me.TireDataGridView = New System.Windows.Forms.DataGridView()
-        Me.TireBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -68,6 +67,7 @@ Partial Class frmTires
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dealerPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.wholesaleCost = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TireBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         TireCodeLabel = New System.Windows.Forms.Label()
         DescriptionLabel = New System.Windows.Forms.Label()
         ManufacturerLabel = New System.Windows.Forms.Label()
@@ -140,7 +140,7 @@ Partial Class frmTires
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(592, 470)
+        Me.btnExit.Location = New System.Drawing.Point(678, 470)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(80, 30)
         Me.btnExit.TabIndex = 21
@@ -401,13 +401,8 @@ Partial Class frmTires
         Me.TireDataGridView.DataSource = Me.TireBindingSource
         Me.TireDataGridView.Location = New System.Drawing.Point(12, 147)
         Me.TireDataGridView.Name = "TireDataGridView"
-        Me.TireDataGridView.Size = New System.Drawing.Size(660, 305)
+        Me.TireDataGridView.Size = New System.Drawing.Size(746, 305)
         Me.TireDataGridView.TabIndex = 33
-        '
-        'TireBindingSource1
-        '
-        Me.TireBindingSource1.DataMember = "tire"
-        Me.TireBindingSource1.DataSource = Me.Comp400_2012DataSet
         '
         'DataGridViewTextBoxColumn1
         '
@@ -455,11 +450,16 @@ Partial Class frmTires
         Me.wholesaleCost.HeaderText = "Wholesale Cost"
         Me.wholesaleCost.Name = "wholesaleCost"
         '
+        'TireBindingSource1
+        '
+        Me.TireBindingSource1.DataMember = "tire"
+        Me.TireBindingSource1.DataSource = Me.Comp400_2012DataSet
+        '
         'frmTires
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(684, 512)
+        Me.ClientSize = New System.Drawing.Size(770, 512)
         Me.Controls.Add(Me.TireDataGridView)
         Me.Controls.Add(TireCodeLabel)
         Me.Controls.Add(Me.TireCodeTextBox)

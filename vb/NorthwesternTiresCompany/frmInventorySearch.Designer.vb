@@ -155,9 +155,9 @@ Partial Class frmInventorySearch
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(592, 470)
+        Me.btnExit.Location = New System.Drawing.Point(579, 470)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(80, 30)
+        Me.btnExit.Size = New System.Drawing.Size(90, 30)
         Me.btnExit.TabIndex = 23
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
@@ -168,7 +168,7 @@ Partial Class frmInventorySearch
         Me.btnBack.ForeColor = System.Drawing.Color.Red
         Me.btnBack.Location = New System.Drawing.Point(12, 470)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(80, 30)
+        Me.btnBack.Size = New System.Drawing.Size(90, 30)
         Me.btnBack.TabIndex = 22
         Me.btnBack.Text = "&Back"
         Me.btnBack.UseVisualStyleBackColor = True
