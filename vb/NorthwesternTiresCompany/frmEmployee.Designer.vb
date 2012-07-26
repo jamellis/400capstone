@@ -22,8 +22,418 @@ Partial Class frmEmployee
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.FirstNameLabel = New System.Windows.Forms.Label()
+        Me.LastNameLabel = New System.Windows.Forms.Label()
+        Me.UserIdLabel = New System.Windows.Forms.Label()
+        Me.PasswordLabel = New System.Windows.Forms.Label()
+        Me.StoreNumLabel = New System.Windows.Forms.Label()
+        Me.UsrSecLvlLabel = New System.Windows.Forms.Label()
+        Me.lblEmp = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.EmployeeIdLabel = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
+        Me.EmpDataGridView = New System.Windows.Forms.DataGridView()
+        Me.EmployeeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UserIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StoreNbrDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UserSecurityLevelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Comp4002012DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Comp400_2012DataSet = New NorthwesternTiresCompany.comp400_2012DataSet()
+        Me.EmployeeTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.employeeTableAdapter()
+        Me.BtnLogout = New System.Windows.Forms.Button()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
+        Me.BtnEdit = New System.Windows.Forms.Button()
+        Me.BtnAdd = New System.Windows.Forms.Button()
+        Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.BtnExit = New System.Windows.Forms.Button()
+        Me.BtnMain = New System.Windows.Forms.Button()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Comp4002012DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(118, 43)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(227, 26)
+        Me.TextBox2.TabIndex = 1
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(118, 75)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(227, 26)
+        Me.TextBox3.TabIndex = 2
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(466, 75)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(61, 26)
+        Me.TextBox4.TabIndex = 3
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(466, 43)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(146, 26)
+        Me.TextBox5.TabIndex = 4
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(466, 11)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(91, 26)
+        Me.TextBox6.TabIndex = 5
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox7.Location = New System.Drawing.Point(652, 15)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(78, 26)
+        Me.TextBox7.TabIndex = 6
+        '
+        'FirstNameLabel
+        '
+        Me.FirstNameLabel.AutoSize = True
+        Me.FirstNameLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FirstNameLabel.Location = New System.Drawing.Point(11, 47)
+        Me.FirstNameLabel.Name = "FirstNameLabel"
+        Me.FirstNameLabel.Size = New System.Drawing.Size(89, 18)
+        Me.FirstNameLabel.TabIndex = 8
+        Me.FirstNameLabel.Text = "First Name:"
+        '
+        'LastNameLabel
+        '
+        Me.LastNameLabel.AutoSize = True
+        Me.LastNameLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LastNameLabel.Location = New System.Drawing.Point(11, 79)
+        Me.LastNameLabel.Name = "LastNameLabel"
+        Me.LastNameLabel.Size = New System.Drawing.Size(88, 18)
+        Me.LastNameLabel.TabIndex = 9
+        Me.LastNameLabel.Text = "Last Name:"
+        '
+        'UserIdLabel
+        '
+        Me.UserIdLabel.AutoSize = True
+        Me.UserIdLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UserIdLabel.Location = New System.Drawing.Point(351, 78)
+        Me.UserIdLabel.Name = "UserIdLabel"
+        Me.UserIdLabel.Size = New System.Drawing.Size(64, 18)
+        Me.UserIdLabel.TabIndex = 10
+        Me.UserIdLabel.Text = "User ID:"
+        '
+        'PasswordLabel
+        '
+        Me.PasswordLabel.AutoSize = True
+        Me.PasswordLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PasswordLabel.Location = New System.Drawing.Point(351, 47)
+        Me.PasswordLabel.Name = "PasswordLabel"
+        Me.PasswordLabel.Size = New System.Drawing.Size(82, 18)
+        Me.PasswordLabel.TabIndex = 11
+        Me.PasswordLabel.Text = "Password:"
+        '
+        'StoreNumLabel
+        '
+        Me.StoreNumLabel.AutoSize = True
+        Me.StoreNumLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StoreNumLabel.Location = New System.Drawing.Point(583, 18)
+        Me.StoreNumLabel.Name = "StoreNumLabel"
+        Me.StoreNumLabel.Size = New System.Drawing.Size(63, 18)
+        Me.StoreNumLabel.TabIndex = 12
+        Me.StoreNumLabel.Text = "Store #:"
+        '
+        'UsrSecLvlLabel
+        '
+        Me.UsrSecLvlLabel.AutoSize = True
+        Me.UsrSecLvlLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsrSecLvlLabel.Location = New System.Drawing.Point(351, 15)
+        Me.UsrSecLvlLabel.Name = "UsrSecLvlLabel"
+        Me.UsrSecLvlLabel.Size = New System.Drawing.Size(109, 18)
+        Me.UsrSecLvlLabel.TabIndex = 13
+        Me.UsrSecLvlLabel.Text = "Security Level:"
+        '
+        'lblEmp
+        '
+        Me.lblEmp.AutoSize = True
+        Me.lblEmp.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmp.Location = New System.Drawing.Point(333, 110)
+        Me.lblEmp.Name = "lblEmp"
+        Me.lblEmp.Size = New System.Drawing.Size(113, 24)
+        Me.lblEmp.TabIndex = 14
+        Me.lblEmp.Text = "Employees"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(118, 11)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(135, 26)
+        Me.TextBox1.TabIndex = 0
+        '
+        'EmployeeIdLabel
+        '
+        Me.EmployeeIdLabel.AutoSize = True
+        Me.EmployeeIdLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EmployeeIdLabel.Location = New System.Drawing.Point(11, 16)
+        Me.EmployeeIdLabel.Name = "EmployeeIdLabel"
+        Me.EmployeeIdLabel.Size = New System.Drawing.Size(101, 18)
+        Me.EmployeeIdLabel.TabIndex = 7
+        Me.EmployeeIdLabel.Text = "Employee ID:"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.UsrSecLvlLabel)
+        Me.GroupBox1.Controls.Add(Me.StoreNumLabel)
+        Me.GroupBox1.Controls.Add(Me.PasswordLabel)
+        Me.GroupBox1.Controls.Add(Me.UserIdLabel)
+        Me.GroupBox1.Controls.Add(Me.LastNameLabel)
+        Me.GroupBox1.Controls.Add(Me.FirstNameLabel)
+        Me.GroupBox1.Controls.Add(Me.TextBox6)
+        Me.GroupBox1.Controls.Add(Me.TextBox7)
+        Me.GroupBox1.Controls.Add(Me.EmployeeIdLabel)
+        Me.GroupBox1.Controls.Add(Me.TextBox5)
+        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 138)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(746, 113)
+        Me.GroupBox1.TabIndex = 15
+        Me.GroupBox1.TabStop = False
+        '
+        'LogoPictureBox
+        '
+        Me.LogoPictureBox.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.nwtires_logo
+        Me.LogoPictureBox.Location = New System.Drawing.Point(243, 12)
+        Me.LogoPictureBox.Name = "LogoPictureBox"
+        Me.LogoPictureBox.Size = New System.Drawing.Size(293, 94)
+        Me.LogoPictureBox.TabIndex = 16
+        Me.LogoPictureBox.TabStop = False
+        '
+        'EmpDataGridView
+        '
+        Me.EmpDataGridView.AutoGenerateColumns = False
+        Me.EmpDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.EmpDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EmployeeIDDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.UserIDDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.StoreNbrDataGridViewTextBoxColumn, Me.UserSecurityLevelDataGridViewTextBoxColumn})
+        Me.EmpDataGridView.DataSource = Me.EmployeeBindingSource
+        Me.EmpDataGridView.Location = New System.Drawing.Point(17, 268)
+        Me.EmpDataGridView.Name = "EmpDataGridView"
+        Me.EmpDataGridView.Size = New System.Drawing.Size(745, 326)
+        Me.EmpDataGridView.TabIndex = 17
+        '
+        'EmployeeIDDataGridViewTextBoxColumn
+        '
+        Me.EmployeeIDDataGridViewTextBoxColumn.DataPropertyName = "employeeID"
+        Me.EmployeeIDDataGridViewTextBoxColumn.HeaderText = "employeeID"
+        Me.EmployeeIDDataGridViewTextBoxColumn.Name = "EmployeeIDDataGridViewTextBoxColumn"
+        '
+        'FirstNameDataGridViewTextBoxColumn
+        '
+        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "firstName"
+        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "firstName"
+        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
+        '
+        'LastNameDataGridViewTextBoxColumn
+        '
+        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "lastName"
+        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "lastName"
+        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
+        '
+        'UserIDDataGridViewTextBoxColumn
+        '
+        Me.UserIDDataGridViewTextBoxColumn.DataPropertyName = "userID"
+        Me.UserIDDataGridViewTextBoxColumn.HeaderText = "userID"
+        Me.UserIDDataGridViewTextBoxColumn.Name = "UserIDDataGridViewTextBoxColumn"
+        '
+        'PasswordDataGridViewTextBoxColumn
+        '
+        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "password"
+        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "password"
+        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
+        '
+        'StoreNbrDataGridViewTextBoxColumn
+        '
+        Me.StoreNbrDataGridViewTextBoxColumn.DataPropertyName = "storeNbr"
+        Me.StoreNbrDataGridViewTextBoxColumn.HeaderText = "storeNbr"
+        Me.StoreNbrDataGridViewTextBoxColumn.Name = "StoreNbrDataGridViewTextBoxColumn"
+        '
+        'UserSecurityLevelDataGridViewTextBoxColumn
+        '
+        Me.UserSecurityLevelDataGridViewTextBoxColumn.DataPropertyName = "userSecurityLevel"
+        Me.UserSecurityLevelDataGridViewTextBoxColumn.HeaderText = "userSecurityLevel"
+        Me.UserSecurityLevelDataGridViewTextBoxColumn.Name = "UserSecurityLevelDataGridViewTextBoxColumn"
+        '
+        'EmployeeBindingSource
+        '
+        Me.EmployeeBindingSource.DataMember = "employee"
+        Me.EmployeeBindingSource.DataSource = Me.Comp4002012DataSetBindingSource
+        '
+        'Comp4002012DataSetBindingSource
+        '
+        Me.Comp4002012DataSetBindingSource.DataSource = Me.Comp400_2012DataSet
+        Me.Comp4002012DataSetBindingSource.Position = 0
+        '
+        'Comp400_2012DataSet
+        '
+        Me.Comp400_2012DataSet.DataSetName = "comp400_2012DataSet"
+        Me.Comp400_2012DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'EmployeeTableAdapter
+        '
+        Me.EmployeeTableAdapter.ClearBeforeFill = True
+        '
+        'BtnLogout
+        '
+        Me.BtnLogout.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogout.ForeColor = System.Drawing.Color.Red
+        Me.BtnLogout.Location = New System.Drawing.Point(17, 615)
+        Me.BtnLogout.Name = "BtnLogout"
+        Me.BtnLogout.Size = New System.Drawing.Size(75, 31)
+        Me.BtnLogout.TabIndex = 18
+        Me.BtnLogout.Text = "Log&Out"
+        Me.BtnLogout.UseVisualStyleBackColor = True
+        '
+        'BtnEdit
+        '
+        Me.BtnEdit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEdit.ForeColor = System.Drawing.Color.Red
+        Me.BtnEdit.Location = New System.Drawing.Point(299, 615)
+        Me.BtnEdit.Name = "BtnEdit"
+        Me.BtnEdit.Size = New System.Drawing.Size(75, 31)
+        Me.BtnEdit.TabIndex = 19
+        Me.BtnEdit.Text = "&Edit"
+        Me.BtnEdit.UseVisualStyleBackColor = True
+        '
+        'BtnAdd
+        '
+        Me.BtnAdd.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAdd.ForeColor = System.Drawing.Color.Red
+        Me.BtnAdd.Location = New System.Drawing.Point(380, 615)
+        Me.BtnAdd.Name = "BtnAdd"
+        Me.BtnAdd.Size = New System.Drawing.Size(75, 31)
+        Me.BtnAdd.TabIndex = 20
+        Me.BtnAdd.Text = "&Add"
+        Me.BtnAdd.UseVisualStyleBackColor = True
+        '
+        'BtnDelete
+        '
+        Me.BtnDelete.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDelete.ForeColor = System.Drawing.Color.Red
+        Me.BtnDelete.Location = New System.Drawing.Point(461, 615)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(75, 31)
+        Me.BtnDelete.TabIndex = 21
+        Me.BtnDelete.Text = "&Delete"
+        Me.BtnDelete.UseVisualStyleBackColor = True
+        '
+        'BtnExit
+        '
+        Me.BtnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExit.ForeColor = System.Drawing.Color.Red
+        Me.BtnExit.Location = New System.Drawing.Point(686, 615)
+        Me.BtnExit.Name = "BtnExit"
+        Me.BtnExit.Size = New System.Drawing.Size(75, 31)
+        Me.BtnExit.TabIndex = 22
+        Me.BtnExit.Text = "E&xit"
+        Me.BtnExit.UseVisualStyleBackColor = True
+        '
+        'BtnMain
+        '
+        Me.BtnMain.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMain.ForeColor = System.Drawing.Color.Red
+        Me.BtnMain.Location = New System.Drawing.Point(98, 615)
+        Me.BtnMain.Name = "BtnMain"
+        Me.BtnMain.Size = New System.Drawing.Size(97, 31)
+        Me.BtnMain.TabIndex = 23
+        Me.BtnMain.Text = "Main&Menu"
+        Me.BtnMain.UseVisualStyleBackColor = True
+        '
+        'frmEmployee
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(778, 658)
+        Me.Controls.Add(Me.BtnMain)
+        Me.Controls.Add(Me.BtnExit)
+        Me.Controls.Add(Me.BtnDelete)
+        Me.Controls.Add(Me.BtnAdd)
+        Me.Controls.Add(Me.BtnEdit)
+        Me.Controls.Add(Me.BtnLogout)
+        Me.Controls.Add(Me.EmpDataGridView)
+        Me.Controls.Add(Me.LogoPictureBox)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.lblEmp)
+        Me.Name = "frmEmployee"
         Me.Text = "frmEmployee"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Comp4002012DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents FirstNameLabel As System.Windows.Forms.Label
+    Friend WithEvents LastNameLabel As System.Windows.Forms.Label
+    Friend WithEvents UserIdLabel As System.Windows.Forms.Label
+    Friend WithEvents PasswordLabel As System.Windows.Forms.Label
+    Friend WithEvents StoreNumLabel As System.Windows.Forms.Label
+    Friend WithEvents UsrSecLvlLabel As System.Windows.Forms.Label
+    Friend WithEvents lblEmp As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents EmployeeIdLabel As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents LogoPictureBox As System.Windows.Forms.PictureBox
+    Friend WithEvents EmpDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents Comp4002012DataSetBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Comp400_2012DataSet As NorthwesternTiresCompany.comp400_2012DataSet
+    Friend WithEvents EmployeeBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents EmployeeTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.employeeTableAdapter
+    Friend WithEvents EmployeeIDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FirstNameDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents LastNameDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents UserIDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PasswordDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents StoreNbrDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents UserSecurityLevelDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents BtnLogout As System.Windows.Forms.Button
+    Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
+    Friend WithEvents BtnEdit As System.Windows.Forms.Button
+    Friend WithEvents BtnAdd As System.Windows.Forms.Button
+    Friend WithEvents BtnDelete As System.Windows.Forms.Button
+    Friend WithEvents BtnExit As System.Windows.Forms.Button
+    Friend WithEvents BtnMain As System.Windows.Forms.Button
 End Class
