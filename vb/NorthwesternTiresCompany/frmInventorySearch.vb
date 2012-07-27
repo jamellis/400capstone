@@ -15,7 +15,7 @@
         'Me.InventoryTableAdapter.Fill(Me.Comp400_2012DataSet.inventory)
         'TODO: This line of code loads data into the 'Comp400_2012DataSet.invSearch' table. You can move, or remove it, as needed.
         Me.InvSearchTableAdapter.Fill(Me.Comp400_2012DataSet.invSearch)
-
+        txtSearch.Focus()
     End Sub
 
     Private Sub btnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearch.Click
