@@ -37,11 +37,11 @@ Partial Class frmInventoryMaintain
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.InventoryBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.InventoryDataGridView = New System.Windows.Forms.DataGridView()
@@ -55,6 +55,7 @@ Partial Class frmInventoryMaintain
         Me.cboTireCode = New System.Windows.Forms.ComboBox()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InventoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InventoryBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,18 +68,20 @@ Partial Class frmInventoryMaintain
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(84, 40)
+        Me.Label1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(99, 99)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 13)
+        Me.Label1.Size = New System.Drawing.Size(71, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Tire Code"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(355, 40)
+        Me.Label2.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(356, 96)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(42, 13)
+        Me.Label2.Size = New System.Drawing.Size(55, 17)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Store #"
         '
@@ -129,61 +132,63 @@ Partial Class frmInventoryMaintain
         Me.InventoryBindingNavigator.BindingSource = Me.InventoryBindingSource
         Me.InventoryBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.InventoryBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.InventoryBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.InventoryBindingNavigatorSaveItem})
-        Me.InventoryBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.InventoryBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
+        Me.InventoryBindingNavigator.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.InventoryBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorDeleteItem, Me.BindingNavigatorSeparator2, Me.InventoryBindingNavigatorSaveItem})
+        Me.InventoryBindingNavigator.Location = New System.Drawing.Point(120, 140)
         Me.InventoryBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.InventoryBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.InventoryBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
         Me.InventoryBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.InventoryBindingNavigator.Name = "InventoryBindingNavigator"
         Me.InventoryBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.InventoryBindingNavigator.Size = New System.Drawing.Size(684, 25)
+        Me.InventoryBindingNavigator.Size = New System.Drawing.Size(416, 26)
         Me.InventoryBindingNavigator.TabIndex = 4
         Me.InventoryBindingNavigator.Text = "BindingNavigator1"
         '
         'BindingNavigatorAddNewItem
         '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.BindingNavigatorAddNewItem.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(120, 23)
+        Me.BindingNavigatorAddNewItem.Text = "Add Inventory"
         '
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 23)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        Me.BindingNavigatorCountItem.Visible = False
         '
         'BindingNavigatorDeleteItem
         '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.BindingNavigatorDeleteItem.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(137, 23)
+        Me.BindingNavigatorDeleteItem.Text = "Delete Inventory"
         '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 23)
         Me.BindingNavigatorMoveFirstItem.Text = "Move first"
+        Me.BindingNavigatorMoveFirstItem.Visible = False
         '
         'BindingNavigatorMovePreviousItem
         '
         Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 23)
         Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorMovePreviousItem.Visible = False
         '
         'BindingNavigatorPositionItem
         '
@@ -193,39 +198,49 @@ Partial Class frmInventoryMaintain
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        Me.BindingNavigatorPositionItem.Visible = False
         '
         'BindingNavigatorSeparator1
         '
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 26)
+        Me.BindingNavigatorSeparator1.Visible = False
         '
         'BindingNavigatorMoveNextItem
         '
         Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 23)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        Me.BindingNavigatorMoveNextItem.Visible = False
         '
         'BindingNavigatorMoveLastItem
         '
         Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 23)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        Me.BindingNavigatorMoveLastItem.Visible = False
+        '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 26)
         '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 26)
         '
         'InventoryBindingNavigatorSaveItem
         '
-        Me.InventoryBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.InventoryBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.InventoryBindingNavigatorSaveItem.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InventoryBindingNavigatorSaveItem.Name = "InventoryBindingNavigatorSaveItem"
-        Me.InventoryBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
-        Me.InventoryBindingNavigatorSaveItem.Text = "Save Data"
+        Me.InventoryBindingNavigatorSaveItem.Size = New System.Drawing.Size(144, 23)
+        Me.InventoryBindingNavigatorSaveItem.Text = "Update Inventory"
         '
         'InventoryDataGridView
         '
@@ -233,7 +248,7 @@ Partial Class frmInventoryMaintain
         Me.InventoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.InventoryDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.InventoryDataGridView.DataSource = Me.InventoryBindingSource
-        Me.InventoryDataGridView.Location = New System.Drawing.Point(118, 129)
+        Me.InventoryDataGridView.Location = New System.Drawing.Point(110, 197)
         Me.InventoryDataGridView.Name = "InventoryDataGridView"
         Me.InventoryDataGridView.Size = New System.Drawing.Size(446, 220)
         Me.InventoryDataGridView.TabIndex = 5
@@ -277,7 +292,7 @@ Partial Class frmInventoryMaintain
         Me.cboStore.DataSource = Me.StoreBindingSource
         Me.cboStore.DisplayMember = "storeNbr"
         Me.cboStore.FormattingEnabled = True
-        Me.cboStore.Location = New System.Drawing.Point(420, 40)
+        Me.cboStore.Location = New System.Drawing.Point(435, 93)
         Me.cboStore.Name = "cboStore"
         Me.cboStore.Size = New System.Drawing.Size(121, 21)
         Me.cboStore.TabIndex = 2
@@ -288,7 +303,7 @@ Partial Class frmInventoryMaintain
         Me.cboTireCode.DataSource = Me.TireBindingSource
         Me.cboTireCode.DisplayMember = "tireCode"
         Me.cboTireCode.FormattingEnabled = True
-        Me.cboTireCode.Location = New System.Drawing.Point(150, 40)
+        Me.cboTireCode.Location = New System.Drawing.Point(202, 96)
         Me.cboTireCode.Name = "cboTireCode"
         Me.cboTireCode.Size = New System.Drawing.Size(121, 21)
         Me.cboTireCode.TabIndex = 3
@@ -315,11 +330,22 @@ Partial Class frmInventoryMaintain
         Me.btnBack.Text = "&Back"
         Me.btnBack.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(221, 21)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(239, 24)
+        Me.Label3.TabIndex = 24
+        Me.Label3.Text = "Inventory Maintenance"
+        '
         'frmInventoryMaintain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 512)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.InventoryDataGridView)
@@ -375,4 +401,5 @@ Partial Class frmInventoryMaintain
     Friend WithEvents cboTireCode As System.Windows.Forms.ComboBox
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents btnBack As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class
