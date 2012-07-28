@@ -23,12 +23,12 @@ Partial Class frmEmployee
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
+        Me.txtUserID = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtSecLevel = New System.Windows.Forms.TextBox()
+        Me.txtStoreNbr = New System.Windows.Forms.TextBox()
         Me.FirstNameLabel = New System.Windows.Forms.Label()
         Me.LastNameLabel = New System.Windows.Forms.Label()
         Me.UserIdLabel = New System.Windows.Forms.Label()
@@ -36,7 +36,7 @@ Partial Class frmEmployee
         Me.StoreNumLabel = New System.Windows.Forms.Label()
         Me.UsrSecLvlLabel = New System.Windows.Forms.Label()
         Me.lblEmp = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtEmpID = New System.Windows.Forms.TextBox()
         Me.EmployeeIdLabel = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.EmpDataGridView = New System.Windows.Forms.DataGridView()
@@ -64,53 +64,53 @@ Partial Class frmEmployee
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox2
+        'txtFirstName
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(118, 43)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(227, 26)
-        Me.TextBox2.TabIndex = 1
+        Me.txtFirstName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFirstName.Location = New System.Drawing.Point(118, 43)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.Size = New System.Drawing.Size(227, 26)
+        Me.txtFirstName.TabIndex = 1
         '
-        'TextBox3
+        'txtLastName
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(118, 75)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(227, 26)
-        Me.TextBox3.TabIndex = 2
+        Me.txtLastName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLastName.Location = New System.Drawing.Point(118, 75)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.Size = New System.Drawing.Size(227, 26)
+        Me.txtLastName.TabIndex = 2
         '
-        'TextBox4
+        'txtUserID
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(466, 75)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(61, 26)
-        Me.TextBox4.TabIndex = 3
+        Me.txtUserID.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUserID.Location = New System.Drawing.Point(466, 44)
+        Me.txtUserID.Name = "txtUserID"
+        Me.txtUserID.Size = New System.Drawing.Size(146, 26)
+        Me.txtUserID.TabIndex = 3
         '
-        'TextBox5
+        'txtPassword
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(466, 43)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(146, 26)
-        Me.TextBox5.TabIndex = 4
+        Me.txtPassword.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Location = New System.Drawing.Point(466, 75)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(146, 26)
+        Me.txtPassword.TabIndex = 4
         '
-        'TextBox6
+        'txtSecLevel
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(466, 11)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(91, 26)
-        Me.TextBox6.TabIndex = 5
+        Me.txtSecLevel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSecLevel.Location = New System.Drawing.Point(466, 11)
+        Me.txtSecLevel.Name = "txtSecLevel"
+        Me.txtSecLevel.Size = New System.Drawing.Size(91, 26)
+        Me.txtSecLevel.TabIndex = 5
         '
-        'TextBox7
+        'txtStoreNbr
         '
-        Me.TextBox7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(652, 15)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(78, 26)
-        Me.TextBox7.TabIndex = 6
+        Me.txtStoreNbr.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtStoreNbr.Location = New System.Drawing.Point(652, 15)
+        Me.txtStoreNbr.Name = "txtStoreNbr"
+        Me.txtStoreNbr.Size = New System.Drawing.Size(78, 26)
+        Me.txtStoreNbr.TabIndex = 6
         '
         'FirstNameLabel
         '
@@ -136,7 +136,7 @@ Partial Class frmEmployee
         '
         Me.UserIdLabel.AutoSize = True
         Me.UserIdLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UserIdLabel.Location = New System.Drawing.Point(351, 78)
+        Me.UserIdLabel.Location = New System.Drawing.Point(351, 47)
         Me.UserIdLabel.Name = "UserIdLabel"
         Me.UserIdLabel.Size = New System.Drawing.Size(64, 18)
         Me.UserIdLabel.TabIndex = 10
@@ -146,7 +146,7 @@ Partial Class frmEmployee
         '
         Me.PasswordLabel.AutoSize = True
         Me.PasswordLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PasswordLabel.Location = New System.Drawing.Point(351, 47)
+        Me.PasswordLabel.Location = New System.Drawing.Point(351, 79)
         Me.PasswordLabel.Name = "PasswordLabel"
         Me.PasswordLabel.Size = New System.Drawing.Size(82, 18)
         Me.PasswordLabel.TabIndex = 11
@@ -182,13 +182,13 @@ Partial Class frmEmployee
         Me.lblEmp.TabIndex = 14
         Me.lblEmp.Text = "Employees"
         '
-        'TextBox1
+        'txtEmpID
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(118, 11)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(135, 26)
-        Me.TextBox1.TabIndex = 0
+        Me.txtEmpID.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmpID.Location = New System.Drawing.Point(118, 11)
+        Me.txtEmpID.Name = "txtEmpID"
+        Me.txtEmpID.Size = New System.Drawing.Size(135, 26)
+        Me.txtEmpID.TabIndex = 0
         '
         'EmployeeIdLabel
         '
@@ -208,14 +208,14 @@ Partial Class frmEmployee
         Me.GroupBox1.Controls.Add(Me.UserIdLabel)
         Me.GroupBox1.Controls.Add(Me.LastNameLabel)
         Me.GroupBox1.Controls.Add(Me.FirstNameLabel)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
-        Me.GroupBox1.Controls.Add(Me.TextBox7)
+        Me.GroupBox1.Controls.Add(Me.txtSecLevel)
+        Me.GroupBox1.Controls.Add(Me.txtStoreNbr)
         Me.GroupBox1.Controls.Add(Me.EmployeeIdLabel)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtPassword)
+        Me.GroupBox1.Controls.Add(Me.txtUserID)
+        Me.GroupBox1.Controls.Add(Me.txtLastName)
+        Me.GroupBox1.Controls.Add(Me.txtFirstName)
+        Me.GroupBox1.Controls.Add(Me.txtEmpID)
         Me.GroupBox1.Location = New System.Drawing.Point(16, 53)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(746, 113)
@@ -374,12 +374,12 @@ Partial Class frmEmployee
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
+    Friend WithEvents txtLastName As System.Windows.Forms.TextBox
+    Friend WithEvents txtUserID As System.Windows.Forms.TextBox
+    Friend WithEvents txtPassword As System.Windows.Forms.TextBox
+    Friend WithEvents txtSecLevel As System.Windows.Forms.TextBox
+    Friend WithEvents txtStoreNbr As System.Windows.Forms.TextBox
     Friend WithEvents FirstNameLabel As System.Windows.Forms.Label
     Friend WithEvents LastNameLabel As System.Windows.Forms.Label
     Friend WithEvents UserIdLabel As System.Windows.Forms.Label
@@ -387,7 +387,7 @@ Partial Class frmEmployee
     Friend WithEvents StoreNumLabel As System.Windows.Forms.Label
     Friend WithEvents UsrSecLvlLabel As System.Windows.Forms.Label
     Friend WithEvents lblEmp As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtEmpID As System.Windows.Forms.TextBox
     Friend WithEvents EmployeeIdLabel As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents EmpDataGridView As System.Windows.Forms.DataGridView
