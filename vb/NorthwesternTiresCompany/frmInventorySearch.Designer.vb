@@ -47,8 +47,8 @@ Partial Class frmInventorySearch
         Me.StoreNbrDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.InventoryNbrDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.InvSearchBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Comp4002012DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Comp400_2012DataSet = New NorthwesternTiresCompany.comp400_2012DataSet()
+        Me.Comp4002012DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblStep2 = New System.Windows.Forms.Label()
         Me.InvSearchTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.invSearchTableAdapter()
         Me.TableAdapterManager = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager()
@@ -60,6 +60,8 @@ Partial Class frmInventorySearch
         Me.TireQtyTextBox = New System.Windows.Forms.TextBox()
         Me.StoreNbrTextBox = New System.Windows.Forms.TextBox()
         Me.InventoryNbrTextBox = New System.Windows.Forms.TextBox()
+        Me.cboStore = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         TireCodeLabel = New System.Windows.Forms.Label()
         ManufacturerLabel = New System.Windows.Forms.Label()
         DescriptionLabel = New System.Windows.Forms.Label()
@@ -70,8 +72,8 @@ Partial Class frmInventorySearch
         InventoryNbrLabel = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvSearchBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Comp4002012DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Comp4002012DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TireCodeLabel
@@ -181,16 +183,16 @@ Partial Class frmInventorySearch
         'txtSearch
         '
         Me.txtSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch.Location = New System.Drawing.Point(175, 64)
+        Me.txtSearch.Location = New System.Drawing.Point(12, 64)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(249, 26)
+        Me.txtSearch.Size = New System.Drawing.Size(261, 26)
         Me.txtSearch.TabIndex = 1
         '
         'lblStep1
         '
         Me.lblStep1.AutoSize = True
         Me.lblStep1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStep1.Location = New System.Drawing.Point(191, 42)
+        Me.lblStep1.Location = New System.Drawing.Point(40, 42)
         Me.lblStep1.Name = "lblStep1"
         Me.lblStep1.Size = New System.Drawing.Size(303, 17)
         Me.lblStep1.TabIndex = 25
@@ -199,7 +201,7 @@ Partial Class frmInventorySearch
         'btnSearch
         '
         Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearch.Location = New System.Drawing.Point(430, 62)
+        Me.btnSearch.Location = New System.Drawing.Point(279, 62)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(80, 30)
         Me.btnSearch.TabIndex = 2
@@ -289,15 +291,15 @@ Partial Class frmInventorySearch
         Me.InvSearchBindingSource.DataMember = "invSearch"
         Me.InvSearchBindingSource.DataSource = Me.Comp400_2012DataSet
         '
-        'Comp4002012DataSetBindingSource
-        '
-        Me.Comp4002012DataSetBindingSource.DataSource = Me.Comp400_2012DataSet
-        Me.Comp4002012DataSetBindingSource.Position = 0
-        '
         'Comp400_2012DataSet
         '
         Me.Comp400_2012DataSet.DataSetName = "comp400_2012DataSet"
         Me.Comp400_2012DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Comp4002012DataSetBindingSource
+        '
+        Me.Comp4002012DataSetBindingSource.DataSource = Me.Comp400_2012DataSet
+        Me.Comp4002012DataSetBindingSource.Position = 0
         '
         'lblStep2
         '
@@ -406,12 +408,34 @@ Partial Class frmInventorySearch
         Me.InventoryNbrTextBox.Size = New System.Drawing.Size(100, 20)
         Me.InventoryNbrTextBox.TabIndex = 11
         '
+        'cboStore
+        '
+        Me.cboStore.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboStore.FormattingEnabled = True
+        Me.cboStore.Items.AddRange(New Object() {"All", "1 (Warehouse)", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
+        Me.cboStore.Location = New System.Drawing.Point(508, 69)
+        Me.cboStore.Name = "cboStore"
+        Me.cboStore.Size = New System.Drawing.Size(161, 24)
+        Me.cboStore.TabIndex = 43
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(400, 72)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(99, 16)
+        Me.Label1.TabIndex = 44
+        Me.Label1.Text = "Store Number:"
+        '
         'frmInventorySearch
         '
         Me.AcceptButton = Me.btnSearch
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(692, 512)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.cboStore)
         Me.Controls.Add(TireCodeLabel)
         Me.Controls.Add(Me.TireCodeTextBox)
         Me.Controls.Add(ManufacturerLabel)
@@ -441,8 +465,8 @@ Partial Class frmInventorySearch
         Me.Text = "Inventory Search"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InvSearchBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Comp4002012DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Comp4002012DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -477,4 +501,6 @@ Partial Class frmInventorySearch
     Friend WithEvents TireQtyTextBox As System.Windows.Forms.TextBox
     Friend WithEvents StoreNbrTextBox As System.Windows.Forms.TextBox
     Friend WithEvents InventoryNbrTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents cboStore As System.Windows.Forms.ComboBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

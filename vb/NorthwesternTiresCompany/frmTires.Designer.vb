@@ -211,31 +211,31 @@ Partial Class frmTires
         Me.TireBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.TireBindingNavigator.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.TireBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.ToolStripSeparator2, Me.BindingNavigatorAddNewItem, Me.ToolStripSeparator3, Me.BindingNavigatorDeleteItem, Me.ToolStripSeparator1, Me.TireBindingNavigatorSaveItem})
-        Me.TireBindingNavigator.Location = New System.Drawing.Point(169, 104)
+        Me.TireBindingNavigator.Location = New System.Drawing.Point(201, 106)
         Me.TireBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.TireBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.TireBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
         Me.TireBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.TireBindingNavigator.Name = "TireBindingNavigator"
         Me.TireBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.TireBindingNavigator.Size = New System.Drawing.Size(348, 28)
+        Me.TireBindingNavigator.Size = New System.Drawing.Size(348, 26)
         Me.TireBindingNavigator.TabIndex = 22
         Me.TireBindingNavigator.Text = "BindingNavigator1"
         '
         'BindingNavigatorAddNewItem
         '
         Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.BindingNavigatorAddNewItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.BindingNavigatorAddNewItem.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold)
         Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(117, 25)
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(115, 23)
         Me.BindingNavigatorAddNewItem.Text = "Add New Tire"
         '
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 25)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 23)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         Me.BindingNavigatorCountItem.Visible = False
@@ -243,11 +243,11 @@ Partial Class frmTires
         'BindingNavigatorDeleteItem
         '
         Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.BindingNavigatorDeleteItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.BindingNavigatorDeleteItem.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold)
         Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(97, 25)
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(94, 23)
         Me.BindingNavigatorDeleteItem.Text = "Delete Tire"
         '
         'BindingNavigatorMoveFirstItem
@@ -256,7 +256,7 @@ Partial Class frmTires
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(33, 25)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(32, 23)
         Me.BindingNavigatorMoveFirstItem.Text = "First"
         Me.BindingNavigatorMoveFirstItem.Visible = False
         '
@@ -266,14 +266,14 @@ Partial Class frmTires
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(56, 25)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(52, 23)
         Me.BindingNavigatorMovePreviousItem.Text = "Previous"
         Me.BindingNavigatorMovePreviousItem.Visible = False
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 28)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 26)
         Me.BindingNavigatorSeparator.Visible = False
         '
         'BindingNavigatorPositionItem
@@ -289,7 +289,7 @@ Partial Class frmTires
         'BindingNavigatorSeparator1
         '
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 28)
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 26)
         Me.BindingNavigatorSeparator1.Visible = False
         '
         'BindingNavigatorMoveNextItem
@@ -298,7 +298,7 @@ Partial Class frmTires
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(35, 25)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(34, 23)
         Me.BindingNavigatorMoveNextItem.Text = "Next"
         Me.BindingNavigatorMoveNextItem.Visible = False
         '
@@ -308,39 +308,39 @@ Partial Class frmTires
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(32, 25)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(31, 23)
         Me.BindingNavigatorMoveLastItem.Text = "Last"
         Me.BindingNavigatorMoveLastItem.Visible = False
         '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 28)
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 26)
         Me.BindingNavigatorSeparator2.Visible = False
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 28)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 26)
         Me.ToolStripSeparator2.Visible = False
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 28)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 26)
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 28)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 26)
         '
         'TireBindingNavigatorSaveItem
         '
         Me.TireBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.TireBindingNavigatorSaveItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.TireBindingNavigatorSaveItem.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold)
         Me.TireBindingNavigatorSaveItem.Image = CType(resources.GetObject("TireBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.TireBindingNavigatorSaveItem.Name = "TireBindingNavigatorSaveItem"
-        Me.TireBindingNavigatorSaveItem.Size = New System.Drawing.Size(119, 25)
+        Me.TireBindingNavigatorSaveItem.Size = New System.Drawing.Size(124, 23)
         Me.TireBindingNavigatorSaveItem.Text = "Save Changes"
         '
         'TireCodeTextBox
