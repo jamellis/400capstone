@@ -14,4 +14,10 @@
         frmMainMenu.Show()
         Me.Close()
     End Sub
+
+    Private Sub btnInventoryReport_Click(sender As System.Object, e As System.EventArgs) Handles btnInventoryReport.Click
+        frmReportInventoryReport.Show()
+
+        Me.Hide()
+    End Sub
 End Class
