@@ -375,6 +375,7 @@ Partial Class frmInventorySearchMaint
         '
         'txtTireQty
         '
+        Me.txtTireQty.CausesValidation = False
         Me.txtTireQty.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "tireQty", True))
         Me.txtTireQty.Location = New System.Drawing.Point(519, 356)
         Me.txtTireQty.Name = "txtTireQty"

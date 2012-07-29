@@ -146,12 +146,6 @@
     <Compile Include="frmReport.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReportSales.Designer.vb">
-      <DependentUpon>frmReportSales.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmReportSales.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmSales.Designer.vb">
       <DependentUpon>frmSales.vb</DependentUpon>
     </Compile>
@@ -198,6 +192,7 @@
     <Compile Include="frmMainMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Validator.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmReportInventoryReport.resx">
@@ -227,9 +222,6 @@
     <EmbeddedResource Include="frmReport.resx">
       <DependentUpon>frmReport.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReportSales.resx">
-      <DependentUpon>frmReportSales.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmSales.resx">
       <DependentUpon>frmSales.vb</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +245,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="rptInventoryReport.rdlc" />
     <EmbeddedResource Include="rptSalesReport.rdlc" />
+    <EmbeddedResource Include="Report1.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

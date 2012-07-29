@@ -20,7 +20,12 @@ Public Class frmInventorySearchMaint
         'Me.InventoryTableAdapter.Fill(Me.Comp400_2012DataSet.inventory)
         'TODO: This line of code loads data into the 'Comp400_2012DataSet.invSearch' table. You can move, or remove it, as needed.
         ' cmd.Connection = cn
-        Me.InvSearchTableAdapter.Fill(Me.Comp400_2012DataSet.invSearch)
+        Try
+            Me.InvSearchTableAdapter.Fill(Me.Comp400_2012DataSet.invSearch)
+        Catch ex As Exception
+            MsgBox("Database error. Please contact your systems administrator " & vbNewLine & ex.Message, MsgBoxStyle.OkOnly)
+        End Try
+
         txtSearch.Focus()
     End Sub
 
@@ -38,7 +43,9 @@ Public Class frmInventorySearchMaint
     End Sub
 
     Private Sub btnUpdateQty_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpdateQty.Click
-        If txtTireQty.Text <> "" Then
+
+        If Validator.IsPresent(txtTireQty, "Quantity") AndAlso
+           Validator.IsInt32(txtTireQty, "Quantity") Then
             'cn.Open()
             'cmd.CommandText = "UPDATE inventory SET tireQty='" & Me.txtTireQty.Text & "' WHERE inventoryNbr='" & Me.txtInventoryNbr.Text & "'"
             'Dim affectedRows = cmd.ExecuteNonQuery()

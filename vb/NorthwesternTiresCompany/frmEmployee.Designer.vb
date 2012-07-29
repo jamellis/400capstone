@@ -400,12 +400,15 @@ Partial Class frmEmployee
         '
         'EmployeeDataGridView
         '
+        Me.EmployeeDataGridView.AllowUserToAddRows = False
+        Me.EmployeeDataGridView.AllowUserToDeleteRows = False
         Me.EmployeeDataGridView.AutoGenerateColumns = False
         Me.EmployeeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.EmployeeDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.EmployeeDataGridView.DataSource = Me.EmployeeBindingSource
         Me.EmployeeDataGridView.Location = New System.Drawing.Point(13, 164)
         Me.EmployeeDataGridView.Name = "EmployeeDataGridView"
+        Me.EmployeeDataGridView.ReadOnly = True
         Me.EmployeeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.EmployeeDataGridView.Size = New System.Drawing.Size(659, 268)
         Me.EmployeeDataGridView.TabIndex = 45
@@ -415,6 +418,7 @@ Partial Class frmEmployee
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "employeeID"
         Me.DataGridViewTextBoxColumn1.HeaderText = "employeeID"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
         Me.DataGridViewTextBoxColumn1.Visible = False
         '
         'DataGridViewTextBoxColumn2
@@ -423,6 +427,7 @@ Partial Class frmEmployee
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "firstName"
         Me.DataGridViewTextBoxColumn2.HeaderText = "First Name"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'DataGridViewTextBoxColumn3
         '
@@ -430,6 +435,7 @@ Partial Class frmEmployee
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "lastName"
         Me.DataGridViewTextBoxColumn3.HeaderText = "Last Name"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'DataGridViewTextBoxColumn4
         '
@@ -437,6 +443,7 @@ Partial Class frmEmployee
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "userID"
         Me.DataGridViewTextBoxColumn4.HeaderText = "User ID"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
         'DataGridViewTextBoxColumn5
         '
@@ -444,19 +451,22 @@ Partial Class frmEmployee
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "password"
         Me.DataGridViewTextBoxColumn5.HeaderText = "Password"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "storeNbr"
         Me.DataGridViewTextBoxColumn6.HeaderText = "Store Number"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
         'DataGridViewTextBoxColumn7
         '
         Me.DataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "userSecurityLevel"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Security"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Clearance"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
         '
         'lblInstructions
         '
@@ -562,9 +572,6 @@ Partial Class frmEmployee
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents EmployeeDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents lblInstructions As System.Windows.Forms.Label
-    Friend WithEvents grpBoxEmpInfo As System.Windows.Forms.GroupBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -572,4 +579,7 @@ Partial Class frmEmployee
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents lblInstructions As System.Windows.Forms.Label
+    Friend WithEvents grpBoxEmpInfo As System.Windows.Forms.GroupBox
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class
