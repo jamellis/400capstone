@@ -49,6 +49,8 @@ Partial Class frmEmployee
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.EmployeeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.LastNameTextBox = New System.Windows.Forms.TextBox()
@@ -64,8 +66,6 @@ Partial Class frmEmployee
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.lblInstructions = New System.Windows.Forms.Label()
         lblFirstName = New System.Windows.Forms.Label()
         lblLastName = New System.Windows.Forms.Label()
@@ -238,7 +238,7 @@ Partial Class frmEmployee
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         Me.BindingNavigatorCountItem.Visible = False
@@ -320,6 +320,16 @@ Partial Class frmEmployee
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         Me.BindingNavigatorSeparator2.Visible = False
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'EmployeeBindingNavigatorSaveItem
         '
@@ -444,16 +454,6 @@ Partial Class frmEmployee
         Me.DataGridViewTextBoxColumn7.HeaderText = "Clearance"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
         'lblInstructions
         '
         Me.lblInstructions.AutoSize = True
@@ -463,7 +463,7 @@ Partial Class frmEmployee
         Me.lblInstructions.Size = New System.Drawing.Size(409, 32)
         Me.lblInstructions.TabIndex = 46
         Me.lblInstructions.Text = "Select an employee from the list below. To edit details, make the" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "changes in the" & _
-            " boxes below then click Save changes."
+    " boxes below then click Save Changes."
         Me.lblInstructions.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmEmployee
