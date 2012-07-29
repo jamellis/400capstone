@@ -34,13 +34,15 @@ Partial Class frmMainMenu
         Me.btnReports = New System.Windows.Forms.Button()
         Me.btnPO = New System.Windows.Forms.Button()
         Me.pctMainLogo = New System.Windows.Forms.PictureBox()
+        Me.grpBoxMainMenu = New System.Windows.Forms.GroupBox()
         CType(Me.pctMainLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpBoxMainMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnStores
         '
         Me.btnStores.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnStores.Location = New System.Drawing.Point(367, 225)
+        Me.btnStores.Location = New System.Drawing.Point(199, 86)
         Me.btnStores.Name = "btnStores"
         Me.btnStores.Size = New System.Drawing.Size(140, 30)
         Me.btnStores.TabIndex = 6
@@ -51,7 +53,7 @@ Partial Class frmMainMenu
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(367, 448)
+        Me.btnExit.Location = New System.Drawing.Point(367, 437)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(90, 30)
         Me.btnExit.TabIndex = 10
@@ -61,7 +63,7 @@ Partial Class frmMainMenu
         'btnTires
         '
         Me.btnTires.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTires.Location = New System.Drawing.Point(367, 155)
+        Me.btnTires.Location = New System.Drawing.Point(199, 17)
         Me.btnTires.Name = "btnTires"
         Me.btnTires.Size = New System.Drawing.Size(140, 30)
         Me.btnTires.TabIndex = 5
@@ -71,17 +73,17 @@ Partial Class frmMainMenu
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(283, 11)
+        Me.lblTitle.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Location = New System.Drawing.Point(260, 114)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(118, 24)
+        Me.lblTitle.Size = New System.Drawing.Size(167, 34)
         Me.lblTitle.TabIndex = 9
         Me.lblTitle.Text = "Main Menu"
         '
         'btnLogOut
         '
-        Me.btnLogOut.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.Location = New System.Drawing.Point(228, 448)
+        Me.btnLogOut.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogOut.Location = New System.Drawing.Point(228, 435)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(90, 30)
         Me.btnLogOut.TabIndex = 9
@@ -91,7 +93,7 @@ Partial Class frmMainMenu
         'btnInventorySearch
         '
         Me.btnInventorySearch.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInventorySearch.Location = New System.Drawing.Point(178, 155)
+        Me.btnInventorySearch.Location = New System.Drawing.Point(10, 17)
         Me.btnInventorySearch.Margin = New System.Windows.Forms.Padding(2)
         Me.btnInventorySearch.Name = "btnInventorySearch"
         Me.btnInventorySearch.Size = New System.Drawing.Size(140, 30)
@@ -102,7 +104,7 @@ Partial Class frmMainMenu
         'btnInventoryMaintain
         '
         Me.btnInventoryMaintain.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInventoryMaintain.Location = New System.Drawing.Point(178, 225)
+        Me.btnInventoryMaintain.Location = New System.Drawing.Point(10, 86)
         Me.btnInventoryMaintain.Margin = New System.Windows.Forms.Padding(2)
         Me.btnInventoryMaintain.Name = "btnInventoryMaintain"
         Me.btnInventoryMaintain.Size = New System.Drawing.Size(140, 30)
@@ -113,7 +115,7 @@ Partial Class frmMainMenu
         'btnSales
         '
         Me.btnSales.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSales.Location = New System.Drawing.Point(178, 295)
+        Me.btnSales.Location = New System.Drawing.Point(10, 155)
         Me.btnSales.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSales.Name = "btnSales"
         Me.btnSales.Size = New System.Drawing.Size(140, 30)
@@ -124,7 +126,7 @@ Partial Class frmMainMenu
         'btnEmployee
         '
         Me.btnEmployee.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEmployee.Location = New System.Drawing.Point(367, 295)
+        Me.btnEmployee.Location = New System.Drawing.Point(199, 155)
         Me.btnEmployee.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEmployee.Name = "btnEmployee"
         Me.btnEmployee.Size = New System.Drawing.Size(140, 30)
@@ -135,7 +137,7 @@ Partial Class frmMainMenu
         'btnReports
         '
         Me.btnReports.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReports.Location = New System.Drawing.Point(178, 365)
+        Me.btnReports.Location = New System.Drawing.Point(10, 224)
         Me.btnReports.Margin = New System.Windows.Forms.Padding(2)
         Me.btnReports.Name = "btnReports"
         Me.btnReports.Size = New System.Drawing.Size(140, 30)
@@ -146,7 +148,7 @@ Partial Class frmMainMenu
         'btnPO
         '
         Me.btnPO.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPO.Location = New System.Drawing.Point(367, 365)
+        Me.btnPO.Location = New System.Drawing.Point(199, 224)
         Me.btnPO.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPO.Name = "btnPO"
         Me.btnPO.Size = New System.Drawing.Size(140, 30)
@@ -156,35 +158,49 @@ Partial Class frmMainMenu
         '
         'pctMainLogo
         '
-        Me.pctMainLogo.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.nwtires_logo_sm
-        Me.pctMainLogo.Location = New System.Drawing.Point(226, 47)
+        Me.pctMainLogo.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.nwtires_logo
+        Me.pctMainLogo.Location = New System.Drawing.Point(194, 11)
         Me.pctMainLogo.Margin = New System.Windows.Forms.Padding(2)
         Me.pctMainLogo.Name = "pctMainLogo"
-        Me.pctMainLogo.Size = New System.Drawing.Size(232, 73)
+        Me.pctMainLogo.Size = New System.Drawing.Size(296, 95)
         Me.pctMainLogo.TabIndex = 26
         Me.pctMainLogo.TabStop = False
+        '
+        'grpBoxMainMenu
+        '
+        Me.grpBoxMainMenu.Controls.Add(Me.btnPO)
+        Me.grpBoxMainMenu.Controls.Add(Me.btnReports)
+        Me.grpBoxMainMenu.Controls.Add(Me.btnEmployee)
+        Me.grpBoxMainMenu.Controls.Add(Me.btnSales)
+        Me.grpBoxMainMenu.Controls.Add(Me.btnInventoryMaintain)
+        Me.grpBoxMainMenu.Controls.Add(Me.btnInventorySearch)
+        Me.grpBoxMainMenu.Controls.Add(Me.btnStores)
+        Me.grpBoxMainMenu.Controls.Add(Me.btnTires)
+        Me.grpBoxMainMenu.Location = New System.Drawing.Point(169, 156)
+        Me.grpBoxMainMenu.Name = "grpBoxMainMenu"
+        Me.grpBoxMainMenu.Size = New System.Drawing.Size(347, 271)
+        Me.grpBoxMainMenu.TabIndex = 27
+        Me.grpBoxMainMenu.TabStop = False
         '
         'frmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 512)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.grpBoxMainMenu)
         Me.Controls.Add(Me.pctMainLogo)
-        Me.Controls.Add(Me.btnPO)
-        Me.Controls.Add(Me.btnReports)
-        Me.Controls.Add(Me.btnEmployee)
-        Me.Controls.Add(Me.btnSales)
-        Me.Controls.Add(Me.btnInventoryMaintain)
-        Me.Controls.Add(Me.btnInventorySearch)
         Me.Controls.Add(Me.btnLogOut)
-        Me.Controls.Add(Me.btnStores)
         Me.Controls.Add(Me.btnExit)
-        Me.Controls.Add(Me.btnTires)
         Me.Controls.Add(Me.lblTitle)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmMainMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main Menu"
         CType(Me.pctMainLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpBoxMainMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -201,4 +217,5 @@ Partial Class frmMainMenu
     Friend WithEvents btnReports As System.Windows.Forms.Button
     Friend WithEvents btnPO As System.Windows.Forms.Button
     Friend WithEvents pctMainLogo As System.Windows.Forms.PictureBox
+    Friend WithEvents grpBoxMainMenu As System.Windows.Forms.GroupBox
 End Class
