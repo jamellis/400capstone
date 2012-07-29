@@ -36,17 +36,18 @@ Partial Class frmLogin
         'lblInstructions
         '
         Me.lblInstructions.AutoSize = True
-        Me.lblInstructions.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInstructions.Location = New System.Drawing.Point(44, 28)
+        Me.lblInstructions.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInstructions.ForeColor = System.Drawing.Color.Blue
+        Me.lblInstructions.Location = New System.Drawing.Point(45, 28)
         Me.lblInstructions.Name = "lblInstructions"
-        Me.lblInstructions.Size = New System.Drawing.Size(283, 36)
+        Me.lblInstructions.Size = New System.Drawing.Size(310, 38)
         Me.lblInstructions.TabIndex = 0
         Me.lblInstructions.Text = "Please type your User ID and Password" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "and click Login. Click Exit to cancel."
         '
         'txtUserID
         '
         Me.txtUserID.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUserID.Location = New System.Drawing.Point(162, 90)
+        Me.txtUserID.Location = New System.Drawing.Point(145, 113)
         Me.txtUserID.Name = "txtUserID"
         Me.txtUserID.Size = New System.Drawing.Size(170, 26)
         Me.txtUserID.TabIndex = 1
@@ -54,7 +55,7 @@ Partial Class frmLogin
         'txtPassword
         '
         Me.txtPassword.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(162, 139)
+        Me.txtPassword.Location = New System.Drawing.Point(145, 144)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(170, 26)
@@ -64,7 +65,7 @@ Partial Class frmLogin
         '
         Me.lblUserID.AutoSize = True
         Me.lblUserID.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUserID.Location = New System.Drawing.Point(47, 96)
+        Me.lblUserID.Location = New System.Drawing.Point(75, 117)
         Me.lblUserID.Name = "lblUserID"
         Me.lblUserID.Size = New System.Drawing.Size(64, 18)
         Me.lblUserID.TabIndex = 3
@@ -74,16 +75,16 @@ Partial Class frmLogin
         '
         Me.lblPassword.AutoSize = True
         Me.lblPassword.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPassword.Location = New System.Drawing.Point(47, 145)
+        Me.lblPassword.Location = New System.Drawing.Point(57, 148)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(78, 18)
+        Me.lblPassword.Size = New System.Drawing.Size(82, 18)
         Me.lblPassword.TabIndex = 4
-        Me.lblPassword.Text = "Password"
+        Me.lblPassword.Text = "Password:"
         '
         'btnLogin
         '
         Me.btnLogin.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(47, 227)
+        Me.btnLogin.Location = New System.Drawing.Point(44, 227)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(80, 30)
         Me.btnLogin.TabIndex = 5
@@ -94,7 +95,8 @@ Partial Class frmLogin
         '
         Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Location = New System.Drawing.Point(252, 227)
+        Me.btnExit.ForeColor = System.Drawing.Color.Red
+        Me.btnExit.Location = New System.Drawing.Point(249, 227)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(80, 30)
         Me.btnExit.TabIndex = 6
@@ -108,9 +110,9 @@ Partial Class frmLogin
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(123, 185)
+        Me.Button1.Location = New System.Drawing.Point(144, 227)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(132, 36)
+        Me.Button1.Size = New System.Drawing.Size(89, 30)
         Me.Button1.TabIndex = 7
         Me.Button1.Text = "Easy login"
         Me.Button1.UseVisualStyleBackColor = True
@@ -122,6 +124,7 @@ Partial Class frmLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnExit
         Me.ClientSize = New System.Drawing.Size(373, 287)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnLogin)
@@ -130,6 +133,9 @@ Partial Class frmLogin
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtUserID)
         Me.Controls.Add(Me.lblInstructions)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
