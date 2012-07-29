@@ -455,7 +455,7 @@ Partial Class frmEmployee
         '
         Me.DataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "userSecurityLevel"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Clearance"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Security"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
         'lblInstructions
@@ -562,6 +562,9 @@ Partial Class frmEmployee
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents EmployeeDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents lblInstructions As System.Windows.Forms.Label
+    Friend WithEvents grpBoxEmpInfo As System.Windows.Forms.GroupBox
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -569,7 +572,4 @@ Partial Class frmEmployee
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents lblInstructions As System.Windows.Forms.Label
-    Friend WithEvents grpBoxEmpInfo As System.Windows.Forms.GroupBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class
