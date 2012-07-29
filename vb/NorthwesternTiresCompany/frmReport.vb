@@ -1,10 +1,17 @@
 ﻿Public Class frmReport
 
-    Private Sub frmReport_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'comp400_2012DataSetSalesReporting.SalesReportTableAdapter' table. You can move, or remove it, as needed.
+    
+    Private Sub btnSalesReport_Click(sender As System.Object, e As System.EventArgs) Handles btnSalesReport.Click
+        frmReportSales.Show()
+        Me.Hide()
+    End Sub
 
-        Me.SalesReportTableAdapterTableAdapter.Fill(Me.comp400_2012DataSetSalesReporting.SalesReportTableAdapter)
+    Private Sub btnExit_Click(sender As System.Object, e As System.EventArgs) Handles btnExit.Click
+        Application.Exit()
+    End Sub
 
-        Me.ReportViewer1.RefreshReport()
+    Private Sub btnBack_Click(sender As System.Object, e As System.EventArgs) Handles btnBack.Click
+        frmMainMenu.Show()
+        Me.Close()
     End Sub
 End Class
