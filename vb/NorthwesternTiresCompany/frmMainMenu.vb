@@ -43,12 +43,14 @@
     End Sub
 
     Private Sub btnEmployee_Click(sender As System.Object, e As System.EventArgs) Handles btnEmployee.Click
-        frmEmployee.Show()
+        Dim EmployeeForm As New frmEmployee
+
+        EmployeeForm.Show()
         Me.Close()
     End Sub
 
     Private Sub btnPO_Click(sender As System.Object, e As System.EventArgs) Handles btnPO.Click
-        frmPo.Show()
+        frmPO2.Show()
         Me.Close()
     End Sub
 End Class

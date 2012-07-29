@@ -1,4 +1,9 @@
-﻿Public Class frmInventorySearch
+﻿Imports System.Data.SqlClient
+
+Public Class frmInventorySearchMaint
+    Dim cn As New SqlConnection("Data Source=localhost;Initial Catalog=comp400_2012;Integrated Security=True")
+    Dim cmd As New SqlCommand
+    Dim dr As SqlDataReader
 
     Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
         Application.Exit()
@@ -14,6 +19,7 @@
         'TODO: This line of code loads data into the 'Comp400_2012DataSet.inventory' table. You can move, or remove it, as needed.
         'Me.InventoryTableAdapter.Fill(Me.Comp400_2012DataSet.inventory)
         'TODO: This line of code loads data into the 'Comp400_2012DataSet.invSearch' table. You can move, or remove it, as needed.
+        cmd.Connection = cn
         Me.InvSearchTableAdapter.Fill(Me.Comp400_2012DataSet.invSearch)
         txtSearch.Focus()
     End Sub
@@ -31,8 +37,12 @@
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        frmInventorySearchMaint.Show()
-        Me.Close()
+    Private Sub btnUpdateQty_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpdateQty.Click
+        If txtTireQty.Text <> "" Then
+            cn.Open()
+            cmd.CommandText = "UPDATE inventory SET tireQty='" & Me.txtTireQty.Text & "' WHERE inventoryNbr='" & Me.txtInventoryNbr.Text & "'"
+            cmd.ExecuteNonQuery()
+            cn.Close()
+        End If
     End Sub
 End Class

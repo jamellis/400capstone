@@ -1,4 +1,5 @@
-﻿Partial Class comp400_2012DataSet
+﻿
 
 
+Partial Public Class comp400_2012DataSet
 End Class

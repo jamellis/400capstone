@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmInventorySearch
+Partial Class frmInventorySearchMaint
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -30,6 +30,7 @@ Partial Class frmInventorySearch
         Dim RetailPriceLabel As System.Windows.Forms.Label
         Dim TireQtyLabel As System.Windows.Forms.Label
         Dim StoreNbrLabel As System.Windows.Forms.Label
+        Dim InventoryNbrLabel As System.Windows.Forms.Label
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
@@ -51,16 +52,18 @@ Partial Class frmInventorySearch
         Me.lblStep2 = New System.Windows.Forms.Label()
         Me.InvSearchTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.invSearchTableAdapter()
         Me.TableAdapterManager = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager()
-        Me.TireCodeTextBox = New System.Windows.Forms.TextBox()
-        Me.ManufacturerTextBox = New System.Windows.Forms.TextBox()
-        Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
-        Me.ManufacturerSizeTextBox = New System.Windows.Forms.TextBox()
-        Me.RetailPriceTextBox = New System.Windows.Forms.TextBox()
-        Me.TireQtyTextBox = New System.Windows.Forms.TextBox()
-        Me.StoreNbrTextBox = New System.Windows.Forms.TextBox()
+        Me.txtTireCode = New System.Windows.Forms.TextBox()
+        Me.txtManufacturer = New System.Windows.Forms.TextBox()
+        Me.txtDescription = New System.Windows.Forms.TextBox()
+        Me.txtManufacturerSize = New System.Windows.Forms.TextBox()
+        Me.txtRetailPrice = New System.Windows.Forms.TextBox()
+        Me.txtTireQty = New System.Windows.Forms.TextBox()
+        Me.txtStoreNbr = New System.Windows.Forms.TextBox()
         Me.cboStore = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnUpdateQty = New System.Windows.Forms.Button()
+        Me.txtInventoryNbr = New System.Windows.Forms.TextBox()
+        Me.InventoryTableAdapter1 = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.inventoryTableAdapter()
         TireCodeLabel = New System.Windows.Forms.Label()
         ManufacturerLabel = New System.Windows.Forms.Label()
         DescriptionLabel = New System.Windows.Forms.Label()
@@ -68,6 +71,7 @@ Partial Class frmInventorySearch
         RetailPriceLabel = New System.Windows.Forms.Label()
         TireQtyLabel = New System.Windows.Forms.Label()
         StoreNbrLabel = New System.Windows.Forms.Label()
+        InventoryNbrLabel = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvSearchBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -136,6 +140,16 @@ Partial Class frmInventorySearch
         StoreNbrLabel.Size = New System.Drawing.Size(75, 13)
         StoreNbrLabel.TabIndex = 40
         StoreNbrLabel.Text = "Store Number:"
+        '
+        'InventoryNbrLabel
+        '
+        InventoryNbrLabel.AutoSize = True
+        InventoryNbrLabel.Location = New System.Drawing.Point(418, 411)
+        InventoryNbrLabel.Name = "InventoryNbrLabel"
+        InventoryNbrLabel.Size = New System.Drawing.Size(74, 13)
+        InventoryNbrLabel.TabIndex = 45
+        InventoryNbrLabel.Text = "Inventory Nbr:"
+        InventoryNbrLabel.Visible = False
         '
         'lblTitle
         '
@@ -324,69 +338,68 @@ Partial Class frmInventorySearch
         Me.TableAdapterManager.wholesaleOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.wholesaleOrderTableAdapter = Nothing
         '
-        'TireCodeTextBox
+        'txtTireCode
         '
-        Me.TireCodeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "tireCode", True))
-        Me.TireCodeTextBox.Location = New System.Drawing.Point(519, 304)
-        Me.TireCodeTextBox.Name = "TireCodeTextBox"
-        Me.TireCodeTextBox.ReadOnly = True
-        Me.TireCodeTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.TireCodeTextBox.TabIndex = 4
+        Me.txtTireCode.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "tireCode", True))
+        Me.txtTireCode.Location = New System.Drawing.Point(519, 304)
+        Me.txtTireCode.Name = "txtTireCode"
+        Me.txtTireCode.ReadOnly = True
+        Me.txtTireCode.Size = New System.Drawing.Size(100, 20)
+        Me.txtTireCode.TabIndex = 4
         '
-        'ManufacturerTextBox
+        'txtManufacturer
         '
-        Me.ManufacturerTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "manufacturer", True))
-        Me.ManufacturerTextBox.Location = New System.Drawing.Point(151, 304)
-        Me.ManufacturerTextBox.Name = "ManufacturerTextBox"
-        Me.ManufacturerTextBox.ReadOnly = True
-        Me.ManufacturerTextBox.Size = New System.Drawing.Size(192, 20)
-        Me.ManufacturerTextBox.TabIndex = 5
+        Me.txtManufacturer.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "manufacturer", True))
+        Me.txtManufacturer.Location = New System.Drawing.Point(151, 304)
+        Me.txtManufacturer.Name = "txtManufacturer"
+        Me.txtManufacturer.ReadOnly = True
+        Me.txtManufacturer.Size = New System.Drawing.Size(192, 20)
+        Me.txtManufacturer.TabIndex = 5
         '
-        'DescriptionTextBox
+        'txtDescription
         '
-        Me.DescriptionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "description", True))
-        Me.DescriptionTextBox.Location = New System.Drawing.Point(151, 356)
-        Me.DescriptionTextBox.Multiline = True
-        Me.DescriptionTextBox.Name = "DescriptionTextBox"
-        Me.DescriptionTextBox.ReadOnly = True
-        Me.DescriptionTextBox.Size = New System.Drawing.Size(192, 67)
-        Me.DescriptionTextBox.TabIndex = 7
+        Me.txtDescription.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "description", True))
+        Me.txtDescription.Location = New System.Drawing.Point(151, 356)
+        Me.txtDescription.Multiline = True
+        Me.txtDescription.Name = "txtDescription"
+        Me.txtDescription.ReadOnly = True
+        Me.txtDescription.Size = New System.Drawing.Size(192, 67)
+        Me.txtDescription.TabIndex = 7
         '
-        'ManufacturerSizeTextBox
+        'txtManufacturerSize
         '
-        Me.ManufacturerSizeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "manufacturerSize", True))
-        Me.ManufacturerSizeTextBox.Location = New System.Drawing.Point(151, 330)
-        Me.ManufacturerSizeTextBox.Name = "ManufacturerSizeTextBox"
-        Me.ManufacturerSizeTextBox.ReadOnly = True
-        Me.ManufacturerSizeTextBox.Size = New System.Drawing.Size(192, 20)
-        Me.ManufacturerSizeTextBox.TabIndex = 6
+        Me.txtManufacturerSize.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "manufacturerSize", True))
+        Me.txtManufacturerSize.Location = New System.Drawing.Point(151, 330)
+        Me.txtManufacturerSize.Name = "txtManufacturerSize"
+        Me.txtManufacturerSize.ReadOnly = True
+        Me.txtManufacturerSize.Size = New System.Drawing.Size(192, 20)
+        Me.txtManufacturerSize.TabIndex = 6
         '
-        'RetailPriceTextBox
+        'txtRetailPrice
         '
-        Me.RetailPriceTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "retailPrice", True))
-        Me.RetailPriceTextBox.Location = New System.Drawing.Point(519, 330)
-        Me.RetailPriceTextBox.Name = "RetailPriceTextBox"
-        Me.RetailPriceTextBox.ReadOnly = True
-        Me.RetailPriceTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.RetailPriceTextBox.TabIndex = 8
+        Me.txtRetailPrice.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "retailPrice", True))
+        Me.txtRetailPrice.Location = New System.Drawing.Point(519, 330)
+        Me.txtRetailPrice.Name = "txtRetailPrice"
+        Me.txtRetailPrice.ReadOnly = True
+        Me.txtRetailPrice.Size = New System.Drawing.Size(100, 20)
+        Me.txtRetailPrice.TabIndex = 8
         '
-        'TireQtyTextBox
+        'txtTireQty
         '
-        Me.TireQtyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "tireQty", True))
-        Me.TireQtyTextBox.Location = New System.Drawing.Point(519, 356)
-        Me.TireQtyTextBox.Name = "TireQtyTextBox"
-        Me.TireQtyTextBox.ReadOnly = True
-        Me.TireQtyTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.TireQtyTextBox.TabIndex = 9
+        Me.txtTireQty.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "tireQty", True))
+        Me.txtTireQty.Location = New System.Drawing.Point(519, 356)
+        Me.txtTireQty.Name = "txtTireQty"
+        Me.txtTireQty.Size = New System.Drawing.Size(74, 20)
+        Me.txtTireQty.TabIndex = 9
         '
-        'StoreNbrTextBox
+        'txtStoreNbr
         '
-        Me.StoreNbrTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "storeNbr", True))
-        Me.StoreNbrTextBox.Location = New System.Drawing.Point(519, 382)
-        Me.StoreNbrTextBox.Name = "StoreNbrTextBox"
-        Me.StoreNbrTextBox.ReadOnly = True
-        Me.StoreNbrTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.StoreNbrTextBox.TabIndex = 10
+        Me.txtStoreNbr.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "storeNbr", True))
+        Me.txtStoreNbr.Location = New System.Drawing.Point(519, 382)
+        Me.txtStoreNbr.Name = "txtStoreNbr"
+        Me.txtStoreNbr.ReadOnly = True
+        Me.txtStoreNbr.Size = New System.Drawing.Size(100, 20)
+        Me.txtStoreNbr.TabIndex = 10
         '
         'cboStore
         '
@@ -408,38 +421,53 @@ Partial Class frmInventorySearch
         Me.Label1.TabIndex = 44
         Me.Label1.Text = "Store Number:"
         '
-        'Button1
+        'btnUpdateQty
         '
-        Me.Button1.Location = New System.Drawing.Point(370, 438)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(104, 23)
-        Me.Button1.TabIndex = 45
-        Me.Button1.Text = "Modify Quantity"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnUpdateQty.Location = New System.Drawing.Point(605, 354)
+        Me.btnUpdateQty.Name = "btnUpdateQty"
+        Me.btnUpdateQty.Size = New System.Drawing.Size(64, 23)
+        Me.btnUpdateQty.TabIndex = 45
+        Me.btnUpdateQty.Text = "Update"
+        Me.btnUpdateQty.UseVisualStyleBackColor = True
         '
-        'frmInventorySearch
+        'txtInventoryNbr
+        '
+        Me.txtInventoryNbr.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "inventoryNbr", True))
+        Me.txtInventoryNbr.Location = New System.Drawing.Point(519, 408)
+        Me.txtInventoryNbr.Name = "txtInventoryNbr"
+        Me.txtInventoryNbr.Size = New System.Drawing.Size(100, 20)
+        Me.txtInventoryNbr.TabIndex = 46
+        Me.txtInventoryNbr.Visible = False
+        '
+        'InventoryTableAdapter1
+        '
+        Me.InventoryTableAdapter1.ClearBeforeFill = True
+        '
+        'frmInventorySearchMaint
         '
         Me.AcceptButton = Me.btnSearch
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(692, 512)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(684, 512)
+        Me.Controls.Add(InventoryNbrLabel)
+        Me.Controls.Add(Me.txtInventoryNbr)
+        Me.Controls.Add(Me.btnUpdateQty)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cboStore)
         Me.Controls.Add(TireCodeLabel)
-        Me.Controls.Add(Me.TireCodeTextBox)
+        Me.Controls.Add(Me.txtTireCode)
         Me.Controls.Add(ManufacturerLabel)
-        Me.Controls.Add(Me.ManufacturerTextBox)
+        Me.Controls.Add(Me.txtManufacturer)
         Me.Controls.Add(DescriptionLabel)
-        Me.Controls.Add(Me.DescriptionTextBox)
+        Me.Controls.Add(Me.txtDescription)
         Me.Controls.Add(ManufacturerSizeLabel)
-        Me.Controls.Add(Me.ManufacturerSizeTextBox)
+        Me.Controls.Add(Me.txtManufacturerSize)
         Me.Controls.Add(RetailPriceLabel)
-        Me.Controls.Add(Me.RetailPriceTextBox)
+        Me.Controls.Add(Me.txtRetailPrice)
         Me.Controls.Add(TireQtyLabel)
-        Me.Controls.Add(Me.TireQtyTextBox)
+        Me.Controls.Add(Me.txtTireQty)
         Me.Controls.Add(StoreNbrLabel)
-        Me.Controls.Add(Me.StoreNbrTextBox)
+        Me.Controls.Add(Me.txtStoreNbr)
         Me.Controls.Add(Me.lblStep2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnSearch)
@@ -448,7 +476,7 @@ Partial Class frmInventorySearch
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.lblTitle)
-        Me.Name = "frmInventorySearch"
+        Me.Name = "frmInventorySearchMaint"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inventory Search"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -481,14 +509,16 @@ Partial Class frmInventorySearch
     Friend WithEvents StoreNbrDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents InventoryNbrDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents InvSearchBindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents TireCodeTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents ManufacturerTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DescriptionTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents ManufacturerSizeTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents RetailPriceTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents TireQtyTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents StoreNbrTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents txtTireCode As System.Windows.Forms.TextBox
+    Friend WithEvents txtManufacturer As System.Windows.Forms.TextBox
+    Friend WithEvents txtDescription As System.Windows.Forms.TextBox
+    Friend WithEvents txtManufacturerSize As System.Windows.Forms.TextBox
+    Friend WithEvents txtRetailPrice As System.Windows.Forms.TextBox
+    Friend WithEvents txtTireQty As System.Windows.Forms.TextBox
+    Friend WithEvents txtStoreNbr As System.Windows.Forms.TextBox
     Friend WithEvents cboStore As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnUpdateQty As System.Windows.Forms.Button
+    Friend WithEvents txtInventoryNbr As System.Windows.Forms.TextBox
+    Friend WithEvents InventoryTableAdapter1 As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.inventoryTableAdapter
 End Class

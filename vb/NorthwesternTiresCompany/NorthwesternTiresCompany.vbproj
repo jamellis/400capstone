@@ -87,6 +87,12 @@
     <Compile Include="frmEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmInventorySearchMaint.Designer.vb">
+      <DependentUpon>frmInventorySearchMaint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventorySearchMaint.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmInventoryMaintain.Designer.vb">
       <DependentUpon>frmInventoryMaintain.vb</DependentUpon>
     </Compile>
@@ -109,6 +115,12 @@
       <DependentUpon>frmPo.vb</DependentUpon>
     </Compile>
     <Compile Include="frmPo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPO2.Designer.vb">
+      <DependentUpon>frmPO2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPO2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmReport.Designer.vb">
@@ -168,6 +180,9 @@
     <EmbeddedResource Include="frmEmployee.resx">
       <DependentUpon>frmEmployee.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInventorySearchMaint.resx">
+      <DependentUpon>frmInventorySearchMaint.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInventoryMaintain.resx">
       <DependentUpon>frmInventoryMaintain.vb</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPo.resx">
       <DependentUpon>frmPo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPO2.resx">
+      <DependentUpon>frmPO2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSales.resx">
       <DependentUpon>frmSales.vb</DependentUpon>
