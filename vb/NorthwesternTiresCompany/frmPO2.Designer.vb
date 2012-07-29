@@ -56,6 +56,7 @@ Partial Class frmPO2
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PurchaseOrderBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,15 +64,17 @@ Partial Class frmPO2
         CType(Me.PODataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PurchaseOrderDetailBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PODetailDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblStep1
         '
         Me.lblStep1.AutoSize = True
-        Me.lblStep1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStep1.Location = New System.Drawing.Point(42, 44)
+        Me.lblStep1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStep1.ForeColor = System.Drawing.Color.Red
+        Me.lblStep1.Location = New System.Drawing.Point(183, 134)
         Me.lblStep1.Name = "lblStep1"
-        Me.lblStep1.Size = New System.Drawing.Size(271, 17)
+        Me.lblStep1.Size = New System.Drawing.Size(322, 19)
         Me.lblStep1.TabIndex = 29
         Me.lblStep1.Text = "Double Click PO to see details for that PO"
         '
@@ -79,7 +82,7 @@ Partial Class frmPO2
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(581, 472)
+        Me.btnExit.Location = New System.Drawing.Point(579, 487)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(90, 30)
         Me.btnExit.TabIndex = 27
@@ -90,7 +93,7 @@ Partial Class frmPO2
         '
         Me.btnBack.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnBack.Location = New System.Drawing.Point(14, 472)
+        Me.btnBack.Location = New System.Drawing.Point(12, 487)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(90, 30)
         Me.btnBack.TabIndex = 26
@@ -100,10 +103,10 @@ Partial Class frmPO2
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(252, 11)
+        Me.lblTitle.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Location = New System.Drawing.Point(221, 93)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(181, 24)
+        Me.lblTitle.Size = New System.Drawing.Size(247, 34)
         Me.lblTitle.TabIndex = 28
         Me.lblTitle.Text = "Purchase Orders"
         '
@@ -155,7 +158,7 @@ Partial Class frmPO2
         Me.PurchaseOrderBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.PurchaseOrderBindingNavigator.Name = "PurchaseOrderBindingNavigator"
         Me.PurchaseOrderBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.PurchaseOrderBindingNavigator.Size = New System.Drawing.Size(278, 25)
+        Me.PurchaseOrderBindingNavigator.Size = New System.Drawing.Size(277, 25)
         Me.PurchaseOrderBindingNavigator.TabIndex = 30
         Me.PurchaseOrderBindingNavigator.Text = "BindingNavigator1"
         Me.PurchaseOrderBindingNavigator.Visible = False
@@ -172,7 +175,7 @@ Partial Class frmPO2
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -259,10 +262,10 @@ Partial Class frmPO2
         Me.PODataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.PODataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.PODataGridView.DataSource = Me.PurchaseOrderBindingSource
-        Me.PODataGridView.Location = New System.Drawing.Point(12, 72)
+        Me.PODataGridView.Location = New System.Drawing.Point(12, 179)
         Me.PODataGridView.Name = "PODataGridView"
         Me.PODataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.PODataGridView.Size = New System.Drawing.Size(351, 379)
+        Me.PODataGridView.Size = New System.Drawing.Size(351, 302)
         Me.PODataGridView.TabIndex = 30
         '
         'DataGridViewTextBoxColumn1
@@ -301,10 +304,10 @@ Partial Class frmPO2
         Me.PODetailDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.PODetailDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.PODetailDataGridView.DataSource = Me.PurchaseOrderDetailBindingSource
-        Me.PODetailDataGridView.Location = New System.Drawing.Point(369, 72)
+        Me.PODetailDataGridView.Location = New System.Drawing.Point(369, 179)
         Me.PODetailDataGridView.Name = "PODetailDataGridView"
         Me.PODetailDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.PODetailDataGridView.Size = New System.Drawing.Size(302, 379)
+        Me.PODetailDataGridView.Size = New System.Drawing.Size(302, 302)
         Me.PODetailDataGridView.TabIndex = 30
         '
         'DataGridViewTextBoxColumn4
@@ -335,11 +338,22 @@ Partial Class frmPO2
         Me.DataGridViewTextBoxColumn7.HeaderText = "Quantity"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.nwtires_logo_sm
+        Me.PictureBox1.Location = New System.Drawing.Point(229, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(230, 74)
+        Me.PictureBox1.TabIndex = 31
+        Me.PictureBox1.TabStop = False
+        '
         'frmPO2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(684, 512)
+        Me.ClientSize = New System.Drawing.Size(684, 524)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PODetailDataGridView)
         Me.Controls.Add(Me.PODataGridView)
         Me.Controls.Add(Me.PurchaseOrderBindingNavigator)
@@ -347,6 +361,9 @@ Partial Class frmPO2
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.lblTitle)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmPO2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Purchase Orders"
@@ -358,6 +375,7 @@ Partial Class frmPO2
         CType(Me.PODataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PurchaseOrderDetailBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PODetailDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -394,4 +412,5 @@ Partial Class frmPO2
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class
