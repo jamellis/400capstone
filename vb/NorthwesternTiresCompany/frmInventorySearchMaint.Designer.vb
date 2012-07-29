@@ -30,7 +30,6 @@ Partial Class frmInventorySearchMaint
         Dim RetailPriceLabel As System.Windows.Forms.Label
         Dim TireQtyLabel As System.Windows.Forms.Label
         Dim StoreNbrLabel As System.Windows.Forms.Label
-        Dim InventoryNbrLabel As System.Windows.Forms.Label
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
@@ -62,8 +61,9 @@ Partial Class frmInventorySearchMaint
         Me.cboStore = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnUpdateQty = New System.Windows.Forms.Button()
-        Me.txtInventoryNbr = New System.Windows.Forms.TextBox()
         Me.InventoryTableAdapter1 = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.inventoryTableAdapter()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         TireCodeLabel = New System.Windows.Forms.Label()
         ManufacturerLabel = New System.Windows.Forms.Label()
         DescriptionLabel = New System.Windows.Forms.Label()
@@ -71,7 +71,6 @@ Partial Class frmInventorySearchMaint
         RetailPriceLabel = New System.Windows.Forms.Label()
         TireQtyLabel = New System.Windows.Forms.Label()
         StoreNbrLabel = New System.Windows.Forms.Label()
-        InventoryNbrLabel = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvSearchBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -141,25 +140,15 @@ Partial Class frmInventorySearchMaint
         StoreNbrLabel.TabIndex = 40
         StoreNbrLabel.Text = "Store Number:"
         '
-        'InventoryNbrLabel
-        '
-        InventoryNbrLabel.AutoSize = True
-        InventoryNbrLabel.Location = New System.Drawing.Point(418, 411)
-        InventoryNbrLabel.Name = "InventoryNbrLabel"
-        InventoryNbrLabel.Size = New System.Drawing.Size(74, 13)
-        InventoryNbrLabel.TabIndex = 45
-        InventoryNbrLabel.Text = "Inventory Nbr:"
-        InventoryNbrLabel.Visible = False
-        '
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(255, 9)
+        Me.lblTitle.Location = New System.Drawing.Point(245, 9)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(182, 24)
+        Me.lblTitle.Size = New System.Drawing.Size(195, 24)
         Me.lblTitle.TabIndex = 19
-        Me.lblTitle.Text = "Inventory Search"
+        Me.lblTitle.Text = "Inventory Maintain"
         '
         'btnExit
         '
@@ -430,18 +419,29 @@ Partial Class frmInventorySearchMaint
         Me.btnUpdateQty.Text = "Update"
         Me.btnUpdateQty.UseVisualStyleBackColor = True
         '
-        'txtInventoryNbr
-        '
-        Me.txtInventoryNbr.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InvSearchBindingSource, "inventoryNbr", True))
-        Me.txtInventoryNbr.Location = New System.Drawing.Point(519, 408)
-        Me.txtInventoryNbr.Name = "txtInventoryNbr"
-        Me.txtInventoryNbr.Size = New System.Drawing.Size(100, 20)
-        Me.txtInventoryNbr.TabIndex = 46
-        Me.txtInventoryNbr.Visible = False
-        '
         'InventoryTableAdapter1
         '
         Me.InventoryTableAdapter1.ClearBeforeFill = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(397, 417)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(272, 17)
+        Me.Label2.TabIndex = 46
+        Me.Label2.Text = "Step 3: Change Quantity and click Update"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(426, 42)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(235, 17)
+        Me.Label3.TabIndex = 47
+        Me.Label3.Text = "(Optional) Choose the store number"
         '
         'frmInventorySearchMaint
         '
@@ -449,8 +449,8 @@ Partial Class frmInventorySearchMaint
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 512)
-        Me.Controls.Add(InventoryNbrLabel)
-        Me.Controls.Add(Me.txtInventoryNbr)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnUpdateQty)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cboStore)
@@ -478,7 +478,7 @@ Partial Class frmInventorySearchMaint
         Me.Controls.Add(Me.lblTitle)
         Me.Name = "frmInventorySearchMaint"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Inventory Search"
+        Me.Text = "Inventory Maintain"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InvSearchBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -519,6 +519,7 @@ Partial Class frmInventorySearchMaint
     Friend WithEvents cboStore As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnUpdateQty As System.Windows.Forms.Button
-    Friend WithEvents txtInventoryNbr As System.Windows.Forms.TextBox
     Friend WithEvents InventoryTableAdapter1 As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.inventoryTableAdapter
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class
