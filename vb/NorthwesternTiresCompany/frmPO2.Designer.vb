@@ -258,12 +258,15 @@ Partial Class frmPO2
         '
         'PODataGridView
         '
+        Me.PODataGridView.AllowUserToAddRows = False
+        Me.PODataGridView.AllowUserToDeleteRows = False
         Me.PODataGridView.AutoGenerateColumns = False
         Me.PODataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.PODataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.PODataGridView.DataSource = Me.PurchaseOrderBindingSource
         Me.PODataGridView.Location = New System.Drawing.Point(12, 179)
         Me.PODataGridView.Name = "PODataGridView"
+        Me.PODataGridView.ReadOnly = True
         Me.PODataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.PODataGridView.Size = New System.Drawing.Size(351, 302)
         Me.PODataGridView.TabIndex = 30
@@ -274,6 +277,7 @@ Partial Class frmPO2
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "poNbr"
         Me.DataGridViewTextBoxColumn1.HeaderText = "PO Number"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
         '
         'DataGridViewTextBoxColumn2
         '
@@ -281,6 +285,7 @@ Partial Class frmPO2
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "vendorID"
         Me.DataGridViewTextBoxColumn2.HeaderText = "Vendor ID"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'DataGridViewTextBoxColumn3
         '
@@ -288,6 +293,7 @@ Partial Class frmPO2
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "storeNbr"
         Me.DataGridViewTextBoxColumn3.HeaderText = "Store Number"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'PurchaseOrderDetailBindingSource
         '
@@ -300,12 +306,15 @@ Partial Class frmPO2
         '
         'PODetailDataGridView
         '
+        Me.PODetailDataGridView.AllowUserToAddRows = False
+        Me.PODetailDataGridView.AllowUserToDeleteRows = False
         Me.PODetailDataGridView.AutoGenerateColumns = False
         Me.PODetailDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.PODetailDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.PODetailDataGridView.DataSource = Me.PurchaseOrderDetailBindingSource
         Me.PODetailDataGridView.Location = New System.Drawing.Point(369, 179)
         Me.PODetailDataGridView.Name = "PODetailDataGridView"
+        Me.PODetailDataGridView.ReadOnly = True
         Me.PODetailDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.PODetailDataGridView.Size = New System.Drawing.Size(302, 302)
         Me.PODetailDataGridView.TabIndex = 30
@@ -315,6 +324,7 @@ Partial Class frmPO2
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "poDtlLineID"
         Me.DataGridViewTextBoxColumn4.HeaderText = "poDtlLineID"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         Me.DataGridViewTextBoxColumn4.Visible = False
         '
         'DataGridViewTextBoxColumn5
@@ -322,6 +332,7 @@ Partial Class frmPO2
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "poNbr"
         Me.DataGridViewTextBoxColumn5.HeaderText = "poNbr"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
         Me.DataGridViewTextBoxColumn5.Visible = False
         '
         'DataGridViewTextBoxColumn6
@@ -330,6 +341,7 @@ Partial Class frmPO2
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "tireCode"
         Me.DataGridViewTextBoxColumn6.HeaderText = "Tire Code"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
         'DataGridViewTextBoxColumn7
         '
@@ -337,6 +349,7 @@ Partial Class frmPO2
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "tireQty"
         Me.DataGridViewTextBoxColumn7.HeaderText = "Quantity"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
         '
         'PictureBox1
         '

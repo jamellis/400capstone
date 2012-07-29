@@ -367,12 +367,16 @@ Partial Class frmTires
         '
         'TireDataGridView
         '
+        Me.TireDataGridView.AllowUserToAddRows = False
+        Me.TireDataGridView.AllowUserToDeleteRows = False
         Me.TireDataGridView.AutoGenerateColumns = False
         Me.TireDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.TireDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn6, Me.dealerPrice, Me.wholesaleCost})
         Me.TireDataGridView.DataSource = Me.TireBindingSource
         Me.TireDataGridView.Location = New System.Drawing.Point(4, 161)
         Me.TireDataGridView.Name = "TireDataGridView"
+        Me.TireDataGridView.ReadOnly = True
+        Me.TireDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.TireDataGridView.Size = New System.Drawing.Size(706, 258)
         Me.TireDataGridView.TabIndex = 33
         '
@@ -383,6 +387,7 @@ Partial Class frmTires
         Me.DataGridViewTextBoxColumn1.FillWeight = 80.0!
         Me.DataGridViewTextBoxColumn1.HeaderText = "Tire Code"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
         '
         'DataGridViewTextBoxColumn2
         '
@@ -391,6 +396,7 @@ Partial Class frmTires
         Me.DataGridViewTextBoxColumn2.FillWeight = 300.0!
         Me.DataGridViewTextBoxColumn2.HeaderText = "Description"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'DataGridViewTextBoxColumn3
         '
@@ -398,6 +404,7 @@ Partial Class frmTires
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "manufacturer"
         Me.DataGridViewTextBoxColumn3.HeaderText = "Manufacturer"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'DataGridViewTextBoxColumn4
         '
@@ -406,12 +413,14 @@ Partial Class frmTires
         Me.DataGridViewTextBoxColumn4.FillWeight = 80.0!
         Me.DataGridViewTextBoxColumn4.HeaderText = "Tire Size"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "retailPrice"
         Me.DataGridViewTextBoxColumn6.HeaderText = "Retail Price"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
         Me.DataGridViewTextBoxColumn6.Width = 80
         '
         'dealerPrice
@@ -419,6 +428,7 @@ Partial Class frmTires
         Me.dealerPrice.DataPropertyName = "dealerPrice"
         Me.dealerPrice.HeaderText = "Dealer Price"
         Me.dealerPrice.Name = "dealerPrice"
+        Me.dealerPrice.ReadOnly = True
         Me.dealerPrice.Width = 80
         '
         'wholesaleCost
@@ -426,6 +436,7 @@ Partial Class frmTires
         Me.wholesaleCost.DataPropertyName = "wholesaleCost"
         Me.wholesaleCost.HeaderText = "Wholesale Cost"
         Me.wholesaleCost.Name = "wholesaleCost"
+        Me.wholesaleCost.ReadOnly = True
         Me.wholesaleCost.Width = 80
         '
         'txtTireCode

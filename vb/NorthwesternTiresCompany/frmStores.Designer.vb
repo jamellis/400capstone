@@ -452,12 +452,16 @@ Partial Class frmStores
         '
         'StoreDataGridView
         '
+        Me.StoreDataGridView.AllowUserToAddRows = False
+        Me.StoreDataGridView.AllowUserToDeleteRows = False
         Me.StoreDataGridView.AutoGenerateColumns = False
         Me.StoreDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.StoreDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.StoreDataGridView.DataSource = Me.StoreBindingSource
         Me.StoreDataGridView.Location = New System.Drawing.Point(12, 308)
         Me.StoreDataGridView.Name = "StoreDataGridView"
+        Me.StoreDataGridView.ReadOnly = True
+        Me.StoreDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.StoreDataGridView.Size = New System.Drawing.Size(660, 246)
         Me.StoreDataGridView.TabIndex = 37
         '
@@ -466,6 +470,7 @@ Partial Class frmStores
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "storeNbr"
         Me.DataGridViewTextBoxColumn1.HeaderText = "Store #"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
         Me.DataGridViewTextBoxColumn1.Width = 50
         '
         'DataGridViewTextBoxColumn2
@@ -473,6 +478,7 @@ Partial Class frmStores
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "streetAddress"
         Me.DataGridViewTextBoxColumn2.HeaderText = "Address"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         Me.DataGridViewTextBoxColumn2.Width = 122
         '
         'DataGridViewTextBoxColumn3
@@ -480,6 +486,7 @@ Partial Class frmStores
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "city"
         Me.DataGridViewTextBoxColumn3.HeaderText = "City"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         Me.DataGridViewTextBoxColumn3.Width = 80
         '
         'DataGridViewTextBoxColumn4
@@ -487,6 +494,7 @@ Partial Class frmStores
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "state"
         Me.DataGridViewTextBoxColumn4.HeaderText = "State"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         Me.DataGridViewTextBoxColumn4.Width = 40
         '
         'DataGridViewTextBoxColumn5
@@ -494,6 +502,7 @@ Partial Class frmStores
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "zip"
         Me.DataGridViewTextBoxColumn5.HeaderText = "Zip"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
         Me.DataGridViewTextBoxColumn5.Width = 40
         '
         'DataGridViewTextBoxColumn6
@@ -501,6 +510,7 @@ Partial Class frmStores
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "phone"
         Me.DataGridViewTextBoxColumn6.HeaderText = "Phone"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
         Me.DataGridViewTextBoxColumn6.Width = 80
         '
         'DataGridViewTextBoxColumn7
@@ -508,6 +518,7 @@ Partial Class frmStores
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "fax"
         Me.DataGridViewTextBoxColumn7.HeaderText = "Fax"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
         Me.DataGridViewTextBoxColumn7.Width = 80
         '
         'DataGridViewTextBoxColumn8
@@ -515,6 +526,7 @@ Partial Class frmStores
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "email"
         Me.DataGridViewTextBoxColumn8.HeaderText = "Email"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
         Me.DataGridViewTextBoxColumn8.Width = 125
         '
         'grpBoxStoreInfo
