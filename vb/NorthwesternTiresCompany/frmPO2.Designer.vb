@@ -71,7 +71,7 @@ Partial Class frmPO2
         '
         Me.lblStep1.AutoSize = True
         Me.lblStep1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStep1.ForeColor = System.Drawing.Color.Red
+        Me.lblStep1.ForeColor = System.Drawing.Color.Blue
         Me.lblStep1.Location = New System.Drawing.Point(183, 134)
         Me.lblStep1.Name = "lblStep1"
         Me.lblStep1.Size = New System.Drawing.Size(322, 19)

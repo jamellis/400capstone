@@ -52,7 +52,7 @@ Partial Class frmSplash
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.nwtires_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(215, 30)
+        Me.PictureBox1.Location = New System.Drawing.Point(217, 30)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(295, 90)
         Me.PictureBox1.TabIndex = 5
@@ -61,7 +61,7 @@ Partial Class frmSplash
         'pctRincon
         '
         Me.pctRincon.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.rinconlogo2
-        Me.pctRincon.Location = New System.Drawing.Point(158, 235)
+        Me.pctRincon.Location = New System.Drawing.Point(155, 232)
         Me.pctRincon.Name = "pctRincon"
         Me.pctRincon.Size = New System.Drawing.Size(419, 122)
         Me.pctRincon.TabIndex = 4
@@ -70,26 +70,27 @@ Partial Class frmSplash
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(113, 158)
+        Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Blue
+        Me.Label1.Location = New System.Drawing.Point(81, 157)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(475, 32)
+        Me.Label1.Size = New System.Drawing.Size(566, 38)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "This is a secure system. You must have legal access in order to access it. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "All " & _
-            "violators will be prosecuted to the fullest extent of the law."
+    "violators will be prosecuted to the fullest extent of the law."
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(63, 393)
+        Me.Label2.Font = New System.Drawing.Font("Arial", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(74, 391)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(588, 32)
+        Me.Label2.Size = New System.Drawing.Size(580, 32)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Copyright Rincon Consulting,  2012. All Rights Reserved. No parts of this applica" & _
-            "tion may be" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "reverse engineered or used in any form without permission from Rinc" & _
-            "on Consulting."
+    "tion may be" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "reverse engineered or used in any form without permission from Rinc" & _
+    "on Consulting."
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmSplash
