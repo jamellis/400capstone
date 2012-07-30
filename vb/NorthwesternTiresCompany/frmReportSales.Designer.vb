@@ -24,14 +24,24 @@ Partial Class frmReportSales
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.rvReportSales = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.comp400_2012DataSetSalesReporting = New NorthwesternTiresCompany.comp400_2012DataSetSalesReporting()
         Me.SalesReportTableAdapterBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.comp400_2012DataSetSalesReporting = New NorthwesternTiresCompany.comp400_2012DataSetSalesReporting()
+        Me.rvReportSales = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.SalesReportTableAdapterTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetSalesReportingTableAdapters.SalesReportTableAdapterTableAdapter()
         Me.btnBack = New System.Windows.Forms.Button()
-        CType(Me.comp400_2012DataSetSalesReporting, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SalesReportTableAdapterBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.comp400_2012DataSetSalesReporting, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'SalesReportTableAdapterBindingSource
+        '
+        Me.SalesReportTableAdapterBindingSource.DataMember = "SalesReportTableAdapter"
+        Me.SalesReportTableAdapterBindingSource.DataSource = Me.comp400_2012DataSetSalesReporting
+        '
+        'comp400_2012DataSetSalesReporting
+        '
+        Me.comp400_2012DataSetSalesReporting.DataSetName = "comp400_2012DataSetSalesReporting"
+        Me.comp400_2012DataSetSalesReporting.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'rvReportSales
         '
@@ -39,20 +49,11 @@ Partial Class frmReportSales
         ReportDataSource1.Value = Me.SalesReportTableAdapterBindingSource
         Me.rvReportSales.LocalReport.DataSources.Add(ReportDataSource1)
         Me.rvReportSales.LocalReport.ReportEmbeddedResource = "NorthwesternTiresCompany.rptSalesReport.rdlc"
-        Me.rvReportSales.Location = New System.Drawing.Point(12, 12)
+        Me.rvReportSales.Location = New System.Drawing.Point(9, 10)
+        Me.rvReportSales.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.rvReportSales.Name = "rvReportSales"
-        Me.rvReportSales.Size = New System.Drawing.Size(1326, 457)
+        Me.rvReportSales.Size = New System.Drawing.Size(995, 372)
         Me.rvReportSales.TabIndex = 0
-        '
-        'comp400_2012DataSetSalesReporting
-        '
-        Me.comp400_2012DataSetSalesReporting.DataSetName = "comp400_2012DataSetSalesReporting"
-        Me.comp400_2012DataSetSalesReporting.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'SalesReportTableAdapterBindingSource
-        '
-        Me.SalesReportTableAdapterBindingSource.DataMember = "SalesReportTableAdapter"
-        Me.SalesReportTableAdapterBindingSource.DataSource = Me.comp400_2012DataSetSalesReporting
         '
         'SalesReportTableAdapterTableAdapter
         '
@@ -62,26 +63,26 @@ Partial Class frmReportSales
         '
         Me.btnBack.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnBack.Location = New System.Drawing.Point(109, 566)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBack.Location = New System.Drawing.Point(82, 460)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(120, 37)
+        Me.btnBack.Size = New System.Drawing.Size(90, 30)
         Me.btnBack.TabIndex = 14
         Me.btnBack.Text = "&Back"
         Me.btnBack.UseVisualStyleBackColor = True
         '
         'frmReportSales
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1350, 634)
+        Me.ClientSize = New System.Drawing.Size(1013, 515)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.rvReportSales)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frmReportSales"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmReportSales"
-        CType(Me.comp400_2012DataSetSalesReporting, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SalesReportTableAdapterBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.comp400_2012DataSetSalesReporting, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

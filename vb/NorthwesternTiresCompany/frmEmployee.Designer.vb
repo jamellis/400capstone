@@ -195,6 +195,7 @@ Partial Class frmEmployee
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.customerTableAdapter = Nothing
         Me.TableAdapterManager.dealerTableAdapter = Nothing
+        Me.TableAdapterManager.employeeTableAdapter = Nothing
         Me.TableAdapterManager.employeeTableAdapter = Me.EmployeeTableAdapter
         Me.TableAdapterManager.inventoryTableAdapter = Nothing
         Me.TableAdapterManager.purchaseOrderDetailTableAdapter = Nothing
