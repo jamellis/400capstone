@@ -162,7 +162,7 @@ Partial Class frmTires
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(630, 571)
+        Me.btnExit.Location = New System.Drawing.Point(622, 568)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(80, 30)
         Me.btnExit.TabIndex = 21
@@ -173,7 +173,7 @@ Partial Class frmTires
         '
         Me.btnBack.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnBack.Location = New System.Drawing.Point(6, 571)
+        Me.btnBack.Location = New System.Drawing.Point(12, 568)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(80, 30)
         Me.btnBack.TabIndex = 19
@@ -257,7 +257,7 @@ Partial Class frmTires
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 23)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 23)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         Me.BindingNavigatorCountItem.Visible = False
@@ -278,7 +278,7 @@ Partial Class frmTires
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(32, 23)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(33, 23)
         Me.BindingNavigatorMoveFirstItem.Text = "First"
         Me.BindingNavigatorMoveFirstItem.Visible = False
         '
@@ -288,7 +288,7 @@ Partial Class frmTires
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(52, 23)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(56, 23)
         Me.BindingNavigatorMovePreviousItem.Text = "Previous"
         Me.BindingNavigatorMovePreviousItem.Visible = False
         '
@@ -320,7 +320,7 @@ Partial Class frmTires
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(34, 23)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(35, 23)
         Me.BindingNavigatorMoveNextItem.Text = "Next"
         Me.BindingNavigatorMoveNextItem.Visible = False
         '
@@ -330,7 +330,7 @@ Partial Class frmTires
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(31, 23)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(32, 23)
         Me.BindingNavigatorMoveLastItem.Text = "Last"
         Me.BindingNavigatorMoveLastItem.Visible = False
         '
@@ -513,8 +513,8 @@ Partial Class frmTires
         Me.lblInstructions.Size = New System.Drawing.Size(681, 36)
         Me.lblInstructions.TabIndex = 47
         Me.lblInstructions.Text = "Select a tire from the list. To edit details, make the changes in the boxes below" & _
-    " then click ""Save" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Changes"". To add a new tire, click the ""Add New Tire"" button " & _
-    "and enter the details."
+            " then click ""Save" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Changes"". To add a new tire, click the ""Add New Tire"" button " & _
+            "then enter the details."
         Me.lblInstructions.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'grpBoxTireInfo

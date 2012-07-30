@@ -1,7 +1,12 @@
 ﻿Public Class frmInventorySearch
 
     Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
-        Application.Exit()
+        Dim result = MessageBox.Show("Are you sure you want to exit?", "Exit Application", MessageBoxButtons.YesNo)
+        If result = Windows.Forms.DialogResult.Yes Then
+            Application.Exit()
+        Else
+            'do nothing - stay here
+        End If
     End Sub
 
     Private Sub btnBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBack.Click
@@ -31,7 +36,7 @@
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         frmInventorySearchMaint.Show()
         Me.Close()
     End Sub

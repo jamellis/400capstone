@@ -49,9 +49,10 @@ Partial Class frmReport
         '
         Me.lblReports.AutoSize = True
         Me.lblReports.Font = New System.Drawing.Font("Arial", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblReports.Location = New System.Drawing.Point(395, 20)
+        Me.lblReports.Location = New System.Drawing.Point(296, 16)
+        Me.lblReports.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblReports.Name = "lblReports"
-        Me.lblReports.Size = New System.Drawing.Size(120, 33)
+        Me.lblReports.Size = New System.Drawing.Size(93, 26)
         Me.lblReports.TabIndex = 0
         Me.lblReports.Text = "Reports"
         '
@@ -62,9 +63,10 @@ Partial Class frmReport
         'btnSalesReport
         '
         Me.btnSalesReport.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalesReport.Location = New System.Drawing.Point(151, 127)
+        Me.btnSalesReport.Location = New System.Drawing.Point(113, 103)
+        Me.btnSalesReport.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnSalesReport.Name = "btnSalesReport"
-        Me.btnSalesReport.Size = New System.Drawing.Size(214, 47)
+        Me.btnSalesReport.Size = New System.Drawing.Size(160, 38)
         Me.btnSalesReport.TabIndex = 1
         Me.btnSalesReport.Text = "Sales Report"
         Me.btnSalesReport.UseVisualStyleBackColor = True
@@ -73,10 +75,9 @@ Partial Class frmReport
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(868, 610)
-        Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnExit.Location = New System.Drawing.Point(582, 470)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(120, 37)
+        Me.btnExit.Size = New System.Drawing.Size(90, 30)
         Me.btnExit.TabIndex = 15
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
@@ -85,10 +86,9 @@ Partial Class frmReport
         '
         Me.btnBack.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnBack.Location = New System.Drawing.Point(112, 610)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBack.Location = New System.Drawing.Point(12, 470)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(120, 37)
+        Me.btnBack.Size = New System.Drawing.Size(90, 30)
         Me.btnBack.TabIndex = 14
         Me.btnBack.Text = "&Back"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -96,26 +96,32 @@ Partial Class frmReport
         'btnInventoryReport
         '
         Me.btnInventoryReport.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInventoryReport.Location = New System.Drawing.Point(151, 199)
+        Me.btnInventoryReport.Location = New System.Drawing.Point(113, 162)
+        Me.btnInventoryReport.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnInventoryReport.Name = "btnInventoryReport"
-        Me.btnInventoryReport.Size = New System.Drawing.Size(214, 51)
+        Me.btnInventoryReport.Size = New System.Drawing.Size(160, 41)
         Me.btnInventoryReport.TabIndex = 16
         Me.btnInventoryReport.Text = "Inventory Report"
         Me.btnInventoryReport.UseVisualStyleBackColor = True
         '
         'frmReport
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1144, 660)
+        Me.ClientSize = New System.Drawing.Size(684, 512)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnInventoryReport)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnSalesReport)
         Me.Controls.Add(Me.lblReports)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmReport"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmReport"
+        Me.Text = "Reports"
         CType(Me.SalesReportTableAdapterBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.comp400_2012DataSetSalesReporting, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

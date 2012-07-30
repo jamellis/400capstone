@@ -46,17 +46,19 @@ Partial Class frmPO2
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.PurchaseOrderBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.PODataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PurchaseOrderDetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PurchaseOrderDetailTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.purchaseOrderDetailTableAdapter()
         Me.PODetailDataGridView = New System.Windows.Forms.DataGridView()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.comments = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.poDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PurchaseOrderBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -151,14 +153,14 @@ Partial Class frmPO2
         Me.PurchaseOrderBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.PurchaseOrderBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.PurchaseOrderBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.PurchaseOrderBindingNavigatorSaveItem})
-        Me.PurchaseOrderBindingNavigator.Location = New System.Drawing.Point(191, 454)
+        Me.PurchaseOrderBindingNavigator.Location = New System.Drawing.Point(187, 484)
         Me.PurchaseOrderBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.PurchaseOrderBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.PurchaseOrderBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
         Me.PurchaseOrderBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.PurchaseOrderBindingNavigator.Name = "PurchaseOrderBindingNavigator"
         Me.PurchaseOrderBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.PurchaseOrderBindingNavigator.Size = New System.Drawing.Size(277, 25)
+        Me.PurchaseOrderBindingNavigator.Size = New System.Drawing.Size(278, 25)
         Me.PurchaseOrderBindingNavigator.TabIndex = 30
         Me.PurchaseOrderBindingNavigator.Text = "BindingNavigator1"
         Me.PurchaseOrderBindingNavigator.Visible = False
@@ -175,7 +177,7 @@ Partial Class frmPO2
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -262,38 +264,14 @@ Partial Class frmPO2
         Me.PODataGridView.AllowUserToDeleteRows = False
         Me.PODataGridView.AutoGenerateColumns = False
         Me.PODataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.PODataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
+        Me.PODataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.poDate, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.PODataGridView.DataSource = Me.PurchaseOrderBindingSource
         Me.PODataGridView.Location = New System.Drawing.Point(12, 179)
         Me.PODataGridView.Name = "PODataGridView"
         Me.PODataGridView.ReadOnly = True
         Me.PODataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.PODataGridView.Size = New System.Drawing.Size(351, 302)
+        Me.PODataGridView.Size = New System.Drawing.Size(657, 161)
         Me.PODataGridView.TabIndex = 30
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "poNbr"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "PO Number"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "vendorID"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Vendor ID"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "storeNbr"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Store Number"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'PurchaseOrderDetailBindingSource
         '
@@ -310,14 +288,23 @@ Partial Class frmPO2
         Me.PODetailDataGridView.AllowUserToDeleteRows = False
         Me.PODetailDataGridView.AutoGenerateColumns = False
         Me.PODetailDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.PODetailDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
+        Me.PODetailDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.comments})
         Me.PODetailDataGridView.DataSource = Me.PurchaseOrderDetailBindingSource
-        Me.PODetailDataGridView.Location = New System.Drawing.Point(369, 179)
+        Me.PODetailDataGridView.Location = New System.Drawing.Point(12, 346)
         Me.PODetailDataGridView.Name = "PODetailDataGridView"
         Me.PODetailDataGridView.ReadOnly = True
         Me.PODetailDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.PODetailDataGridView.Size = New System.Drawing.Size(302, 302)
+        Me.PODetailDataGridView.Size = New System.Drawing.Size(659, 135)
         Me.PODetailDataGridView.TabIndex = 30
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.nwtires_logo_sm
+        Me.PictureBox1.Location = New System.Drawing.Point(229, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(230, 74)
+        Me.PictureBox1.TabIndex = 31
+        Me.PictureBox1.TabStop = False
         '
         'DataGridViewTextBoxColumn4
         '
@@ -351,14 +338,46 @@ Partial Class frmPO2
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.ReadOnly = True
         '
-        'PictureBox1
+        'comments
         '
-        Me.PictureBox1.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.nwtires_logo_sm
-        Me.PictureBox1.Location = New System.Drawing.Point(229, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(230, 74)
-        Me.PictureBox1.TabIndex = 31
-        Me.PictureBox1.TabStop = False
+        Me.comments.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.comments.DataPropertyName = "comments"
+        Me.comments.FillWeight = 284.7716!
+        Me.comments.HeaderText = "Comments"
+        Me.comments.Name = "comments"
+        Me.comments.ReadOnly = True
+        '
+        'poDate
+        '
+        Me.poDate.DataPropertyName = "poDate"
+        Me.poDate.HeaderText = "PO Date"
+        Me.poDate.Name = "poDate"
+        Me.poDate.ReadOnly = True
+        Me.poDate.Width = 80
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "poNbr"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "PO Number"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "vendorID"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Vendor ID"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "storeNbr"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Store Number"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'frmPO2
         '
@@ -418,6 +437,8 @@ Partial Class frmPO2
     Friend WithEvents PurchaseOrderDetailBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents PurchaseOrderDetailTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.purchaseOrderDetailTableAdapter
     Friend WithEvents PODetailDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents poDate As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -425,5 +446,5 @@ Partial Class frmPO2
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents comments As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

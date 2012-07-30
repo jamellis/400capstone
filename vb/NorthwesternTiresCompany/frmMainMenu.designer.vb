@@ -83,7 +83,7 @@ Partial Class frmMainMenu
         'btnLogOut
         '
         Me.btnLogOut.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.Location = New System.Drawing.Point(228, 435)
+        Me.btnLogOut.Location = New System.Drawing.Point(229, 437)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(90, 30)
         Me.btnLogOut.TabIndex = 9

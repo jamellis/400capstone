@@ -195,7 +195,6 @@ Partial Class frmEmployee
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.customerTableAdapter = Nothing
         Me.TableAdapterManager.dealerTableAdapter = Nothing
-        Me.TableAdapterManager.employeeTableAdapter = Nothing
         Me.TableAdapterManager.employeeTableAdapter = Me.EmployeeTableAdapter
         Me.TableAdapterManager.inventoryTableAdapter = Nothing
         Me.TableAdapterManager.purchaseOrderDetailTableAdapter = Nothing
@@ -243,7 +242,7 @@ Partial Class frmEmployee
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         Me.BindingNavigatorCountItem.Visible = False
@@ -479,7 +478,7 @@ Partial Class frmEmployee
         Me.lblInstructions.Size = New System.Drawing.Size(489, 38)
         Me.lblInstructions.TabIndex = 46
         Me.lblInstructions.Text = "Select an employee from the list below. To edit details, make the" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "changes in the" & _
-    " boxes below then click Save Changes."
+            " boxes below then click Save Changes."
         Me.lblInstructions.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'grpBoxEmpInfo

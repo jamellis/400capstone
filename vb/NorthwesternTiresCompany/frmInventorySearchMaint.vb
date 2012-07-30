@@ -1,12 +1,14 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class frmInventorySearchMaint
-    Dim cn As New SqlConnection("Data Source=localhost;Initial Catalog=comp400_2012;Integrated Security=True")
-    Dim cmd As New SqlCommand
-    Dim dr As SqlDataReader
 
     Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
-        Application.Exit()
+        Dim result = MessageBox.Show("Are you sure you want to exit?", "Exit Application", MessageBoxButtons.YesNo)
+        If result = Windows.Forms.DialogResult.Yes Then
+            Application.Exit()
+        Else
+            'do nothing - stay here
+        End If
     End Sub
 
     Private Sub btnBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBack.Click
@@ -46,10 +48,6 @@ Public Class frmInventorySearchMaint
 
         If Validator.IsPresent(txtTireQty, "Quantity") AndAlso
            Validator.IsInt32(txtTireQty, "Quantity") Then
-            'cn.Open()
-            'cmd.CommandText = "UPDATE inventory SET tireQty='" & Me.txtTireQty.Text & "' WHERE inventoryNbr='" & Me.txtInventoryNbr.Text & "'"
-            'Dim affectedRows = cmd.ExecuteNonQuery()
-            'cn.Close()
             Try
                 Dim rowView As DataRowView = InvSearchBindingSource.Current
                 Dim curRow As comp400_2012DataSet.invSearchRow = rowView.Row

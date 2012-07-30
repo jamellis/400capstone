@@ -60,7 +60,6 @@ Partial Class frmInventorySearch
         Me.StoreNbrTextBox = New System.Windows.Forms.TextBox()
         Me.cboStore = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         TireCodeLabel = New System.Windows.Forms.Label()
         ManufacturerLabel = New System.Windows.Forms.Label()
         DescriptionLabel = New System.Windows.Forms.Label()
@@ -408,22 +407,12 @@ Partial Class frmInventorySearch
         Me.Label1.TabIndex = 44
         Me.Label1.Text = "Store Number:"
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(370, 438)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(104, 23)
-        Me.Button1.TabIndex = 45
-        Me.Button1.Text = "Modify Quantity"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'frmInventorySearch
         '
         Me.AcceptButton = Me.btnSearch
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(692, 512)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cboStore)
         Me.Controls.Add(TireCodeLabel)
@@ -490,5 +479,4 @@ Partial Class frmInventorySearch
     Friend WithEvents StoreNbrTextBox As System.Windows.Forms.TextBox
     Friend WithEvents cboStore As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

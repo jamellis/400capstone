@@ -23,14 +23,14 @@ Partial Class frmStores
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim StoreNbrLabel As System.Windows.Forms.Label
-        Dim StreetAddressLabel As System.Windows.Forms.Label
-        Dim CityLabel As System.Windows.Forms.Label
-        Dim StateLabel As System.Windows.Forms.Label
-        Dim ZipLabel As System.Windows.Forms.Label
-        Dim PhoneLabel As System.Windows.Forms.Label
-        Dim FaxLabel As System.Windows.Forms.Label
-        Dim EmailLabel As System.Windows.Forms.Label
+        Dim lblStoreNbr As System.Windows.Forms.Label
+        Dim lblStreetAddress As System.Windows.Forms.Label
+        Dim lblCity As System.Windows.Forms.Label
+        Dim lblState As System.Windows.Forms.Label
+        Dim lblZip As System.Windows.Forms.Label
+        Dim lblPhone As System.Windows.Forms.Label
+        Dim lblFax As System.Windows.Forms.Label
+        Dim lblEmail As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmStores))
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
@@ -55,14 +55,14 @@ Partial Class frmStores
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.StoreBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.StoreNbrTextBox = New System.Windows.Forms.TextBox()
-        Me.StreetAddressTextBox = New System.Windows.Forms.TextBox()
-        Me.CityTextBox = New System.Windows.Forms.TextBox()
-        Me.StateTextBox = New System.Windows.Forms.TextBox()
-        Me.ZipTextBox = New System.Windows.Forms.TextBox()
-        Me.PhoneTextBox = New System.Windows.Forms.TextBox()
-        Me.FaxTextBox = New System.Windows.Forms.TextBox()
-        Me.EmailTextBox = New System.Windows.Forms.TextBox()
+        Me.txtStoreNbr = New System.Windows.Forms.TextBox()
+        Me.txtStreetAddress = New System.Windows.Forms.TextBox()
+        Me.txtCity = New System.Windows.Forms.TextBox()
+        Me.txtState = New System.Windows.Forms.TextBox()
+        Me.txtZip = New System.Windows.Forms.TextBox()
+        Me.txtPhone = New System.Windows.Forms.TextBox()
+        Me.txtFax = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.StoreDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -73,15 +73,16 @@ Partial Class frmStores
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpBoxStoreInfo = New System.Windows.Forms.GroupBox()
+        Me.btnModify = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        StoreNbrLabel = New System.Windows.Forms.Label()
-        StreetAddressLabel = New System.Windows.Forms.Label()
-        CityLabel = New System.Windows.Forms.Label()
-        StateLabel = New System.Windows.Forms.Label()
-        ZipLabel = New System.Windows.Forms.Label()
-        PhoneLabel = New System.Windows.Forms.Label()
-        FaxLabel = New System.Windows.Forms.Label()
-        EmailLabel = New System.Windows.Forms.Label()
+        lblStoreNbr = New System.Windows.Forms.Label()
+        lblStreetAddress = New System.Windows.Forms.Label()
+        lblCity = New System.Windows.Forms.Label()
+        lblState = New System.Windows.Forms.Label()
+        lblZip = New System.Windows.Forms.Label()
+        lblPhone = New System.Windows.Forms.Label()
+        lblFax = New System.Windows.Forms.Label()
+        lblEmail = New System.Windows.Forms.Label()
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StoreBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StoreBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,91 +92,91 @@ Partial Class frmStores
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'StoreNbrLabel
+        'lblStoreNbr
         '
-        StoreNbrLabel.AutoSize = True
-        StoreNbrLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        StoreNbrLabel.Location = New System.Drawing.Point(16, 19)
-        StoreNbrLabel.Name = "StoreNbrLabel"
-        StoreNbrLabel.Size = New System.Drawing.Size(63, 18)
-        StoreNbrLabel.TabIndex = 22
-        StoreNbrLabel.Text = "Store #:"
+        lblStoreNbr.AutoSize = True
+        lblStoreNbr.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblStoreNbr.Location = New System.Drawing.Point(16, 19)
+        lblStoreNbr.Name = "lblStoreNbr"
+        lblStoreNbr.Size = New System.Drawing.Size(63, 18)
+        lblStoreNbr.TabIndex = 22
+        lblStoreNbr.Text = "Store #:"
         '
-        'StreetAddressLabel
+        'lblStreetAddress
         '
-        StreetAddressLabel.AutoSize = True
-        StreetAddressLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        StreetAddressLabel.Location = New System.Drawing.Point(16, 45)
-        StreetAddressLabel.Name = "StreetAddressLabel"
-        StreetAddressLabel.Size = New System.Drawing.Size(71, 18)
-        StreetAddressLabel.TabIndex = 24
-        StreetAddressLabel.Text = "Address:"
+        lblStreetAddress.AutoSize = True
+        lblStreetAddress.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblStreetAddress.Location = New System.Drawing.Point(16, 45)
+        lblStreetAddress.Name = "lblStreetAddress"
+        lblStreetAddress.Size = New System.Drawing.Size(71, 18)
+        lblStreetAddress.TabIndex = 24
+        lblStreetAddress.Text = "Address:"
         '
-        'CityLabel
+        'lblCity
         '
-        CityLabel.AutoSize = True
-        CityLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        CityLabel.Location = New System.Drawing.Point(16, 71)
-        CityLabel.Name = "CityLabel"
-        CityLabel.Size = New System.Drawing.Size(39, 18)
-        CityLabel.TabIndex = 26
-        CityLabel.Text = "City:"
+        lblCity.AutoSize = True
+        lblCity.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblCity.Location = New System.Drawing.Point(16, 71)
+        lblCity.Name = "lblCity"
+        lblCity.Size = New System.Drawing.Size(39, 18)
+        lblCity.TabIndex = 26
+        lblCity.Text = "City:"
         '
-        'StateLabel
+        'lblState
         '
-        StateLabel.AutoSize = True
-        StateLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        StateLabel.Location = New System.Drawing.Point(16, 97)
-        StateLabel.Name = "StateLabel"
-        StateLabel.Size = New System.Drawing.Size(49, 18)
-        StateLabel.TabIndex = 28
-        StateLabel.Text = "State:"
+        lblState.AutoSize = True
+        lblState.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblState.Location = New System.Drawing.Point(16, 97)
+        lblState.Name = "lblState"
+        lblState.Size = New System.Drawing.Size(49, 18)
+        lblState.TabIndex = 28
+        lblState.Text = "State:"
         '
-        'ZipLabel
+        'lblZip
         '
-        ZipLabel.AutoSize = True
-        ZipLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ZipLabel.Location = New System.Drawing.Point(149, 97)
-        ZipLabel.Name = "ZipLabel"
-        ZipLabel.Size = New System.Drawing.Size(34, 18)
-        ZipLabel.TabIndex = 30
-        ZipLabel.Text = "Zip:"
+        lblZip.AutoSize = True
+        lblZip.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblZip.Location = New System.Drawing.Point(149, 97)
+        lblZip.Name = "lblZip"
+        lblZip.Size = New System.Drawing.Size(34, 18)
+        lblZip.TabIndex = 30
+        lblZip.Text = "Zip:"
         '
-        'PhoneLabel
+        'lblPhone
         '
-        PhoneLabel.AutoSize = True
-        PhoneLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        PhoneLabel.Location = New System.Drawing.Point(323, 18)
-        PhoneLabel.Name = "PhoneLabel"
-        PhoneLabel.Size = New System.Drawing.Size(57, 18)
-        PhoneLabel.TabIndex = 32
-        PhoneLabel.Text = "Phone:"
+        lblPhone.AutoSize = True
+        lblPhone.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblPhone.Location = New System.Drawing.Point(323, 18)
+        lblPhone.Name = "lblPhone"
+        lblPhone.Size = New System.Drawing.Size(57, 18)
+        lblPhone.TabIndex = 32
+        lblPhone.Text = "Phone:"
         '
-        'FaxLabel
+        'lblFax
         '
-        FaxLabel.AutoSize = True
-        FaxLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        FaxLabel.Location = New System.Drawing.Point(323, 45)
-        FaxLabel.Name = "FaxLabel"
-        FaxLabel.Size = New System.Drawing.Size(38, 18)
-        FaxLabel.TabIndex = 34
-        FaxLabel.Text = "Fax:"
+        lblFax.AutoSize = True
+        lblFax.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblFax.Location = New System.Drawing.Point(323, 45)
+        lblFax.Name = "lblFax"
+        lblFax.Size = New System.Drawing.Size(38, 18)
+        lblFax.TabIndex = 34
+        lblFax.Text = "Fax:"
         '
-        'EmailLabel
+        'lblEmail
         '
-        EmailLabel.AutoSize = True
-        EmailLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        EmailLabel.Location = New System.Drawing.Point(323, 71)
-        EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New System.Drawing.Size(52, 18)
-        EmailLabel.TabIndex = 36
-        EmailLabel.Text = "Email:"
+        lblEmail.AutoSize = True
+        lblEmail.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblEmail.Location = New System.Drawing.Point(323, 71)
+        lblEmail.Name = "lblEmail"
+        lblEmail.Size = New System.Drawing.Size(52, 18)
+        lblEmail.TabIndex = 36
+        lblEmail.Text = "Email:"
         '
         'btnExit
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(592, 560)
+        Me.btnExit.Location = New System.Drawing.Point(602, 560)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(80, 30)
         Me.btnExit.TabIndex = 21
@@ -270,7 +271,7 @@ Partial Class frmStores
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 25)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 25)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         Me.BindingNavigatorCountItem.Visible = False
@@ -291,7 +292,7 @@ Partial Class frmStores
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(32, 25)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(33, 25)
         Me.BindingNavigatorMoveFirstItem.Text = "First"
         Me.BindingNavigatorMoveFirstItem.Visible = False
         '
@@ -301,7 +302,7 @@ Partial Class frmStores
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(52, 25)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(56, 25)
         Me.BindingNavigatorMovePreviousItem.Text = "Previous"
         Me.BindingNavigatorMovePreviousItem.Visible = False
         '
@@ -333,7 +334,7 @@ Partial Class frmStores
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(34, 25)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(35, 25)
         Me.BindingNavigatorMoveNextItem.Text = "Next"
         Me.BindingNavigatorMoveNextItem.Visible = False
         '
@@ -343,7 +344,7 @@ Partial Class frmStores
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(31, 25)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(32, 25)
         Me.BindingNavigatorMoveLastItem.Text = "Last"
         Me.BindingNavigatorMoveLastItem.Visible = False
         '
@@ -378,77 +379,93 @@ Partial Class frmStores
         Me.StoreBindingNavigatorSaveItem.Size = New System.Drawing.Size(119, 25)
         Me.StoreBindingNavigatorSaveItem.Text = "Save Changes"
         '
-        'StoreNbrTextBox
+        'txtStoreNbr
         '
-        Me.StoreNbrTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "storeNbr", True))
-        Me.StoreNbrTextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StoreNbrTextBox.Location = New System.Drawing.Point(89, 16)
-        Me.StoreNbrTextBox.Name = "StoreNbrTextBox"
-        Me.StoreNbrTextBox.Size = New System.Drawing.Size(190, 26)
-        Me.StoreNbrTextBox.TabIndex = 23
+        Me.txtStoreNbr.CausesValidation = False
+        Me.txtStoreNbr.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "storeNbr", True))
+        Me.txtStoreNbr.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtStoreNbr.Location = New System.Drawing.Point(89, 16)
+        Me.txtStoreNbr.Name = "txtStoreNbr"
+        Me.txtStoreNbr.ReadOnly = True
+        Me.txtStoreNbr.Size = New System.Drawing.Size(190, 26)
+        Me.txtStoreNbr.TabIndex = 23
         '
-        'StreetAddressTextBox
+        'txtStreetAddress
         '
-        Me.StreetAddressTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "streetAddress", True))
-        Me.StreetAddressTextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StreetAddressTextBox.Location = New System.Drawing.Point(89, 42)
-        Me.StreetAddressTextBox.Name = "StreetAddressTextBox"
-        Me.StreetAddressTextBox.Size = New System.Drawing.Size(190, 26)
-        Me.StreetAddressTextBox.TabIndex = 25
+        Me.txtStreetAddress.CausesValidation = False
+        Me.txtStreetAddress.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "streetAddress", True))
+        Me.txtStreetAddress.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtStreetAddress.Location = New System.Drawing.Point(89, 42)
+        Me.txtStreetAddress.Name = "txtStreetAddress"
+        Me.txtStreetAddress.ReadOnly = True
+        Me.txtStreetAddress.Size = New System.Drawing.Size(190, 26)
+        Me.txtStreetAddress.TabIndex = 25
         '
-        'CityTextBox
+        'txtCity
         '
-        Me.CityTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "city", True))
-        Me.CityTextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CityTextBox.Location = New System.Drawing.Point(89, 68)
-        Me.CityTextBox.Name = "CityTextBox"
-        Me.CityTextBox.Size = New System.Drawing.Size(190, 26)
-        Me.CityTextBox.TabIndex = 27
+        Me.txtCity.CausesValidation = False
+        Me.txtCity.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "city", True))
+        Me.txtCity.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCity.Location = New System.Drawing.Point(89, 68)
+        Me.txtCity.Name = "txtCity"
+        Me.txtCity.ReadOnly = True
+        Me.txtCity.Size = New System.Drawing.Size(190, 26)
+        Me.txtCity.TabIndex = 27
         '
-        'StateTextBox
+        'txtState
         '
-        Me.StateTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "state", True))
-        Me.StateTextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StateTextBox.Location = New System.Drawing.Point(89, 95)
-        Me.StateTextBox.Name = "StateTextBox"
-        Me.StateTextBox.Size = New System.Drawing.Size(43, 26)
-        Me.StateTextBox.TabIndex = 29
+        Me.txtState.CausesValidation = False
+        Me.txtState.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "state", True))
+        Me.txtState.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtState.Location = New System.Drawing.Point(89, 95)
+        Me.txtState.Name = "txtState"
+        Me.txtState.ReadOnly = True
+        Me.txtState.Size = New System.Drawing.Size(43, 26)
+        Me.txtState.TabIndex = 29
         '
-        'ZipTextBox
+        'txtZip
         '
-        Me.ZipTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "zip", True))
-        Me.ZipTextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ZipTextBox.Location = New System.Drawing.Point(189, 95)
-        Me.ZipTextBox.Name = "ZipTextBox"
-        Me.ZipTextBox.Size = New System.Drawing.Size(90, 26)
-        Me.ZipTextBox.TabIndex = 31
+        Me.txtZip.CausesValidation = False
+        Me.txtZip.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "zip", True))
+        Me.txtZip.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtZip.Location = New System.Drawing.Point(189, 95)
+        Me.txtZip.Name = "txtZip"
+        Me.txtZip.ReadOnly = True
+        Me.txtZip.Size = New System.Drawing.Size(90, 26)
+        Me.txtZip.TabIndex = 31
         '
-        'PhoneTextBox
+        'txtPhone
         '
-        Me.PhoneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "phone", True))
-        Me.PhoneTextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PhoneTextBox.Location = New System.Drawing.Point(380, 16)
-        Me.PhoneTextBox.Name = "PhoneTextBox"
-        Me.PhoneTextBox.Size = New System.Drawing.Size(161, 26)
-        Me.PhoneTextBox.TabIndex = 33
+        Me.txtPhone.CausesValidation = False
+        Me.txtPhone.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "phone", True))
+        Me.txtPhone.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhone.Location = New System.Drawing.Point(380, 16)
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.ReadOnly = True
+        Me.txtPhone.Size = New System.Drawing.Size(161, 26)
+        Me.txtPhone.TabIndex = 33
         '
-        'FaxTextBox
+        'txtFax
         '
-        Me.FaxTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "fax", True))
-        Me.FaxTextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FaxTextBox.Location = New System.Drawing.Point(380, 42)
-        Me.FaxTextBox.Name = "FaxTextBox"
-        Me.FaxTextBox.Size = New System.Drawing.Size(161, 26)
-        Me.FaxTextBox.TabIndex = 35
+        Me.txtFax.CausesValidation = False
+        Me.txtFax.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "fax", True))
+        Me.txtFax.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFax.Location = New System.Drawing.Point(380, 42)
+        Me.txtFax.Name = "txtFax"
+        Me.txtFax.ReadOnly = True
+        Me.txtFax.Size = New System.Drawing.Size(161, 26)
+        Me.txtFax.TabIndex = 35
         '
-        'EmailTextBox
+        'txtEmail
         '
-        Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "email", True))
-        Me.EmailTextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EmailTextBox.Location = New System.Drawing.Point(380, 68)
-        Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.Size = New System.Drawing.Size(161, 26)
-        Me.EmailTextBox.TabIndex = 37
+        Me.txtEmail.CausesValidation = False
+        Me.txtEmail.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "email", True))
+        Me.txtEmail.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(380, 68)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.ReadOnly = True
+        Me.txtEmail.Size = New System.Drawing.Size(161, 26)
+        Me.txtEmail.TabIndex = 37
         '
         'StoreDataGridView
         '
@@ -462,7 +479,7 @@ Partial Class frmStores
         Me.StoreDataGridView.Name = "StoreDataGridView"
         Me.StoreDataGridView.ReadOnly = True
         Me.StoreDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.StoreDataGridView.Size = New System.Drawing.Size(660, 246)
+        Me.StoreDataGridView.Size = New System.Drawing.Size(670, 246)
         Me.StoreDataGridView.TabIndex = 37
         '
         'DataGridViewTextBoxColumn1
@@ -475,27 +492,28 @@ Partial Class frmStores
         '
         'DataGridViewTextBoxColumn2
         '
+        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "streetAddress"
+        Me.DataGridViewTextBoxColumn2.FillWeight = 120.0!
         Me.DataGridViewTextBoxColumn2.HeaderText = "Address"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Width = 122
         '
         'DataGridViewTextBoxColumn3
         '
+        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "city"
         Me.DataGridViewTextBoxColumn3.HeaderText = "City"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Width = 80
         '
         'DataGridViewTextBoxColumn4
         '
+        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "state"
         Me.DataGridViewTextBoxColumn4.HeaderText = "State"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        Me.DataGridViewTextBoxColumn4.Width = 40
         '
         'DataGridViewTextBoxColumn5
         '
@@ -523,35 +541,46 @@ Partial Class frmStores
         '
         'DataGridViewTextBoxColumn8
         '
+        Me.DataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "email"
         Me.DataGridViewTextBoxColumn8.HeaderText = "Email"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Width = 125
         '
         'grpBoxStoreInfo
         '
-        Me.grpBoxStoreInfo.Controls.Add(StoreNbrLabel)
-        Me.grpBoxStoreInfo.Controls.Add(Me.StoreNbrTextBox)
-        Me.grpBoxStoreInfo.Controls.Add(StreetAddressLabel)
-        Me.grpBoxStoreInfo.Controls.Add(Me.StreetAddressTextBox)
-        Me.grpBoxStoreInfo.Controls.Add(CityLabel)
-        Me.grpBoxStoreInfo.Controls.Add(Me.CityTextBox)
-        Me.grpBoxStoreInfo.Controls.Add(StateLabel)
-        Me.grpBoxStoreInfo.Controls.Add(Me.StateTextBox)
-        Me.grpBoxStoreInfo.Controls.Add(ZipLabel)
-        Me.grpBoxStoreInfo.Controls.Add(Me.ZipTextBox)
-        Me.grpBoxStoreInfo.Controls.Add(PhoneLabel)
-        Me.grpBoxStoreInfo.Controls.Add(Me.PhoneTextBox)
-        Me.grpBoxStoreInfo.Controls.Add(FaxLabel)
-        Me.grpBoxStoreInfo.Controls.Add(Me.FaxTextBox)
-        Me.grpBoxStoreInfo.Controls.Add(EmailLabel)
-        Me.grpBoxStoreInfo.Controls.Add(Me.EmailTextBox)
+        Me.grpBoxStoreInfo.Controls.Add(Me.btnModify)
+        Me.grpBoxStoreInfo.Controls.Add(lblStoreNbr)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtStoreNbr)
+        Me.grpBoxStoreInfo.Controls.Add(lblStreetAddress)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtStreetAddress)
+        Me.grpBoxStoreInfo.Controls.Add(lblCity)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtCity)
+        Me.grpBoxStoreInfo.Controls.Add(lblState)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtState)
+        Me.grpBoxStoreInfo.Controls.Add(lblZip)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtZip)
+        Me.grpBoxStoreInfo.Controls.Add(lblPhone)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtPhone)
+        Me.grpBoxStoreInfo.Controls.Add(lblFax)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtFax)
+        Me.grpBoxStoreInfo.Controls.Add(lblEmail)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtEmail)
         Me.grpBoxStoreInfo.Location = New System.Drawing.Point(60, 121)
         Me.grpBoxStoreInfo.Name = "grpBoxStoreInfo"
         Me.grpBoxStoreInfo.Size = New System.Drawing.Size(564, 133)
         Me.grpBoxStoreInfo.TabIndex = 38
         Me.grpBoxStoreInfo.TabStop = False
+        '
+        'btnModify
+        '
+        Me.btnModify.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModify.Location = New System.Drawing.Point(350, 100)
+        Me.btnModify.Name = "btnModify"
+        Me.btnModify.Size = New System.Drawing.Size(165, 30)
+        Me.btnModify.TabIndex = 38
+        Me.btnModify.Text = "Modify Details"
+        Me.btnModify.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -566,7 +595,7 @@ Partial Class frmStores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(684, 602)
+        Me.ClientSize = New System.Drawing.Size(694, 602)
         Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.grpBoxStoreInfo)
@@ -617,15 +646,17 @@ Partial Class frmStores
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents StoreNbrTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents StreetAddressTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents CityTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents StateTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents ZipTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents PhoneTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents FaxTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents EmailTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents txtStoreNbr As System.Windows.Forms.TextBox
+    Friend WithEvents txtStreetAddress As System.Windows.Forms.TextBox
+    Friend WithEvents txtCity As System.Windows.Forms.TextBox
+    Friend WithEvents txtState As System.Windows.Forms.TextBox
+    Friend WithEvents txtZip As System.Windows.Forms.TextBox
+    Friend WithEvents txtPhone As System.Windows.Forms.TextBox
+    Friend WithEvents txtFax As System.Windows.Forms.TextBox
+    Friend WithEvents txtEmail As System.Windows.Forms.TextBox
     Friend WithEvents StoreDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents grpBoxStoreInfo As System.Windows.Forms.GroupBox
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -634,6 +665,5 @@ Partial Class frmStores
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents grpBoxStoreInfo As System.Windows.Forms.GroupBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents btnModify As System.Windows.Forms.Button
 End Class

@@ -1,8 +1,12 @@
 ﻿Public Class frmMainMenu
 
-    
     Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
-        Application.Exit()
+        Dim result = MessageBox.Show("Are you sure you want to exit?", "Exit Application", MessageBoxButtons.YesNo)
+        If result = Windows.Forms.DialogResult.Yes Then
+            Application.Exit()
+        Else
+            'do nothing - stay here
+        End If
     End Sub
 
     Private Sub btnTires_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTires.Click
@@ -28,7 +32,9 @@
     End Sub
 
     Private Sub btnInventoryMaintain_Click(sender As System.Object, e As System.EventArgs) Handles btnInventoryMaintain.Click
-        frmInventoryMaintain.Show()
+        Dim InventoryMaintainForm As New frmInventorySearchMaint
+
+        InventoryMaintainForm.Show()
         Me.Close()
     End Sub
 
