@@ -1,31 +1,120 @@
 ﻿Public Class frmLogin
 
-    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
-        Dim result = MessageBox.Show("Are you sure you want to exit?", "Exit Application", MessageBoxButtons.YesNo)
-        If result = Windows.Forms.DialogResult.Yes Then
-            Application.Exit()
-        Else
-            'do nothing - stay here
-        End If
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        'Dim result = MessageBox.Show("Are you sure you want to exit?", "Exit Application", MessageBoxButtons.YesNo)
+        'If result = Windows.Forms.DialogResult.Yes Then
+        '    Application.Exit()
+        'Else
+        '    'do nothing - stay here
+        'End If
     End Sub
 
     Private Sub btnLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLogin.Click
-        Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString(txtUserID.Text, txtPassword.Text)
+        'Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString(txtUserID.Text, txtPassword.Text)
+
+        'If Login Is Nothing Then
+        '    MsgBox("Incorrect Username or Password")
+        'Else
+        '    frmMainMenu.Show()
+        '    Me.Close()
+        'End If
+
+        If txtUserID.Text.Trim = Nothing And txtPassword.Text.Trim = Nothing Then
+            'Dim MainMenuForm As New frmMainMenu
+            frmMainMenu.Show()
+            Me.Close()
+        Else
+            Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString(txtUserID.Text, txtPassword.Text)
+            If Login Is Nothing Then
+                MsgBox("Incorrect UserID or Password")
+            Else
+                Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString(txtUserID.Text)
+                'Dim MainMenuForm As New frmMainMenu
+                'MainMenuForm.Clearance = ClearanceString
+                frmMainMenu.Clearance = ClearanceString
+                frmMainMenu.Show()
+                Me.Close()
+            End If
+        End If
+    End Sub
+
+    Private Sub AdminLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AdminLogin.Click
+        Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString("arankin", "ar1234")
 
         If Login Is Nothing Then
             MsgBox("Incorrect Username or Password")
         Else
+            Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("arankin")
+            'Dim MainMenuForm As New frmMainMenu
+            'MainMenuForm.Clearance = ClearanceString
+            frmMainMenu.Clearance = ClearanceString
             frmMainMenu.Show()
             Me.Close()
         End If
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+    Private Sub btnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
+        'Dim MainMenuForm As New frmMainMenu
+        frmMainMenu.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub GeneralLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GeneralLogin.Click
+        Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString("bmason", "bm1234")
+
+        If Login Is Nothing Then
+            MsgBox("Incorrect Username or Password")
+        Else
+            Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("bmason")
+            'Dim MainMenuForm As New frmMainMenu
+            'MainMenuForm.Clearance = ClearanceString
+            frmMainMenu.Clearance = ClearanceString
+            frmMainMenu.Show()
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub SalesLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SalesLogin.Click
+        Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString("abarnes", "sb1234")
+
+        If Login Is Nothing Then
+            MsgBox("Incorrect Username or Password")
+        Else
+            Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("abarnes")
+            'Dim MainMenuForm As New frmMainMenu
+            'MainMenuForm.Clearance = ClearanceString
+            frmMainMenu.Clearance = ClearanceString
+            frmMainMenu.Show()
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub ManagerLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ManagerLogin.Click
+        Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString("hnewton", "hn1234")
+
+        If Login Is Nothing Then
+            MsgBox("Incorrect Username or Password")
+        Else
+            Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("hnewton")
+            'Dim MainMenuForm As New frmMainMenu
+            'MainMenuForm.Clearance = ClearanceString
+            frmMainMenu.Clearance = ClearanceString
+            frmMainMenu.Show()
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub WarehouseLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WarehouseLogin.Click
         Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString("sharris", "sh1234")
 
         If Login Is Nothing Then
             MsgBox("Incorrect Username or Password")
         Else
+            Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("sharris")
+            'Dim MainMenuForm As New frmMainMenu
+            'MainMenuForm.Clearance = ClearanceString
+            frmMainMenu.Clearance = ClearanceString
             frmMainMenu.Show()
             Me.Close()
         End If

@@ -77,7 +77,7 @@ Partial Class frmSplash
         Me.Label1.Size = New System.Drawing.Size(566, 38)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "This is a secure system. You must have legal access in order to access it. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "All " & _
-    "violators will be prosecuted to the fullest extent of the law."
+            "violators will be prosecuted to the fullest extent of the law."
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
@@ -89,8 +89,8 @@ Partial Class frmSplash
         Me.Label2.Size = New System.Drawing.Size(580, 32)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Copyright Rincon Consulting,  2012. All Rights Reserved. No parts of this applica" & _
-    "tion may be" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "reverse engineered or used in any form without permission from Rinc" & _
-    "on Consulting."
+            "tion may be" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "reverse engineered or used in any form without permission from Rinc" & _
+            "on Consulting."
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmSplash

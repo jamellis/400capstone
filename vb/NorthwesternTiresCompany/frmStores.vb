@@ -1,37 +1,38 @@
 ﻿Public Class frmStores
 
     Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        StoreBindingSource.EndEdit()
         Dim curRec As DataRowView = StoreBindingSource.Current
 
-        'Dim curRec As DataRowView = StoreBindingSource.Current
         If curRec.Row.RowState <> DataRowState.Unchanged Then
-            MsgBox("Yes! Current Row state is: " & curRec.Row.RowState.ToString(), MsgBoxStyle.OkOnly)
-            'Dim result = MessageBox.Show("Unsaved changes. Do you want to exit?", "Unsaved changes", MessageBoxButtons.YesNo)
-            'If result = Windows.Forms.DialogResult.Yes Then
-            '    Application.Exit()
-            'Else
-            '    'do nothing - stay here
-            'End If
+            ' MsgBox("Yes! Current Row state is: " & curRec.Row.RowState.ToString(), MsgBoxStyle.OkOnly)
+            Dim result = MessageBox.Show("Unsaved changes. Do you want to exit?", "Unsaved changes", MessageBoxButtons.YesNo)
+            If result = Windows.Forms.DialogResult.Yes Then
+                Application.Exit()
+            Else
+                'do nothing - stay here
+            End If
         Else
-            MsgBox("No! Current Row state is: " & curRec.Row.RowState.ToString(), MsgBoxStyle.OkOnly)
-            'Dim result = MessageBox.Show("Are you sure you want to exit?", "Exit Application", MessageBoxButtons.YesNo)
-            'If result = Windows.Forms.DialogResult.Yes Then
-            '    Application.Exit()
-            'Else
-            '    'do nothing - stay here
-            'End If
+            'MsgBox("No! Current Row state is: " & curRec.Row.RowState.ToString(), MsgBoxStyle.OkOnly)
+            Dim result = MessageBox.Show("Are you sure you want to exit?", "Exit Application", MessageBoxButtons.YesNo)
+            If result = Windows.Forms.DialogResult.Yes Then
+                Application.Exit()
+            Else
+                'do nothing - stay here
+            End If
 
         End If
     End Sub
 
     Private Sub btnBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBack.Click
+        StoreBindingSource.EndEdit()
         Dim curRec As DataRowView = StoreBindingSource.Current
         If curRec.Row.RowState <> DataRowState.Unchanged Then
             Dim result = MessageBox.Show("Changes will be lost. Do you want to go back to the Main Menu?", "Unsaved changes", MessageBoxButtons.YesNo)
             If result = Windows.Forms.DialogResult.Yes Then
-                Dim MainMenuForm As New frmMainMenu
+                'Dim MainMenuForm As New frmMainMenu
 
-                MainMenuForm.Show()
+                frmMainMenu.Show()
                 Me.Close()
             Else
                 'do nothing - stay here
@@ -39,9 +40,9 @@
         Else
             'Dim result = MessageBox.Show("Are you sure you want to go to the Main Menu?", "Main Menu", MessageBoxButtons.YesNo)
             'If result = Windows.Forms.DialogResult.Yes Then
-            Dim MainMenuForm As New frmMainMenu
+            'Dim MainMenuForm As New frmMainMenu
 
-            MainMenuForm.Show()
+            frmMainMenu.Show()
             Me.Close()
             'Else
             'do nothing - stay here

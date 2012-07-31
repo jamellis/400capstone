@@ -41,6 +41,7 @@ Partial Class frmMainMenu
         '
         'btnStores
         '
+        Me.btnStores.Enabled = False
         Me.btnStores.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnStores.Location = New System.Drawing.Point(199, 86)
         Me.btnStores.Name = "btnStores"
@@ -53,7 +54,7 @@ Partial Class frmMainMenu
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(367, 437)
+        Me.btnExit.Location = New System.Drawing.Point(367, 470)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(90, 30)
         Me.btnExit.TabIndex = 10
@@ -62,6 +63,7 @@ Partial Class frmMainMenu
         '
         'btnTires
         '
+        Me.btnTires.Enabled = False
         Me.btnTires.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTires.Location = New System.Drawing.Point(199, 17)
         Me.btnTires.Name = "btnTires"
@@ -83,11 +85,11 @@ Partial Class frmMainMenu
         'btnLogOut
         '
         Me.btnLogOut.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.Location = New System.Drawing.Point(229, 437)
+        Me.btnLogOut.Location = New System.Drawing.Point(229, 470)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(90, 30)
         Me.btnLogOut.TabIndex = 9
-        Me.btnLogOut.Text = "&Log Out"
+        Me.btnLogOut.Text = "&Log In"
         Me.btnLogOut.UseVisualStyleBackColor = True
         '
         'btnInventorySearch
@@ -103,6 +105,7 @@ Partial Class frmMainMenu
         '
         'btnInventoryMaintain
         '
+        Me.btnInventoryMaintain.Enabled = False
         Me.btnInventoryMaintain.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnInventoryMaintain.Location = New System.Drawing.Point(10, 86)
         Me.btnInventoryMaintain.Margin = New System.Windows.Forms.Padding(2)
@@ -114,6 +117,7 @@ Partial Class frmMainMenu
         '
         'btnSales
         '
+        Me.btnSales.Enabled = False
         Me.btnSales.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSales.Location = New System.Drawing.Point(10, 155)
         Me.btnSales.Margin = New System.Windows.Forms.Padding(2)
@@ -125,6 +129,7 @@ Partial Class frmMainMenu
         '
         'btnEmployee
         '
+        Me.btnEmployee.Enabled = False
         Me.btnEmployee.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEmployee.Location = New System.Drawing.Point(199, 155)
         Me.btnEmployee.Margin = New System.Windows.Forms.Padding(2)
@@ -136,6 +141,7 @@ Partial Class frmMainMenu
         '
         'btnReports
         '
+        Me.btnReports.Enabled = False
         Me.btnReports.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReports.Location = New System.Drawing.Point(10, 224)
         Me.btnReports.Margin = New System.Windows.Forms.Padding(2)
@@ -147,6 +153,7 @@ Partial Class frmMainMenu
         '
         'btnPO
         '
+        Me.btnPO.Enabled = False
         Me.btnPO.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPO.Location = New System.Drawing.Point(199, 224)
         Me.btnPO.Margin = New System.Windows.Forms.Padding(2)

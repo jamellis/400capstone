@@ -10,9 +10,8 @@
     End Sub
 
     Private Sub btnBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBack.Click
-        Dim MainMenuForm As New frmMainMenu
-
-        MainMenuForm.Show()
+        'Dim MainMenuForm As New frmMainMenu
+        frmMainMenu.Show()
         Me.Close()
     End Sub
 End Class
