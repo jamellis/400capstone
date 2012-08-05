@@ -26,4 +26,5 @@
         'TODO: This line of code loads data into the 'Comp400_2012DataSet.tire' table. You can move, or remove it, as needed.
         Me.TireTableAdapter.Fill(Me.Comp400_2012DataSet.tire)
     End Sub
+
 End Class
