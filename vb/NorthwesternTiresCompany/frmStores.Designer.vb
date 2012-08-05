@@ -42,17 +42,6 @@ Partial Class frmStores
         Me.txtCity = New System.Windows.Forms.TextBox()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.StoreDataGridView = New System.Windows.Forms.DataGridView()
-        Me.grpBoxStoreInfo = New System.Windows.Forms.GroupBox()
-        Me.txtState = New System.Windows.Forms.TextBox()
-        Me.txtStoreNbr = New System.Windows.Forms.TextBox()
-        Me.txtZip = New System.Windows.Forms.MaskedTextBox()
-        Me.txtFax = New System.Windows.Forms.MaskedTextBox()
-        Me.txtPhone = New System.Windows.Forms.MaskedTextBox()
-        Me.btnModify = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnSave = New System.Windows.Forms.Button()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnAdd = New System.Windows.Forms.Button()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -61,7 +50,18 @@ Partial Class frmStores
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.grpBoxStoreInfo = New System.Windows.Forms.GroupBox()
         Me.lblSave = New System.Windows.Forms.Label()
+        Me.txtState = New System.Windows.Forms.TextBox()
+        Me.txtStoreNbr = New System.Windows.Forms.TextBox()
+        Me.txtZip = New System.Windows.Forms.MaskedTextBox()
+        Me.txtFax = New System.Windows.Forms.MaskedTextBox()
+        Me.txtPhone = New System.Windows.Forms.MaskedTextBox()
+        Me.btnModify = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         lblStoreNbr = New System.Windows.Forms.Label()
         lblStreetAddress = New System.Windows.Forms.Label()
         lblCity = New System.Windows.Forms.Label()
@@ -74,14 +74,13 @@ Partial Class frmStores
         CType(Me.StoreBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StoreDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpBoxStoreInfo.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblStoreNbr
         '
         lblStoreNbr.AutoSize = True
         lblStoreNbr.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblStoreNbr.Location = New System.Drawing.Point(16, 18)
+        lblStoreNbr.Location = New System.Drawing.Point(16, 19)
         lblStoreNbr.Name = "lblStoreNbr"
         lblStoreNbr.Size = New System.Drawing.Size(63, 18)
         lblStoreNbr.TabIndex = 22
@@ -91,7 +90,7 @@ Partial Class frmStores
         '
         lblStreetAddress.AutoSize = True
         lblStreetAddress.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblStreetAddress.Location = New System.Drawing.Point(16, 51)
+        lblStreetAddress.Location = New System.Drawing.Point(16, 52)
         lblStreetAddress.Name = "lblStreetAddress"
         lblStreetAddress.Size = New System.Drawing.Size(71, 18)
         lblStreetAddress.TabIndex = 24
@@ -101,7 +100,7 @@ Partial Class frmStores
         '
         lblCity.AutoSize = True
         lblCity.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblCity.Location = New System.Drawing.Point(16, 83)
+        lblCity.Location = New System.Drawing.Point(16, 84)
         lblCity.Name = "lblCity"
         lblCity.Size = New System.Drawing.Size(39, 18)
         lblCity.TabIndex = 26
@@ -111,7 +110,7 @@ Partial Class frmStores
         '
         lblState.AutoSize = True
         lblState.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblState.Location = New System.Drawing.Point(16, 112)
+        lblState.Location = New System.Drawing.Point(16, 116)
         lblState.Name = "lblState"
         lblState.Size = New System.Drawing.Size(49, 18)
         lblState.TabIndex = 28
@@ -121,7 +120,7 @@ Partial Class frmStores
         '
         lblZip.AutoSize = True
         lblZip.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblZip.Location = New System.Drawing.Point(149, 112)
+        lblZip.Location = New System.Drawing.Point(141, 116)
         lblZip.Name = "lblZip"
         lblZip.Size = New System.Drawing.Size(34, 18)
         lblZip.TabIndex = 30
@@ -131,7 +130,7 @@ Partial Class frmStores
         '
         lblPhone.AutoSize = True
         lblPhone.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblPhone.Location = New System.Drawing.Point(322, 16)
+        lblPhone.Location = New System.Drawing.Point(322, 17)
         lblPhone.Name = "lblPhone"
         lblPhone.Size = New System.Drawing.Size(57, 18)
         lblPhone.TabIndex = 32
@@ -141,7 +140,7 @@ Partial Class frmStores
         '
         lblFax.AutoSize = True
         lblFax.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblFax.Location = New System.Drawing.Point(322, 51)
+        lblFax.Location = New System.Drawing.Point(322, 52)
         lblFax.Name = "lblFax"
         lblFax.Size = New System.Drawing.Size(38, 18)
         lblFax.TabIndex = 34
@@ -151,7 +150,7 @@ Partial Class frmStores
         '
         lblEmail.AutoSize = True
         lblEmail.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblEmail.Location = New System.Drawing.Point(322, 83)
+        lblEmail.Location = New System.Drawing.Point(322, 84)
         lblEmail.Name = "lblEmail"
         lblEmail.Size = New System.Drawing.Size(52, 18)
         lblEmail.TabIndex = 36
@@ -182,10 +181,10 @@ Partial Class frmStores
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(292, 84)
+        Me.lblTitle.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Location = New System.Drawing.Point(308, 9)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(105, 34)
+        Me.lblTitle.Size = New System.Drawing.Size(79, 26)
         Me.lblTitle.TabIndex = 18
         Me.lblTitle.Text = "Stores"
         '
@@ -227,7 +226,7 @@ Partial Class frmStores
         Me.txtStreetAddress.CausesValidation = False
         Me.txtStreetAddress.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "streetAddress", True))
         Me.txtStreetAddress.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtStreetAddress.Location = New System.Drawing.Point(89, 48)
+        Me.txtStreetAddress.Location = New System.Drawing.Point(89, 49)
         Me.txtStreetAddress.Name = "txtStreetAddress"
         Me.txtStreetAddress.ReadOnly = True
         Me.txtStreetAddress.Size = New System.Drawing.Size(190, 26)
@@ -238,7 +237,7 @@ Partial Class frmStores
         Me.txtCity.CausesValidation = False
         Me.txtCity.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "city", True))
         Me.txtCity.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCity.Location = New System.Drawing.Point(89, 80)
+        Me.txtCity.Location = New System.Drawing.Point(89, 81)
         Me.txtCity.Name = "txtCity"
         Me.txtCity.ReadOnly = True
         Me.txtCity.Size = New System.Drawing.Size(190, 26)
@@ -249,7 +248,7 @@ Partial Class frmStores
         Me.txtEmail.CausesValidation = False
         Me.txtEmail.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "email", True))
         Me.txtEmail.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(380, 80)
+        Me.txtEmail.Location = New System.Drawing.Point(380, 81)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.ReadOnly = True
         Me.txtEmail.Size = New System.Drawing.Size(161, 26)
@@ -263,142 +262,12 @@ Partial Class frmStores
         Me.StoreDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.StoreDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.StoreDataGridView.DataSource = Me.StoreBindingSource
-        Me.StoreDataGridView.Location = New System.Drawing.Point(12, 302)
+        Me.StoreDataGridView.Location = New System.Drawing.Point(12, 234)
         Me.StoreDataGridView.Name = "StoreDataGridView"
         Me.StoreDataGridView.ReadOnly = True
         Me.StoreDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.StoreDataGridView.Size = New System.Drawing.Size(670, 170)
+        Me.StoreDataGridView.Size = New System.Drawing.Size(670, 238)
         Me.StoreDataGridView.TabIndex = 37
-        '
-        'grpBoxStoreInfo
-        '
-        Me.grpBoxStoreInfo.Controls.Add(Me.lblSave)
-        Me.grpBoxStoreInfo.Controls.Add(Me.txtState)
-        Me.grpBoxStoreInfo.Controls.Add(Me.txtStoreNbr)
-        Me.grpBoxStoreInfo.Controls.Add(Me.txtZip)
-        Me.grpBoxStoreInfo.Controls.Add(Me.txtFax)
-        Me.grpBoxStoreInfo.Controls.Add(Me.txtPhone)
-        Me.grpBoxStoreInfo.Controls.Add(lblStoreNbr)
-        Me.grpBoxStoreInfo.Controls.Add(lblStreetAddress)
-        Me.grpBoxStoreInfo.Controls.Add(Me.txtStreetAddress)
-        Me.grpBoxStoreInfo.Controls.Add(lblCity)
-        Me.grpBoxStoreInfo.Controls.Add(Me.txtCity)
-        Me.grpBoxStoreInfo.Controls.Add(lblState)
-        Me.grpBoxStoreInfo.Controls.Add(lblZip)
-        Me.grpBoxStoreInfo.Controls.Add(lblPhone)
-        Me.grpBoxStoreInfo.Controls.Add(lblFax)
-        Me.grpBoxStoreInfo.Controls.Add(lblEmail)
-        Me.grpBoxStoreInfo.Controls.Add(Me.txtEmail)
-        Me.grpBoxStoreInfo.Location = New System.Drawing.Point(60, 114)
-        Me.grpBoxStoreInfo.Name = "grpBoxStoreInfo"
-        Me.grpBoxStoreInfo.Size = New System.Drawing.Size(564, 146)
-        Me.grpBoxStoreInfo.TabIndex = 38
-        Me.grpBoxStoreInfo.TabStop = False
-        '
-        'txtState
-        '
-        Me.txtState.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "state", True))
-        Me.txtState.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtState.Location = New System.Drawing.Point(89, 112)
-        Me.txtState.MaxLength = 2
-        Me.txtState.Name = "txtState"
-        Me.txtState.ReadOnly = True
-        Me.txtState.Size = New System.Drawing.Size(40, 26)
-        Me.txtState.TabIndex = 4
-        '
-        'txtStoreNbr
-        '
-        Me.txtStoreNbr.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "storeNbr", True))
-        Me.txtStoreNbr.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtStoreNbr.Location = New System.Drawing.Point(89, 16)
-        Me.txtStoreNbr.MaxLength = 4
-        Me.txtStoreNbr.Name = "txtStoreNbr"
-        Me.txtStoreNbr.ReadOnly = True
-        Me.txtStoreNbr.Size = New System.Drawing.Size(190, 26)
-        Me.txtStoreNbr.TabIndex = 1
-        '
-        'txtZip
-        '
-        Me.txtZip.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "zip", True))
-        Me.txtZip.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtZip.Location = New System.Drawing.Point(181, 112)
-        Me.txtZip.Mask = "00000-9999"
-        Me.txtZip.Name = "txtZip"
-        Me.txtZip.ReadOnly = True
-        Me.txtZip.Size = New System.Drawing.Size(98, 26)
-        Me.txtZip.TabIndex = 5
-        '
-        'txtFax
-        '
-        Me.txtFax.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "fax", True))
-        Me.txtFax.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFax.Location = New System.Drawing.Point(381, 48)
-        Me.txtFax.Mask = "000-000-0000"
-        Me.txtFax.Name = "txtFax"
-        Me.txtFax.ReadOnly = True
-        Me.txtFax.Size = New System.Drawing.Size(160, 26)
-        Me.txtFax.TabIndex = 7
-        '
-        'txtPhone
-        '
-        Me.txtPhone.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "phone", True))
-        Me.txtPhone.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhone.Location = New System.Drawing.Point(381, 15)
-        Me.txtPhone.Mask = "000-000-0000"
-        Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.ReadOnly = True
-        Me.txtPhone.Size = New System.Drawing.Size(160, 26)
-        Me.txtPhone.TabIndex = 6
-        '
-        'btnModify
-        '
-        Me.btnModify.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModify.Location = New System.Drawing.Point(209, 266)
-        Me.btnModify.Name = "btnModify"
-        Me.btnModify.Size = New System.Drawing.Size(115, 30)
-        Me.btnModify.TabIndex = 11
-        Me.btnModify.Text = "Modify Details"
-        Me.btnModify.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.nwtires_logo_sm
-        Me.PictureBox1.Location = New System.Drawing.Point(226, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(233, 76)
-        Me.PictureBox1.TabIndex = 39
-        Me.PictureBox1.TabStop = False
-        '
-        'btnSave
-        '
-        Me.btnSave.Enabled = False
-        Me.btnSave.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSave.Location = New System.Drawing.Point(509, 266)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(115, 30)
-        Me.btnSave.TabIndex = 9
-        Me.btnSave.Text = "Save Changes"
-        Me.btnSave.UseVisualStyleBackColor = True
-        '
-        'btnDelete
-        '
-        Me.btnDelete.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDelete.Location = New System.Drawing.Point(358, 266)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(115, 30)
-        Me.btnDelete.TabIndex = 12
-        Me.btnDelete.Text = "Delete Store"
-        Me.btnDelete.UseVisualStyleBackColor = True
-        '
-        'btnAdd
-        '
-        Me.btnAdd.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(60, 266)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(115, 30)
-        Me.btnAdd.TabIndex = 10
-        Me.btnAdd.Text = "Add New Store"
-        Me.btnAdd.UseVisualStyleBackColor = True
         '
         'DataGridViewTextBoxColumn1
         '
@@ -465,16 +334,148 @@ Partial Class frmStores
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         Me.DataGridViewTextBoxColumn8.ReadOnly = True
         '
+        'grpBoxStoreInfo
+        '
+        Me.grpBoxStoreInfo.Controls.Add(Me.lblSave)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtState)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtStoreNbr)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtZip)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtFax)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtPhone)
+        Me.grpBoxStoreInfo.Controls.Add(lblStoreNbr)
+        Me.grpBoxStoreInfo.Controls.Add(lblStreetAddress)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtStreetAddress)
+        Me.grpBoxStoreInfo.Controls.Add(lblCity)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtCity)
+        Me.grpBoxStoreInfo.Controls.Add(lblState)
+        Me.grpBoxStoreInfo.Controls.Add(lblZip)
+        Me.grpBoxStoreInfo.Controls.Add(lblPhone)
+        Me.grpBoxStoreInfo.Controls.Add(lblFax)
+        Me.grpBoxStoreInfo.Controls.Add(lblEmail)
+        Me.grpBoxStoreInfo.Controls.Add(Me.txtEmail)
+        Me.grpBoxStoreInfo.Location = New System.Drawing.Point(65, 38)
+        Me.grpBoxStoreInfo.Name = "grpBoxStoreInfo"
+        Me.grpBoxStoreInfo.Size = New System.Drawing.Size(564, 154)
+        Me.grpBoxStoreInfo.TabIndex = 38
+        Me.grpBoxStoreInfo.TabStop = False
+        '
         'lblSave
         '
         Me.lblSave.AutoSize = True
         Me.lblSave.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSave.Location = New System.Drawing.Point(317, 107)
+        Me.lblSave.Location = New System.Drawing.Point(317, 109)
         Me.lblSave.Name = "lblSave"
         Me.lblSave.Size = New System.Drawing.Size(240, 36)
         Me.lblSave.TabIndex = 37
         Me.lblSave.Text = "Please fill in all information before" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "clicking save changes"
         Me.lblSave.Visible = False
+        '
+        'txtState
+        '
+        Me.txtState.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "state", True))
+        Me.txtState.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtState.Location = New System.Drawing.Point(89, 113)
+        Me.txtState.MaxLength = 2
+        Me.txtState.Name = "txtState"
+        Me.txtState.ReadOnly = True
+        Me.txtState.Size = New System.Drawing.Size(40, 26)
+        Me.txtState.TabIndex = 4
+        '
+        'txtStoreNbr
+        '
+        Me.txtStoreNbr.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "storeNbr", True))
+        Me.txtStoreNbr.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtStoreNbr.Location = New System.Drawing.Point(89, 17)
+        Me.txtStoreNbr.MaxLength = 4
+        Me.txtStoreNbr.Name = "txtStoreNbr"
+        Me.txtStoreNbr.ReadOnly = True
+        Me.txtStoreNbr.Size = New System.Drawing.Size(190, 26)
+        Me.txtStoreNbr.TabIndex = 1
+        '
+        'txtZip
+        '
+        Me.txtZip.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "zip", True))
+        Me.txtZip.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtZip.Location = New System.Drawing.Point(181, 113)
+        Me.txtZip.Mask = "00000-9999"
+        Me.txtZip.Name = "txtZip"
+        Me.txtZip.ReadOnly = True
+        Me.txtZip.Size = New System.Drawing.Size(98, 26)
+        Me.txtZip.TabIndex = 5
+        '
+        'txtFax
+        '
+        Me.txtFax.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "fax", True))
+        Me.txtFax.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFax.Location = New System.Drawing.Point(381, 49)
+        Me.txtFax.Mask = "000-000-0000"
+        Me.txtFax.Name = "txtFax"
+        Me.txtFax.ReadOnly = True
+        Me.txtFax.Size = New System.Drawing.Size(160, 26)
+        Me.txtFax.TabIndex = 7
+        '
+        'txtPhone
+        '
+        Me.txtPhone.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "phone", True))
+        Me.txtPhone.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhone.Location = New System.Drawing.Point(381, 16)
+        Me.txtPhone.Mask = "000-000-0000"
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.ReadOnly = True
+        Me.txtPhone.Size = New System.Drawing.Size(160, 26)
+        Me.txtPhone.TabIndex = 6
+        '
+        'btnModify
+        '
+        Me.btnModify.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModify.Location = New System.Drawing.Point(147, 198)
+        Me.btnModify.Name = "btnModify"
+        Me.btnModify.Size = New System.Drawing.Size(128, 30)
+        Me.btnModify.TabIndex = 11
+        Me.btnModify.Text = "Modify Details"
+        Me.btnModify.UseVisualStyleBackColor = True
+        '
+        'btnSave
+        '
+        Me.btnSave.Enabled = False
+        Me.btnSave.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.Location = New System.Drawing.Point(417, 198)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(128, 30)
+        Me.btnSave.TabIndex = 9
+        Me.btnSave.Text = "Save Changes"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.Location = New System.Drawing.Point(282, 198)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(128, 30)
+        Me.btnDelete.TabIndex = 12
+        Me.btnDelete.Text = "Delete Store"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.Location = New System.Drawing.Point(12, 198)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(128, 30)
+        Me.btnAdd.TabIndex = 10
+        Me.btnAdd.Text = "Add New Store"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
+        'btnCancel
+        '
+        Me.btnCancel.Enabled = False
+        Me.btnCancel.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.Location = New System.Drawing.Point(552, 198)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(128, 30)
+        Me.btnCancel.TabIndex = 39
+        Me.btnCancel.Text = "Cancel Changes"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
         'frmStores
         '
@@ -482,11 +483,11 @@ Partial Class frmStores
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(694, 522)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnModify)
         Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.grpBoxStoreInfo)
         Me.Controls.Add(Me.StoreDataGridView)
         Me.Controls.Add(Me.btnExit)
@@ -503,7 +504,6 @@ Partial Class frmStores
         CType(Me.StoreDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpBoxStoreInfo.ResumeLayout(False)
         Me.grpBoxStoreInfo.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -520,7 +520,6 @@ Partial Class frmStores
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
     Friend WithEvents StoreDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents grpBoxStoreInfo As System.Windows.Forms.GroupBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents btnModify As System.Windows.Forms.Button
     Friend WithEvents txtState As System.Windows.Forms.TextBox
     Friend WithEvents txtStoreNbr As System.Windows.Forms.TextBox
@@ -539,4 +538,5 @@ Partial Class frmStores
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents lblSave As System.Windows.Forms.Label
+    Friend WithEvents btnCancel As System.Windows.Forms.Button
 End Class

@@ -101,6 +101,7 @@
         txtZip.ReadOnly = False
         btnModify.Enabled = False
         btnSave.Enabled = True
+        btnCancel.Enabled = True
         btnAdd.Enabled = False
         btnDelete.Enabled = False
     End Sub
@@ -142,6 +143,7 @@
             txtZip.ReadOnly = True
             btnModify.Enabled = True
             btnSave.Enabled = False
+            btnCancel.Enabled = False
             btnAdd.Enabled = True
             btnDelete.Enabled = True
         End If
@@ -161,6 +163,7 @@
         txtZip.ReadOnly = False
         btnModify.Enabled = False
         btnSave.Enabled = True
+        btnCancel.Enabled = True
         btnAdd.Enabled = False
         btnDelete.Enabled = False
         Me.StoreBindingSource.AddNew()
@@ -180,4 +183,26 @@
         End Try
     End Sub
 
+    Private Sub btnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
+        Try
+            Me.StoreBindingSource.CancelEdit()
+        Catch ex As Exception
+            MsgBox("Cancel Edit failed.")
+        End Try
+        StoreDataGridView.Enabled = True
+        lblSave.Visible = False
+        txtCity.ReadOnly = True
+        txtEmail.ReadOnly = True
+        txtFax.ReadOnly = True
+        txtPhone.ReadOnly = True
+        txtState.ReadOnly = True
+        txtStoreNbr.ReadOnly = True
+        txtStreetAddress.ReadOnly = True
+        txtZip.ReadOnly = True
+        btnModify.Enabled = True
+        btnSave.Enabled = False
+        btnCancel.Enabled = False
+        btnAdd.Enabled = True
+        btnDelete.Enabled = True
+    End Sub
 End Class
