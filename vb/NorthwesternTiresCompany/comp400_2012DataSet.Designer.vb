@@ -9723,12 +9723,21 @@ Namespace comp400_2012DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT     tireCode, description, manufacturer, manufacturerSize, retailPrice, de"& _ 
                 "alerPrice, wholesaleCost"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         tire"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        tireCode, description, manufacturer, manufacturerSize, retailPrice,"& _ 
+                " dealerPrice, wholesaleCost"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tire"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (description LIK"& _ 
+                "E '%' + @Param1 + '%') OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (tireCode LIKE '%' + @Param1"& _ 
+                "  + '%') OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (manufacturer LIKE @Param1  + '%') OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"   "& _ 
+                "                      (manufacturerSize LIKE '%' + @Param1  + '%')"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "description", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9750,6 +9759,40 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As comp400_2012DataSet.tireDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As comp400_2012DataSet.tireDataTable = New comp400_2012DataSet.tireDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBySearch(ByVal dataTable As comp400_2012DataSet.tireDataTable, ByVal Param1 As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBySearch(ByVal Param1 As String) As comp400_2012DataSet.tireDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
             Dim dataTable As comp400_2012DataSet.tireDataTable = New comp400_2012DataSet.tireDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -10147,7 +10190,8 @@ Namespace comp400_2012DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(2) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT     employeeID, firstName, lastName, userID, password, storeNbr, userSecurityLevel" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM         employee"
+            Me._commandCollection(0).CommandText = "SELECT     employeeID, firstName, lastName, userID, password, storeNbr, userSecur"& _ 
+                "ityLevel"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         employee"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
@@ -10170,7 +10214,7 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
         Public Overloads Overridable Function Fill(ByVal dataTable As comp400_2012DataSet.employeeDataTable) As Integer
-            Me.adapter.SelectCommand = Me.CommandCollection(0)
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
