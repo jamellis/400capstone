@@ -432,7 +432,7 @@ Partial Class frmStores
         Me.btnModify.Name = "btnModify"
         Me.btnModify.Size = New System.Drawing.Size(128, 30)
         Me.btnModify.TabIndex = 11
-        Me.btnModify.Text = "Modify Details"
+        Me.btnModify.Text = "Modify"
         Me.btnModify.UseVisualStyleBackColor = True
         '
         'btnSave
@@ -453,7 +453,7 @@ Partial Class frmStores
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(128, 30)
         Me.btnDelete.TabIndex = 12
-        Me.btnDelete.Text = "Delete Store"
+        Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
         'btnAdd
@@ -463,7 +463,7 @@ Partial Class frmStores
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(128, 30)
         Me.btnAdd.TabIndex = 10
-        Me.btnAdd.Text = "Add New Store"
+        Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
         'btnCancel

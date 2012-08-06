@@ -51,13 +51,13 @@ Partial Class frmTires
         Me.btnModify = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.grpTireDetails = New System.Windows.Forms.GroupBox()
-        Me.txtTireCode = New System.Windows.Forms.TextBox()
-        Me.txtManufacturer = New System.Windows.Forms.TextBox()
+        Me.txtTireSize = New System.Windows.Forms.TextBox()
+        Me.txtDescription = New System.Windows.Forms.TextBox()
         Me.txtWholesaleCost = New System.Windows.Forms.TextBox()
         Me.txtDealerPrice = New System.Windows.Forms.TextBox()
         Me.txtRetailPrice = New System.Windows.Forms.TextBox()
-        Me.txtDescription = New System.Windows.Forms.TextBox()
-        Me.txtTireSize = New System.Windows.Forms.TextBox()
+        Me.txtManufacturer = New System.Windows.Forms.TextBox()
+        Me.txtTireCode = New System.Windows.Forms.TextBox()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.lblSearch = New System.Windows.Forms.Label()
@@ -73,6 +73,76 @@ Partial Class frmTires
         CType(Me.TireDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpTireDetails.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'lblTireCode
+        '
+        lblTireCode.AutoSize = True
+        lblTireCode.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblTireCode.Location = New System.Drawing.Point(14, 22)
+        lblTireCode.Name = "lblTireCode"
+        lblTireCode.Size = New System.Drawing.Size(74, 16)
+        lblTireCode.TabIndex = 2
+        lblTireCode.Text = "Tire Code:"
+        '
+        'lblManufacturer
+        '
+        lblManufacturer.AutoSize = True
+        lblManufacturer.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblManufacturer.Location = New System.Drawing.Point(13, 51)
+        lblManufacturer.Name = "lblManufacturer"
+        lblManufacturer.Size = New System.Drawing.Size(96, 16)
+        lblManufacturer.TabIndex = 15
+        lblManufacturer.Text = "Manufacturer:"
+        '
+        'lblWholesaleCost
+        '
+        lblWholesaleCost.AutoSize = True
+        lblWholesaleCost.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblWholesaleCost.Location = New System.Drawing.Point(296, 79)
+        lblWholesaleCost.Name = "lblWholesaleCost"
+        lblWholesaleCost.Size = New System.Drawing.Size(111, 16)
+        lblWholesaleCost.TabIndex = 22
+        lblWholesaleCost.Text = "Wholesale Cost:"
+        '
+        'lblDealerPrice
+        '
+        lblDealerPrice.AutoSize = True
+        lblDealerPrice.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblDealerPrice.Location = New System.Drawing.Point(296, 51)
+        lblDealerPrice.Name = "lblDealerPrice"
+        lblDealerPrice.Size = New System.Drawing.Size(90, 16)
+        lblDealerPrice.TabIndex = 21
+        lblDealerPrice.Text = "Dealer Price:"
+        '
+        'lblRetailPrice
+        '
+        lblRetailPrice.AutoSize = True
+        lblRetailPrice.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblRetailPrice.Location = New System.Drawing.Point(296, 22)
+        lblRetailPrice.Name = "lblRetailPrice"
+        lblRetailPrice.Size = New System.Drawing.Size(84, 16)
+        lblRetailPrice.TabIndex = 20
+        lblRetailPrice.Text = "Retail Price:"
+        '
+        'lblDescription
+        '
+        lblDescription.AutoSize = True
+        lblDescription.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblDescription.Location = New System.Drawing.Point(14, 109)
+        lblDescription.Name = "lblDescription"
+        lblDescription.Size = New System.Drawing.Size(83, 16)
+        lblDescription.TabIndex = 24
+        lblDescription.Text = "Description:"
+        '
+        'lblTireSize
+        '
+        lblTireSize.AutoSize = True
+        lblTireSize.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblTireSize.Location = New System.Drawing.Point(14, 79)
+        lblTireSize.Name = "lblTireSize"
+        lblTireSize.Size = New System.Drawing.Size(66, 16)
+        lblTireSize.TabIndex = 23
+        lblTireSize.Text = "Tire Size:"
         '
         'btnExit
         '
@@ -221,7 +291,7 @@ Partial Class frmTires
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(128, 30)
         Me.btnDelete.TabIndex = 36
-        Me.btnDelete.Text = "Delete Tire"
+        Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
         'btnCancel
@@ -253,7 +323,7 @@ Partial Class frmTires
         Me.btnModify.Name = "btnModify"
         Me.btnModify.Size = New System.Drawing.Size(128, 30)
         Me.btnModify.TabIndex = 35
-        Me.btnModify.Text = "Modify Details"
+        Me.btnModify.Text = "Modify"
         Me.btnModify.UseVisualStyleBackColor = True
         '
         'btnAdd
@@ -263,7 +333,7 @@ Partial Class frmTires
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(128, 30)
         Me.btnAdd.TabIndex = 34
-        Me.btnAdd.Text = "Add New Tire"
+        Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
         'grpTireDetails
@@ -288,46 +358,25 @@ Partial Class frmTires
         Me.grpTireDetails.TabIndex = 39
         Me.grpTireDetails.TabStop = False
         '
-        'lblTireCode
+        'txtTireSize
         '
-        lblTireCode.AutoSize = True
-        lblTireCode.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblTireCode.Location = New System.Drawing.Point(14, 22)
-        lblTireCode.Name = "lblTireCode"
-        lblTireCode.Size = New System.Drawing.Size(74, 16)
-        lblTireCode.TabIndex = 2
-        lblTireCode.Text = "Tire Code:"
+        Me.txtTireSize.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TireBindingSource, "manufacturerSize", True))
+        Me.txtTireSize.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTireSize.Location = New System.Drawing.Point(116, 77)
+        Me.txtTireSize.Name = "txtTireSize"
+        Me.txtTireSize.ReadOnly = True
+        Me.txtTireSize.Size = New System.Drawing.Size(140, 23)
+        Me.txtTireSize.TabIndex = 26
         '
-        'txtTireCode
+        'txtDescription
         '
-        Me.txtTireCode.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TireBindingSource, "tireCode", True))
-        Me.txtTireCode.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTireCode.Location = New System.Drawing.Point(116, 19)
-        Me.txtTireCode.MaxLength = 4
-        Me.txtTireCode.Name = "txtTireCode"
-        Me.txtTireCode.ReadOnly = True
-        Me.txtTireCode.Size = New System.Drawing.Size(140, 23)
-        Me.txtTireCode.TabIndex = 3
-        '
-        'lblManufacturer
-        '
-        lblManufacturer.AutoSize = True
-        lblManufacturer.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblManufacturer.Location = New System.Drawing.Point(13, 51)
-        lblManufacturer.Name = "lblManufacturer"
-        lblManufacturer.Size = New System.Drawing.Size(96, 16)
-        lblManufacturer.TabIndex = 15
-        lblManufacturer.Text = "Manufacturer:"
-        '
-        'txtManufacturer
-        '
-        Me.txtManufacturer.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TireBindingSource, "manufacturer", True))
-        Me.txtManufacturer.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtManufacturer.Location = New System.Drawing.Point(116, 48)
-        Me.txtManufacturer.Name = "txtManufacturer"
-        Me.txtManufacturer.ReadOnly = True
-        Me.txtManufacturer.Size = New System.Drawing.Size(140, 23)
-        Me.txtManufacturer.TabIndex = 16
+        Me.txtDescription.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TireBindingSource, "description", True))
+        Me.txtDescription.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescription.Location = New System.Drawing.Point(116, 106)
+        Me.txtDescription.Name = "txtDescription"
+        Me.txtDescription.ReadOnly = True
+        Me.txtDescription.Size = New System.Drawing.Size(426, 23)
+        Me.txtDescription.TabIndex = 25
         '
         'txtWholesaleCost
         '
@@ -359,75 +408,26 @@ Partial Class frmTires
         Me.txtRetailPrice.Size = New System.Drawing.Size(127, 20)
         Me.txtRetailPrice.TabIndex = 17
         '
-        'lblWholesaleCost
+        'txtManufacturer
         '
-        lblWholesaleCost.AutoSize = True
-        lblWholesaleCost.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblWholesaleCost.Location = New System.Drawing.Point(296, 79)
-        lblWholesaleCost.Name = "lblWholesaleCost"
-        lblWholesaleCost.Size = New System.Drawing.Size(111, 16)
-        lblWholesaleCost.TabIndex = 22
-        lblWholesaleCost.Text = "Wholesale Cost:"
+        Me.txtManufacturer.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TireBindingSource, "manufacturer", True))
+        Me.txtManufacturer.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtManufacturer.Location = New System.Drawing.Point(116, 48)
+        Me.txtManufacturer.Name = "txtManufacturer"
+        Me.txtManufacturer.ReadOnly = True
+        Me.txtManufacturer.Size = New System.Drawing.Size(140, 23)
+        Me.txtManufacturer.TabIndex = 16
         '
-        'lblDealerPrice
+        'txtTireCode
         '
-        lblDealerPrice.AutoSize = True
-        lblDealerPrice.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblDealerPrice.Location = New System.Drawing.Point(296, 51)
-        lblDealerPrice.Name = "lblDealerPrice"
-        lblDealerPrice.Size = New System.Drawing.Size(90, 16)
-        lblDealerPrice.TabIndex = 21
-        lblDealerPrice.Text = "Dealer Price:"
-        '
-        'lblRetailPrice
-        '
-        lblRetailPrice.AutoSize = True
-        lblRetailPrice.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblRetailPrice.Location = New System.Drawing.Point(296, 22)
-        lblRetailPrice.Name = "lblRetailPrice"
-        lblRetailPrice.Size = New System.Drawing.Size(84, 16)
-        lblRetailPrice.TabIndex = 20
-        lblRetailPrice.Text = "Retail Price:"
-        '
-        'lblDescription
-        '
-        lblDescription.AutoSize = True
-        lblDescription.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblDescription.Location = New System.Drawing.Point(14, 109)
-        lblDescription.Name = "lblDescription"
-        lblDescription.Size = New System.Drawing.Size(83, 16)
-        lblDescription.TabIndex = 24
-        lblDescription.Text = "Description:"
-        '
-        'lblTireSize
-        '
-        lblTireSize.AutoSize = True
-        lblTireSize.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblTireSize.Location = New System.Drawing.Point(14, 79)
-        lblTireSize.Name = "lblTireSize"
-        lblTireSize.Size = New System.Drawing.Size(66, 16)
-        lblTireSize.TabIndex = 23
-        lblTireSize.Text = "Tire Size:"
-        '
-        'txtDescription
-        '
-        Me.txtDescription.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TireBindingSource, "description", True))
-        Me.txtDescription.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescription.Location = New System.Drawing.Point(116, 106)
-        Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.ReadOnly = True
-        Me.txtDescription.Size = New System.Drawing.Size(426, 23)
-        Me.txtDescription.TabIndex = 25
-        '
-        'txtTireSize
-        '
-        Me.txtTireSize.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TireBindingSource, "manufacturerSize", True))
-        Me.txtTireSize.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTireSize.Location = New System.Drawing.Point(116, 77)
-        Me.txtTireSize.Name = "txtTireSize"
-        Me.txtTireSize.ReadOnly = True
-        Me.txtTireSize.Size = New System.Drawing.Size(140, 23)
-        Me.txtTireSize.TabIndex = 26
+        Me.txtTireCode.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TireBindingSource, "tireCode", True))
+        Me.txtTireCode.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTireCode.Location = New System.Drawing.Point(116, 19)
+        Me.txtTireCode.MaxLength = 4
+        Me.txtTireCode.Name = "txtTireCode"
+        Me.txtTireCode.ReadOnly = True
+        Me.txtTireCode.Size = New System.Drawing.Size(140, 23)
+        Me.txtTireCode.TabIndex = 3
         '
         'btnSearch
         '

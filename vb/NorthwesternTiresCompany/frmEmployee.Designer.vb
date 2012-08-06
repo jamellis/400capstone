@@ -29,7 +29,6 @@ Partial Class frmEmployee
         Dim lblPassword As System.Windows.Forms.Label
         Dim lblStoreNbr As System.Windows.Forms.Label
         Dim lblUserSecurity As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEmployee))
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
@@ -37,38 +36,31 @@ Partial Class frmEmployee
         Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmployeeTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.employeeTableAdapter()
         Me.TableAdapterManager = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager()
-        Me.EmployeeBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.EmployeeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
-        Me.LastNameTextBox = New System.Windows.Forms.TextBox()
-        Me.UserIDTextBox = New System.Windows.Forms.TextBox()
-        Me.PasswordTextBox = New System.Windows.Forms.TextBox()
-        Me.StoreNbrTextBox = New System.Windows.Forms.TextBox()
-        Me.UserSecurityLevelTextBox = New System.Windows.Forms.TextBox()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
+        Me.txtUserID = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtUserSecurity = New System.Windows.Forms.TextBox()
         Me.EmployeeDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lblInstructions = New System.Windows.Forms.Label()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpBoxEmpInfo = New System.Windows.Forms.GroupBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.lblSearch = New System.Windows.Forms.Label()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnModify = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.txtStoreNbr = New System.Windows.Forms.ComboBox()
+        Me.StoreBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StoreTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.storeTableAdapter()
         lblFirstName = New System.Windows.Forms.Label()
         lblLastName = New System.Windows.Forms.Label()
         lblUserID = New System.Windows.Forms.Label()
@@ -77,18 +69,16 @@ Partial Class frmEmployee
         lblUserSecurity = New System.Windows.Forms.Label()
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmployeeBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.EmployeeBindingNavigator.SuspendLayout()
         CType(Me.EmployeeDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpBoxEmpInfo.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StoreBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblFirstName
         '
         lblFirstName.AutoSize = True
         lblFirstName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblFirstName.Location = New System.Drawing.Point(6, 16)
+        lblFirstName.Location = New System.Drawing.Point(28, 21)
         lblFirstName.Name = "lblFirstName"
         lblFirstName.Size = New System.Drawing.Size(89, 18)
         lblFirstName.TabIndex = 34
@@ -98,7 +88,7 @@ Partial Class frmEmployee
         '
         lblLastName.AutoSize = True
         lblLastName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblLastName.Location = New System.Drawing.Point(7, 42)
+        lblLastName.Location = New System.Drawing.Point(28, 54)
         lblLastName.Name = "lblLastName"
         lblLastName.Size = New System.Drawing.Size(88, 18)
         lblLastName.TabIndex = 36
@@ -108,7 +98,7 @@ Partial Class frmEmployee
         '
         lblUserID.AutoSize = True
         lblUserID.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblUserID.Location = New System.Drawing.Point(464, 17)
+        lblUserID.Location = New System.Drawing.Point(308, 54)
         lblUserID.Name = "lblUserID"
         lblUserID.Size = New System.Drawing.Size(64, 18)
         lblUserID.TabIndex = 38
@@ -118,7 +108,7 @@ Partial Class frmEmployee
         '
         lblPassword.AutoSize = True
         lblPassword.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblPassword.Location = New System.Drawing.Point(464, 43)
+        lblPassword.Location = New System.Drawing.Point(308, 86)
         lblPassword.Name = "lblPassword"
         lblPassword.Size = New System.Drawing.Size(82, 18)
         lblPassword.TabIndex = 40
@@ -128,7 +118,7 @@ Partial Class frmEmployee
         '
         lblStoreNbr.AutoSize = True
         lblStoreNbr.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblStoreNbr.Location = New System.Drawing.Point(264, 17)
+        lblStoreNbr.Location = New System.Drawing.Point(308, 21)
         lblStoreNbr.Name = "lblStoreNbr"
         lblStoreNbr.Size = New System.Drawing.Size(109, 18)
         lblStoreNbr.TabIndex = 42
@@ -138,7 +128,7 @@ Partial Class frmEmployee
         '
         lblUserSecurity.AutoSize = True
         lblUserSecurity.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblUserSecurity.Location = New System.Drawing.Point(264, 43)
+        lblUserSecurity.Location = New System.Drawing.Point(28, 86)
         lblUserSecurity.Name = "lblUserSecurity"
         lblUserSecurity.Size = New System.Drawing.Size(84, 18)
         lblUserSecurity.TabIndex = 44
@@ -148,7 +138,7 @@ Partial Class frmEmployee
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(582, 523)
+        Me.btnExit.Location = New System.Drawing.Point(592, 480)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(90, 30)
         Me.btnExit.TabIndex = 30
@@ -159,7 +149,7 @@ Partial Class frmEmployee
         '
         Me.btnBack.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnBack.Location = New System.Drawing.Point(13, 523)
+        Me.btnBack.Location = New System.Drawing.Point(12, 480)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(90, 30)
         Me.btnBack.TabIndex = 29
@@ -169,10 +159,10 @@ Partial Class frmEmployee
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
-        Me.lblTitle.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(258, 82)
+        Me.lblTitle.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Location = New System.Drawing.Point(285, 9)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(168, 34)
+        Me.lblTitle.Size = New System.Drawing.Size(124, 26)
         Me.lblTitle.TabIndex = 31
         Me.lblTitle.Text = "Employees"
         '
@@ -209,194 +199,55 @@ Partial Class frmEmployee
         Me.TableAdapterManager.wholesaleOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.wholesaleOrderTableAdapter = Nothing
         '
-        'EmployeeBindingNavigator
+        'txtFirstName
         '
-        Me.EmployeeBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.EmployeeBindingNavigator.BindingSource = Me.EmployeeBindingSource
-        Me.EmployeeBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.EmployeeBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.EmployeeBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
-        Me.EmployeeBindingNavigator.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.EmployeeBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.ToolStripSeparator1, Me.ToolStripSeparator2, Me.EmployeeBindingNavigatorSaveItem, Me.BindingNavigatorDeleteItem})
-        Me.EmployeeBindingNavigator.Location = New System.Drawing.Point(220, 528)
-        Me.EmployeeBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.EmployeeBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.EmployeeBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.EmployeeBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.EmployeeBindingNavigator.Name = "EmployeeBindingNavigator"
-        Me.EmployeeBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.EmployeeBindingNavigator.Size = New System.Drawing.Size(242, 25)
-        Me.EmployeeBindingNavigator.TabIndex = 32
-        Me.EmployeeBindingNavigator.Text = "BindingNavigator1"
+        Me.txtFirstName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "firstName", True))
+        Me.txtFirstName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFirstName.Location = New System.Drawing.Point(123, 19)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.ReadOnly = True
+        Me.txtFirstName.Size = New System.Drawing.Size(157, 26)
+        Me.txtFirstName.TabIndex = 35
         '
-        'BindingNavigatorAddNewItem
+        'txtLastName
         '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.BindingNavigatorAddNewItem.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(114, 22)
-        Me.BindingNavigatorAddNewItem.Text = "New Employee"
+        Me.txtLastName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "lastName", True))
+        Me.txtLastName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLastName.Location = New System.Drawing.Point(123, 51)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.ReadOnly = True
+        Me.txtLastName.Size = New System.Drawing.Size(157, 26)
+        Me.txtLastName.TabIndex = 37
         '
-        'BindingNavigatorCountItem
+        'txtUserID
         '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        Me.BindingNavigatorCountItem.Visible = False
+        Me.txtUserID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "userID", True))
+        Me.txtUserID.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUserID.Location = New System.Drawing.Point(423, 51)
+        Me.txtUserID.Name = "txtUserID"
+        Me.txtUserID.ReadOnly = True
+        Me.txtUserID.Size = New System.Drawing.Size(139, 26)
+        Me.txtUserID.TabIndex = 39
         '
-        'BindingNavigatorDeleteItem
+        'txtPassword
         '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete Employee"
-        Me.BindingNavigatorDeleteItem.Visible = False
+        Me.txtPassword.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "password", True))
+        Me.txtPassword.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Location = New System.Drawing.Point(423, 83)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.ReadOnly = True
+        Me.txtPassword.Size = New System.Drawing.Size(139, 26)
+        Me.txtPassword.TabIndex = 41
         '
-        'BindingNavigatorMoveFirstItem
+        'txtUserSecurity
         '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
-        Me.BindingNavigatorMoveFirstItem.Visible = False
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        Me.BindingNavigatorMovePreviousItem.Visible = False
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        Me.BindingNavigatorSeparator.Visible = False
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
-        Me.BindingNavigatorPositionItem.Visible = False
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        Me.BindingNavigatorSeparator1.Visible = False
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
-        Me.BindingNavigatorMoveNextItem.Visible = False
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
-        Me.BindingNavigatorMoveLastItem.Visible = False
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        Me.BindingNavigatorSeparator2.Visible = False
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'EmployeeBindingNavigatorSaveItem
-        '
-        Me.EmployeeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.EmployeeBindingNavigatorSaveItem.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.EmployeeBindingNavigatorSaveItem.Image = CType(resources.GetObject("EmployeeBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.EmployeeBindingNavigatorSaveItem.Name = "EmployeeBindingNavigatorSaveItem"
-        Me.EmployeeBindingNavigatorSaveItem.Size = New System.Drawing.Size(113, 22)
-        Me.EmployeeBindingNavigatorSaveItem.Text = "Save Changes"
-        '
-        'FirstNameTextBox
-        '
-        Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "firstName", True))
-        Me.FirstNameTextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FirstNameTextBox.Location = New System.Drawing.Point(101, 14)
-        Me.FirstNameTextBox.Name = "FirstNameTextBox"
-        Me.FirstNameTextBox.Size = New System.Drawing.Size(157, 26)
-        Me.FirstNameTextBox.TabIndex = 35
-        '
-        'LastNameTextBox
-        '
-        Me.LastNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "lastName", True))
-        Me.LastNameTextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LastNameTextBox.Location = New System.Drawing.Point(101, 40)
-        Me.LastNameTextBox.Name = "LastNameTextBox"
-        Me.LastNameTextBox.Size = New System.Drawing.Size(157, 26)
-        Me.LastNameTextBox.TabIndex = 37
-        '
-        'UserIDTextBox
-        '
-        Me.UserIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "userID", True))
-        Me.UserIDTextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UserIDTextBox.Location = New System.Drawing.Point(551, 13)
-        Me.UserIDTextBox.Name = "UserIDTextBox"
-        Me.UserIDTextBox.Size = New System.Drawing.Size(100, 26)
-        Me.UserIDTextBox.TabIndex = 39
-        '
-        'PasswordTextBox
-        '
-        Me.PasswordTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "password", True))
-        Me.PasswordTextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PasswordTextBox.Location = New System.Drawing.Point(551, 39)
-        Me.PasswordTextBox.Name = "PasswordTextBox"
-        Me.PasswordTextBox.Size = New System.Drawing.Size(100, 26)
-        Me.PasswordTextBox.TabIndex = 41
-        '
-        'StoreNbrTextBox
-        '
-        Me.StoreNbrTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "storeNbr", True))
-        Me.StoreNbrTextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StoreNbrTextBox.Location = New System.Drawing.Point(379, 13)
-        Me.StoreNbrTextBox.Name = "StoreNbrTextBox"
-        Me.StoreNbrTextBox.Size = New System.Drawing.Size(79, 26)
-        Me.StoreNbrTextBox.TabIndex = 43
-        '
-        'UserSecurityLevelTextBox
-        '
-        Me.UserSecurityLevelTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "userSecurityLevel", True))
-        Me.UserSecurityLevelTextBox.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UserSecurityLevelTextBox.Location = New System.Drawing.Point(379, 39)
-        Me.UserSecurityLevelTextBox.Name = "UserSecurityLevelTextBox"
-        Me.UserSecurityLevelTextBox.Size = New System.Drawing.Size(79, 26)
-        Me.UserSecurityLevelTextBox.TabIndex = 45
+        Me.txtUserSecurity.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "userSecurityLevel", True))
+        Me.txtUserSecurity.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUserSecurity.Location = New System.Drawing.Point(123, 83)
+        Me.txtUserSecurity.Name = "txtUserSecurity"
+        Me.txtUserSecurity.ReadOnly = True
+        Me.txtUserSecurity.Size = New System.Drawing.Size(157, 26)
+        Me.txtUserSecurity.TabIndex = 45
         '
         'EmployeeDataGridView
         '
@@ -404,13 +255,13 @@ Partial Class frmEmployee
         Me.EmployeeDataGridView.AllowUserToDeleteRows = False
         Me.EmployeeDataGridView.AutoGenerateColumns = False
         Me.EmployeeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.EmployeeDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
+        Me.EmployeeDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.EmployeeDataGridView.DataSource = Me.EmployeeBindingSource
-        Me.EmployeeDataGridView.Location = New System.Drawing.Point(13, 164)
+        Me.EmployeeDataGridView.Location = New System.Drawing.Point(13, 246)
         Me.EmployeeDataGridView.Name = "EmployeeDataGridView"
         Me.EmployeeDataGridView.ReadOnly = True
         Me.EmployeeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.EmployeeDataGridView.Size = New System.Drawing.Size(659, 268)
+        Me.EmployeeDataGridView.Size = New System.Drawing.Size(669, 228)
         Me.EmployeeDataGridView.TabIndex = 45
         '
         'DataGridViewTextBoxColumn1
@@ -437,6 +288,21 @@ Partial Class frmEmployee
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "storeNbr"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Store Number"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "userSecurityLevel"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Clearance"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -453,74 +319,145 @@ Partial Class frmEmployee
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "storeNbr"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Store Number"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "userSecurityLevel"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Clearance"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        '
-        'lblInstructions
-        '
-        Me.lblInstructions.AutoSize = True
-        Me.lblInstructions.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInstructions.ForeColor = System.Drawing.Color.Blue
-        Me.lblInstructions.Location = New System.Drawing.Point(98, 123)
-        Me.lblInstructions.Name = "lblInstructions"
-        Me.lblInstructions.Size = New System.Drawing.Size(489, 38)
-        Me.lblInstructions.TabIndex = 46
-        Me.lblInstructions.Text = "Select an employee from the list below. To edit details, make the" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "changes in the" & _
-            " boxes below then click Save Changes."
-        Me.lblInstructions.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'grpBoxEmpInfo
         '
-        Me.grpBoxEmpInfo.Controls.Add(Me.FirstNameTextBox)
-        Me.grpBoxEmpInfo.Controls.Add(Me.LastNameTextBox)
+        Me.grpBoxEmpInfo.Controls.Add(Me.txtStoreNbr)
+        Me.grpBoxEmpInfo.Controls.Add(Me.txtFirstName)
+        Me.grpBoxEmpInfo.Controls.Add(Me.txtLastName)
         Me.grpBoxEmpInfo.Controls.Add(lblUserID)
         Me.grpBoxEmpInfo.Controls.Add(lblFirstName)
         Me.grpBoxEmpInfo.Controls.Add(lblLastName)
-        Me.grpBoxEmpInfo.Controls.Add(Me.UserIDTextBox)
+        Me.grpBoxEmpInfo.Controls.Add(Me.txtUserID)
         Me.grpBoxEmpInfo.Controls.Add(lblPassword)
-        Me.grpBoxEmpInfo.Controls.Add(Me.PasswordTextBox)
+        Me.grpBoxEmpInfo.Controls.Add(Me.txtPassword)
         Me.grpBoxEmpInfo.Controls.Add(lblStoreNbr)
-        Me.grpBoxEmpInfo.Controls.Add(Me.StoreNbrTextBox)
         Me.grpBoxEmpInfo.Controls.Add(lblUserSecurity)
-        Me.grpBoxEmpInfo.Controls.Add(Me.UserSecurityLevelTextBox)
-        Me.grpBoxEmpInfo.Location = New System.Drawing.Point(13, 438)
+        Me.grpBoxEmpInfo.Controls.Add(Me.txtUserSecurity)
+        Me.grpBoxEmpInfo.Location = New System.Drawing.Point(48, 82)
         Me.grpBoxEmpInfo.Name = "grpBoxEmpInfo"
-        Me.grpBoxEmpInfo.Size = New System.Drawing.Size(659, 79)
+        Me.grpBoxEmpInfo.Size = New System.Drawing.Size(599, 122)
         Me.grpBoxEmpInfo.TabIndex = 47
         Me.grpBoxEmpInfo.TabStop = False
         '
-        'PictureBox1
+        'btnSearch
         '
-        Me.PictureBox1.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.nwtires_logo_sm
-        Me.PictureBox1.Location = New System.Drawing.Point(225, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(235, 75)
-        Me.PictureBox1.TabIndex = 48
-        Me.PictureBox1.TabStop = False
+        Me.btnSearch.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearch.Location = New System.Drawing.Point(485, 46)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(115, 30)
+        Me.btnSearch.TabIndex = 50
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = True
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearch.Location = New System.Drawing.Point(277, 48)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(202, 26)
+        Me.txtSearch.TabIndex = 49
+        '
+        'lblSearch
+        '
+        Me.lblSearch.AutoSize = True
+        Me.lblSearch.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSearch.Location = New System.Drawing.Point(94, 51)
+        Me.lblSearch.Name = "lblSearch"
+        Me.lblSearch.Size = New System.Drawing.Size(177, 18)
+        Me.lblSearch.TabIndex = 48
+        Me.lblSearch.Text = "Search for an employee:"
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.Location = New System.Drawing.Point(283, 210)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(128, 30)
+        Me.btnDelete.TabIndex = 53
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnCancel
+        '
+        Me.btnCancel.Enabled = False
+        Me.btnCancel.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.Location = New System.Drawing.Point(553, 210)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(128, 30)
+        Me.btnCancel.TabIndex = 55
+        Me.btnCancel.Text = "Cancel Changes"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
+        'btnSave
+        '
+        Me.btnSave.Enabled = False
+        Me.btnSave.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.Location = New System.Drawing.Point(418, 210)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(128, 30)
+        Me.btnSave.TabIndex = 54
+        Me.btnSave.Text = "Save Changes"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'btnModify
+        '
+        Me.btnModify.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModify.Location = New System.Drawing.Point(148, 210)
+        Me.btnModify.Name = "btnModify"
+        Me.btnModify.Size = New System.Drawing.Size(128, 30)
+        Me.btnModify.TabIndex = 52
+        Me.btnModify.Text = "Modify"
+        Me.btnModify.UseVisualStyleBackColor = True
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.Location = New System.Drawing.Point(13, 210)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(128, 30)
+        Me.btnAdd.TabIndex = 51
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
+        'txtStoreNbr
+        '
+        Me.txtStoreNbr.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.EmployeeBindingSource, "storeNbr", True))
+        Me.txtStoreNbr.DataSource = Me.StoreBindingSource
+        Me.txtStoreNbr.DisplayMember = "storeNbr"
+        Me.txtStoreNbr.Enabled = False
+        Me.txtStoreNbr.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtStoreNbr.FormattingEnabled = True
+        Me.txtStoreNbr.Location = New System.Drawing.Point(423, 18)
+        Me.txtStoreNbr.Name = "txtStoreNbr"
+        Me.txtStoreNbr.Size = New System.Drawing.Size(139, 26)
+        Me.txtStoreNbr.TabIndex = 56
+        Me.txtStoreNbr.ValueMember = "storeNbr"
+        '
+        'StoreBindingSource
+        '
+        Me.StoreBindingSource.DataMember = "store"
+        Me.StoreBindingSource.DataSource = Me.Comp400_2012DataSet
+        '
+        'StoreTableAdapter
+        '
+        Me.StoreTableAdapter.ClearBeforeFill = True
         '
         'frmEmployee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(684, 565)
+        Me.ClientSize = New System.Drawing.Size(694, 522)
         Me.ControlBox = False
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.btnModify)
+        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.btnSearch)
+        Me.Controls.Add(Me.txtSearch)
+        Me.Controls.Add(Me.lblSearch)
         Me.Controls.Add(Me.grpBoxEmpInfo)
-        Me.Controls.Add(Me.lblInstructions)
         Me.Controls.Add(Me.EmployeeDataGridView)
-        Me.Controls.Add(Me.EmployeeBindingNavigator)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.lblTitle)
@@ -532,13 +469,10 @@ Partial Class frmEmployee
         Me.Text = "Employees"
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmployeeBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.EmployeeBindingNavigator.ResumeLayout(False)
-        Me.EmployeeBindingNavigator.PerformLayout()
         CType(Me.EmployeeDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpBoxEmpInfo.ResumeLayout(False)
         Me.grpBoxEmpInfo.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StoreBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -550,36 +484,29 @@ Partial Class frmEmployee
     Friend WithEvents EmployeeBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents EmployeeTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.employeeTableAdapter
     Friend WithEvents TableAdapterManager As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager
-    Friend WithEvents EmployeeBindingNavigator As System.Windows.Forms.BindingNavigator
-    Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents BindingNavigatorDeleteItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMoveFirstItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMovePreviousItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents BindingNavigatorPositionItem As System.Windows.Forms.ToolStripTextBox
-    Friend WithEvents BindingNavigatorSeparator1 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents BindingNavigatorMoveNextItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents EmployeeBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents FirstNameTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents LastNameTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents UserIDTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents PasswordTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents StoreNbrTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents UserSecurityLevelTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
+    Friend WithEvents txtLastName As System.Windows.Forms.TextBox
+    Friend WithEvents txtUserID As System.Windows.Forms.TextBox
+    Friend WithEvents txtPassword As System.Windows.Forms.TextBox
+    Friend WithEvents txtUserSecurity As System.Windows.Forms.TextBox
     Friend WithEvents EmployeeDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents grpBoxEmpInfo As System.Windows.Forms.GroupBox
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents lblInstructions As System.Windows.Forms.Label
-    Friend WithEvents grpBoxEmpInfo As System.Windows.Forms.GroupBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnSearch As System.Windows.Forms.Button
+    Friend WithEvents txtSearch As System.Windows.Forms.TextBox
+    Friend WithEvents lblSearch As System.Windows.Forms.Label
+    Friend WithEvents btnDelete As System.Windows.Forms.Button
+    Friend WithEvents btnCancel As System.Windows.Forms.Button
+    Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents btnModify As System.Windows.Forms.Button
+    Friend WithEvents btnAdd As System.Windows.Forms.Button
+    Friend WithEvents txtStoreNbr As System.Windows.Forms.ComboBox
+    Friend WithEvents StoreBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents StoreTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.storeTableAdapter
 End Class
