@@ -207,7 +207,7 @@ Partial Class frmEmployee
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.ReadOnly = True
         Me.txtFirstName.Size = New System.Drawing.Size(157, 26)
-        Me.txtFirstName.TabIndex = 35
+        Me.txtFirstName.TabIndex = 2
         '
         'txtLastName
         '
@@ -217,7 +217,7 @@ Partial Class frmEmployee
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.ReadOnly = True
         Me.txtLastName.Size = New System.Drawing.Size(157, 26)
-        Me.txtLastName.TabIndex = 37
+        Me.txtLastName.TabIndex = 3
         '
         'txtUserID
         '
@@ -227,7 +227,7 @@ Partial Class frmEmployee
         Me.txtUserID.Name = "txtUserID"
         Me.txtUserID.ReadOnly = True
         Me.txtUserID.Size = New System.Drawing.Size(139, 26)
-        Me.txtUserID.TabIndex = 39
+        Me.txtUserID.TabIndex = 6
         '
         'txtPassword
         '
@@ -237,7 +237,7 @@ Partial Class frmEmployee
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.ReadOnly = True
         Me.txtPassword.Size = New System.Drawing.Size(139, 26)
-        Me.txtPassword.TabIndex = 41
+        Me.txtPassword.TabIndex = 7
         '
         'txtUserSecurity
         '
@@ -247,7 +247,7 @@ Partial Class frmEmployee
         Me.txtUserSecurity.Name = "txtUserSecurity"
         Me.txtUserSecurity.ReadOnly = True
         Me.txtUserSecurity.Size = New System.Drawing.Size(157, 26)
-        Me.txtUserSecurity.TabIndex = 45
+        Me.txtUserSecurity.TabIndex = 4
         '
         'EmployeeDataGridView
         '
@@ -355,7 +355,7 @@ Partial Class frmEmployee
         Me.txtSearch.Location = New System.Drawing.Point(277, 48)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(202, 26)
-        Me.txtSearch.TabIndex = 49
+        Me.txtSearch.TabIndex = 1
         '
         'lblSearch
         '
@@ -430,7 +430,7 @@ Partial Class frmEmployee
         Me.txtStoreNbr.Location = New System.Drawing.Point(423, 18)
         Me.txtStoreNbr.Name = "txtStoreNbr"
         Me.txtStoreNbr.Size = New System.Drawing.Size(139, 26)
-        Me.txtStoreNbr.TabIndex = 56
+        Me.txtStoreNbr.TabIndex = 5
         Me.txtStoreNbr.ValueMember = "storeNbr"
         '
         'StoreBindingSource
