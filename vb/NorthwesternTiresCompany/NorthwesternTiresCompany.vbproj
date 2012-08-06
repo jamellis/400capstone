@@ -84,14 +84,6 @@
     <Compile Include="comp400_2012DataSet.vb">
       <DependentUpon>comp400_2012DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="comp400_2012DataSetSalesReporting.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>comp400_2012DataSetSalesReporting.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="comp400_2012DataSetSalesReporting.vb">
-      <DependentUpon>comp400_2012DataSetSalesReporting.xsd</DependentUpon>
-    </Compile>
     <Compile Include="frmReportInventoryReport.Designer.vb">
       <DependentUpon>frmReportInventoryReport.vb</DependentUpon>
     </Compile>
@@ -267,17 +259,6 @@
     </None>
     <None Include="comp400_2012DataSet.xss">
       <DependentUpon>comp400_2012DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="comp400_2012DataSetSalesReporting.xsc">
-      <DependentUpon>comp400_2012DataSetSalesReporting.xsd</DependentUpon>
-    </None>
-    <None Include="comp400_2012DataSetSalesReporting.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>comp400_2012DataSetSalesReporting.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="comp400_2012DataSetSalesReporting.xss">
-      <DependentUpon>comp400_2012DataSetSalesReporting.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
