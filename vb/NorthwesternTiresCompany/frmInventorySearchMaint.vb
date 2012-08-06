@@ -12,16 +12,11 @@ Public Class frmInventorySearchMaint
     End Sub
 
     Private Sub btnBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBack.Click
-        'Dim MainMenuForm As New frmMainMenu
         frmMainMenu.Show()
         Me.Close()
     End Sub
 
     Private Sub frmInventorySearch_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'Comp400_2012DataSet.inventory' table. You can move, or remove it, as needed.
-        'Me.InventoryTableAdapter.Fill(Me.Comp400_2012DataSet.inventory)
-        'TODO: This line of code loads data into the 'Comp400_2012DataSet.invSearch' table. You can move, or remove it, as needed.
-        ' cmd.Connection = cn
         Try
             Me.InvSearchTableAdapter.Fill(Me.Comp400_2012DataSet.invSearch)
         Catch ex As Exception
@@ -32,8 +27,6 @@ Public Class frmInventorySearchMaint
     End Sub
 
     Private Sub btnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearch.Click
-        ' Dim SelectQry = "SELECT inventory.inventoryNbr, inventory.tireCode, tire.manufacturer, tire.description, tire.manufacturerSize, tire.retailPrice, inventory.tireQty, inventory.storeNbr FROM inventory INNER JOIN store ON inventory.storeNbr = store.storeNbr INNER JOIN tire ON inventory.tireCode = tire.tireCode WHERE (inventory.tireCode LIKE '%" & Me.txtSearch.Text & "%') OR (tire.manufacturer LIKE '%" & Me.txtSearch.Text & "%') OR (tire.description LIKE '%" & Me.txtSearch.Text & "%') OR (tire.manufacturerSize LIKE '%" & Me.txtSearch.Text & "%')"
-        ' Me.InvSearchTableAdapter.Fill(SelectQry)
         If cboStore.SelectedIndex < 1 Then
             Me.InvSearchTableAdapter.FillBySearch(Me.Comp400_2012DataSet.invSearch, txtSearch.Text)
         Else
@@ -45,17 +38,31 @@ Public Class frmInventorySearchMaint
     End Sub
 
     Private Sub btnUpdateQty_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpdateQty.Click
-
+        Dim rowView As DataRowView = InvSearchBindingSource.Current
+        Dim curRow As comp400_2012DataSet.invSearchRow = rowView.Row
         If Validator.IsPresent(txtTireQty, "Quantity") AndAlso
            Validator.IsInt32(txtTireQty, "Quantity") Then
-            Try
-                Dim rowView As DataRowView = InvSearchBindingSource.Current
-                Dim curRow As comp400_2012DataSet.invSearchRow = rowView.Row
-                InvSearchTableAdapter.UpdateQuantity(txtTireQty.Text, curRow.inventoryNbr)
-                Me.InvSearchTableAdapter.Fill(Me.Comp400_2012DataSet.invSearch)
-            Catch ex As Exception
-                MsgBox("Quantity Update error" & ex.Message, MsgBoxStyle.OkOnly, "Error")
-            End Try
+            If txtTireQty.Text = 0 Then
+                Dim result = MsgBox("Are you sure you want to delete this inventory?" & vbNewLine & "This cannot be undone.", MsgBoxStyle.YesNo)
+                If result = MsgBoxResult.Yes Then
+                    Try
+                        Me.InvSearchBindingSource.EndEdit()
+                        InvSearchTableAdapter.DeleteInventory(curRow.inventoryNbr)
+                        Me.InvSearchTableAdapter.Fill(Me.Comp400_2012DataSet.invSearch)
+                    Catch ex As Exception
+                        MsgBox("Delete failed.")
+                    End Try
+                End If
+            Else
+                Try
+                    InvSearchBindingSource.EndEdit()
+                    InvSearchTableAdapter.UpdateQuantity(txtTireQty.Text, curRow.inventoryNbr)
+                    Me.InvSearchTableAdapter.Fill(Me.Comp400_2012DataSet.invSearch)
+                Catch ex As Exception
+                    MsgBox("Quantity Update error" & ex.Message, MsgBoxStyle.OkOnly, "Error")
+                End Try
+            End If
+
         End If
     End Sub
 End Class
