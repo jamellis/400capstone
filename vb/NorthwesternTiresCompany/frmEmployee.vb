@@ -50,6 +50,8 @@
     End Sub
 
     Private Sub frmEmployee_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Comp400_2012DataSet.securityClearance' table. You can move, or remove it, as needed.
+        Me.SecurityClearanceTableAdapter.Fill(Me.Comp400_2012DataSet.securityClearance)
         'TODO: This line of code loads data into the 'Comp400_2012DataSet.store' table. You can move, or remove it, as needed.
         Me.StoreTableAdapter.Fill(Me.Comp400_2012DataSet.store)
         'TODO: This line of code loads data into the 'Comp400_2012DataSet.employee' table. You can move, or remove it, as needed.
@@ -62,7 +64,7 @@
         EmployeeDataGridView.Enabled = False
         txtFirstName.ReadOnly = False
         txtLastName.ReadOnly = False
-        txtUserSecurity.ReadOnly = False
+        txtUserSecurity.enabled = True
         txtStoreNbr.Enabled = True
         txtUserID.ReadOnly = False
         txtPassword.ReadOnly = False
@@ -99,7 +101,7 @@
             EmployeeDataGridView.Enabled = True
             txtFirstName.ReadOnly = True
             txtLastName.ReadOnly = True
-            txtUserSecurity.ReadOnly = True
+            txtUserSecurity.Enabled = False
             txtStoreNbr.Enabled = False
             txtUserID.ReadOnly = True
             txtPassword.ReadOnly = True
@@ -117,7 +119,7 @@
         EmployeeDataGridView.Enabled = False
         txtFirstName.ReadOnly = False
         txtLastName.ReadOnly = False
-        txtUserSecurity.ReadOnly = False
+        txtUserSecurity.Enabled = True
         txtStoreNbr.Enabled = True
         txtUserID.ReadOnly = False
         txtPassword.ReadOnly = False
@@ -164,7 +166,7 @@
         EmployeeDataGridView.Enabled = True
         txtFirstName.ReadOnly = True
         txtLastName.ReadOnly = True
-        txtUserSecurity.ReadOnly = True
+        txtUserSecurity.Enabled = False
         txtStoreNbr.Enabled = False
         txtUserID.ReadOnly = True
         txtPassword.ReadOnly = True

@@ -40,7 +40,6 @@ Partial Class frmEmployee
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.txtUserID = New System.Windows.Forms.TextBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.txtUserSecurity = New System.Windows.Forms.TextBox()
         Me.EmployeeDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -50,6 +49,8 @@ Partial Class frmEmployee
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpBoxEmpInfo = New System.Windows.Forms.GroupBox()
+        Me.txtStoreNbr = New System.Windows.Forms.ComboBox()
+        Me.StoreBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.lblSearch = New System.Windows.Forms.Label()
@@ -58,9 +59,10 @@ Partial Class frmEmployee
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnModify = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
-        Me.txtStoreNbr = New System.Windows.Forms.ComboBox()
-        Me.StoreBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StoreTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.storeTableAdapter()
+        Me.txtUserSecurity = New System.Windows.Forms.ComboBox()
+        Me.SecurityClearanceBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SecurityClearanceTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.securityClearanceTableAdapter()
         lblFirstName = New System.Windows.Forms.Label()
         lblLastName = New System.Windows.Forms.Label()
         lblUserID = New System.Windows.Forms.Label()
@@ -72,6 +74,7 @@ Partial Class frmEmployee
         CType(Me.EmployeeDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpBoxEmpInfo.SuspendLayout()
         CType(Me.StoreBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SecurityClearanceBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblFirstName
@@ -191,11 +194,13 @@ Partial Class frmEmployee
         Me.TableAdapterManager.purchaseOrderTableAdapter = Nothing
         Me.TableAdapterManager.retailOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.retailOrderTableAdapter = Nothing
+        Me.TableAdapterManager.securityClearanceTableAdapter = Nothing
         Me.TableAdapterManager.storeTableAdapter = Nothing
         Me.TableAdapterManager.tireTableAdapter = Nothing
         Me.TableAdapterManager.transferOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.transferOrderTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.vendorTableAdapter = Nothing
         Me.TableAdapterManager.wholesaleOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.wholesaleOrderTableAdapter = Nothing
         '
@@ -238,16 +243,6 @@ Partial Class frmEmployee
         Me.txtPassword.ReadOnly = True
         Me.txtPassword.Size = New System.Drawing.Size(139, 26)
         Me.txtPassword.TabIndex = 7
-        '
-        'txtUserSecurity
-        '
-        Me.txtUserSecurity.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "userSecurityLevel", True))
-        Me.txtUserSecurity.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUserSecurity.Location = New System.Drawing.Point(123, 83)
-        Me.txtUserSecurity.Name = "txtUserSecurity"
-        Me.txtUserSecurity.ReadOnly = True
-        Me.txtUserSecurity.Size = New System.Drawing.Size(157, 26)
-        Me.txtUserSecurity.TabIndex = 4
         '
         'EmployeeDataGridView
         '
@@ -321,6 +316,7 @@ Partial Class frmEmployee
         '
         'grpBoxEmpInfo
         '
+        Me.grpBoxEmpInfo.Controls.Add(Me.txtUserSecurity)
         Me.grpBoxEmpInfo.Controls.Add(Me.txtStoreNbr)
         Me.grpBoxEmpInfo.Controls.Add(Me.txtFirstName)
         Me.grpBoxEmpInfo.Controls.Add(Me.txtLastName)
@@ -332,12 +328,30 @@ Partial Class frmEmployee
         Me.grpBoxEmpInfo.Controls.Add(Me.txtPassword)
         Me.grpBoxEmpInfo.Controls.Add(lblStoreNbr)
         Me.grpBoxEmpInfo.Controls.Add(lblUserSecurity)
-        Me.grpBoxEmpInfo.Controls.Add(Me.txtUserSecurity)
         Me.grpBoxEmpInfo.Location = New System.Drawing.Point(48, 82)
         Me.grpBoxEmpInfo.Name = "grpBoxEmpInfo"
         Me.grpBoxEmpInfo.Size = New System.Drawing.Size(599, 122)
         Me.grpBoxEmpInfo.TabIndex = 47
         Me.grpBoxEmpInfo.TabStop = False
+        '
+        'txtStoreNbr
+        '
+        Me.txtStoreNbr.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.EmployeeBindingSource, "storeNbr", True))
+        Me.txtStoreNbr.DataSource = Me.StoreBindingSource
+        Me.txtStoreNbr.DisplayMember = "storeNbr"
+        Me.txtStoreNbr.Enabled = False
+        Me.txtStoreNbr.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtStoreNbr.FormattingEnabled = True
+        Me.txtStoreNbr.Location = New System.Drawing.Point(423, 18)
+        Me.txtStoreNbr.Name = "txtStoreNbr"
+        Me.txtStoreNbr.Size = New System.Drawing.Size(139, 26)
+        Me.txtStoreNbr.TabIndex = 5
+        Me.txtStoreNbr.ValueMember = "storeNbr"
+        '
+        'StoreBindingSource
+        '
+        Me.StoreBindingSource.DataMember = "store"
+        Me.StoreBindingSource.DataSource = Me.Comp400_2012DataSet
         '
         'btnSearch
         '
@@ -419,28 +433,32 @@ Partial Class frmEmployee
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'txtStoreNbr
-        '
-        Me.txtStoreNbr.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.EmployeeBindingSource, "storeNbr", True))
-        Me.txtStoreNbr.DataSource = Me.StoreBindingSource
-        Me.txtStoreNbr.DisplayMember = "storeNbr"
-        Me.txtStoreNbr.Enabled = False
-        Me.txtStoreNbr.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtStoreNbr.FormattingEnabled = True
-        Me.txtStoreNbr.Location = New System.Drawing.Point(423, 18)
-        Me.txtStoreNbr.Name = "txtStoreNbr"
-        Me.txtStoreNbr.Size = New System.Drawing.Size(139, 26)
-        Me.txtStoreNbr.TabIndex = 5
-        Me.txtStoreNbr.ValueMember = "storeNbr"
-        '
-        'StoreBindingSource
-        '
-        Me.StoreBindingSource.DataMember = "store"
-        Me.StoreBindingSource.DataSource = Me.Comp400_2012DataSet
-        '
         'StoreTableAdapter
         '
         Me.StoreTableAdapter.ClearBeforeFill = True
+        '
+        'txtUserSecurity
+        '
+        Me.txtUserSecurity.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.EmployeeBindingSource, "userSecurityLevel", True))
+        Me.txtUserSecurity.DataSource = Me.SecurityClearanceBindingSource
+        Me.txtUserSecurity.DisplayMember = "Clearance"
+        Me.txtUserSecurity.Enabled = False
+        Me.txtUserSecurity.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUserSecurity.FormattingEnabled = True
+        Me.txtUserSecurity.Location = New System.Drawing.Point(123, 83)
+        Me.txtUserSecurity.Name = "txtUserSecurity"
+        Me.txtUserSecurity.Size = New System.Drawing.Size(157, 26)
+        Me.txtUserSecurity.TabIndex = 56
+        Me.txtUserSecurity.ValueMember = "Clearance"
+        '
+        'SecurityClearanceBindingSource
+        '
+        Me.SecurityClearanceBindingSource.DataMember = "securityClearance"
+        Me.SecurityClearanceBindingSource.DataSource = Me.Comp400_2012DataSet
+        '
+        'SecurityClearanceTableAdapter
+        '
+        Me.SecurityClearanceTableAdapter.ClearBeforeFill = True
         '
         'frmEmployee
         '
@@ -473,6 +491,7 @@ Partial Class frmEmployee
         Me.grpBoxEmpInfo.ResumeLayout(False)
         Me.grpBoxEmpInfo.PerformLayout()
         CType(Me.StoreBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SecurityClearanceBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -488,7 +507,6 @@ Partial Class frmEmployee
     Friend WithEvents txtLastName As System.Windows.Forms.TextBox
     Friend WithEvents txtUserID As System.Windows.Forms.TextBox
     Friend WithEvents txtPassword As System.Windows.Forms.TextBox
-    Friend WithEvents txtUserSecurity As System.Windows.Forms.TextBox
     Friend WithEvents EmployeeDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents grpBoxEmpInfo As System.Windows.Forms.GroupBox
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -509,4 +527,7 @@ Partial Class frmEmployee
     Friend WithEvents txtStoreNbr As System.Windows.Forms.ComboBox
     Friend WithEvents StoreBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents StoreTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.storeTableAdapter
+    Friend WithEvents txtUserSecurity As System.Windows.Forms.ComboBox
+    Friend WithEvents SecurityClearanceBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents SecurityClearanceTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.securityClearanceTableAdapter
 End Class
