@@ -397,7 +397,7 @@ Partial Class frmStores
         Me.txtZip.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StoreBindingSource, "zip", True))
         Me.txtZip.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtZip.Location = New System.Drawing.Point(181, 113)
-        Me.txtZip.Mask = "00000-9999"
+        Me.txtZip.Mask = "00000"
         Me.txtZip.Name = "txtZip"
         Me.txtZip.ReadOnly = True
         Me.txtZip.Size = New System.Drawing.Size(98, 26)

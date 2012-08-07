@@ -24,29 +24,17 @@ Partial Class frmReport
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.SalesReportTableAdapterBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.comp400_2012DataSetSalesReporting = New NorthwesternTiresCompany.comp400_2012DataSetSalesReporting()
         Me.lblReports = New System.Windows.Forms.Label()
-        Me.SalesReportTableAdapterTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetSalesReportingTableAdapters.SalesReportTableAdapterTableAdapter()
         Me.btnSalesReport = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnInventoryReport = New System.Windows.Forms.Button()
         CType(Me.SalesReportTableAdapterBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.comp400_2012DataSetSalesReporting, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'SalesReportTableAdapterBindingSource
-        '
+
         Me.SalesReportTableAdapterBindingSource.DataMember = "SalesReportTableAdapter"
-        Me.SalesReportTableAdapterBindingSource.DataSource = Me.comp400_2012DataSetSalesReporting
-        '
-        'comp400_2012DataSetSalesReporting
-        '
-        Me.comp400_2012DataSetSalesReporting.DataSetName = "comp400_2012DataSetSalesReporting"
-        Me.comp400_2012DataSetSalesReporting.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'lblReports
-        '
+
         Me.lblReports.AutoSize = True
         Me.lblReports.Font = New System.Drawing.Font("Arial", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblReports.Location = New System.Drawing.Point(296, 16)
@@ -55,12 +43,7 @@ Partial Class frmReport
         Me.lblReports.Size = New System.Drawing.Size(93, 26)
         Me.lblReports.TabIndex = 0
         Me.lblReports.Text = "Reports"
-        '
-        'SalesReportTableAdapterTableAdapter
-        '
-        Me.SalesReportTableAdapterTableAdapter.ClearBeforeFill = True
-        '
-        'btnSalesReport
+
         '
         Me.btnSalesReport.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalesReport.Location = New System.Drawing.Point(113, 103)
@@ -70,8 +53,7 @@ Partial Class frmReport
         Me.btnSalesReport.TabIndex = 1
         Me.btnSalesReport.Text = "Sales Report"
         Me.btnSalesReport.UseVisualStyleBackColor = True
-        '
-        'btnExit
+
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
@@ -123,15 +105,15 @@ Partial Class frmReport
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reports"
         CType(Me.SalesReportTableAdapterBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.comp400_2012DataSetSalesReporting, System.ComponentModel.ISupportInitialize).EndInit()
+        'CType(Me.comp400_2012DataSetSalesReporting, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents lblReports As System.Windows.Forms.Label
     Friend WithEvents SalesReportTableAdapterBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents comp400_2012DataSetSalesReporting As NorthwesternTiresCompany.comp400_2012DataSetSalesReporting
-    Friend WithEvents SalesReportTableAdapterTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetSalesReportingTableAdapters.SalesReportTableAdapterTableAdapter
+    'Friend WithEvents comp400_2012DataSetSalesReporting As NorthwesternTiresCompany.comp400_2012DataSetSalesReporting
+    'Friend WithEvents SalesReportTableAdapterTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetSalesReportingTableAdapters.SalesReportTableAdapterTableAdapter
     Friend WithEvents btnSalesReport As System.Windows.Forms.Button
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents btnBack As System.Windows.Forms.Button
