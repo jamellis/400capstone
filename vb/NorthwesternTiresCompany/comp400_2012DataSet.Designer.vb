@@ -3134,6 +3134,8 @@ Partial Public Class comp400_2012DataSet
         
         Private columnvendorID As Global.System.Data.DataColumn
         
+        Private columnclosed As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -3202,6 +3204,14 @@ Partial Public Class comp400_2012DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property closedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnclosed
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -3238,9 +3248,9 @@ Partial Public Class comp400_2012DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddpurchaseOrderRow(ByVal parentstoreRowByfkPOStore As storeRow, ByVal poDate As Date, ByVal parentvendorRowByfkPoVendor As vendorRow) As purchaseOrderRow
+        Public Overloads Function AddpurchaseOrderRow(ByVal parentstoreRowByfkPOStore As storeRow, ByVal poDate As Date, ByVal parentvendorRowByfkPoVendor As vendorRow, ByVal closed As Boolean) As purchaseOrderRow
             Dim rowpurchaseOrderRow As purchaseOrderRow = CType(Me.NewRow,purchaseOrderRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, poDate, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, poDate, Nothing, closed}
             If (Not (parentstoreRowByfkPOStore) Is Nothing) Then
                 columnValuesArray(0) = parentstoreRowByfkPOStore(0)
             End If
@@ -3279,6 +3289,7 @@ Partial Public Class comp400_2012DataSet
             Me.columnpoNbr = MyBase.Columns("poNbr")
             Me.columnpoDate = MyBase.Columns("poDate")
             Me.columnvendorID = MyBase.Columns("vendorID")
+            Me.columnclosed = MyBase.Columns("closed")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3292,6 +3303,8 @@ Partial Public Class comp400_2012DataSet
             MyBase.Columns.Add(Me.columnpoDate)
             Me.columnvendorID = New Global.System.Data.DataColumn("vendorID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnvendorID)
+            Me.columnclosed = New Global.System.Data.DataColumn("closed", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnclosed)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint2", New Global.System.Data.DataColumn() {Me.columnpoNbr}, true))
             Me.columnstoreNbr.AllowDBNull = false
             Me.columnstoreNbr.MaxLength = 5
@@ -6069,6 +6082,8 @@ Partial Public Class comp400_2012DataSet
         
         Private columnretailOrderTotal As Global.System.Data.DataColumn
         
+        Private columncheckedOut As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -6169,6 +6184,14 @@ Partial Public Class comp400_2012DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property checkedOutColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncheckedOut
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -6205,9 +6228,9 @@ Partial Public Class comp400_2012DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddretailOrderRow(ByVal parentcustomerRowByfkRtlOrdCust1 As customerRow, ByVal parentstoreRowByfkRtlOrdStore1 As storeRow, ByVal parentemployeeRowByfkRtlOrdEmp1 As employeeRow, ByVal salesDate As Date, ByVal taxableTotal As Decimal, ByVal laborCharges As Decimal, ByVal retailOrderTotal As Decimal) As retailOrderRow
+        Public Overloads Function AddretailOrderRow(ByVal parentcustomerRowByfkRtlOrdCust1 As customerRow, ByVal parentstoreRowByfkRtlOrdStore1 As storeRow, ByVal parentemployeeRowByfkRtlOrdEmp1 As employeeRow, ByVal salesDate As Date, ByVal taxableTotal As Decimal, ByVal laborCharges As Decimal, ByVal retailOrderTotal As Decimal, ByVal checkedOut As Boolean) As retailOrderRow
             Dim rowretailOrderRow As retailOrderRow = CType(Me.NewRow,retailOrderRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing, Nothing, salesDate, taxableTotal, laborCharges, retailOrderTotal}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing, Nothing, salesDate, taxableTotal, laborCharges, retailOrderTotal, checkedOut}
             If (Not (parentcustomerRowByfkRtlOrdCust1) Is Nothing) Then
                 columnValuesArray(1) = parentcustomerRowByfkRtlOrdCust1(7)
             End If
@@ -6253,6 +6276,7 @@ Partial Public Class comp400_2012DataSet
             Me.columntaxableTotal = MyBase.Columns("taxableTotal")
             Me.columnlaborCharges = MyBase.Columns("laborCharges")
             Me.columnretailOrderTotal = MyBase.Columns("retailOrderTotal")
+            Me.columncheckedOut = MyBase.Columns("checkedOut")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6274,6 +6298,8 @@ Partial Public Class comp400_2012DataSet
             MyBase.Columns.Add(Me.columnlaborCharges)
             Me.columnretailOrderTotal = New Global.System.Data.DataColumn("retailOrderTotal", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnretailOrderTotal)
+            Me.columncheckedOut = New Global.System.Data.DataColumn("checkedOut", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncheckedOut)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnretailOrderNbr}, true))
             Me.columnretailOrderNbr.AutoIncrement = true
             Me.columnretailOrderNbr.AutoIncrementSeed = -1
@@ -7803,6 +7829,21 @@ Partial Public Class comp400_2012DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property closed() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablepurchaseOrder.closedColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'closed' in table 'purchaseOrder' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablepurchaseOrder.closedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property storeRow() As storeRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("fkPOStore")),storeRow)
@@ -7822,6 +7863,18 @@ Partial Public Class comp400_2012DataSet
                 Me.SetParentRow(value, Me.Table.ParentRelations("fkPoVendor"))
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsclosedNull() As Boolean
+            Return Me.IsNull(Me.tablepurchaseOrder.closedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetclosedNull()
+            Me(Me.tablepurchaseOrder.closedColumn) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -8724,6 +8777,21 @@ Partial Public Class comp400_2012DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property checkedOut() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableretailOrder.checkedOutColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'checkedOut' in table 'retailOrder' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableretailOrder.checkedOutColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property customerRow() As customerRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("fkRtlOrdCust1")),customerRow)
@@ -8754,6 +8822,18 @@ Partial Public Class comp400_2012DataSet
                 Me.SetParentRow(value, Me.Table.ParentRelations("fkRtlOrdStore1"))
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscheckedOutNull() As Boolean
+            Return Me.IsNull(Me.tableretailOrder.checkedOutColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcheckedOutNull()
+            Me(Me.tableretailOrder.checkedOutColumn) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -12331,40 +12411,50 @@ Namespace comp400_2012DataSetTableAdapters
             tableMapping.ColumnMappings.Add("poNbr", "poNbr")
             tableMapping.ColumnMappings.Add("poDate", "poDate")
             tableMapping.ColumnMappings.Add("vendorID", "vendorID")
+            tableMapping.ColumnMappings.Add("closed", "closed")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM [purchaseOrder] WHERE (([poNbr] = @Original_poNbr) AND ([storeNbr] = "& _ 
                 "@Original_storeNbr) AND ([poDate] = @Original_poDate) AND ([vendorID] = @Origina"& _ 
-                "l_vendorID))"
+                "l_vendorID) AND ((@IsNull_closed = 1 AND [closed] IS NULL) OR ([closed] = @Origi"& _ 
+                "nal_closed)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_poNbr", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "poNbr", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_storeNbr", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "storeNbr", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_poDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "poDate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_vendorID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "vendorID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_closed", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "closed", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_closed", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "closed", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [purchaseOrder] ([storeNbr], [poDate], [vendorID]) VALUES (@storeNbr,"& _ 
-                " @poDate, @vendorID);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT poNbr, storeNbr, poDate, vendorID FROM purchaseOrd"& _ 
-                "er WHERE (poNbr = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [purchaseOrder] ([storeNbr], [poDate], [vendorID], [closed]) VALUES ("& _ 
+                "@storeNbr, @poDate, @vendorID, @closed);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT poNbr, storeNbr, poDate, vendor"& _ 
+                "ID, closed FROM purchaseOrder WHERE (poNbr = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@storeNbr", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "storeNbr", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@poDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "poDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@vendorID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "vendorID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@closed", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "closed", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [purchaseOrder] SET [storeNbr] = @storeNbr, [poDate] = @poDate, [vendorID]"& _ 
-                " = @vendorID WHERE (([poNbr] = @Original_poNbr) AND ([storeNbr] = @Original_stor"& _ 
-                "eNbr) AND ([poDate] = @Original_poDate) AND ([vendorID] = @Original_vendorID));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT poNbr, storeNbr, poDate, vendorID FROM purchaseOrder WHERE (poNbr = @poN"& _ 
-                "br)"
+                " = @vendorID, [closed] = @closed WHERE (([poNbr] = @Original_poNbr) AND ([storeN"& _ 
+                "br] = @Original_storeNbr) AND ([poDate] = @Original_poDate) AND ([vendorID] = @O"& _ 
+                "riginal_vendorID) AND ((@IsNull_closed = 1 AND [closed] IS NULL) OR ([closed] = "& _ 
+                "@Original_closed)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT poNbr, storeNbr, poDate, vendorID, closed FROM purc"& _ 
+                "haseOrder WHERE (poNbr = @poNbr)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@storeNbr", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "storeNbr", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@poDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "poDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@vendorID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "vendorID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@closed", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "closed", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_poNbr", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "poNbr", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_storeNbr", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "storeNbr", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_poDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "poDate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_vendorID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "vendorID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_closed", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "closed", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_closed", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "closed", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@poNbr", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "poNbr", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
@@ -12381,7 +12471,7 @@ Namespace comp400_2012DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        poNbr, storeNbr, poDate, vendorID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            purchaseOrder"
+            Me._commandCollection(0).CommandText = "SELECT poNbr, storeNbr, poDate, vendorID, closed FROM purchaseOrder"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -12441,7 +12531,7 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_poNbr As Integer, ByVal Original_storeNbr As String, ByVal Original_poDate As Date, ByVal Original_vendorID As Integer) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_poNbr As Integer, ByVal Original_storeNbr As String, ByVal Original_poDate As Date, ByVal Original_vendorID As Integer, ByVal Original_closed As Global.System.Nullable(Of Boolean)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_poNbr,Integer)
             If (Original_storeNbr Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_storeNbr")
@@ -12450,6 +12540,13 @@ Namespace comp400_2012DataSetTableAdapters
             End If
             Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_poDate,Date)
             Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_vendorID,Integer)
+            If (Original_closed.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_closed.Value,Boolean)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -12469,7 +12566,7 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal storeNbr As String, ByVal poDate As Date, ByVal vendorID As Integer) As Integer
+        Public Overloads Overridable Function Insert(ByVal storeNbr As String, ByVal poDate As Date, ByVal vendorID As Integer, ByVal closed As Global.System.Nullable(Of Boolean)) As Integer
             If (storeNbr Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("storeNbr")
             Else
@@ -12477,6 +12574,11 @@ Namespace comp400_2012DataSetTableAdapters
             End If
             Me.Adapter.InsertCommand.Parameters(1).Value = CType(poDate,Date)
             Me.Adapter.InsertCommand.Parameters(2).Value = CType(vendorID,Integer)
+            If (closed.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(closed.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -12496,7 +12598,7 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal storeNbr As String, ByVal poDate As Date, ByVal vendorID As Integer, ByVal Original_poNbr As Integer, ByVal Original_storeNbr As String, ByVal Original_poDate As Date, ByVal Original_vendorID As Integer, ByVal poNbr As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal storeNbr As String, ByVal poDate As Date, ByVal vendorID As Integer, ByVal closed As Global.System.Nullable(Of Boolean), ByVal Original_poNbr As Integer, ByVal Original_storeNbr As String, ByVal Original_poDate As Date, ByVal Original_vendorID As Integer, ByVal Original_closed As Global.System.Nullable(Of Boolean), ByVal poNbr As Integer) As Integer
             If (storeNbr Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("storeNbr")
             Else
@@ -12504,15 +12606,27 @@ Namespace comp400_2012DataSetTableAdapters
             End If
             Me.Adapter.UpdateCommand.Parameters(1).Value = CType(poDate,Date)
             Me.Adapter.UpdateCommand.Parameters(2).Value = CType(vendorID,Integer)
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_poNbr,Integer)
+            If (closed.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(closed.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_poNbr,Integer)
             If (Original_storeNbr Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_storeNbr")
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_storeNbr,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_storeNbr,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_poDate,Date)
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_vendorID,Integer)
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(poNbr,Integer)
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_poDate,Date)
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_vendorID,Integer)
+            If (Original_closed.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_closed.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(poNbr,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -12532,8 +12646,8 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal storeNbr As String, ByVal poDate As Date, ByVal vendorID As Integer, ByVal Original_poNbr As Integer, ByVal Original_storeNbr As String, ByVal Original_poDate As Date, ByVal Original_vendorID As Integer) As Integer
-            Return Me.Update(storeNbr, poDate, vendorID, Original_poNbr, Original_storeNbr, Original_poDate, Original_vendorID, Original_poNbr)
+        Public Overloads Overridable Function Update(ByVal storeNbr As String, ByVal poDate As Date, ByVal vendorID As Integer, ByVal closed As Global.System.Nullable(Of Boolean), ByVal Original_poNbr As Integer, ByVal Original_storeNbr As String, ByVal Original_poDate As Date, ByVal Original_vendorID As Integer, ByVal Original_closed As Global.System.Nullable(Of Boolean)) As Integer
+            Return Me.Update(storeNbr, poDate, vendorID, closed, Original_poNbr, Original_storeNbr, Original_poDate, Original_vendorID, Original_closed, Original_poNbr)
         End Function
     End Class
     
@@ -15061,6 +15175,7 @@ Namespace comp400_2012DataSetTableAdapters
             tableMapping.ColumnMappings.Add("taxableTotal", "taxableTotal")
             tableMapping.ColumnMappings.Add("laborCharges", "laborCharges")
             tableMapping.ColumnMappings.Add("retailOrderTotal", "retailOrderTotal")
+            tableMapping.ColumnMappings.Add("checkedOut", "checkedOut")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -15068,7 +15183,9 @@ Namespace comp400_2012DataSetTableAdapters
                 "D ([customerID] = @Original_customerID) AND ([storeNbr] = @Original_storeNbr) AN"& _ 
                 "D ([employeeID] = @Original_employeeID) AND ([salesDate] = @Original_salesDate) "& _ 
                 "AND ([taxableTotal] = @Original_taxableTotal) AND ([laborCharges] = @Original_la"& _ 
-                "borCharges) AND ([retailOrderTotal] = @Original_retailOrderTotal))"
+                "borCharges) AND ([retailOrderTotal] = @Original_retailOrderTotal) AND ((@IsNull_"& _ 
+                "checkedOut = 1 AND [checkedOut] IS NULL) OR ([checkedOut] = @Original_checkedOut"& _ 
+                ")))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_retailOrderNbr", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "retailOrderNbr", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_customerID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "customerID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -15078,14 +15195,16 @@ Namespace comp400_2012DataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_taxableTotal", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "taxableTotal", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_laborCharges", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "laborCharges", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_retailOrderTotal", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "retailOrderTotal", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_checkedOut", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "checkedOut", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_checkedOut", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "checkedOut", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [retailOrder] ([customerID], [storeNbr], [employeeID], [salesDate], ["& _ 
-                "taxableTotal], [laborCharges], [retailOrderTotal]) VALUES (@customerID, @storeNb"& _ 
-                "r, @employeeID, @salesDate, @taxableTotal, @laborCharges, @retailOrderTotal);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"S"& _ 
-                "ELECT retailOrderNbr, customerID, storeNbr, employeeID, salesDate, taxableTotal,"& _ 
-                " laborCharges, retailOrderTotal FROM retailOrder WHERE (retailOrderNbr = SCOPE_I"& _ 
-                "DENTITY())"
+                "taxableTotal], [laborCharges], [retailOrderTotal], [checkedOut]) VALUES (@custom"& _ 
+                "erID, @storeNbr, @employeeID, @salesDate, @taxableTotal, @laborCharges, @retailO"& _ 
+                "rderTotal, @checkedOut);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT retailOrderNbr, customerID, storeNbr, employeeI"& _ 
+                "D, salesDate, taxableTotal, laborCharges, retailOrderTotal, checkedOut FROM reta"& _ 
+                "ilOrder WHERE (retailOrderNbr = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@customerID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "customerID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@storeNbr", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "storeNbr", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -15094,18 +15213,21 @@ Namespace comp400_2012DataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@taxableTotal", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "taxableTotal", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@laborCharges", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "laborCharges", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@retailOrderTotal", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "retailOrderTotal", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@checkedOut", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "checkedOut", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [retailOrder] SET [customerID] = @customerID, [storeNbr] = @storeNbr, [emp"& _ 
                 "loyeeID] = @employeeID, [salesDate] = @salesDate, [taxableTotal] = @taxableTotal"& _ 
-                ", [laborCharges] = @laborCharges, [retailOrderTotal] = @retailOrderTotal WHERE ("& _ 
-                "([retailOrderNbr] = @Original_retailOrderNbr) AND ([customerID] = @Original_cust"& _ 
-                "omerID) AND ([storeNbr] = @Original_storeNbr) AND ([employeeID] = @Original_empl"& _ 
-                "oyeeID) AND ([salesDate] = @Original_salesDate) AND ([taxableTotal] = @Original_"& _ 
-                "taxableTotal) AND ([laborCharges] = @Original_laborCharges) AND ([retailOrderTot"& _ 
-                "al] = @Original_retailOrderTotal));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT retailOrderNbr, customerID, storeNbr"& _ 
-                ", employeeID, salesDate, taxableTotal, laborCharges, retailOrderTotal FROM retai"& _ 
-                "lOrder WHERE (retailOrderNbr = @retailOrderNbr)"
+                ", [laborCharges] = @laborCharges, [retailOrderTotal] = @retailOrderTotal, [check"& _ 
+                "edOut] = @checkedOut WHERE (([retailOrderNbr] = @Original_retailOrderNbr) AND (["& _ 
+                "customerID] = @Original_customerID) AND ([storeNbr] = @Original_storeNbr) AND (["& _ 
+                "employeeID] = @Original_employeeID) AND ([salesDate] = @Original_salesDate) AND "& _ 
+                "([taxableTotal] = @Original_taxableTotal) AND ([laborCharges] = @Original_laborC"& _ 
+                "harges) AND ([retailOrderTotal] = @Original_retailOrderTotal) AND ((@IsNull_chec"& _ 
+                "kedOut = 1 AND [checkedOut] IS NULL) OR ([checkedOut] = @Original_checkedOut)));"& _ 
+                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT retailOrderNbr, customerID, storeNbr, employeeID, salesDate, taxableTot"& _ 
+                "al, laborCharges, retailOrderTotal, checkedOut FROM retailOrder WHERE (retailOrd"& _ 
+                "erNbr = @retailOrderNbr)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@customerID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "customerID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@storeNbr", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "storeNbr", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -15114,6 +15236,7 @@ Namespace comp400_2012DataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@taxableTotal", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "taxableTotal", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@laborCharges", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "laborCharges", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@retailOrderTotal", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "retailOrderTotal", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@checkedOut", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "checkedOut", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_retailOrderNbr", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "retailOrderNbr", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_customerID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "customerID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_storeNbr", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "storeNbr", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -15122,6 +15245,8 @@ Namespace comp400_2012DataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_taxableTotal", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "taxableTotal", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_laborCharges", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "laborCharges", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_retailOrderTotal", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 7, 2, "retailOrderTotal", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_checkedOut", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "checkedOut", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_checkedOut", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "checkedOut", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@retailOrderNbr", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "retailOrderNbr", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
@@ -15138,7 +15263,8 @@ Namespace comp400_2012DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT     retailOrder.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         retailOrder"
+            Me._commandCollection(0).CommandText = "SELECT retailOrderNbr, customerID, storeNbr, employeeID, salesDate, taxableTotal,"& _ 
+                " laborCharges, retailOrderTotal, checkedOut FROM retailOrder"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -15198,7 +15324,7 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_retailOrderNbr As Integer, ByVal Original_customerID As Integer, ByVal Original_storeNbr As String, ByVal Original_employeeID As Integer, ByVal Original_salesDate As Date, ByVal Original_taxableTotal As Decimal, ByVal Original_laborCharges As Decimal, ByVal Original_retailOrderTotal As Decimal) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_retailOrderNbr As Integer, ByVal Original_customerID As Integer, ByVal Original_storeNbr As String, ByVal Original_employeeID As Integer, ByVal Original_salesDate As Date, ByVal Original_taxableTotal As Decimal, ByVal Original_laborCharges As Decimal, ByVal Original_retailOrderTotal As Decimal, ByVal Original_checkedOut As Global.System.Nullable(Of Boolean)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_retailOrderNbr,Integer)
             Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_customerID,Integer)
             If (Original_storeNbr Is Nothing) Then
@@ -15211,6 +15337,13 @@ Namespace comp400_2012DataSetTableAdapters
             Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_taxableTotal,Decimal)
             Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_laborCharges,Decimal)
             Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_retailOrderTotal,Decimal)
+            If (Original_checkedOut.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_checkedOut.Value,Boolean)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -15230,7 +15363,7 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal customerID As Integer, ByVal storeNbr As String, ByVal employeeID As Integer, ByVal salesDate As Date, ByVal taxableTotal As Decimal, ByVal laborCharges As Decimal, ByVal retailOrderTotal As Decimal) As Integer
+        Public Overloads Overridable Function Insert(ByVal customerID As Integer, ByVal storeNbr As String, ByVal employeeID As Integer, ByVal salesDate As Date, ByVal taxableTotal As Decimal, ByVal laborCharges As Decimal, ByVal retailOrderTotal As Decimal, ByVal checkedOut As Global.System.Nullable(Of Boolean)) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(customerID,Integer)
             If (storeNbr Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("storeNbr")
@@ -15242,6 +15375,11 @@ Namespace comp400_2012DataSetTableAdapters
             Me.Adapter.InsertCommand.Parameters(4).Value = CType(taxableTotal,Decimal)
             Me.Adapter.InsertCommand.Parameters(5).Value = CType(laborCharges,Decimal)
             Me.Adapter.InsertCommand.Parameters(6).Value = CType(retailOrderTotal,Decimal)
+            If (checkedOut.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(checkedOut.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -15269,6 +15407,7 @@ Namespace comp400_2012DataSetTableAdapters
                     ByVal taxableTotal As Decimal,  _
                     ByVal laborCharges As Decimal,  _
                     ByVal retailOrderTotal As Decimal,  _
+                    ByVal checkedOut As Global.System.Nullable(Of Boolean),  _
                     ByVal Original_retailOrderNbr As Integer,  _
                     ByVal Original_customerID As Integer,  _
                     ByVal Original_storeNbr As String,  _
@@ -15277,6 +15416,7 @@ Namespace comp400_2012DataSetTableAdapters
                     ByVal Original_taxableTotal As Decimal,  _
                     ByVal Original_laborCharges As Decimal,  _
                     ByVal Original_retailOrderTotal As Decimal,  _
+                    ByVal Original_checkedOut As Global.System.Nullable(Of Boolean),  _
                     ByVal retailOrderNbr As Integer) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(customerID,Integer)
             If (storeNbr Is Nothing) Then
@@ -15289,19 +15429,31 @@ Namespace comp400_2012DataSetTableAdapters
             Me.Adapter.UpdateCommand.Parameters(4).Value = CType(taxableTotal,Decimal)
             Me.Adapter.UpdateCommand.Parameters(5).Value = CType(laborCharges,Decimal)
             Me.Adapter.UpdateCommand.Parameters(6).Value = CType(retailOrderTotal,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_retailOrderNbr,Integer)
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_customerID,Integer)
+            If (checkedOut.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(checkedOut.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_retailOrderNbr,Integer)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_customerID,Integer)
             If (Original_storeNbr Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_storeNbr")
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_storeNbr,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_storeNbr,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_employeeID,Integer)
-            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_salesDate,Date)
-            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_taxableTotal,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_laborCharges,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_retailOrderTotal,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(retailOrderNbr,Integer)
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_employeeID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_salesDate,Date)
+            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_taxableTotal,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_laborCharges,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_retailOrderTotal,Decimal)
+            If (Original_checkedOut.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_checkedOut.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(18).Value = CType(retailOrderNbr,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -15321,8 +15473,25 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal customerID As Integer, ByVal storeNbr As String, ByVal employeeID As Integer, ByVal salesDate As Date, ByVal taxableTotal As Decimal, ByVal laborCharges As Decimal, ByVal retailOrderTotal As Decimal, ByVal Original_retailOrderNbr As Integer, ByVal Original_customerID As Integer, ByVal Original_storeNbr As String, ByVal Original_employeeID As Integer, ByVal Original_salesDate As Date, ByVal Original_taxableTotal As Decimal, ByVal Original_laborCharges As Decimal, ByVal Original_retailOrderTotal As Decimal) As Integer
-            Return Me.Update(customerID, storeNbr, employeeID, salesDate, taxableTotal, laborCharges, retailOrderTotal, Original_retailOrderNbr, Original_customerID, Original_storeNbr, Original_employeeID, Original_salesDate, Original_taxableTotal, Original_laborCharges, Original_retailOrderTotal, Original_retailOrderNbr)
+        Public Overloads Overridable Function Update( _
+                    ByVal customerID As Integer,  _
+                    ByVal storeNbr As String,  _
+                    ByVal employeeID As Integer,  _
+                    ByVal salesDate As Date,  _
+                    ByVal taxableTotal As Decimal,  _
+                    ByVal laborCharges As Decimal,  _
+                    ByVal retailOrderTotal As Decimal,  _
+                    ByVal checkedOut As Global.System.Nullable(Of Boolean),  _
+                    ByVal Original_retailOrderNbr As Integer,  _
+                    ByVal Original_customerID As Integer,  _
+                    ByVal Original_storeNbr As String,  _
+                    ByVal Original_employeeID As Integer,  _
+                    ByVal Original_salesDate As Date,  _
+                    ByVal Original_taxableTotal As Decimal,  _
+                    ByVal Original_laborCharges As Decimal,  _
+                    ByVal Original_retailOrderTotal As Decimal,  _
+                    ByVal Original_checkedOut As Global.System.Nullable(Of Boolean)) As Integer
+            Return Me.Update(customerID, storeNbr, employeeID, salesDate, taxableTotal, laborCharges, retailOrderTotal, checkedOut, Original_retailOrderNbr, Original_customerID, Original_storeNbr, Original_employeeID, Original_salesDate, Original_taxableTotal, Original_laborCharges, Original_retailOrderTotal, Original_checkedOut, Original_retailOrderNbr)
         End Function
     End Class
     
