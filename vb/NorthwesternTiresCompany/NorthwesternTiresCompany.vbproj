@@ -102,12 +102,6 @@
     <Compile Include="frmInventorySearchMaint.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInventoryMaintain.Designer.vb">
-      <DependentUpon>frmInventoryMaintain.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmInventoryMaintain.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmInventorySearch.Designer.vb">
       <DependentUpon>frmInventorySearch.vb</DependentUpon>
     </Compile>
@@ -201,9 +195,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInventorySearchMaint.resx">
       <DependentUpon>frmInventorySearchMaint.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmInventoryMaintain.resx">
-      <DependentUpon>frmInventoryMaintain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInventorySearch.resx">
       <DependentUpon>frmInventorySearch.vb</DependentUpon>
