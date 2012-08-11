@@ -24,22 +24,32 @@ Partial Class frmReportSales
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.salesReportTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Comp400_2012DataSet = New NorthwesternTiresCompany.comp400_2012DataSet()
         Me.rvReportSales = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.Comp400_2012DataSet = New NorthwesternTiresCompany.comp400_2012DataSet()
-        Me.salesReportTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.salesReportTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.salesReportTableAdapter()
-        CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.salesReportTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'salesReportTableBindingSource
+        '
+        Me.salesReportTableBindingSource.DataMember = "salesReportTable"
+        Me.salesReportTableBindingSource.DataSource = Me.Comp400_2012DataSet
+        '
+        'Comp400_2012DataSet
+        '
+        Me.Comp400_2012DataSet.DataSetName = "comp400_2012DataSet"
+        Me.Comp400_2012DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'rvReportSales
         '
-        ReportDataSource1.Name = "SalesReport"
+        ReportDataSource1.Name = "Sales"
         ReportDataSource1.Value = Me.salesReportTableBindingSource
         Me.rvReportSales.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.rvReportSales.LocalReport.ReportEmbeddedResource = "NorthwesternTiresCompany.rptSalesReport.rdlc"
+        Me.rvReportSales.LocalReport.ReportEmbeddedResource = "NorthwesternTiresCompany.Report1.rdlc"
         Me.rvReportSales.Location = New System.Drawing.Point(12, 12)
         Me.rvReportSales.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.rvReportSales.Name = "rvReportSales"
@@ -70,16 +80,6 @@ Partial Class frmReportSales
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
-        'Comp400_2012DataSet
-        '
-        Me.Comp400_2012DataSet.DataSetName = "comp400_2012DataSet"
-        Me.Comp400_2012DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'salesReportTableBindingSource
-        '
-        Me.salesReportTableBindingSource.DataMember = "salesReportTable"
-        Me.salesReportTableBindingSource.DataSource = Me.Comp400_2012DataSet
-        '
         'salesReportTableAdapter
         '
         Me.salesReportTableAdapter.ClearBeforeFill = True
@@ -96,8 +96,8 @@ Partial Class frmReportSales
         Me.Name = "frmReportSales"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sales Report"
-        CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.salesReportTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

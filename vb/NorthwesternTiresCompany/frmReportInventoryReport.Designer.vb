@@ -46,7 +46,7 @@ Partial Class frmReportInventoryReport
         '
         'rvInventoryReport
         '
-        ReportDataSource1.Name = "InventoryReport"
+        ReportDataSource1.Name = "Inventory"
         ReportDataSource1.Value = Me.InventoryReportTableBindingSource
         Me.rvInventoryReport.LocalReport.DataSources.Add(ReportDataSource1)
         Me.rvInventoryReport.LocalReport.ReportEmbeddedResource = "NorthwesternTiresCompany.rptInventoryReport.rdlc"
@@ -65,7 +65,7 @@ Partial Class frmReportInventoryReport
         Me.btnBack.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnBack.Location = New System.Drawing.Point(16, 681)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(120, 37)
         Me.btnBack.TabIndex = 15
@@ -77,7 +77,7 @@ Partial Class frmReportInventoryReport
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
         Me.btnExit.Location = New System.Drawing.Point(1371, 681)
-        Me.btnExit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(120, 37)
         Me.btnExit.TabIndex = 16
