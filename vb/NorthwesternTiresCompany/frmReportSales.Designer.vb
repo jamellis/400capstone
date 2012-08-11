@@ -27,6 +27,8 @@ Partial Class frmReportSales
         Me.rvReportSales = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.Comp400_2012DataSet = New NorthwesternTiresCompany.comp400_2012DataSet()
+        CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'rvReportSales
@@ -64,6 +66,11 @@ Partial Class frmReportSales
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
+        'Comp400_2012DataSet
+        '
+        Me.Comp400_2012DataSet.DataSetName = "comp400_2012DataSet"
+        Me.Comp400_2012DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'frmReportSales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -76,10 +83,12 @@ Partial Class frmReportSales
         Me.Name = "frmReportSales"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sales Report"
+        CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents rvReportSales As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents btnBack As System.Windows.Forms.Button
     Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents Comp400_2012DataSet As NorthwesternTiresCompany.comp400_2012DataSet
 End Class
