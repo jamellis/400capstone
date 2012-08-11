@@ -10,14 +10,6 @@
     End Sub
 
     Private Sub btnLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLogin.Click
-        'Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString(txtUserID.Text, txtPassword.Text)
-
-        'If Login Is Nothing Then
-        '    MsgBox("Incorrect Username or Password")
-        'Else
-        '    frmMainMenu.Show()
-        '    Me.Close()
-        'End If
 
         If txtUserID.Text.Trim = Nothing And txtPassword.Text.Trim = Nothing Then
             'Dim MainMenuForm As New frmMainMenu
@@ -28,10 +20,9 @@
             If Login Is Nothing Then
                 MsgBox("Incorrect UserID or Password")
             Else
-                Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString(txtUserID.Text)
-                'Dim MainMenuForm As New frmMainMenu
-                'MainMenuForm.Clearance = ClearanceString
-                frmMainMenu.Clearance = ClearanceString
+                userInfo.Clearance = Me.EmployeeTableAdapter1.ClearanceString(txtUserID.Text)
+                userInfo.EmployeeID = Me.EmployeeTableAdapter1.EmployeeNumber(txtUserID.Text)
+                userInfo.StoreNumber = Me.EmployeeTableAdapter1.StoreNumber(txtUserID.Text)
                 frmMainMenu.Show()
                 Me.Close()
             End If
@@ -45,9 +36,9 @@
             MsgBox("Incorrect Username or Password")
         Else
             Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("arankin")
-            'Dim MainMenuForm As New frmMainMenu
-            'MainMenuForm.Clearance = ClearanceString
-            frmMainMenu.Clearance = ClearanceString
+            userInfo.Clearance = ClearanceString
+            userInfo.EmployeeID = Me.EmployeeTableAdapter1.EmployeeNumber("arankin")
+            userInfo.StoreNumber = Me.EmployeeTableAdapter1.StoreNumber("arankin")
             frmMainMenu.Show()
             Me.Close()
         End If
@@ -67,9 +58,9 @@
             MsgBox("Incorrect Username or Password")
         Else
             Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("bmason")
-            'Dim MainMenuForm As New frmMainMenu
-            'MainMenuForm.Clearance = ClearanceString
-            frmMainMenu.Clearance = ClearanceString
+            userInfo.Clearance = ClearanceString
+            userInfo.EmployeeID = Me.EmployeeTableAdapter1.EmployeeNumber("bmason")
+            userInfo.StoreNumber = Me.EmployeeTableAdapter1.StoreNumber("bmason")
             frmMainMenu.Show()
             Me.Close()
         End If
@@ -82,9 +73,9 @@
             MsgBox("Incorrect Username or Password")
         Else
             Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("abarnes")
-            'Dim MainMenuForm As New frmMainMenu
-            'MainMenuForm.Clearance = ClearanceString
-            frmMainMenu.Clearance = ClearanceString
+            userInfo.Clearance = ClearanceString
+            userInfo.EmployeeID = Me.EmployeeTableAdapter1.EmployeeNumber("abarnes")
+            userInfo.StoreNumber = Me.EmployeeTableAdapter1.StoreNumber("abarnes")
             frmMainMenu.Show()
             Me.Close()
         End If
@@ -97,9 +88,9 @@
             MsgBox("Incorrect Username or Password")
         Else
             Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("hnewton")
-            'Dim MainMenuForm As New frmMainMenu
-            'MainMenuForm.Clearance = ClearanceString
-            frmMainMenu.Clearance = ClearanceString
+            userInfo.Clearance = ClearanceString
+            userInfo.EmployeeID = Me.EmployeeTableAdapter1.EmployeeNumber("hnewton")
+            userInfo.StoreNumber = Me.EmployeeTableAdapter1.StoreNumber("hnewton")
             frmMainMenu.Show()
             Me.Close()
         End If
@@ -112,11 +103,12 @@
             MsgBox("Incorrect Username or Password")
         Else
             Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("sharris")
-            'Dim MainMenuForm As New frmMainMenu
-            'MainMenuForm.Clearance = ClearanceString
-            frmMainMenu.Clearance = ClearanceString
+            userInfo.Clearance = ClearanceString
+            userInfo.EmployeeID = Me.EmployeeTableAdapter1.EmployeeNumber("sharris")
+            userInfo.StoreNumber = Me.EmployeeTableAdapter1.StoreNumber("sharris")
             frmMainMenu.Show()
             Me.Close()
         End If
     End Sub
+
 End Class

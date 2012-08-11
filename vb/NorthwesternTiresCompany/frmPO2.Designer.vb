@@ -136,7 +136,6 @@ Partial Class frmPO2
         Me.TableAdapterManager.inventoryTableAdapter = Nothing
         Me.TableAdapterManager.purchaseOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.purchaseOrderTableAdapter = Me.PurchaseOrderTableAdapter
-        Me.TableAdapterManager.retailOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.retailOrderTableAdapter = Nothing
         Me.TableAdapterManager.securityClearanceTableAdapter = Nothing
         Me.TableAdapterManager.storeTableAdapter = Nothing

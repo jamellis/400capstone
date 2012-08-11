@@ -25,6 +25,10 @@ Partial Class frmSales
         Me.lblSales = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.btnSelectCust = New System.Windows.Forms.Button()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
+        Me.txtPhone = New System.Windows.Forms.MaskedTextBox()
         Me.SuspendLayout()
         '
         'lblSales
@@ -59,12 +63,54 @@ Partial Class frmSales
         Me.btnBack.Text = "&Back"
         Me.btnBack.UseVisualStyleBackColor = True
         '
+        'btnSelectCust
+        '
+        Me.btnSelectCust.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSelectCust.Location = New System.Drawing.Point(40, 50)
+        Me.btnSelectCust.Name = "btnSelectCust"
+        Me.btnSelectCust.Size = New System.Drawing.Size(139, 30)
+        Me.btnSelectCust.TabIndex = 19
+        Me.btnSelectCust.Text = "Select customer"
+        Me.btnSelectCust.UseVisualStyleBackColor = True
+        '
+        'txtFirstName
+        '
+        Me.txtFirstName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFirstName.Location = New System.Drawing.Point(227, 53)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.ReadOnly = True
+        Me.txtFirstName.Size = New System.Drawing.Size(129, 26)
+        Me.txtFirstName.TabIndex = 20
+        '
+        'txtLastName
+        '
+        Me.txtLastName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLastName.Location = New System.Drawing.Point(362, 54)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.ReadOnly = True
+        Me.txtLastName.Size = New System.Drawing.Size(129, 26)
+        Me.txtLastName.TabIndex = 20
+        '
+        'txtPhone
+        '
+        Me.txtPhone.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhone.Location = New System.Drawing.Point(497, 54)
+        Me.txtPhone.Mask = "(000) 000-0000"
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.ReadOnly = True
+        Me.txtPhone.Size = New System.Drawing.Size(129, 26)
+        Me.txtPhone.TabIndex = 21
+        '
         'frmSales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 512)
         Me.ControlBox = False
+        Me.Controls.Add(Me.txtPhone)
+        Me.Controls.Add(Me.txtLastName)
+        Me.Controls.Add(Me.txtFirstName)
+        Me.Controls.Add(Me.btnSelectCust)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.lblSales)
@@ -81,4 +127,8 @@ Partial Class frmSales
     Friend WithEvents lblSales As System.Windows.Forms.Label
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents btnBack As System.Windows.Forms.Button
+    Friend WithEvents btnSelectCust As System.Windows.Forms.Button
+    Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
+    Friend WithEvents txtLastName As System.Windows.Forms.TextBox
+    Friend WithEvents txtPhone As System.Windows.Forms.MaskedTextBox
 End Class

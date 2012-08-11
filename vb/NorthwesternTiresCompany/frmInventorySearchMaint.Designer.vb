@@ -317,7 +317,6 @@ Partial Class frmInventorySearchMaint
         Me.TableAdapterManager.inventoryTableAdapter = Nothing
         Me.TableAdapterManager.purchaseOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.purchaseOrderTableAdapter = Nothing
-        Me.TableAdapterManager.retailOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.retailOrderTableAdapter = Nothing
         Me.TableAdapterManager.storeTableAdapter = Nothing
         Me.TableAdapterManager.tireTableAdapter = Nothing

@@ -14,4 +14,16 @@
         frmMainMenu.Show()
         Me.Close()
     End Sub
+
+    Private Sub btnSelectCust_Click(sender As System.Object, e As System.EventArgs) Handles btnSelectCust.Click
+        Dim myCustForm As New frmCustomers
+        Dim result = myCustForm.ShowDialog()
+        If result = Windows.Forms.DialogResult.OK Then
+            MessageBox.Show(myCustForm.custNum)
+            txtFirstName.Text = myCustForm.fName
+            txtLastName.Text = myCustForm.lName
+            txtPhone.Text = myCustForm.cPhone
+        End If
+    End Sub
+
 End Class

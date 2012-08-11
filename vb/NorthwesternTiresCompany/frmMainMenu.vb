@@ -1,16 +1,5 @@
 ﻿Public Class frmMainMenu
 
-    Private _clearance As String
-
-    Public Property Clearance As String
-        Get
-            Return _clearance
-        End Get
-        Set(ByVal value As String)
-            _clearance = value
-        End Set
-    End Property
-
     Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
         Dim result = MessageBox.Show("Are you sure you want to exit?", "Exit Application", MessageBoxButtons.YesNo)
         If result = Windows.Forms.DialogResult.Yes Then
@@ -95,23 +84,23 @@
 
     Private Sub frmMainMenu_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'MsgBox("Incoming clearance is: " & _clearance, MsgBoxStyle.OkOnly)
-        If _clearance IsNot Nothing Then
+        If userInfo.Clearance IsNot Nothing Then
 
-            If _clearance = "Warehouse" Then
+            If userInfo.Clearance = "Warehouse" Then
                 btnInventoryMaintain.Enabled = True
                 btnLogOut.Text = "&Log Out"
             End If
-            If _clearance = "Sales" Then
+            If userInfo.Clearance = "Sales" Then
                 btnSales.Enabled = True
                 btnLogOut.Text = "&Log Out"
             End If
-            If _clearance = "Manager" Then
+            If userInfo.Clearance = "Manager" Then
                 btnReports.Enabled = True
                 btnSales.Enabled = True
                 btnInventoryMaintain.Enabled = True
                 btnLogOut.Text = "&Log Out"
             End If
-            If _clearance = "Admin" Then
+            If userInfo.Clearance = "Admin" Then
                 btnEmployee.Enabled = True
                 btnInventoryMaintain.Enabled = True
                 btnPO.Enabled = True

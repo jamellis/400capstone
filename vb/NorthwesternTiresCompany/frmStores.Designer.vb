@@ -211,7 +211,6 @@ Partial Class frmStores
         Me.TableAdapterManager.inventoryTableAdapter = Nothing
         Me.TableAdapterManager.purchaseOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.purchaseOrderTableAdapter = Nothing
-        Me.TableAdapterManager.retailOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.retailOrderTableAdapter = Nothing
         Me.TableAdapterManager.storeTableAdapter = Me.StoreTableAdapter
         Me.TableAdapterManager.tireTableAdapter = Nothing
