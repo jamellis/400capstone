@@ -7044,6 +7044,8 @@ Partial Public Class comp400_2012DataSet
         
         Private columnretailOrderTotal As Global.System.Data.DataColumn
         
+        Private columnsalesDate As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -7120,6 +7122,14 @@ Partial Public Class comp400_2012DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property salesDateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsalesDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -7156,9 +7166,9 @@ Partial Public Class comp400_2012DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddsalesReportTableRow(ByVal firstName As String, ByVal lastName As String, ByVal retailOrderTotal As Decimal) As salesReportTableRow
+        Public Overloads Function AddsalesReportTableRow(ByVal firstName As String, ByVal lastName As String, ByVal retailOrderTotal As Decimal, ByVal salesDate As Date) As salesReportTableRow
             Dim rowsalesReportTableRow As salesReportTableRow = CType(Me.NewRow,salesReportTableRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, firstName, lastName, Nothing, retailOrderTotal}
+            Dim columnValuesArray() As Object = New Object() {Nothing, firstName, lastName, Nothing, retailOrderTotal, salesDate}
             rowsalesReportTableRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowsalesReportTableRow)
             Return rowsalesReportTableRow
@@ -7192,6 +7202,7 @@ Partial Public Class comp400_2012DataSet
             Me.columnlastName = MyBase.Columns("lastName")
             Me.columnretailOrderNbr = MyBase.Columns("retailOrderNbr")
             Me.columnretailOrderTotal = MyBase.Columns("retailOrderTotal")
+            Me.columnsalesDate = MyBase.Columns("salesDate")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7207,6 +7218,8 @@ Partial Public Class comp400_2012DataSet
             MyBase.Columns.Add(Me.columnretailOrderNbr)
             Me.columnretailOrderTotal = New Global.System.Data.DataColumn("retailOrderTotal", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnretailOrderTotal)
+            Me.columnsalesDate = New Global.System.Data.DataColumn("salesDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsalesDate)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnemployeeID, Me.columnretailOrderNbr}, true))
             Me.columnemployeeID.AutoIncrement = true
             Me.columnemployeeID.AutoIncrementSeed = -1
@@ -7223,6 +7236,7 @@ Partial Public Class comp400_2012DataSet
             Me.columnretailOrderNbr.AllowDBNull = false
             Me.columnretailOrderNbr.ReadOnly = true
             Me.columnretailOrderTotal.AllowDBNull = false
+            Me.columnsalesDate.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9375,6 +9389,17 @@ Partial Public Class comp400_2012DataSet
             End Get
             Set
                 Me(Me.tablesalesReportTable.retailOrderTotalColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property salesDate() As Date
+            Get
+                Return CType(Me(Me.tablesalesReportTable.salesDateColumn),Date)
+            End Get
+            Set
+                Me(Me.tablesalesReportTable.salesDateColumn) = value
             End Set
         End Property
         
@@ -16774,6 +16799,7 @@ Namespace comp400_2012DataSetTableAdapters
             tableMapping.ColumnMappings.Add("lastName", "lastName")
             tableMapping.ColumnMappings.Add("retailOrderNbr", "retailOrderNbr")
             tableMapping.ColumnMappings.Add("retailOrderTotal", "retailOrderTotal")
+            tableMapping.ColumnMappings.Add("salesDate", "salesDate")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -16791,8 +16817,9 @@ Namespace comp400_2012DataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT employee.employeeID, employee.firstName, employee.lastName, retailOrder.re"& _ 
-                "tailOrderNbr, retailOrder.retailOrderTotal"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     employee INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"      "& _ 
-                "            retailOrder ON employee.employeeID = retailOrder.employeeID"
+                "tailOrderNbr, retailOrder.retailOrderTotal, retailOrder.salesDate"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     empl"& _ 
+                "oyee INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  retailOrder ON employee.employeeID = retailOr"& _ 
+                "der.employeeID"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
