@@ -49,18 +49,18 @@ Partial Class frmReportSales
         ReportDataSource1.Name = "Sales"
         ReportDataSource1.Value = Me.salesReportTableBindingSource
         Me.rvReportSales.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.rvReportSales.LocalReport.ReportEmbeddedResource = "NorthwesternTiresCompany.Report1.rdlc"
+        Me.rvReportSales.LocalReport.ReportEmbeddedResource = "NorthwesternTiresCompany.rptSalesReport.rdlc"
         Me.rvReportSales.Location = New System.Drawing.Point(12, 12)
         Me.rvReportSales.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.rvReportSales.Name = "rvReportSales"
-        Me.rvReportSales.Size = New System.Drawing.Size(1326, 457)
+        Me.rvReportSales.Size = New System.Drawing.Size(907, 864)
         Me.rvReportSales.TabIndex = 0
         '
         'btnBack
         '
         Me.btnBack.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnBack.Location = New System.Drawing.Point(16, 582)
+        Me.btnBack.Location = New System.Drawing.Point(17, 895)
         Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(120, 37)
@@ -72,7 +72,7 @@ Partial Class frmReportSales
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(1215, 582)
+        Me.btnExit.Location = New System.Drawing.Point(764, 895)
         Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(120, 37)
@@ -88,10 +88,11 @@ Partial Class frmReportSales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1351, 634)
+        Me.ClientSize = New System.Drawing.Size(933, 955)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.rvReportSales)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frmReportSales"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
