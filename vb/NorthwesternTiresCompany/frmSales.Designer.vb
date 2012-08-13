@@ -43,6 +43,11 @@ Partial Class frmSales
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnSaveOrder = New System.Windows.Forms.Button()
         Me.btnCancelOrder = New System.Windows.Forms.Button()
+        Me.RetailOrderTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.retailOrderTableAdapter()
+        Me.Comp400_2012DataSet = New NorthwesternTiresCompany.comp400_2012DataSet()
+        Me.TableAdapterManager = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager()
+        Me.InvSearchTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.invSearchTableAdapter()
+        CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblSales
@@ -257,6 +262,38 @@ Partial Class frmSales
         Me.btnCancelOrder.Text = "Cancel Order"
         Me.btnCancelOrder.UseVisualStyleBackColor = True
         '
+        'RetailOrderTableAdapter
+        '
+        Me.RetailOrderTableAdapter.ClearBeforeFill = True
+        '
+        'Comp400_2012DataSet
+        '
+        Me.Comp400_2012DataSet.DataSetName = "comp400_2012DataSet"
+        Me.Comp400_2012DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.customerTableAdapter = Nothing
+        Me.TableAdapterManager.dealerTableAdapter = Nothing
+        Me.TableAdapterManager.employeeTableAdapter = Nothing
+        Me.TableAdapterManager.inventoryTableAdapter = Nothing
+        Me.TableAdapterManager.purchaseOrderDetailTableAdapter = Nothing
+        Me.TableAdapterManager.purchaseOrderTableAdapter = Nothing
+        Me.TableAdapterManager.retailOrderTableAdapter = Me.RetailOrderTableAdapter
+        Me.TableAdapterManager.securityClearanceTableAdapter = Nothing
+        Me.TableAdapterManager.storeTableAdapter = Nothing
+        Me.TableAdapterManager.tireTableAdapter = Nothing
+        Me.TableAdapterManager.transferOrderDetailTableAdapter = Nothing
+        Me.TableAdapterManager.transferOrderTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.vendorTableAdapter = Nothing
+        Me.TableAdapterManager.wholesaleOrderTableAdapter = Nothing
+        '
+        'InvSearchTableAdapter
+        '
+        Me.InvSearchTableAdapter.ClearBeforeFill = True
+        '
         'frmSales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -290,6 +327,7 @@ Partial Class frmSales
         Me.Name = "frmSales"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sales"
+        CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -315,4 +353,8 @@ Partial Class frmSales
     Friend WithEvents btnUpdate As System.Windows.Forms.Button
     Friend WithEvents btnSaveOrder As System.Windows.Forms.Button
     Friend WithEvents btnCancelOrder As System.Windows.Forms.Button
+    Friend WithEvents RetailOrderTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.retailOrderTableAdapter
+    Friend WithEvents Comp400_2012DataSet As NorthwesternTiresCompany.comp400_2012DataSet
+    Friend WithEvents TableAdapterManager As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager
+    Friend WithEvents InvSearchTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.invSearchTableAdapter
 End Class

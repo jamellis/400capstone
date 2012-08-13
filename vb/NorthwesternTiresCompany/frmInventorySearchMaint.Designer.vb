@@ -64,6 +64,7 @@ Partial Class frmInventorySearchMaint
         Me.InventoryTableAdapter1 = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.inventoryTableAdapter()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.StoreTableAdapter1 = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.storeTableAdapter()
         TireCodeLabel = New System.Windows.Forms.Label()
         ManufacturerLabel = New System.Windows.Forms.Label()
         DescriptionLabel = New System.Windows.Forms.Label()
@@ -318,11 +319,13 @@ Partial Class frmInventorySearchMaint
         Me.TableAdapterManager.purchaseOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.purchaseOrderTableAdapter = Nothing
         Me.TableAdapterManager.retailOrderTableAdapter = Nothing
+        Me.TableAdapterManager.securityClearanceTableAdapter = Nothing
         Me.TableAdapterManager.storeTableAdapter = Nothing
         Me.TableAdapterManager.tireTableAdapter = Nothing
         Me.TableAdapterManager.transferOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.transferOrderTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.vendorTableAdapter = Nothing
         Me.TableAdapterManager.wholesaleOrderTableAdapter = Nothing
         '
         'txtTireCode
@@ -393,7 +396,6 @@ Partial Class frmInventorySearchMaint
         '
         Me.cboStore.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboStore.FormattingEnabled = True
-        Me.cboStore.Items.AddRange(New Object() {"All", "0001", "0002", "0003", "0004", "0005", "0006", "0007", "0008", "0009", "0010"})
         Me.cboStore.Location = New System.Drawing.Point(508, 69)
         Me.cboStore.Name = "cboStore"
         Me.cboStore.Size = New System.Drawing.Size(161, 24)
@@ -441,6 +443,10 @@ Partial Class frmInventorySearchMaint
         Me.Label3.Size = New System.Drawing.Size(235, 17)
         Me.Label3.TabIndex = 47
         Me.Label3.Text = "(Optional) Choose the store number"
+        '
+        'StoreTableAdapter1
+        '
+        Me.StoreTableAdapter1.ClearBeforeFill = True
         '
         'frmInventorySearchMaint
         '
@@ -521,4 +527,5 @@ Partial Class frmInventorySearchMaint
     Friend WithEvents InventoryTableAdapter1 As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.inventoryTableAdapter
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents StoreTableAdapter1 As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.storeTableAdapter
 End Class

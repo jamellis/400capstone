@@ -3,6 +3,7 @@
     Public tCode As String
     Public rPrice As Decimal
     Public tQuant As Integer
+    Public invID As Integer
 
     Private Sub frmSalesInvSearch_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Comp400_2012DataSet.invSearch' table. You can move, or remove it, as needed.
@@ -39,6 +40,7 @@
                 tCode = row.tireCode
                 rPrice = row.retailPrice
                 tQuant = row.tireQty
+                invID = row.inventoryNbr
                 DialogResult = Windows.Forms.DialogResult.OK
             Else
                 MsgBox("You cannot select a tire from another store." & vbNewLine & _
@@ -59,8 +61,6 @@
                 Dim storeNum = CStr(cboStore.SelectedItem)
                 Me.InvSearchTableAdapter.FillBySearchStoreNbr(Me.Comp400_2012DataSet.invSearch, txtSearch.Text, storeNum)
             End If
-            'Dim storeNum = CStr(cboStore.SelectedItem)
-            'Me.InvSearchTableAdapter.FillBySearchStoreNbr(Me.Comp400_2012DataSet.invSearch, txtSearch.Text, storeNum)
         Catch ex As Exception
             MsgBox("Failed to search database. " & ex.Message)
         End Try

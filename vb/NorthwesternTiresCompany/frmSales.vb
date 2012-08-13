@@ -2,11 +2,9 @@
     Dim cID As Integer ' get from Dialog frmCustomers
     Dim orderDate As String = Date.Now.Date
     Dim employID As Integer = userInfo.EmployeeID
-    Dim storNum As Integer = userInfo.StoreNumber
+    Dim storNum As String = userInfo.StoreNumber
     Dim tirCode As String ' get from Dialog frmSalesInvSearch
-    Dim tirMan As String ' get from Dialog frmSalesInvSearch
-    Dim tirSize As String ' get from Dialog frmSalesInvSearch
-    Dim tirDesc As String ' get from Dialog frmSalesInvSearch
+    Dim invNbr As Integer ' get from Dialog frmSalesInvSearch
     Dim orderTotal As Decimal = 0
 
 
@@ -60,7 +58,9 @@
         Dim myInvSearchForm As New frmSalesInvSearch
         Dim result = myInvSearchForm.ShowDialog()
         If result = Windows.Forms.DialogResult.OK Then
-            txtTireCode.Text = myInvSearchForm.tCode
+            tirCode = myInvSearchForm.tCode
+            invNbr = myInvSearchForm.invID
+            txtTireCode.Text = tirCode
             txtPrice.Text = myInvSearchForm.rPrice
             txtOnHand.Text = myInvSearchForm.tQuant
             txtNeeded.ReadOnly = False
@@ -102,5 +102,17 @@
 
     Private Sub txtNeeded_TextChanged(sender As Object, e As System.EventArgs) Handles txtNeeded.TextChanged
         btnSaveOrder.Enabled = False
+    End Sub
+
+    Private Sub btnSaveOrder_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSaveOrder.Click
+        Try
+            RetailOrderTableAdapter.Insert(cID, storNum, employID, orderDate, orderTotal, tirCode, txtNeeded.Text)
+            InvSearchTableAdapter.UpdateQuantity((CInt(txtOnHand.Text) - CInt(txtNeeded.Text)), invNbr)
+            MsgBox("Order Saved", MsgBoxStyle.OkOnly)
+        Catch ex As Exception
+            MsgBox("There was a problem saving this order. Please contact your systems administrator." & vbNewLine & ex.Message, MsgBoxStyle.OkOnly)
+        End Try
+        frmMainMenu.Show()
+        Me.Close()
     End Sub
 End Class
