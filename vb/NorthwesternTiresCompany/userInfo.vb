@@ -1,7 +1,7 @@
 ﻿Public Class userInfo
     Private Shared _clearance As String
     Private Shared _employeeID As String
-    Private Shared _storeNum As Integer
+    Private Shared _storeNum As String
 
     Public Shared Property Clearance As String
         Get
@@ -21,11 +21,11 @@
         End Set
     End Property
 
-    Public Shared Property StoreNumber As Integer
+    Public Shared Property StoreNumber As String
         Get
             Return _storeNum
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             _storeNum = value
         End Set
     End Property

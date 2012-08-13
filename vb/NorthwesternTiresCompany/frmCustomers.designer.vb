@@ -34,7 +34,6 @@ Partial Class frmCustomers
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.lblSearch = New System.Windows.Forms.Label()
-        Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnModify = New System.Windows.Forms.Button()
@@ -46,14 +45,6 @@ Partial Class frmCustomers
         Me.CustomerTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.customerTableAdapter()
         Me.TableAdapterManager = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager()
         Me.CustomerDataGridView = New System.Windows.Forms.DataGridView()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtFirstName = New System.Windows.Forms.TextBox()
-        Me.txtLastName = New System.Windows.Forms.TextBox()
-        Me.txtStreet = New System.Windows.Forms.TextBox()
-        Me.txtCity = New System.Windows.Forms.TextBox()
-        Me.txtState = New System.Windows.Forms.TextBox()
-        Me.txtPhone = New System.Windows.Forms.MaskedTextBox()
-        Me.txtZip = New System.Windows.Forms.MaskedTextBox()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -62,6 +53,14 @@ Partial Class frmCustomers
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtZip = New System.Windows.Forms.MaskedTextBox()
+        Me.txtPhone = New System.Windows.Forms.MaskedTextBox()
+        Me.txtState = New System.Windows.Forms.TextBox()
+        Me.txtCity = New System.Windows.Forms.TextBox()
+        Me.txtStreet = New System.Windows.Forms.TextBox()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
         lblFirstName = New System.Windows.Forms.Label()
         lblLastName = New System.Windows.Forms.Label()
         lblPhone = New System.Windows.Forms.Label()
@@ -74,6 +73,76 @@ Partial Class frmCustomers
         CType(Me.CustomerDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'lblFirstName
+        '
+        lblFirstName.AutoSize = True
+        lblFirstName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblFirstName.Location = New System.Drawing.Point(38, 16)
+        lblFirstName.Name = "lblFirstName"
+        lblFirstName.Size = New System.Drawing.Size(90, 20)
+        lblFirstName.TabIndex = 0
+        lblFirstName.Text = "First Name:"
+        '
+        'lblLastName
+        '
+        lblLastName.AutoSize = True
+        lblLastName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblLastName.Location = New System.Drawing.Point(38, 48)
+        lblLastName.Name = "lblLastName"
+        lblLastName.Size = New System.Drawing.Size(90, 20)
+        lblLastName.TabIndex = 2
+        lblLastName.Text = "Last Name:"
+        '
+        'lblPhone
+        '
+        lblPhone.AutoSize = True
+        lblPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblPhone.Location = New System.Drawing.Point(38, 80)
+        lblPhone.Name = "lblPhone"
+        lblPhone.Size = New System.Drawing.Size(59, 20)
+        lblPhone.TabIndex = 4
+        lblPhone.Text = "Phone:"
+        '
+        'lblStreet
+        '
+        lblStreet.AutoSize = True
+        lblStreet.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblStreet.Location = New System.Drawing.Point(355, 16)
+        lblStreet.Name = "lblStreet"
+        lblStreet.Size = New System.Drawing.Size(57, 20)
+        lblStreet.TabIndex = 6
+        lblStreet.Text = "Street:"
+        '
+        'lblCity
+        '
+        lblCity.AutoSize = True
+        lblCity.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblCity.Location = New System.Drawing.Point(355, 48)
+        lblCity.Name = "lblCity"
+        lblCity.Size = New System.Drawing.Size(39, 20)
+        lblCity.TabIndex = 8
+        lblCity.Text = "City:"
+        '
+        'lblState
+        '
+        lblState.AutoSize = True
+        lblState.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblState.Location = New System.Drawing.Point(355, 80)
+        lblState.Name = "lblState"
+        lblState.Size = New System.Drawing.Size(52, 20)
+        lblState.TabIndex = 10
+        lblState.Text = "State:"
+        '
+        'lblZip
+        '
+        lblZip.AutoSize = True
+        lblZip.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblZip.Location = New System.Drawing.Point(466, 80)
+        lblZip.Name = "lblZip"
+        lblZip.Size = New System.Drawing.Size(35, 20)
+        lblZip.TabIndex = 12
+        lblZip.Text = "Zip:"
         '
         'lblTitle
         '
@@ -101,7 +170,7 @@ Partial Class frmCustomers
         Me.txtSearch.Location = New System.Drawing.Point(271, 46)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(202, 26)
-        Me.txtSearch.TabIndex = 51
+        Me.txtSearch.TabIndex = 1
         '
         'lblSearch
         '
@@ -112,16 +181,6 @@ Partial Class frmCustomers
         Me.lblSearch.Size = New System.Drawing.Size(165, 18)
         Me.lblSearch.TabIndex = 52
         Me.lblSearch.Text = "Search for a customer:"
-        '
-        'btnDelete
-        '
-        Me.btnDelete.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDelete.Location = New System.Drawing.Point(283, 204)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(128, 30)
-        Me.btnDelete.TabIndex = 58
-        Me.btnDelete.Text = "Delete"
-        Me.btnDelete.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
@@ -138,7 +197,7 @@ Partial Class frmCustomers
         '
         Me.btnSave.Enabled = False
         Me.btnSave.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSave.Location = New System.Drawing.Point(418, 204)
+        Me.btnSave.Location = New System.Drawing.Point(373, 204)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(128, 30)
         Me.btnSave.TabIndex = 59
@@ -148,7 +207,7 @@ Partial Class frmCustomers
         'btnModify
         '
         Me.btnModify.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModify.Location = New System.Drawing.Point(148, 204)
+        Me.btnModify.Location = New System.Drawing.Point(193, 204)
         Me.btnModify.Name = "btnModify"
         Me.btnModify.Size = New System.Drawing.Size(128, 30)
         Me.btnModify.TabIndex = 57
@@ -236,163 +295,6 @@ Partial Class frmCustomers
         Me.CustomerDataGridView.Size = New System.Drawing.Size(670, 234)
         Me.CustomerDataGridView.TabIndex = 63
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.txtZip)
-        Me.GroupBox1.Controls.Add(Me.txtPhone)
-        Me.GroupBox1.Controls.Add(lblZip)
-        Me.GroupBox1.Controls.Add(lblState)
-        Me.GroupBox1.Controls.Add(Me.txtState)
-        Me.GroupBox1.Controls.Add(lblCity)
-        Me.GroupBox1.Controls.Add(Me.txtCity)
-        Me.GroupBox1.Controls.Add(lblStreet)
-        Me.GroupBox1.Controls.Add(Me.txtStreet)
-        Me.GroupBox1.Controls.Add(lblPhone)
-        Me.GroupBox1.Controls.Add(lblLastName)
-        Me.GroupBox1.Controls.Add(Me.txtLastName)
-        Me.GroupBox1.Controls.Add(lblFirstName)
-        Me.GroupBox1.Controls.Add(Me.txtFirstName)
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 78)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(668, 120)
-        Me.GroupBox1.TabIndex = 64
-        Me.GroupBox1.TabStop = False
-        '
-        'lblFirstName
-        '
-        lblFirstName.AutoSize = True
-        lblFirstName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblFirstName.Location = New System.Drawing.Point(38, 16)
-        lblFirstName.Name = "lblFirstName"
-        lblFirstName.Size = New System.Drawing.Size(90, 20)
-        lblFirstName.TabIndex = 0
-        lblFirstName.Text = "First Name:"
-        '
-        'txtFirstName
-        '
-        Me.txtFirstName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "custFirstName", True))
-        Me.txtFirstName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFirstName.Location = New System.Drawing.Point(134, 13)
-        Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(167, 26)
-        Me.txtFirstName.TabIndex = 1
-        '
-        'lblLastName
-        '
-        lblLastName.AutoSize = True
-        lblLastName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblLastName.Location = New System.Drawing.Point(38, 48)
-        lblLastName.Name = "lblLastName"
-        lblLastName.Size = New System.Drawing.Size(90, 20)
-        lblLastName.TabIndex = 2
-        lblLastName.Text = "Last Name:"
-        '
-        'txtLastName
-        '
-        Me.txtLastName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "custLastName", True))
-        Me.txtLastName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLastName.Location = New System.Drawing.Point(134, 45)
-        Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(167, 26)
-        Me.txtLastName.TabIndex = 3
-        '
-        'lblPhone
-        '
-        lblPhone.AutoSize = True
-        lblPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblPhone.Location = New System.Drawing.Point(38, 80)
-        lblPhone.Name = "lblPhone"
-        lblPhone.Size = New System.Drawing.Size(59, 20)
-        lblPhone.TabIndex = 4
-        lblPhone.Text = "Phone:"
-        '
-        'lblStreet
-        '
-        lblStreet.AutoSize = True
-        lblStreet.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblStreet.Location = New System.Drawing.Point(355, 16)
-        lblStreet.Name = "lblStreet"
-        lblStreet.Size = New System.Drawing.Size(57, 20)
-        lblStreet.TabIndex = 6
-        lblStreet.Text = "Street:"
-        '
-        'txtStreet
-        '
-        Me.txtStreet.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "custStreet", True))
-        Me.txtStreet.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtStreet.Location = New System.Drawing.Point(422, 13)
-        Me.txtStreet.Name = "txtStreet"
-        Me.txtStreet.Size = New System.Drawing.Size(185, 26)
-        Me.txtStreet.TabIndex = 7
-        '
-        'lblCity
-        '
-        lblCity.AutoSize = True
-        lblCity.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblCity.Location = New System.Drawing.Point(355, 48)
-        lblCity.Name = "lblCity"
-        lblCity.Size = New System.Drawing.Size(39, 20)
-        lblCity.TabIndex = 8
-        lblCity.Text = "City:"
-        '
-        'txtCity
-        '
-        Me.txtCity.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "custCity", True))
-        Me.txtCity.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCity.Location = New System.Drawing.Point(422, 45)
-        Me.txtCity.Name = "txtCity"
-        Me.txtCity.Size = New System.Drawing.Size(185, 26)
-        Me.txtCity.TabIndex = 9
-        '
-        'lblState
-        '
-        lblState.AutoSize = True
-        lblState.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblState.Location = New System.Drawing.Point(355, 80)
-        lblState.Name = "lblState"
-        lblState.Size = New System.Drawing.Size(52, 20)
-        lblState.TabIndex = 10
-        lblState.Text = "State:"
-        '
-        'txtState
-        '
-        Me.txtState.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "custState", True))
-        Me.txtState.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtState.Location = New System.Drawing.Point(422, 77)
-        Me.txtState.MaxLength = 2
-        Me.txtState.Name = "txtState"
-        Me.txtState.Size = New System.Drawing.Size(38, 26)
-        Me.txtState.TabIndex = 11
-        '
-        'lblZip
-        '
-        lblZip.AutoSize = True
-        lblZip.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblZip.Location = New System.Drawing.Point(466, 80)
-        lblZip.Name = "lblZip"
-        lblZip.Size = New System.Drawing.Size(35, 20)
-        lblZip.TabIndex = 12
-        lblZip.Text = "Zip:"
-        '
-        'txtPhone
-        '
-        Me.txtPhone.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "custPhone", True))
-        Me.txtPhone.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhone.Location = New System.Drawing.Point(135, 78)
-        Me.txtPhone.Mask = "(000) 000-0000"
-        Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(128, 26)
-        Me.txtPhone.TabIndex = 14
-        '
-        'txtZip
-        '
-        Me.txtZip.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtZip.Location = New System.Drawing.Point(507, 78)
-        Me.txtZip.Mask = "00000"
-        Me.txtZip.Name = "txtZip"
-        Me.txtZip.Size = New System.Drawing.Size(100, 26)
-        Me.txtZip.TabIndex = 15
-        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -458,6 +360,101 @@ Partial Class frmCustomers
         Me.DataGridViewTextBoxColumn8.ReadOnly = True
         Me.DataGridViewTextBoxColumn8.Visible = False
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.txtZip)
+        Me.GroupBox1.Controls.Add(Me.txtPhone)
+        Me.GroupBox1.Controls.Add(lblZip)
+        Me.GroupBox1.Controls.Add(lblState)
+        Me.GroupBox1.Controls.Add(Me.txtState)
+        Me.GroupBox1.Controls.Add(lblCity)
+        Me.GroupBox1.Controls.Add(Me.txtCity)
+        Me.GroupBox1.Controls.Add(lblStreet)
+        Me.GroupBox1.Controls.Add(Me.txtStreet)
+        Me.GroupBox1.Controls.Add(lblPhone)
+        Me.GroupBox1.Controls.Add(lblLastName)
+        Me.GroupBox1.Controls.Add(Me.txtLastName)
+        Me.GroupBox1.Controls.Add(lblFirstName)
+        Me.GroupBox1.Controls.Add(Me.txtFirstName)
+        Me.GroupBox1.Location = New System.Drawing.Point(13, 78)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(668, 120)
+        Me.GroupBox1.TabIndex = 64
+        Me.GroupBox1.TabStop = False
+        '
+        'txtZip
+        '
+        Me.txtZip.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "custZip", True))
+        Me.txtZip.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtZip.Location = New System.Drawing.Point(507, 78)
+        Me.txtZip.Mask = "00000"
+        Me.txtZip.Name = "txtZip"
+        Me.txtZip.ReadOnly = True
+        Me.txtZip.Size = New System.Drawing.Size(100, 26)
+        Me.txtZip.TabIndex = 7
+        '
+        'txtPhone
+        '
+        Me.txtPhone.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "custPhone", True))
+        Me.txtPhone.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhone.Location = New System.Drawing.Point(135, 78)
+        Me.txtPhone.Mask = "(000) 000-0000"
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.ReadOnly = True
+        Me.txtPhone.Size = New System.Drawing.Size(128, 26)
+        Me.txtPhone.TabIndex = 3
+        '
+        'txtState
+        '
+        Me.txtState.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "custState", True))
+        Me.txtState.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtState.Location = New System.Drawing.Point(422, 77)
+        Me.txtState.MaxLength = 2
+        Me.txtState.Name = "txtState"
+        Me.txtState.ReadOnly = True
+        Me.txtState.Size = New System.Drawing.Size(38, 26)
+        Me.txtState.TabIndex = 6
+        '
+        'txtCity
+        '
+        Me.txtCity.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "custCity", True))
+        Me.txtCity.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCity.Location = New System.Drawing.Point(422, 45)
+        Me.txtCity.Name = "txtCity"
+        Me.txtCity.ReadOnly = True
+        Me.txtCity.Size = New System.Drawing.Size(185, 26)
+        Me.txtCity.TabIndex = 5
+        '
+        'txtStreet
+        '
+        Me.txtStreet.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "custStreet", True))
+        Me.txtStreet.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtStreet.Location = New System.Drawing.Point(422, 13)
+        Me.txtStreet.Name = "txtStreet"
+        Me.txtStreet.ReadOnly = True
+        Me.txtStreet.Size = New System.Drawing.Size(185, 26)
+        Me.txtStreet.TabIndex = 4
+        '
+        'txtLastName
+        '
+        Me.txtLastName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "custLastName", True))
+        Me.txtLastName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLastName.Location = New System.Drawing.Point(134, 45)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.ReadOnly = True
+        Me.txtLastName.Size = New System.Drawing.Size(167, 26)
+        Me.txtLastName.TabIndex = 2
+        '
+        'txtFirstName
+        '
+        Me.txtFirstName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "custFirstName", True))
+        Me.txtFirstName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFirstName.Location = New System.Drawing.Point(134, 13)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.ReadOnly = True
+        Me.txtFirstName.Size = New System.Drawing.Size(167, 26)
+        Me.txtFirstName.TabIndex = 1
+        '
         'frmCustomers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -468,7 +465,6 @@ Partial Class frmCustomers
         Me.Controls.Add(Me.CustomerDataGridView)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnUse)
-        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnModify)
@@ -481,6 +477,7 @@ Partial Class frmCustomers
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmCustomers"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Customers"
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -495,7 +492,6 @@ Partial Class frmCustomers
     Friend WithEvents btnSearch As System.Windows.Forms.Button
     Friend WithEvents txtSearch As System.Windows.Forms.TextBox
     Friend WithEvents lblSearch As System.Windows.Forms.Label
-    Friend WithEvents btnDelete As System.Windows.Forms.Button
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents btnModify As System.Windows.Forms.Button
