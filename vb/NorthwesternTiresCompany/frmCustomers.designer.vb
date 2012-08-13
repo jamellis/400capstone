@@ -332,7 +332,7 @@ Partial Class frmCustomers
         Me.DataGridViewTextBoxColumn5.HeaderText = "State"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        Me.DataGridViewTextBoxColumn5.Width = 80
+        Me.DataGridViewTextBoxColumn5.Width = 70
         '
         'DataGridViewTextBoxColumn6
         '
@@ -340,7 +340,7 @@ Partial Class frmCustomers
         Me.DataGridViewTextBoxColumn6.HeaderText = "Zip"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Width = 80
+        Me.DataGridViewTextBoxColumn6.Width = 70
         '
         'DataGridViewTextBoxColumn7
         '
@@ -397,7 +397,7 @@ Partial Class frmCustomers
         Me.txtPhone.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "custPhone", True))
         Me.txtPhone.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPhone.Location = New System.Drawing.Point(135, 78)
-        Me.txtPhone.Mask = "(000) 000-0000"
+        Me.txtPhone.Mask = "000-000-0000"
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.ReadOnly = True
         Me.txtPhone.Size = New System.Drawing.Size(128, 26)

@@ -212,11 +212,13 @@ Partial Class frmStores
         Me.TableAdapterManager.purchaseOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.purchaseOrderTableAdapter = Nothing
         Me.TableAdapterManager.retailOrderTableAdapter = Nothing
+        Me.TableAdapterManager.securityClearanceTableAdapter = Nothing
         Me.TableAdapterManager.storeTableAdapter = Me.StoreTableAdapter
         Me.TableAdapterManager.tireTableAdapter = Nothing
         Me.TableAdapterManager.transferOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.transferOrderTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.vendorTableAdapter = Nothing
         Me.TableAdapterManager.wholesaleOrderTableAdapter = Nothing
         '
         'txtStreetAddress
