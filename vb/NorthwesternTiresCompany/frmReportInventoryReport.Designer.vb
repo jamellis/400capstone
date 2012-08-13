@@ -23,7 +23,7 @@ Partial Class frmReportInventoryReport
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.InventoryReportTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.comp400_2012DataSet = New NorthwesternTiresCompany.comp400_2012DataSet()
         Me.rvInventoryReport = New Microsoft.Reporting.WinForms.ReportViewer()
@@ -46,14 +46,14 @@ Partial Class frmReportInventoryReport
         '
         'rvInventoryReport
         '
-        ReportDataSource2.Name = "Inventory"
-        ReportDataSource2.Value = Me.InventoryReportTableBindingSource
-        Me.rvInventoryReport.LocalReport.DataSources.Add(ReportDataSource2)
+        ReportDataSource1.Name = "Inventory"
+        ReportDataSource1.Value = Me.InventoryReportTableBindingSource
+        Me.rvInventoryReport.LocalReport.DataSources.Add(ReportDataSource1)
         Me.rvInventoryReport.LocalReport.ReportEmbeddedResource = "NorthwesternTiresCompany.rptInventoryReport.rdlc"
         Me.rvInventoryReport.Location = New System.Drawing.Point(12, 26)
         Me.rvInventoryReport.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.rvInventoryReport.Name = "rvInventoryReport"
-        Me.rvInventoryReport.Size = New System.Drawing.Size(890, 864)
+        Me.rvInventoryReport.Size = New System.Drawing.Size(856, 829)
         Me.rvInventoryReport.TabIndex = 0
         '
         'InventoryReportTableAdapter
@@ -64,7 +64,7 @@ Partial Class frmReportInventoryReport
         '
         Me.btnBack.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnBack.Location = New System.Drawing.Point(16, 915)
+        Me.btnBack.Location = New System.Drawing.Point(16, 898)
         Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(120, 37)
@@ -76,7 +76,7 @@ Partial Class frmReportInventoryReport
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(772, 915)
+        Me.btnExit.Location = New System.Drawing.Point(729, 898)
         Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(120, 37)
@@ -88,7 +88,7 @@ Partial Class frmReportInventoryReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(914, 967)
+        Me.ClientSize = New System.Drawing.Size(880, 967)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnBack)
