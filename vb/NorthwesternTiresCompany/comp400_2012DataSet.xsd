@@ -326,7 +326,7 @@ WHERE     (userID = @Param1)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="comp400_2012ConnectionString (MySettings)" DbObjectName="comp400_2012.dbo.employee" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="EmployeeNumber" Modifier="Public" Name="EmployeeNumber" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="EmployeeNumber">
+              <DbSource ConnectionRef="comp400_2012ConnectionString (MySettings)" DbObjectName="comp400_2012.dbo.employee" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="EmployeeNumber" Modifier="Public" Name="EmployeeNumber" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="EmployeeNumber">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT     employeeID
@@ -351,7 +351,7 @@ WHERE        (firstName LIKE '%' + @Param1 + '%') OR
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="comp400_2012ConnectionString (MySettings)" DbObjectName="comp400_2012.dbo.employee" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="StoreNumber" Modifier="Public" Name="StoreNumber" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="StoreNumber">
+              <DbSource ConnectionRef="comp400_2012ConnectionString (MySettings)" DbObjectName="comp400_2012.dbo.employee" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="StoreNumber" Modifier="Public" Name="StoreNumber" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="StoreNumber">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT     storeNbr
@@ -363,7 +363,7 @@ WHERE     (userID = @Param1)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="comp400_2012ConnectionString (MySettings)" DbObjectName="comp400_2012.dbo.employee" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="UserIDPasswordString" Modifier="Public" Name="UserIDPasswordString" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="UserIDPasswordString">
+              <DbSource ConnectionRef="comp400_2012ConnectionString (MySettings)" DbObjectName="comp400_2012.dbo.employee" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="UserIDPasswordString" Modifier="Public" Name="UserIDPasswordString" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UserIDPasswordString">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(*) AS Result, userID, password
@@ -478,10 +478,9 @@ WHERE     (custFirstName LIKE '%' + @Param1 + '%') OR
               <DbSource ConnectionRef="comp400_2012ConnectionString (MySettings)" DbObjectName="comp400_2012.dbo.dealer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dealer] WHERE (([dealerId] = @Original_dealerId) AND ([dealerAcctNbr] = @Original_dealerAcctNbr) AND ([dealerName] = @Original_dealerName) AND ([dealerStreet] = @Original_dealerStreet) AND ([dealerCity] = @Original_dealerCity) AND ([dealerState] = @Original_dealerState) AND ([dealerZip] = @Original_dealerZip) AND ([dealerPhone] = @Original_dealerPhone))</CommandText>
+                    <CommandText>DELETE FROM [dealer] WHERE (([dealerId] = @Original_dealerId) AND ([dealerName] = @Original_dealerName) AND ([dealerStreet] = @Original_dealerStreet) AND ([dealerCity] = @Original_dealerCity) AND ([dealerState] = @Original_dealerState) AND ([dealerZip] = @Original_dealerZip) AND ([dealerPhone] = @Original_dealerPhone))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_dealerId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="dealerId" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_dealerAcctNbr" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerAcctNbr" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_dealerName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerName" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_dealerStreet" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerStreet" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_dealerCity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerCity" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -493,10 +492,9 @@ WHERE     (custFirstName LIKE '%' + @Param1 + '%') OR
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dealer] ([dealerAcctNbr], [dealerName], [dealerStreet], [dealerCity], [dealerState], [dealerZip], [dealerPhone]) VALUES (@dealerAcctNbr, @dealerName, @dealerStreet, @dealerCity, @dealerState, @dealerZip, @dealerPhone);
-SELECT dealerId, dealerAcctNbr, dealerName, dealerStreet, dealerCity, dealerState, dealerZip, dealerPhone FROM dealer WHERE (dealerId = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dealer] ([dealerName], [dealerStreet], [dealerCity], [dealerState], [dealerZip], [dealerPhone]) VALUES (@dealerName, @dealerStreet, @dealerCity, @dealerState, @dealerZip, @dealerPhone);
+SELECT dealerId, dealerName, dealerStreet, dealerCity, dealerState, dealerZip, dealerPhone FROM dealer WHERE (dealerId = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@dealerAcctNbr" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerAcctNbr" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@dealerName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@dealerStreet" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerStreet" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@dealerCity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerCity" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -507,18 +505,16 @@ SELECT dealerId, dealerAcctNbr, dealerName, dealerStreet, dealerCity, dealerStat
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT     dealerId, dealerAcctNbr, dealerName, dealerStreet, dealerCity, dealerState, dealerZip, dealerPhone
-FROM         dealer</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT dealerId, dealerName, dealerStreet, dealerCity, dealerState, dealerZip, dealerPhone FROM dealer</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dealer] SET [dealerAcctNbr] = @dealerAcctNbr, [dealerName] = @dealerName, [dealerStreet] = @dealerStreet, [dealerCity] = @dealerCity, [dealerState] = @dealerState, [dealerZip] = @dealerZip, [dealerPhone] = @dealerPhone WHERE (([dealerId] = @Original_dealerId) AND ([dealerAcctNbr] = @Original_dealerAcctNbr) AND ([dealerName] = @Original_dealerName) AND ([dealerStreet] = @Original_dealerStreet) AND ([dealerCity] = @Original_dealerCity) AND ([dealerState] = @Original_dealerState) AND ([dealerZip] = @Original_dealerZip) AND ([dealerPhone] = @Original_dealerPhone));
-SELECT dealerId, dealerAcctNbr, dealerName, dealerStreet, dealerCity, dealerState, dealerZip, dealerPhone FROM dealer WHERE (dealerId = @dealerId)</CommandText>
+                    <CommandText>UPDATE [dealer] SET [dealerName] = @dealerName, [dealerStreet] = @dealerStreet, [dealerCity] = @dealerCity, [dealerState] = @dealerState, [dealerZip] = @dealerZip, [dealerPhone] = @dealerPhone WHERE (([dealerId] = @Original_dealerId) AND ([dealerName] = @Original_dealerName) AND ([dealerStreet] = @Original_dealerStreet) AND ([dealerCity] = @Original_dealerCity) AND ([dealerState] = @Original_dealerState) AND ([dealerZip] = @Original_dealerZip) AND ([dealerPhone] = @Original_dealerPhone));
+SELECT dealerId, dealerName, dealerStreet, dealerCity, dealerState, dealerZip, dealerPhone FROM dealer WHERE (dealerId = @dealerId)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@dealerAcctNbr" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerAcctNbr" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@dealerName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@dealerStreet" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerStreet" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@dealerCity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerCity" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -526,7 +522,6 @@ SELECT dealerId, dealerAcctNbr, dealerName, dealerStreet, dealerCity, dealerStat
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@dealerZip" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerZip" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@dealerPhone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerPhone" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_dealerId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="dealerId" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_dealerAcctNbr" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerAcctNbr" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_dealerName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerName" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_dealerStreet" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerStreet" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_dealerCity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerCity" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -547,7 +542,6 @@ SELECT dealerId, dealerAcctNbr, dealerName, dealerStreet, dealerCity, dealerStat
               <Mapping SourceColumn="dealerZip" DataSetColumn="dealerZip" />
               <Mapping SourceColumn="dealerPhone" DataSetColumn="dealerPhone" />
               <Mapping SourceColumn="dealerId" DataSetColumn="dealerId" />
-              <Mapping SourceColumn="dealerAcctNbr" DataSetColumn="dealerAcctNbr" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -818,119 +812,79 @@ SELECT tnfrDtlLineID, transferOrderNbr, tireCode, tireQty FROM transferOrderDeta
               <DbSource ConnectionRef="comp400_2012ConnectionString (MySettings)" DbObjectName="comp400_2012.dbo.wholesaleOrder" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [wholesaleOrder] WHERE (([whslOrderNbr] = @Original_whslOrderNbr) AND ([dealerAcctNbr] = @Original_dealerAcctNbr) AND ([transactionTotal] = @Original_transactionTotal) AND ([whslOrderDate] = @Original_whslOrderDate) AND ([dealerID] = @Original_dealerID))</CommandText>
+                    <CommandText>DELETE FROM [wholesaleOrder] WHERE (([dealerID] = @Original_dealerID) AND ((@IsNull_isClosed = 1 AND [isClosed] IS NULL) OR ([isClosed] = @Original_isClosed)) AND ([salesDate] = @Original_salesDate) AND ([tireCode] = @Original_tireCode) AND ((@IsNull_tireQty = 1 AND [tireQty] IS NULL) OR ([tireQty] = @Original_tireQty)) AND ([whlslOrderNbr] = @Original_whlslOrderNbr) AND ((@IsNull_whlslOrderTotal = 1 AND [whlslOrderTotal] IS NULL) OR ([whlslOrderTotal] = @Original_whlslOrderTotal)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_whslOrderNbr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="whslOrderNbr" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_dealerAcctNbr" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerAcctNbr" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_transactionTotal" Precision="7" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="transactionTotal" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_whslOrderDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="whslOrderDate" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_dealerID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="dealerID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_isClosed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="isClosed" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_isClosed" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="isClosed" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_salesDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="salesDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_tireCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tireCode" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tireQty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tireQty" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_tireQty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tireQty" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_whlslOrderNbr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="whlslOrderNbr" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_whlslOrderTotal" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="whlslOrderTotal" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_whlslOrderTotal" Precision="7" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="whlslOrderTotal" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [wholesaleOrder] ([dealerAcctNbr], [transactionTotal], [whslOrderDate], [dealerID]) VALUES (@dealerAcctNbr, @transactionTotal, @whslOrderDate, @dealerID);
-SELECT whslOrderNbr, dealerAcctNbr, transactionTotal, whslOrderDate, dealerID FROM wholesaleOrder WHERE (whslOrderNbr = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [wholesaleOrder] ([dealerID], [comments], [isClosed], [salesDate], [tireCode], [tireQty], [whlslOrderTotal]) VALUES (@dealerID, @comments, @isClosed, @salesDate, @tireCode, @tireQty, @whlslOrderTotal);
+SELECT dealerID, comments, isClosed, salesDate, tireCode, tireQty, whlslOrderNbr, whlslOrderTotal FROM wholesaleOrder WHERE (whlslOrderNbr = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@dealerAcctNbr" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerAcctNbr" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@transactionTotal" Precision="7" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="transactionTotal" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@whslOrderDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="whslOrderDate" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@dealerID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="dealerID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@comments" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="comments" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@isClosed" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="isClosed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@salesDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="salesDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@tireCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tireCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@tireQty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tireQty" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@whlslOrderTotal" Precision="7" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="whlslOrderTotal" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT     whslOrderNbr, dealerAcctNbr, transactionTotal, whslOrderDate, dealerID
-FROM         wholesaleOrder</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT dealerID, comments, isClosed, salesDate, tireCode, tireQty, whlslOrderNbr, whlslOrderTotal FROM wholesaleOrder</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [wholesaleOrder] SET [dealerAcctNbr] = @dealerAcctNbr, [transactionTotal] = @transactionTotal, [whslOrderDate] = @whslOrderDate, [dealerID] = @dealerID WHERE (([whslOrderNbr] = @Original_whslOrderNbr) AND ([dealerAcctNbr] = @Original_dealerAcctNbr) AND ([transactionTotal] = @Original_transactionTotal) AND ([whslOrderDate] = @Original_whslOrderDate) AND ([dealerID] = @Original_dealerID));
-SELECT whslOrderNbr, dealerAcctNbr, transactionTotal, whslOrderDate, dealerID FROM wholesaleOrder WHERE (whslOrderNbr = @whslOrderNbr)</CommandText>
+                    <CommandText>UPDATE [wholesaleOrder] SET [dealerID] = @dealerID, [comments] = @comments, [isClosed] = @isClosed, [salesDate] = @salesDate, [tireCode] = @tireCode, [tireQty] = @tireQty, [whlslOrderTotal] = @whlslOrderTotal WHERE (([dealerID] = @Original_dealerID) AND ((@IsNull_isClosed = 1 AND [isClosed] IS NULL) OR ([isClosed] = @Original_isClosed)) AND ([salesDate] = @Original_salesDate) AND ([tireCode] = @Original_tireCode) AND ((@IsNull_tireQty = 1 AND [tireQty] IS NULL) OR ([tireQty] = @Original_tireQty)) AND ([whlslOrderNbr] = @Original_whlslOrderNbr) AND ((@IsNull_whlslOrderTotal = 1 AND [whlslOrderTotal] IS NULL) OR ([whlslOrderTotal] = @Original_whlslOrderTotal)));
+SELECT dealerID, comments, isClosed, salesDate, tireCode, tireQty, whlslOrderNbr, whlslOrderTotal FROM wholesaleOrder WHERE (whlslOrderNbr = @whlslOrderNbr)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@dealerAcctNbr" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerAcctNbr" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@transactionTotal" Precision="7" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="transactionTotal" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@whslOrderDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="whslOrderDate" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@dealerID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="dealerID" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_whslOrderNbr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="whslOrderNbr" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_dealerAcctNbr" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dealerAcctNbr" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_transactionTotal" Precision="7" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="transactionTotal" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_whslOrderDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="whslOrderDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@comments" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="comments" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@isClosed" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="isClosed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@salesDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="salesDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@tireCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tireCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@tireQty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tireQty" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@whlslOrderTotal" Precision="7" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="whlslOrderTotal" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_dealerID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="dealerID" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="whslOrderNbr" ColumnName="whslOrderNbr" DataSourceName="comp400_2012.dbo.wholesaleOrder" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@whslOrderNbr" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="whslOrderNbr" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_isClosed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="isClosed" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_isClosed" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="isClosed" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_salesDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="salesDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_tireCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tireCode" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tireQty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tireQty" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_tireQty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tireQty" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_whlslOrderNbr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="whlslOrderNbr" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_whlslOrderTotal" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="whlslOrderTotal" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_whlslOrderTotal" Precision="7" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="whlslOrderTotal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="whlslOrderNbr" ColumnName="whlslOrderNbr" DataSourceName="comp400_2012.dbo.wholesaleOrder" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@whlslOrderNbr" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="whlslOrderNbr" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="dealerAcctNbr" DataSetColumn="dealerAcctNbr" />
-              <Mapping SourceColumn="transactionTotal" DataSetColumn="transactionTotal" />
-              <Mapping SourceColumn="whslOrderNbr" DataSetColumn="whslOrderNbr" />
-              <Mapping SourceColumn="whslOrderDate" DataSetColumn="whslOrderDate" />
               <Mapping SourceColumn="dealerID" DataSetColumn="dealerID" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="wholesaleOrderDetailTableAdapter" GeneratorDataComponentClassName="wholesaleOrderDetailTableAdapter" Name="wholesaleOrderDetail" UserDataComponentName="wholesaleOrderDetailTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="comp400_2012ConnectionString (MySettings)" DbObjectName="comp400_2012.dbo.wholesaleOrderDetail" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <DeleteCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [wholesaleOrderDetail] WHERE (([whslDtlLineID] = @Original_whslDtlLineID) AND ([whslOrderNbr] = @Original_whslOrderNbr) AND ([tireCode] = @Original_tireCode) AND ([tireQty] = @Original_tireQty))</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_whslDtlLineID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="whslDtlLineID" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_whslOrderNbr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="whslOrderNbr" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_tireCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tireCode" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_tireQty" Precision="4" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="tireQty" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </DeleteCommand>
-                <InsertCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [wholesaleOrderDetail] ([whslOrderNbr], [tireCode], [tireQty]) VALUES (@whslOrderNbr, @tireCode, @tireQty);
-SELECT whslDtlLineID, whslOrderNbr, tireCode, tireQty FROM wholesaleOrderDetail WHERE (whslDtlLineID = SCOPE_IDENTITY())</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@whslOrderNbr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="whslOrderNbr" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@tireCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tireCode" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@tireQty" Precision="4" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="tireQty" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </InsertCommand>
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT     whslDtlLineID, whslOrderNbr, tireCode, tireQty
-FROM         wholesaleOrderDetail</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-                <UpdateCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [wholesaleOrderDetail] SET [whslOrderNbr] = @whslOrderNbr, [tireCode] = @tireCode, [tireQty] = @tireQty WHERE (([whslDtlLineID] = @Original_whslDtlLineID) AND ([whslOrderNbr] = @Original_whslOrderNbr) AND ([tireCode] = @Original_tireCode) AND ([tireQty] = @Original_tireQty));
-SELECT whslDtlLineID, whslOrderNbr, tireCode, tireQty FROM wholesaleOrderDetail WHERE (whslDtlLineID = @whslDtlLineID)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@whslOrderNbr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="whslOrderNbr" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@tireCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tireCode" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@tireQty" Precision="4" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="tireQty" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_whslDtlLineID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="whslDtlLineID" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_whslOrderNbr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="whslOrderNbr" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_tireCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tireCode" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_tireQty" Precision="4" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="tireQty" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="whslDtlLineID" ColumnName="whslDtlLineID" DataSourceName="comp400_2012.dbo.wholesaleOrderDetail" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@whslDtlLineID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="whslDtlLineID" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </UpdateCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
+              <Mapping SourceColumn="whlslOrderNbr" DataSetColumn="whlslOrderNbr" />
+              <Mapping SourceColumn="salesDate" DataSetColumn="salesDate" />
               <Mapping SourceColumn="tireCode" DataSetColumn="tireCode" />
               <Mapping SourceColumn="tireQty" DataSetColumn="tireQty" />
-              <Mapping SourceColumn="whslOrderNbr" DataSetColumn="whslOrderNbr" />
-              <Mapping SourceColumn="whslDtlLineID" DataSetColumn="whslDtlLineID" />
+              <Mapping SourceColumn="whlslOrderTotal" DataSetColumn="whlslOrderTotal" />
+              <Mapping SourceColumn="isClosed" DataSetColumn="isClosed" />
+              <Mapping SourceColumn="comments" DataSetColumn="comments" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -1370,7 +1324,7 @@ FROM     employee INNER JOIN
               <xs:element name="manufacturerSize" msprop:Generator_ColumnVarNameInTable="columnmanufacturerSize" msprop:Generator_ColumnPropNameInRow="manufacturerSize" msprop:Generator_ColumnPropNameInTable="manufacturerSizeColumn" msprop:Generator_UserColumnName="manufacturerSize">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="4" />
+                    <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -1531,13 +1485,6 @@ FROM     employee INNER JOIN
                 </xs:simpleType>
               </xs:element>
               <xs:element name="dealerId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columndealerId" msprop:Generator_ColumnPropNameInRow="dealerId" msprop:Generator_ColumnPropNameInTable="dealerIdColumn" msprop:Generator_UserColumnName="dealerId" type="xs:int" />
-              <xs:element name="dealerAcctNbr" msprop:Generator_ColumnVarNameInTable="columndealerAcctNbr" msprop:Generator_ColumnPropNameInRow="dealerAcctNbr" msprop:Generator_ColumnPropNameInTable="dealerAcctNbrColumn" msprop:Generator_UserColumnName="dealerAcctNbr">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1623,23 +1570,9 @@ FROM     employee INNER JOIN
         <xs:element name="wholesaleOrder" msprop:Generator_TableClassName="wholesaleOrderDataTable" msprop:Generator_TableVarName="tablewholesaleOrder" msprop:Generator_TablePropName="wholesaleOrder" msprop:Generator_RowDeletingName="wholesaleOrderRowDeleting" msprop:Generator_UserTableName="wholesaleOrder" msprop:Generator_RowChangingName="wholesaleOrderRowChanging" msprop:Generator_RowEvHandlerName="wholesaleOrderRowChangeEventHandler" msprop:Generator_RowDeletedName="wholesaleOrderRowDeleted" msprop:Generator_RowEvArgName="wholesaleOrderRowChangeEvent" msprop:Generator_RowChangedName="wholesaleOrderRowChanged" msprop:Generator_RowClassName="wholesaleOrderRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="dealerAcctNbr" msprop:Generator_ColumnVarNameInTable="columndealerAcctNbr" msprop:Generator_ColumnPropNameInRow="dealerAcctNbr" msprop:Generator_ColumnPropNameInTable="dealerAcctNbrColumn" msprop:Generator_UserColumnName="dealerAcctNbr">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="transactionTotal" msprop:Generator_ColumnVarNameInTable="columntransactionTotal" msprop:Generator_ColumnPropNameInRow="transactionTotal" msprop:Generator_ColumnPropNameInTable="transactionTotalColumn" msprop:Generator_UserColumnName="transactionTotal" type="xs:decimal" />
-              <xs:element name="whslOrderNbr" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnwhslOrderNbr" msprop:Generator_ColumnPropNameInRow="whslOrderNbr" msprop:Generator_ColumnPropNameInTable="whslOrderNbrColumn" msprop:Generator_UserColumnName="whslOrderNbr" type="xs:int" />
-              <xs:element name="whslOrderDate" msprop:Generator_ColumnVarNameInTable="columnwhslOrderDate" msprop:Generator_ColumnPropNameInRow="whslOrderDate" msprop:Generator_ColumnPropNameInTable="whslOrderDateColumn" msprop:Generator_UserColumnName="whslOrderDate" type="xs:dateTime" />
               <xs:element name="dealerID" msprop:Generator_ColumnVarNameInTable="columndealerID" msprop:Generator_ColumnPropNameInRow="dealerID" msprop:Generator_ColumnPropNameInTable="dealerIDColumn" msprop:Generator_UserColumnName="dealerID" type="xs:int" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="wholesaleOrderDetail" msprop:Generator_TableClassName="wholesaleOrderDetailDataTable" msprop:Generator_TableVarName="tablewholesaleOrderDetail" msprop:Generator_TablePropName="wholesaleOrderDetail" msprop:Generator_RowDeletingName="wholesaleOrderDetailRowDeleting" msprop:Generator_UserTableName="wholesaleOrderDetail" msprop:Generator_RowChangingName="wholesaleOrderDetailRowChanging" msprop:Generator_RowEvHandlerName="wholesaleOrderDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="wholesaleOrderDetailRowDeleted" msprop:Generator_RowEvArgName="wholesaleOrderDetailRowChangeEvent" msprop:Generator_RowChangedName="wholesaleOrderDetailRowChanged" msprop:Generator_RowClassName="wholesaleOrderDetailRow">
-          <xs:complexType>
-            <xs:sequence>
+              <xs:element name="whlslOrderNbr" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnwhlslOrderNbr" msprop:Generator_ColumnPropNameInRow="whlslOrderNbr" msprop:Generator_ColumnPropNameInTable="whlslOrderNbrColumn" msprop:Generator_UserColumnName="whlslOrderNbr" type="xs:int" />
+              <xs:element name="salesDate" msprop:Generator_ColumnVarNameInTable="columnsalesDate" msprop:Generator_ColumnPropNameInRow="salesDate" msprop:Generator_ColumnPropNameInTable="salesDateColumn" msprop:Generator_UserColumnName="salesDate" type="xs:dateTime" />
               <xs:element name="tireCode" msprop:Generator_ColumnVarNameInTable="columntireCode" msprop:Generator_ColumnPropNameInRow="tireCode" msprop:Generator_ColumnPropNameInTable="tireCodeColumn" msprop:Generator_UserColumnName="tireCode">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1647,9 +1580,16 @@ FROM     employee INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="tireQty" msprop:Generator_ColumnVarNameInTable="columntireQty" msprop:Generator_ColumnPropNameInRow="tireQty" msprop:Generator_ColumnPropNameInTable="tireQtyColumn" msprop:Generator_UserColumnName="tireQty" type="xs:decimal" />
-              <xs:element name="whslOrderNbr" msprop:Generator_ColumnVarNameInTable="columnwhslOrderNbr" msprop:Generator_ColumnPropNameInRow="whslOrderNbr" msprop:Generator_ColumnPropNameInTable="whslOrderNbrColumn" msprop:Generator_UserColumnName="whslOrderNbr" type="xs:int" />
-              <xs:element name="whslDtlLineID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnwhslDtlLineID" msprop:Generator_ColumnPropNameInRow="whslDtlLineID" msprop:Generator_ColumnPropNameInTable="whslDtlLineIDColumn" msprop:Generator_UserColumnName="whslDtlLineID" type="xs:int" />
+              <xs:element name="tireQty" msprop:Generator_ColumnVarNameInTable="columntireQty" msprop:Generator_ColumnPropNameInRow="tireQty" msprop:Generator_ColumnPropNameInTable="tireQtyColumn" msprop:Generator_UserColumnName="tireQty" type="xs:int" minOccurs="0" />
+              <xs:element name="whlslOrderTotal" msprop:Generator_ColumnVarNameInTable="columnwhlslOrderTotal" msprop:Generator_ColumnPropNameInRow="whlslOrderTotal" msprop:Generator_ColumnPropNameInTable="whlslOrderTotalColumn" msprop:Generator_UserColumnName="whlslOrderTotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="isClosed" msprop:Generator_ColumnVarNameInTable="columnisClosed" msprop:Generator_ColumnPropNameInRow="isClosed" msprop:Generator_ColumnPropNameInTable="isClosedColumn" msprop:Generator_UserColumnName="isClosed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="comments" msprop:Generator_ColumnVarNameInTable="columncomments" msprop:Generator_ColumnPropNameInRow="comments" msprop:Generator_ColumnPropNameInTable="commentsColumn" msprop:Generator_UserColumnName="comments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1857,13 +1797,9 @@ FROM     employee INNER JOIN
       <xs:selector xpath=".//mstns:transferOrderDetail" />
       <xs:field xpath="mstns:tnfrDtlLineID" />
     </xs:unique>
-    <xs:unique name="wholesaleOrder_Constraint2" msdata:ConstraintName="Constraint2" msdata:PrimaryKey="true">
+    <xs:unique name="wholesaleOrder_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:wholesaleOrder" />
-      <xs:field xpath="mstns:whslOrderNbr" />
-    </xs:unique>
-    <xs:unique name="wholesaleOrderDetail_Constraint2" msdata:ConstraintName="Constraint2" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:wholesaleOrderDetail" />
-      <xs:field xpath="mstns:whslDtlLineID" />
+      <xs:field xpath="mstns:whlslOrderNbr" />
     </xs:unique>
     <xs:unique name="invSearch_Constraint2" msdata:ConstraintName="Constraint2" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:invSearch" />
@@ -1897,7 +1833,6 @@ FROM     employee INNER JOIN
       <msdata:Relationship name="fkTrnRecStore" msdata:parent="store" msdata:child="transferOrder" msdata:parentkey="storeNbr" msdata:childkey="receiveStore" msprop:Generator_UserChildTable="transferOrder" msprop:Generator_ChildPropName="GettransferOrderRowsByfkTrnRecStore" msprop:Generator_ParentPropName="storeRowByfkTrnRecStore" msprop:Generator_UserRelationName="fkTrnRecStore" msprop:Generator_RelationVarName="relationfkTrnRecStore" msprop:Generator_UserParentTable="store" />
       <msdata:Relationship name="fkTrnShipStore" msdata:parent="store" msdata:child="transferOrder" msdata:parentkey="storeNbr" msdata:childkey="shipStore" msprop:Generator_UserChildTable="transferOrder" msprop:Generator_ChildPropName="GettransferOrderRowsByfkTrnShipStore" msprop:Generator_ParentPropName="storeRowByfkTrnShipStore" msprop:Generator_UserRelationName="fkTrnShipStore" msprop:Generator_RelationVarName="relationfkTrnShipStore" msprop:Generator_UserParentTable="store" />
       <msdata:Relationship name="fkTnfrDtlTire" msdata:parent="tire" msdata:child="transferOrderDetail" msdata:parentkey="tireCode" msdata:childkey="tireCode" msprop:Generator_UserChildTable="transferOrderDetail" msprop:Generator_ChildPropName="GettransferOrderDetailRows" msprop:Generator_ParentPropName="tireRow" msprop:Generator_UserRelationName="fkTnfrDtlTire" msprop:Generator_RelationVarName="relationfkTnfrDtlTire" msprop:Generator_UserParentTable="tire" />
-      <msdata:Relationship name="fkWhslDtlTire" msdata:parent="tire" msdata:child="wholesaleOrderDetail" msdata:parentkey="tireCode" msdata:childkey="tireCode" msprop:Generator_UserChildTable="wholesaleOrderDetail" msprop:Generator_ChildPropName="GetwholesaleOrderDetailRows" msprop:Generator_ParentPropName="tireRow" msprop:Generator_UserRelationName="fkWhslDtlTire" msprop:Generator_RelationVarName="relationfkWhslDtlTire" msprop:Generator_UserParentTable="tire" />
       <msdata:Relationship name="fkStoreinv1" msdata:parent="store" msdata:child="invSearch" msdata:parentkey="storeNbr" msdata:childkey="storeNbr" msprop:Generator_UserChildTable="invSearch" msprop:Generator_ChildPropName="GetinvSearchRows" msprop:Generator_UserParentTable="store" msprop:Generator_UserRelationName="fkStoreinv1" msprop:Generator_RelationVarName="relationfkStoreinv1" msprop:Generator_ParentPropName="storeRow" />
       <msdata:Relationship name="fkTireinv1" msdata:parent="tire" msdata:child="invSearch" msdata:parentkey="tireCode" msdata:childkey="tireCode" msprop:Generator_UserChildTable="invSearch" msprop:Generator_ChildPropName="GetinvSearchRows" msprop:Generator_UserParentTable="tire" msprop:Generator_UserRelationName="fkTireinv1" msprop:Generator_RelationVarName="relationfkTireinv1" msprop:Generator_ParentPropName="tireRow" />
       <msdata:Relationship name="fkStoreinv2" msdata:parent="store" msdata:child="InventoryReportTable" msdata:parentkey="storeNbr" msdata:childkey="storeNbr" msprop:Generator_UserChildTable="InventoryReportTable" msprop:Generator_ChildPropName="GetInventoryReportTableRows" msprop:Generator_UserParentTable="store" msprop:Generator_UserRelationName="fkStoreinv2" msprop:Generator_RelationVarName="relationfkStoreinv2" msprop:Generator_ParentPropName="storeRow" />
@@ -1905,13 +1840,13 @@ FROM     employee INNER JOIN
       <msdata:Relationship name="fkPOOrdNbr" msdata:parent="purchaseOrder" msdata:child="purchaseOrderDetail" msdata:parentkey="poNbr" msdata:childkey="poNbr" msprop:Generator_UserChildTable="purchaseOrderDetail" msprop:Generator_ChildPropName="GetpurchaseOrderDetailRowsByfkPOOrdNbr" msprop:Generator_ParentPropName="purchaseOrderRowByfkPOOrdNbr" msprop:Generator_UserRelationName="fkPOOrdNbr" msprop:Generator_RelationVarName="relationfkPOOrdNbr" msprop:Generator_UserParentTable="purchaseOrder" />
       <msdata:Relationship name="fkTnfrDtlOrder" msdata:parent="transferOrder" msdata:child="transferOrderDetail" msdata:parentkey="transferOrderNbr" msdata:childkey="transferOrderNbr" msprop:Generator_UserChildTable="transferOrderDetail" msprop:Generator_ChildPropName="GettransferOrderDetailRows" msprop:Generator_ParentPropName="transferOrderRow" msprop:Generator_UserRelationName="fkTnfrDtlOrder" msprop:Generator_RelationVarName="relationfkTnfrDtlOrder" msprop:Generator_UserParentTable="transferOrder" />
       <msdata:Relationship name="fkWhslDealer" msdata:parent="dealer" msdata:child="wholesaleOrder" msdata:parentkey="dealerId" msdata:childkey="dealerID" msprop:Generator_UserChildTable="wholesaleOrder" msprop:Generator_ChildPropName="GetwholesaleOrderRows" msprop:Generator_ParentPropName="dealerRow" msprop:Generator_UserRelationName="fkWhslDealer" msprop:Generator_RelationVarName="relationfkWhslDealer" msprop:Generator_UserParentTable="dealer" />
-      <msdata:Relationship name="fkWhslDtlOrder" msdata:parent="wholesaleOrder" msdata:child="wholesaleOrderDetail" msdata:parentkey="whslOrderNbr" msdata:childkey="whslOrderNbr" msprop:Generator_UserChildTable="wholesaleOrderDetail" msprop:Generator_ChildPropName="GetwholesaleOrderDetailRows" msprop:Generator_ParentPropName="wholesaleOrderRow" msprop:Generator_UserRelationName="fkWhslDtlOrder" msprop:Generator_RelationVarName="relationfkWhslDtlOrder" msprop:Generator_UserParentTable="wholesaleOrder" />
       <msdata:Relationship name="fkRtlOrdCust1" msdata:parent="customer" msdata:child="retailOrder" msdata:parentkey="customerID" msdata:childkey="customerID" msprop:Generator_UserChildTable="retailOrder" msprop:Generator_ChildPropName="GetretailOrderRows" msprop:Generator_ParentPropName="customerRow" msprop:Generator_UserRelationName="fkRtlOrdCust1" msprop:Generator_RelationVarName="relationfkRtlOrdCust1" msprop:Generator_UserParentTable="customer" />
       <msdata:Relationship name="fkRtlOrdEmp1" msdata:parent="employee" msdata:child="retailOrder" msdata:parentkey="employeeID" msdata:childkey="employeeID" msprop:Generator_UserChildTable="retailOrder" msprop:Generator_ChildPropName="GetretailOrderRows" msprop:Generator_ParentPropName="employeeRow" msprop:Generator_UserRelationName="fkRtlOrdEmp1" msprop:Generator_RelationVarName="relationfkRtlOrdEmp1" msprop:Generator_UserParentTable="employee" />
       <msdata:Relationship name="fkRtlOrdStore1" msdata:parent="store" msdata:child="retailOrder" msdata:parentkey="storeNbr" msdata:childkey="storeNbr" msprop:Generator_UserChildTable="retailOrder" msprop:Generator_ChildPropName="GetretailOrderRows" msprop:Generator_ParentPropName="storeRow" msprop:Generator_UserRelationName="fkRtlOrdStore1" msprop:Generator_RelationVarName="relationfkRtlOrdStore1" msprop:Generator_UserParentTable="store" />
       <msdata:Relationship name="fkEmpSecurity" msdata:parent="securityClearance" msdata:child="employee" msdata:parentkey="Clearance" msdata:childkey="userSecurityLevel" msprop:Generator_UserChildTable="employee" msprop:Generator_ChildPropName="GetemployeeRows" msprop:Generator_ParentPropName="securityClearanceRow" msprop:Generator_UserRelationName="fkEmpSecurity" msprop:Generator_RelationVarName="relationfkEmpSecurity" msprop:Generator_UserParentTable="securityClearance" />
       <msdata:Relationship name="fkPoVendor" msdata:parent="vendor" msdata:child="purchaseOrder" msdata:parentkey="vendorID" msdata:childkey="vendorID" msprop:Generator_UserChildTable="purchaseOrder" msprop:Generator_ChildPropName="GetpurchaseOrderRows" msprop:Generator_ParentPropName="vendorRow" msprop:Generator_UserRelationName="fkPoVendor" msprop:Generator_RelationVarName="relationfkPoVendor" msprop:Generator_UserParentTable="vendor" />
       <msdata:Relationship name="fkRtlOrderEmp" msdata:parent="salesReportTable" msdata:child="retailOrder" msdata:parentkey="employeeID" msdata:childkey="employeeID" msprop:Generator_UserChildTable="retailOrder" msprop:Generator_ChildPropName="GetretailOrderRows" msprop:Generator_ParentPropName="salesReportTableRow" msprop:Generator_UserRelationName="fkRtlOrderEmp" msprop:Generator_RelationVarName="relationfkRtlOrderEmp" msprop:Generator_UserParentTable="salesReportTable" />
+      <msdata:Relationship name="FK_wholesaleOrder_tire" msdata:parent="tire" msdata:child="wholesaleOrder" msdata:parentkey="tireCode" msdata:childkey="tireCode" msprop:Generator_UserChildTable="wholesaleOrder" msprop:Generator_ChildPropName="GetwholesaleOrderRows" msprop:Generator_UserParentTable="tire" msprop:Generator_UserRelationName="FK_wholesaleOrder_tire" msprop:Generator_RelationVarName="relationFK_wholesaleOrder_tire" msprop:Generator_ParentPropName="tireRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

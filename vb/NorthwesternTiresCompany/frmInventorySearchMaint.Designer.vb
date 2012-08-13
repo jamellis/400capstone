@@ -323,7 +323,6 @@ Partial Class frmInventorySearchMaint
         Me.TableAdapterManager.transferOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.transferOrderTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.wholesaleOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.wholesaleOrderTableAdapter = Nothing
         '
         'txtTireCode
