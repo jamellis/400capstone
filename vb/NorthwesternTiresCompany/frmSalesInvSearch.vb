@@ -2,6 +2,7 @@
 
     Public tCode As String
     Public rPrice As Decimal
+    Public dPrice As Decimal
     Public tQuant As Integer
     Public invID As Integer
 
@@ -39,6 +40,7 @@
             If row.storeNbr = userInfo.StoreNumber Then
                 tCode = row.tireCode
                 rPrice = row.retailPrice
+                dPrice = InvSearchTableAdapter.GetDealerPrice(tCode)
                 tQuant = row.tireQty
                 invID = row.inventoryNbr
                 DialogResult = Windows.Forms.DialogResult.OK

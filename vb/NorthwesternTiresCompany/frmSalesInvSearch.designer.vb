@@ -156,7 +156,7 @@ Partial Class frmSalesInvSearch
         Me.cboStore.Location = New System.Drawing.Point(508, 54)
         Me.cboStore.Name = "cboStore"
         Me.cboStore.Size = New System.Drawing.Size(161, 24)
-        Me.cboStore.TabIndex = 47
+        Me.cboStore.TabIndex = 3
         '
         'btnSearch
         '
@@ -164,7 +164,7 @@ Partial Class frmSalesInvSearch
         Me.btnSearch.Location = New System.Drawing.Point(279, 47)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(80, 30)
-        Me.btnSearch.TabIndex = 46
+        Me.btnSearch.TabIndex = 2
         Me.btnSearch.Text = "Search"
         Me.btnSearch.UseVisualStyleBackColor = True
         '
@@ -174,7 +174,7 @@ Partial Class frmSalesInvSearch
         Me.txtSearch.Location = New System.Drawing.Point(12, 49)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(261, 26)
-        Me.txtSearch.TabIndex = 45
+        Me.txtSearch.TabIndex = 1
         '
         'StoreTableAdapter1
         '
@@ -315,7 +315,7 @@ Partial Class frmSalesInvSearch
         Me.TireCodeTextBox.Name = "TireCodeTextBox"
         Me.TireCodeTextBox.ReadOnly = True
         Me.TireCodeTextBox.Size = New System.Drawing.Size(138, 26)
-        Me.TireCodeTextBox.TabIndex = 65
+        Me.TireCodeTextBox.TabIndex = 7
         '
         'ManufacturerTextBox
         '
@@ -325,7 +325,7 @@ Partial Class frmSalesInvSearch
         Me.ManufacturerTextBox.Name = "ManufacturerTextBox"
         Me.ManufacturerTextBox.ReadOnly = True
         Me.ManufacturerTextBox.Size = New System.Drawing.Size(153, 26)
-        Me.ManufacturerTextBox.TabIndex = 67
+        Me.ManufacturerTextBox.TabIndex = 4
         '
         'DescriptionTextBox
         '
@@ -336,7 +336,7 @@ Partial Class frmSalesInvSearch
         Me.DescriptionTextBox.Name = "DescriptionTextBox"
         Me.DescriptionTextBox.ReadOnly = True
         Me.DescriptionTextBox.Size = New System.Drawing.Size(232, 60)
-        Me.DescriptionTextBox.TabIndex = 69
+        Me.DescriptionTextBox.TabIndex = 6
         '
         'ManufacturerSizeTextBox
         '
@@ -346,7 +346,7 @@ Partial Class frmSalesInvSearch
         Me.ManufacturerSizeTextBox.Name = "ManufacturerSizeTextBox"
         Me.ManufacturerSizeTextBox.ReadOnly = True
         Me.ManufacturerSizeTextBox.Size = New System.Drawing.Size(153, 26)
-        Me.ManufacturerSizeTextBox.TabIndex = 71
+        Me.ManufacturerSizeTextBox.TabIndex = 5
         '
         'RetailPriceTextBox
         '
@@ -356,7 +356,7 @@ Partial Class frmSalesInvSearch
         Me.RetailPriceTextBox.Name = "RetailPriceTextBox"
         Me.RetailPriceTextBox.ReadOnly = True
         Me.RetailPriceTextBox.Size = New System.Drawing.Size(138, 26)
-        Me.RetailPriceTextBox.TabIndex = 73
+        Me.RetailPriceTextBox.TabIndex = 8
         '
         'TireQtyTextBox
         '
@@ -366,7 +366,7 @@ Partial Class frmSalesInvSearch
         Me.TireQtyTextBox.Name = "TireQtyTextBox"
         Me.TireQtyTextBox.ReadOnly = True
         Me.TireQtyTextBox.Size = New System.Drawing.Size(138, 26)
-        Me.TireQtyTextBox.TabIndex = 75
+        Me.TireQtyTextBox.TabIndex = 9
         '
         'GroupBox1
         '

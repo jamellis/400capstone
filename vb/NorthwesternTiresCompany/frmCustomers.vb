@@ -6,8 +6,11 @@
 
     Private Sub frmCustomers_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Comp400_2012DataSet.customer' table. You can move, or remove it, as needed.
-        Me.CustomerTableAdapter.Fill(Me.Comp400_2012DataSet.customer)
-
+        Try
+            Me.CustomerTableAdapter.Fill(Me.Comp400_2012DataSet.customer)
+        Catch ex As Exception
+            MsgBox("There was a problem loading data. Contact your systems administrator." & vbNewLine & ex.Message)
+        End Try
     End Sub
 
     Private Sub btnUse_Click(sender As System.Object, e As System.EventArgs) Handles btnUse.Click

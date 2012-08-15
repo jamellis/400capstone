@@ -1,21 +1,16 @@
-﻿Public Class frmSales
-    Dim cID As Integer ' get from Dialog frmCustomers
+﻿Public Class frmSalesDealerNew
+    Dim dID As Integer ' get from Dialog frmDealers
+    Dim dName As String ' get from Dialog frmDealers
+    Dim dPhone As Integer ' get from Dialog frmDealers
     Dim orderDate As String = Date.Now.Date
-    Dim employID As Integer = userInfo.EmployeeID
-    Dim storNum As String = userInfo.StoreNumber
+    Dim storNum As String = "0001"
     Dim tirCode As String ' get from Dialog frmSalesInvSearch
     Dim invNbr As Integer ' get from Dialog frmSalesInvSearch
     Dim orderTotal As Decimal = 0
 
-    Private Sub frmSales_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        If userInfo.Clearance = "Admin" Then
-            btnDealerOrders.Visible = True
-        End If
+    Private Sub frmSalesDealerNew_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         lblTotal.Text = FormatCurrency(orderTotal, 2)
-        Dim fname As String = Me.EmployeeTableAdapter.SalespersonFirstName(employID)
-        Dim lname As String = Me.EmployeeTableAdapter.SalespersonLastName(employID)
-        lblSalesperson.Text = fname & " " & lname
-        btnSelectCust.Focus()
+        btnSelectDealer.Focus()
     End Sub
 
     Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
@@ -32,46 +27,45 @@
                 Application.Exit()
             End If
         End If
-
     End Sub
 
     Private Sub btnBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBack.Click
-        'Dim MainMenuForm As New frmMainMenu
         If txtNeeded.Text = "" Then
-            frmMainMenu.Show()
+            frmSalesDealer.Show()
             Me.Close()
         Else
             Dim result = MsgBox("You have not saved this order. Would you like to Cancel?", MsgBoxStyle.YesNo)
             If result = MsgBoxResult.Yes Then
-                frmMainMenu.Show()
+
+                frmSalesDealer.Show()
                 Me.Close()
             End If
         End If
-
     End Sub
 
-    Private Sub btnSelectCust_Click(sender As System.Object, e As System.EventArgs) Handles btnSelectCust.Click
-        Dim myCustForm As New frmCustomers
-        Dim result = myCustForm.ShowDialog()
+    Private Sub btnSelectDealer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSelectDealer.Click
+        Dim myDealerForm As New frmDealers
+        Dim result = myDealerForm.ShowDialog()
         If result = Windows.Forms.DialogResult.OK Then
             ' MessageBox.Show(myCustForm.custNum)
-            cID = myCustForm.custNum
-            txtFirstName.Text = myCustForm.fName
-            txtLastName.Text = myCustForm.lName
-            txtPhone.Text = myCustForm.cPhone
+            dID = myDealerForm.dealerNum
+            dName = myDealerForm.dName
+            txtDealerID.Text = dID
+            txtDealerName.Text = dName
+            txtDealerPhone.Text = myDealerForm.dPhone
             btnSelectTire.Enabled = True
             btnSelectTire.Focus()
         End If
     End Sub
 
-    Private Sub btnSelectTire_Click(sender As System.Object, e As System.EventArgs) Handles btnSelectTire.Click
+    Private Sub btnSelectTire_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSelectTire.Click
         Dim myInvSearchForm As New frmSalesInvSearch
         Dim result = myInvSearchForm.ShowDialog()
         If result = Windows.Forms.DialogResult.OK Then
             tirCode = myInvSearchForm.tCode
             invNbr = myInvSearchForm.invID
             txtTireCode.Text = tirCode
-            txtPrice.Text = myInvSearchForm.rPrice
+            txtPrice.Text = myInvSearchForm.dPrice
             txtOnHand.Text = myInvSearchForm.tQuant
             txtNeeded.ReadOnly = False
             btnUpdate.Enabled = True
@@ -103,28 +97,22 @@
         End If
     End Sub
 
-    Private Sub txtNeeded_TextChanged(sender As Object, e As System.EventArgs) Handles txtNeeded.TextChanged
+    Private Sub txtNeeded_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNeeded.TextChanged
         btnSaveOrder.Enabled = False
     End Sub
 
     Private Sub btnSaveOrder_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSaveOrder.Click
         Try
-            RetailOrderTableAdapter.Insert(cID, storNum, employID, orderDate, orderTotal, tirCode, txtNeeded.Text)
+            WholesaleOrderTableAdapter.Insert(dID, "", False, orderDate, tirCode, txtNeeded.Text, orderTotal)
             InvSearchTableAdapter.UpdateQuantity((CInt(txtOnHand.Text) - CInt(txtNeeded.Text)), invNbr)
-            Dim mySalesReceipt As New frmSalesReceipt
-            mySalesReceipt.retailOrderNbr = Me.RetailOrderTableAdapter.LastOrderNbr
-            Dim result = mySalesReceipt.ShowDialog()
-            If result = DialogResult.OK Then
-                frmMainMenu.Show()
-                Me.Close()
-            End If
+            ' Dim myDealerReceipt As New frmDealerReceipt
+            ' Dim result = myDealerReceipt.ShowDialog()
+            ' If result = DialogResult.OK Then
+            frmMainMenu.Show()
+            Me.Close()
+            ' End If
         Catch ex As Exception
             MsgBox("There was a problem saving this order. Please contact your systems administrator." & vbNewLine & ex.Message, MsgBoxStyle.OkOnly)
         End Try
-    End Sub
-
-    Private Sub btnDealerOrders_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDealerOrders.Click
-        frmSalesDealer.Show()
-        Me.Close()
     End Sub
 End Class

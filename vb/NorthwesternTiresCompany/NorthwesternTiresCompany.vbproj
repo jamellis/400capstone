@@ -90,6 +90,12 @@
     <Compile Include="frmCustomers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmDealers.Designer.vb">
+      <DependentUpon>frmDealers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDealers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmReportInventoryReport.Designer.vb">
       <DependentUpon>frmReportInventoryReport.vb</DependentUpon>
     </Compile>
@@ -148,6 +154,18 @@
       <DependentUpon>frmSales.vb</DependentUpon>
     </Compile>
     <Compile Include="frmSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalesDealer.Designer.vb">
+      <DependentUpon>frmSalesDealer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalesDealer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalesDealerNew.Designer.vb">
+      <DependentUpon>frmSalesDealerNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalesDealerNew.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSalesInvSearch.designer.vb">
@@ -209,6 +227,9 @@
     <EmbeddedResource Include="frmCustomers.resx">
       <DependentUpon>frmCustomers.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDealers.resx">
+      <DependentUpon>frmDealers.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReportInventoryReport.resx">
       <DependentUpon>frmReportInventoryReport.vb</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +259,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSales.resx">
       <DependentUpon>frmSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalesDealer.resx">
+      <DependentUpon>frmSalesDealer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalesDealerNew.resx">
+      <DependentUpon>frmSalesDealerNew.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSalesInvSearch.resx">
       <DependentUpon>frmSalesInvSearch.vb</DependentUpon>
