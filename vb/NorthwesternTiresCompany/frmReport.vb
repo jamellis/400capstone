@@ -22,7 +22,11 @@
 
     Private Sub btnInventoryReport_Click(sender As System.Object, e As System.EventArgs) Handles btnInventoryReport.Click
         frmReportInventoryReport.Show()
+        Me.Hide()
+    End Sub
 
+    Private Sub btnSalesReceipt_Click(sender As System.Object, e As System.EventArgs) Handles btnSalesReceipt.Click
+        frmSalesReceipt.Show()
         Me.Hide()
     End Sub
 End Class
