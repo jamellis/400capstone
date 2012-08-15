@@ -47,6 +47,9 @@ Partial Class frmSales
         Me.Comp400_2012DataSet = New NorthwesternTiresCompany.comp400_2012DataSet()
         Me.TableAdapterManager = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager()
         Me.InvSearchTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.invSearchTableAdapter()
+        Me.EmployeeTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.employeeTableAdapter()
+        Me.lblSalespersonLabel = New System.Windows.Forms.Label()
+        Me.lblSalesperson = New System.Windows.Forms.Label()
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -85,7 +88,7 @@ Partial Class frmSales
         'btnSelectCust
         '
         Me.btnSelectCust.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSelectCust.Location = New System.Drawing.Point(40, 50)
+        Me.btnSelectCust.Location = New System.Drawing.Point(52, 135)
         Me.btnSelectCust.Name = "btnSelectCust"
         Me.btnSelectCust.Size = New System.Drawing.Size(139, 30)
         Me.btnSelectCust.TabIndex = 19
@@ -95,7 +98,7 @@ Partial Class frmSales
         'txtFirstName
         '
         Me.txtFirstName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFirstName.Location = New System.Drawing.Point(227, 54)
+        Me.txtFirstName.Location = New System.Drawing.Point(239, 139)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.ReadOnly = True
         Me.txtFirstName.Size = New System.Drawing.Size(129, 26)
@@ -104,7 +107,7 @@ Partial Class frmSales
         'txtLastName
         '
         Me.txtLastName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLastName.Location = New System.Drawing.Point(362, 54)
+        Me.txtLastName.Location = New System.Drawing.Point(374, 139)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.ReadOnly = True
         Me.txtLastName.Size = New System.Drawing.Size(129, 26)
@@ -113,7 +116,7 @@ Partial Class frmSales
         'txtPhone
         '
         Me.txtPhone.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhone.Location = New System.Drawing.Point(497, 54)
+        Me.txtPhone.Location = New System.Drawing.Point(509, 139)
         Me.txtPhone.Mask = "(000) 000-0000"
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.ReadOnly = True
@@ -124,7 +127,7 @@ Partial Class frmSales
         '
         Me.btnSelectTire.Enabled = False
         Me.btnSelectTire.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSelectTire.Location = New System.Drawing.Point(40, 133)
+        Me.btnSelectTire.Location = New System.Drawing.Point(52, 207)
         Me.btnSelectTire.Name = "btnSelectTire"
         Me.btnSelectTire.Size = New System.Drawing.Size(139, 30)
         Me.btnSelectTire.TabIndex = 19
@@ -134,7 +137,7 @@ Partial Class frmSales
         'txtTireCode
         '
         Me.txtTireCode.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTireCode.Location = New System.Drawing.Point(226, 137)
+        Me.txtTireCode.Location = New System.Drawing.Point(238, 211)
         Me.txtTireCode.Name = "txtTireCode"
         Me.txtTireCode.ReadOnly = True
         Me.txtTireCode.Size = New System.Drawing.Size(129, 26)
@@ -143,7 +146,7 @@ Partial Class frmSales
         'txtPrice
         '
         Me.txtPrice.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrice.Location = New System.Drawing.Point(361, 137)
+        Me.txtPrice.Location = New System.Drawing.Point(373, 211)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.ReadOnly = True
         Me.txtPrice.Size = New System.Drawing.Size(129, 26)
@@ -153,7 +156,7 @@ Partial Class frmSales
         '
         Me.lblOnHand.AutoSize = True
         Me.lblOnHand.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblOnHand.Location = New System.Drawing.Point(496, 116)
+        Me.lblOnHand.Location = New System.Drawing.Point(508, 190)
         Me.lblOnHand.Name = "lblOnHand"
         Me.lblOnHand.Size = New System.Drawing.Size(130, 18)
         Me.lblOnHand.TabIndex = 22
@@ -162,7 +165,7 @@ Partial Class frmSales
         'txtOnHand
         '
         Me.txtOnHand.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtOnHand.Location = New System.Drawing.Point(496, 137)
+        Me.txtOnHand.Location = New System.Drawing.Point(508, 211)
         Me.txtOnHand.Name = "txtOnHand"
         Me.txtOnHand.ReadOnly = True
         Me.txtOnHand.Size = New System.Drawing.Size(129, 26)
@@ -192,7 +195,7 @@ Partial Class frmSales
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(311, 230)
+        Me.Label1.Location = New System.Drawing.Point(323, 286)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(106, 18)
         Me.Label1.TabIndex = 24
@@ -202,7 +205,7 @@ Partial Class frmSales
         '
         Me.lblPrice.AutoSize = True
         Me.lblPrice.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrice.Location = New System.Drawing.Point(376, 116)
+        Me.lblPrice.Location = New System.Drawing.Point(388, 190)
         Me.lblPrice.Name = "lblPrice"
         Me.lblPrice.Size = New System.Drawing.Size(106, 18)
         Me.lblPrice.TabIndex = 22
@@ -212,7 +215,7 @@ Partial Class frmSales
         '
         Me.lblTireCode.AutoSize = True
         Me.lblTireCode.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTireCode.Location = New System.Drawing.Point(254, 116)
+        Me.lblTireCode.Location = New System.Drawing.Point(266, 190)
         Me.lblTireCode.Name = "lblTireCode"
         Me.lblTireCode.Size = New System.Drawing.Size(81, 18)
         Me.lblTireCode.TabIndex = 22
@@ -221,7 +224,7 @@ Partial Class frmSales
         'txtNeeded
         '
         Me.txtNeeded.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNeeded.Location = New System.Drawing.Point(423, 227)
+        Me.txtNeeded.Location = New System.Drawing.Point(435, 283)
         Me.txtNeeded.Mask = "990"
         Me.txtNeeded.Name = "txtNeeded"
         Me.txtNeeded.ReadOnly = True
@@ -234,7 +237,7 @@ Partial Class frmSales
         '
         Me.btnUpdate.Enabled = False
         Me.btnUpdate.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUpdate.Location = New System.Drawing.Point(474, 227)
+        Me.btnUpdate.Location = New System.Drawing.Point(486, 283)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(120, 26)
         Me.btnUpdate.TabIndex = 26
@@ -294,12 +297,38 @@ Partial Class frmSales
         '
         Me.InvSearchTableAdapter.ClearBeforeFill = True
         '
+        'EmployeeTableAdapter
+        '
+        Me.EmployeeTableAdapter.ClearBeforeFill = True
+        '
+        'lblSalespersonLabel
+        '
+        Me.lblSalespersonLabel.AutoSize = True
+        Me.lblSalespersonLabel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSalespersonLabel.Location = New System.Drawing.Point(205, 64)
+        Me.lblSalespersonLabel.Name = "lblSalespersonLabel"
+        Me.lblSalespersonLabel.Size = New System.Drawing.Size(100, 18)
+        Me.lblSalespersonLabel.TabIndex = 28
+        Me.lblSalespersonLabel.Text = "Salesperson:"
+        '
+        'lblSalesperson
+        '
+        Me.lblSalesperson.AutoSize = True
+        Me.lblSalesperson.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSalesperson.Location = New System.Drawing.Point(311, 64)
+        Me.lblSalesperson.Name = "lblSalesperson"
+        Me.lblSalesperson.Size = New System.Drawing.Size(19, 18)
+        Me.lblSalesperson.TabIndex = 28
+        Me.lblSalesperson.Text = "S"
+        '
         'frmSales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 512)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblSalesperson)
+        Me.Controls.Add(Me.lblSalespersonLabel)
         Me.Controls.Add(Me.btnCancelOrder)
         Me.Controls.Add(Me.btnSaveOrder)
         Me.Controls.Add(Me.btnUpdate)
@@ -357,4 +386,7 @@ Partial Class frmSales
     Friend WithEvents Comp400_2012DataSet As NorthwesternTiresCompany.comp400_2012DataSet
     Friend WithEvents TableAdapterManager As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager
     Friend WithEvents InvSearchTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.invSearchTableAdapter
+    Friend WithEvents EmployeeTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.employeeTableAdapter
+    Friend WithEvents lblSalespersonLabel As System.Windows.Forms.Label
+    Friend WithEvents lblSalesperson As System.Windows.Forms.Label
 End Class

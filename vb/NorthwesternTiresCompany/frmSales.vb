@@ -71,6 +71,9 @@
 
     Private Sub frmSales_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         lblTotal.Text = FormatCurrency(orderTotal, 2)
+        Dim fname As String = Me.EmployeeTableAdapter.SalespersonFirstName(employID)
+        Dim lname As String = Me.EmployeeTableAdapter.SalespersonLastName(employID)
+        lblSalesperson.Text = fname & " " & lname
         btnSelectCust.Focus()
     End Sub
 
@@ -108,11 +111,16 @@
         Try
             RetailOrderTableAdapter.Insert(cID, storNum, employID, orderDate, orderTotal, tirCode, txtNeeded.Text)
             InvSearchTableAdapter.UpdateQuantity((CInt(txtOnHand.Text) - CInt(txtNeeded.Text)), invNbr)
-            MsgBox("Order Saved", MsgBoxStyle.OkOnly)
+            Dim mySalesReceipt As New frmSalesReceipt
+            mySalesReceipt.retailOrderNbr = Me.RetailOrderTableAdapter.LastOrderNbr
+            Dim result = mySalesReceipt.ShowDialog()
+            If result = DialogResult.OK Then
+                frmMainMenu.Show()
+                Me.Close()
+            End If
         Catch ex As Exception
             MsgBox("There was a problem saving this order. Please contact your systems administrator." & vbNewLine & ex.Message, MsgBoxStyle.OkOnly)
         End Try
-        frmMainMenu.Show()
-        Me.Close()
+
     End Sub
 End Class

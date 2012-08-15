@@ -676,7 +676,7 @@
         <Top>2.32778in</Top>
         <Left>0.98in</Left>
         <Height>1.02722in</Height>
-        <Width>5.08667in</Width>
+        <Width>5.08666in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -1197,8 +1197,8 @@
         <DataSetName>Customer</DataSetName>
         <Top>1.03611in</Top>
         <Left>1.14722in</Left>
-        <Height>0.61667in</Height>
-        <Width>4.63333in</Width>
+        <Height>0.61666in</Height>
+        <Width>4.63334in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -1592,7 +1592,7 @@
         <Top>3.81333in</Top>
         <Left>0.98in</Left>
         <Height>0.75in</Height>
-        <Width>5.08667in</Width>
+        <Width>5.08668in</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>

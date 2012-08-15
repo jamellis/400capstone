@@ -313,6 +313,7 @@ Partial Class frmSalesInvSearch
         Me.TireCodeTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TireCodeTextBox.Location = New System.Drawing.Point(468, 25)
         Me.TireCodeTextBox.Name = "TireCodeTextBox"
+        Me.TireCodeTextBox.ReadOnly = True
         Me.TireCodeTextBox.Size = New System.Drawing.Size(138, 26)
         Me.TireCodeTextBox.TabIndex = 65
         '
@@ -322,6 +323,7 @@ Partial Class frmSalesInvSearch
         Me.ManufacturerTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ManufacturerTextBox.Location = New System.Drawing.Point(143, 25)
         Me.ManufacturerTextBox.Name = "ManufacturerTextBox"
+        Me.ManufacturerTextBox.ReadOnly = True
         Me.ManufacturerTextBox.Size = New System.Drawing.Size(153, 26)
         Me.ManufacturerTextBox.TabIndex = 67
         '
@@ -332,6 +334,7 @@ Partial Class frmSalesInvSearch
         Me.DescriptionTextBox.Location = New System.Drawing.Point(143, 92)
         Me.DescriptionTextBox.Multiline = True
         Me.DescriptionTextBox.Name = "DescriptionTextBox"
+        Me.DescriptionTextBox.ReadOnly = True
         Me.DescriptionTextBox.Size = New System.Drawing.Size(232, 60)
         Me.DescriptionTextBox.TabIndex = 69
         '
@@ -341,6 +344,7 @@ Partial Class frmSalesInvSearch
         Me.ManufacturerSizeTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ManufacturerSizeTextBox.Location = New System.Drawing.Point(143, 60)
         Me.ManufacturerSizeTextBox.Name = "ManufacturerSizeTextBox"
+        Me.ManufacturerSizeTextBox.ReadOnly = True
         Me.ManufacturerSizeTextBox.Size = New System.Drawing.Size(153, 26)
         Me.ManufacturerSizeTextBox.TabIndex = 71
         '
@@ -350,6 +354,7 @@ Partial Class frmSalesInvSearch
         Me.RetailPriceTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RetailPriceTextBox.Location = New System.Drawing.Point(468, 57)
         Me.RetailPriceTextBox.Name = "RetailPriceTextBox"
+        Me.RetailPriceTextBox.ReadOnly = True
         Me.RetailPriceTextBox.Size = New System.Drawing.Size(138, 26)
         Me.RetailPriceTextBox.TabIndex = 73
         '
@@ -359,6 +364,7 @@ Partial Class frmSalesInvSearch
         Me.TireQtyTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TireQtyTextBox.Location = New System.Drawing.Point(468, 89)
         Me.TireQtyTextBox.Name = "TireQtyTextBox"
+        Me.TireQtyTextBox.ReadOnly = True
         Me.TireQtyTextBox.Size = New System.Drawing.Size(138, 26)
         Me.TireQtyTextBox.TabIndex = 75
         '
