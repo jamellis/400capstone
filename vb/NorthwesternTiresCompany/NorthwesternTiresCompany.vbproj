@@ -96,10 +96,16 @@
     <Compile Include="frmDealers.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReportInventoryReport.Designer.vb">
-      <DependentUpon>frmReportInventoryReport.vb</DependentUpon>
+    <Compile Include="frmReportGlobalInventory.Designer.vb">
+      <DependentUpon>frmReportGlobalInventory.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmReportInventoryReport.vb">
+    <Compile Include="frmReportGlobalInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportInventoryByStoreReport.Designer.vb">
+      <DependentUpon>frmReportInventoryByStoreReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportInventoryByStoreReport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEmployee.Designer.vb">
@@ -236,8 +242,11 @@
     <EmbeddedResource Include="frmDealers.resx">
       <DependentUpon>frmDealers.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReportInventoryReport.resx">
-      <DependentUpon>frmReportInventoryReport.vb</DependentUpon>
+    <EmbeddedResource Include="frmReportGlobalInventory.resx">
+      <DependentUpon>frmReportGlobalInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportInventoryByStoreReport.resx">
+      <DependentUpon>frmReportInventoryByStoreReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmployee.resx">
       <DependentUpon>frmEmployee.vb</DependentUpon>
@@ -299,8 +308,9 @@
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptGlobalInventoryReport.rdlc" />
     <EmbeddedResource Include="rptSalesReceipt.rdlc" />
-    <EmbeddedResource Include="rptInventoryReport.rdlc" />
+    <EmbeddedResource Include="rptInventoryByStoreReport.rdlc" />
     <EmbeddedResource Include="rptSalesReport.rdlc" />
   </ItemGroup>
   <ItemGroup>

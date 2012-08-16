@@ -21,7 +21,7 @@
     End Sub
 
     Private Sub btnInventoryReport_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnInventoryReportByStore.Click
-        frmReportInventoryReport.Show()
+        frmReportInventoryByStoreReport.Show()
         Me.Hide()
     End Sub
 
