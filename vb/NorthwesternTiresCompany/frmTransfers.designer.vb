@@ -153,7 +153,6 @@ Partial Class frmTransfers
         Me.TableAdapterManager.transferOrderTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.vendorTableAdapter = Nothing
-        Me.TableAdapterManager.wholesaleOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.wholesaleOrderTableAdapter = Nothing
         '
         'RecStoreBindingNavigator
