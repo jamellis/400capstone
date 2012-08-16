@@ -86,4 +86,9 @@ Public Class frmInventorySearchMaint
             MsgBox("Failed to search database. " & ex.Message)
         End Try
     End Sub
+
+    Private Sub btnStoreTransfer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStoreTransfer.Click
+        frmTransfers.Show()
+        Me.Close()
+    End Sub
 End Class

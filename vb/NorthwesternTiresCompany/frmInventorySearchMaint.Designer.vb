@@ -65,6 +65,7 @@ Partial Class frmInventorySearchMaint
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.StoreTableAdapter1 = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.storeTableAdapter()
+        Me.btnStoreTransfer = New System.Windows.Forms.Button()
         TireCodeLabel = New System.Windows.Forms.Label()
         ManufacturerLabel = New System.Windows.Forms.Label()
         DescriptionLabel = New System.Windows.Forms.Label()
@@ -448,12 +449,23 @@ Partial Class frmInventorySearchMaint
         '
         Me.StoreTableAdapter1.ClearBeforeFill = True
         '
+        'btnStoreTransfer
+        '
+        Me.btnStoreTransfer.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStoreTransfer.Location = New System.Drawing.Point(262, 470)
+        Me.btnStoreTransfer.Name = "btnStoreTransfer"
+        Me.btnStoreTransfer.Size = New System.Drawing.Size(150, 30)
+        Me.btnStoreTransfer.TabIndex = 48
+        Me.btnStoreTransfer.Text = "Store Transfer"
+        Me.btnStoreTransfer.UseVisualStyleBackColor = True
+        '
         'frmInventorySearchMaint
         '
         Me.AcceptButton = Me.btnSearch
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 512)
+        Me.Controls.Add(Me.btnStoreTransfer)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnUpdateQty)
@@ -528,4 +540,5 @@ Partial Class frmInventorySearchMaint
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents StoreTableAdapter1 As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.storeTableAdapter
+    Friend WithEvents btnStoreTransfer As System.Windows.Forms.Button
 End Class
