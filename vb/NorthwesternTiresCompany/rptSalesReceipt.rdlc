@@ -122,7 +122,7 @@
         <Value>nwtires_logo_receipt</Value>
         <Sizing>FitProportional</Sizing>
         <Top>0.18333in</Top>
-        <Left>2.01458in</Left>
+        <Left>1.51458in</Left>
         <Height>0.78333in</Height>
         <Width>2.47083in</Width>
         <Style>
@@ -160,7 +160,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Customer Number:</Value>
+                              <Value>Customer Information:</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -181,37 +181,10 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <ColSpan>2</ColSpan>
                   </CellContents>
                 </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox4">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox4</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
+                <TablixCell />
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="Textbox6">
@@ -288,7 +261,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>customerID</rd:DefaultName>
@@ -662,7 +637,7 @@
         </TablixRowHierarchy>
         <DataSetName>Customer</DataSetName>
         <Top>2.45278in</Top>
-        <Left>0.58166in</Left>
+        <Left>0.08166in</Left>
         <Height>1.02722in</Height>
         <Width>5.33668in</Width>
         <ZIndex>1</ZIndex>
@@ -1145,9 +1120,9 @@
         </TablixRowHierarchy>
         <DataSetName>Customer</DataSetName>
         <Top>1.03611in</Top>
-        <Left>0.59195in</Left>
+        <Left>0.09195in</Left>
         <Height>0.79374in</Height>
-        <Width>5.32639in</Width>
+        <Width>5.32641in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -1174,7 +1149,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox36</rd:DefaultName>
         <Top>1.93833in</Top>
-        <Left>0.59195in</Left>
+        <Left>0.09195in</Left>
         <Height>0.25in</Height>
         <Width>1.36261in</Width>
         <ZIndex>3</ZIndex>
@@ -1204,7 +1179,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox37</rd:DefaultName>
         <Top>1.93833in</Top>
-        <Left>2.1939in</Left>
+        <Left>1.6939in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>4</ZIndex>
@@ -1349,7 +1324,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>retailOrderNbr</rd:DefaultName>
@@ -1438,7 +1415,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!salesDate.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>d</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1499,7 +1478,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>tireQty</rd:DefaultName>
@@ -1542,7 +1523,7 @@
         </TablixRowHierarchy>
         <DataSetName>Customer</DataSetName>
         <Top>3.81333in</Top>
-        <Left>0.59195in</Left>
+        <Left>0.09195in</Left>
         <Height>0.75in</Height>
         <Width>5.32639in</Width>
         <ZIndex>5</ZIndex>
@@ -1571,7 +1552,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox57</rd:DefaultName>
         <Top>5.08in</Top>
-        <Left>3.55612in</Left>
+        <Left>3.05612in</Left>
         <Height>0.25in</Height>
         <Width>1.09944in</Width>
         <ZIndex>6</ZIndex>
@@ -1604,7 +1585,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox58</rd:DefaultName>
         <Top>5.08in</Top>
-        <Left>4.83833in</Left>
+        <Left>4.33833in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>7</ZIndex>
@@ -1622,7 +1603,7 @@
     <Height>5.6in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>5.48958in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
