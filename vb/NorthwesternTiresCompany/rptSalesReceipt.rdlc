@@ -1357,7 +1357,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>tireQty1</rd:DefaultName>
@@ -1527,7 +1529,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox57</rd:DefaultName>
         <Top>5.08in</Top>
-        <Left>3.05612in</Left>
+        <Left>2.80612in</Left>
         <Height>0.25in</Height>
         <Width>1.09944in</Width>
         <ZIndex>6</ZIndex>
@@ -1560,7 +1562,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox58</rd:DefaultName>
         <Top>5.08in</Top>
-        <Left>4.33833in</Left>
+        <Left>4.08833in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>7</ZIndex>
