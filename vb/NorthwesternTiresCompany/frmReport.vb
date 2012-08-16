@@ -20,12 +20,12 @@
         Me.Close()
     End Sub
 
-    Private Sub btnInventoryReport_Click(sender As System.Object, e As System.EventArgs) Handles btnInventoryReport.Click
+    Private Sub btnInventoryReport_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnInventoryReportByStore.Click
         frmReportInventoryReport.Show()
         Me.Hide()
     End Sub
 
-    Private Sub btnSalesReceipt_Click(sender As System.Object, e As System.EventArgs) Handles btnSalesReceipt.Click
+    Private Sub btnSalesReceipt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGlobalInventoryReport.Click
         frmSalesReceipt.Show()
         Me.Hide()
     End Sub
