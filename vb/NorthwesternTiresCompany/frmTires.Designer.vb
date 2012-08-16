@@ -197,7 +197,6 @@ Partial Class frmTires
         Me.TableAdapterManager.dealerTableAdapter = Nothing
         Me.TableAdapterManager.employeeTableAdapter = Nothing
         Me.TableAdapterManager.inventoryTableAdapter = Nothing
-        Me.TableAdapterManager.purchaseOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.purchaseOrderTableAdapter = Nothing
         Me.TableAdapterManager.retailOrderTableAdapter = Nothing
         Me.TableAdapterManager.securityClearanceTableAdapter = Nothing

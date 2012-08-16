@@ -31,8 +31,6 @@
         Dim selectedRowView As DataRowView = CType(PODataGridView.SelectedRows(0).DataBoundItem, DataRowView)
         Dim selectedRow As comp400_2012DataSet.purchaseOrderRow = CType(selectedRowView.Row, comp400_2012DataSet.purchaseOrderRow)
 
-        Me.PurchaseOrderDetailTableAdapter.FillByPONbr(Me.Comp400_2012DataSet.purchaseOrderDetail, selectedRow.poNbr)
-
         PODetailDataGridView.ClearSelection()
 
     End Sub

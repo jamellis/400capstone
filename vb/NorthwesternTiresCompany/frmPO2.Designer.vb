@@ -47,7 +47,6 @@ Partial Class frmPO2
         Me.PurchaseOrderBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.PODataGridView = New System.Windows.Forms.DataGridView()
         Me.PurchaseOrderDetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PurchaseOrderDetailTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.purchaseOrderDetailTableAdapter()
         Me.PODetailDataGridView = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.poDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -134,7 +133,6 @@ Partial Class frmPO2
         Me.TableAdapterManager.dealerTableAdapter = Nothing
         Me.TableAdapterManager.employeeTableAdapter = Nothing
         Me.TableAdapterManager.inventoryTableAdapter = Nothing
-        Me.TableAdapterManager.purchaseOrderDetailTableAdapter = Nothing
         Me.TableAdapterManager.purchaseOrderTableAdapter = Me.PurchaseOrderTableAdapter
         Me.TableAdapterManager.retailOrderTableAdapter = Nothing
         Me.TableAdapterManager.securityClearanceTableAdapter = Nothing
@@ -278,10 +276,6 @@ Partial Class frmPO2
         '
         Me.PurchaseOrderDetailBindingSource.DataMember = "purchaseOrderDetail"
         Me.PurchaseOrderDetailBindingSource.DataSource = Me.Comp400_2012DataSet
-        '
-        'PurchaseOrderDetailTableAdapter
-        '
-        Me.PurchaseOrderDetailTableAdapter.ClearBeforeFill = True
         '
         'PODetailDataGridView
         '
@@ -444,7 +438,6 @@ Partial Class frmPO2
     Friend WithEvents PurchaseOrderBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents PODataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents PurchaseOrderDetailBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents PurchaseOrderDetailTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.purchaseOrderDetailTableAdapter
     Friend WithEvents PODetailDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
