@@ -58,14 +58,14 @@ Partial Class frmReportSales
         Me.rvReportSales.Location = New System.Drawing.Point(9, 52)
         Me.rvReportSales.Margin = New System.Windows.Forms.Padding(2)
         Me.rvReportSales.Name = "rvReportSales"
-        Me.rvReportSales.Size = New System.Drawing.Size(760, 677)
+        Me.rvReportSales.Size = New System.Drawing.Size(760, 559)
         Me.rvReportSales.TabIndex = 0
         '
         'btnBack
         '
         Me.btnBack.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnBack.Location = New System.Drawing.Point(12, 734)
+        Me.btnBack.Location = New System.Drawing.Point(12, 626)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(90, 30)
         Me.btnBack.TabIndex = 14
@@ -76,7 +76,7 @@ Partial Class frmReportSales
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(675, 734)
+        Me.btnExit.Location = New System.Drawing.Point(675, 626)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(90, 30)
         Me.btnExit.TabIndex = 17
@@ -139,7 +139,7 @@ Partial Class frmReportSales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(777, 776)
+        Me.ClientSize = New System.Drawing.Size(777, 665)
         Me.Controls.Add(Me.btnCreateReport)
         Me.Controls.Add(Me.DateTimeEnd)
         Me.Controls.Add(Me.DateTimeBegin)
