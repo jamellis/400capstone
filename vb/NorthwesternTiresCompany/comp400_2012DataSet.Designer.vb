@@ -17022,7 +17022,7 @@ Namespace comp400_2012DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT employee.employeeID, employee.firstName, employee.lastName, retailOrder.re"& _ 
@@ -17030,6 +17030,16 @@ Namespace comp400_2012DataSetTableAdapters
                 "oyee INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  retailOrder ON employee.employeeID = retailOr"& _ 
                 "der.employeeID"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        employee.employeeID, employee.firstName, employee.lastName, retailO"& _ 
+                "rder.retailOrderNbr, retailOrder.retailOrderTotal, retailOrder.salesDate"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM  "& _ 
+                "          employee INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         retailOrder ON employee."& _ 
+                "employeeID = retailOrder.employeeID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (retailOrder.salesDate >= @Sta"& _ 
+                "rtDate AND retailOrder.salesDate <= @EndDate)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StartDate", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "salesDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EndDate", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "salesDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -17051,6 +17061,50 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As comp400_2012DataSet.salesReportTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As comp400_2012DataSet.salesReportTableDataTable = New comp400_2012DataSet.salesReportTableDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByDateRange(ByVal dataTable As comp400_2012DataSet.salesReportTableDataTable, ByVal StartDate As String, ByVal EndDate As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (StartDate Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("StartDate")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(StartDate,String)
+            End If
+            If (EndDate Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("EndDate")
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(EndDate,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByDateRange(ByVal StartDate As String, ByVal EndDate As String) As comp400_2012DataSet.salesReportTableDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (StartDate Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("StartDate")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(StartDate,String)
+            End If
+            If (EndDate Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("EndDate")
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(EndDate,String)
+            End If
             Dim dataTable As comp400_2012DataSet.salesReportTableDataTable = New comp400_2012DataSet.salesReportTableDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
