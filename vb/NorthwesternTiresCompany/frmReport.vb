@@ -26,7 +26,7 @@
     End Sub
 
     Private Sub btnSalesReceipt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGlobalInventoryReport.Click
-        frmSalesReceipt.Show()
-        Me.Hide()
+        frmReportGlobalInventory.Show()
+        Me.Close()
     End Sub
 End Class
