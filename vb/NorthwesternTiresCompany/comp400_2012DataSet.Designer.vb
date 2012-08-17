@@ -15645,7 +15645,7 @@ Namespace comp400_2012DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT inventory.tireCode, inventory.storeNbr, inventory.tireQty, tire.manufactur"& _ 
@@ -15653,6 +15653,15 @@ Namespace comp400_2012DataSetTableAdapters
                 "e ON inventory.storeNbr = store.storeNbr INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  tire ON i"& _ 
                 "nventory.tireCode = tire.tireCode"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        inventory.tireCode, inventory.storeNbr, inventory.tireQty, tire.man"& _ 
+                "ufacturer, tire.manufacturerSize"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            inventory INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
+                "                 store ON inventory.storeNbr = store.storeNbr INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"      "& _ 
+                "                   tire ON inventory.tireCode = tire.tireCode"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (inv"& _ 
+                "entory.storeNbr = @StoreNumber)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StoreNumber", Global.System.Data.SqlDbType.VarChar, 5, Global.System.Data.ParameterDirection.Input, 0, 0, "storeNbr", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -15674,6 +15683,40 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As comp400_2012DataSet.InventoryReportTableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As comp400_2012DataSet.InventoryReportTableDataTable = New comp400_2012DataSet.InventoryReportTableDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByStoreNumber(ByVal dataTable As comp400_2012DataSet.InventoryReportTableDataTable, ByVal StoreNumber As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (StoreNumber Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("StoreNumber")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(StoreNumber,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByStoreNumber(ByVal StoreNumber As String) As comp400_2012DataSet.InventoryReportTableDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (StoreNumber Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("StoreNumber")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(StoreNumber,String)
+            End If
             Dim dataTable As comp400_2012DataSet.InventoryReportTableDataTable = New comp400_2012DataSet.InventoryReportTableDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
