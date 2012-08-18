@@ -10658,10 +10658,10 @@ Namespace comp400_2012DataSetTableAdapters
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "SELECT        inventoryNbr, tireCode, storeNbr, tireQty"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            inventor"& _ 
-                "y"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (storeNbr = @Param1) AND (tireCode = @Param2)"
+                "y"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (storeNbr = @storeNbr) AND (tireCode = @tireCode)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.VarChar, 5, Global.System.Data.ParameterDirection.Input, 0, 0, "storeNbr", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param2", Global.System.Data.SqlDbType.VarChar, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "tireCode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@storeNbr", Global.System.Data.SqlDbType.VarChar, 5, Global.System.Data.ParameterDirection.Input, 0, 0, "storeNbr", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tireCode", Global.System.Data.SqlDbType.VarChar, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "tireCode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "SELECT        tireQty"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            inventory"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (inventoryNbr = @i"& _ 
@@ -10722,17 +10722,17 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByStoreNbrAndTireCode(ByVal dataTable As comp400_2012DataSet.inventoryDataTable, ByVal Param1 As String, ByVal Param2 As String) As Integer
+        Public Overloads Overridable Function FillByStoreNbrAndTireCode(ByVal dataTable As comp400_2012DataSet.inventoryDataTable, ByVal storeNbr As String, ByVal tireCode As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
+            If (storeNbr Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("storeNbr")
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(storeNbr,String)
             End If
-            If (Param2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param2")
+            If (tireCode Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("tireCode")
             Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param2,String)
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(tireCode,String)
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -10745,17 +10745,17 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByStoreNbrAndTireCode(ByVal Param1 As String, ByVal Param2 As String) As comp400_2012DataSet.inventoryDataTable
+        Public Overloads Overridable Function GetDataByStoreNbrAndTireCode(ByVal storeNbr As String, ByVal tireCode As String) As comp400_2012DataSet.inventoryDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
+            If (storeNbr Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("storeNbr")
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(storeNbr,String)
             End If
-            If (Param2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param2")
+            If (tireCode Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("tireCode")
             Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param2,String)
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(tireCode,String)
             End If
             Dim dataTable As comp400_2012DataSet.inventoryDataTable = New comp400_2012DataSet.inventoryDataTable()
             Me.Adapter.Fill(dataTable)
@@ -11766,7 +11766,7 @@ Namespace comp400_2012DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(2) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT     tireCode, description, manufacturer, manufacturerSize, retailPrice, de"& _ 
@@ -11781,6 +11781,11 @@ Namespace comp400_2012DataSetTableAdapters
                 "                      (manufacturerSize LIKE '%' + @Param1  + '%')"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "description", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "SELECT wholesaleCost FROM tire"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE tireCode = @tireCode"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tireCode", Global.System.Data.SqlDbType.VarChar, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "tireCode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -12027,6 +12032,37 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update(ByVal description As String, ByVal manufacturer As String, ByVal manufacturerSize As String, ByVal retailPrice As Decimal, ByVal dealerPrice As Decimal, ByVal wholesaleCost As Decimal, ByVal Original_tireCode As String, ByVal Original_description As String, ByVal Original_manufacturer As String, ByVal Original_manufacturerSize As String, ByVal Original_retailPrice As Decimal, ByVal Original_dealerPrice As Decimal, ByVal Original_wholesaleCost As Decimal) As Integer
             Return Me.Update(Original_tireCode, description, manufacturer, manufacturerSize, retailPrice, dealerPrice, wholesaleCost, Original_tireCode, Original_description, Original_manufacturer, Original_manufacturerSize, Original_retailPrice, Original_dealerPrice, Original_wholesaleCost)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function GetWholesaleCostByTireCode(ByVal tireCode As String) As Object
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(2)
+            If (tireCode Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("tireCode")
+            Else
+                command.Parameters(0).Value = CType(tireCode,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Object
+            Try 
+                returnValue = command.ExecuteScalar
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            If ((returnValue Is Nothing)  _
+                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
+                Return Nothing
+            Else
+                Return CType(returnValue,Object)
+            End If
         End Function
     End Class
     
@@ -15435,7 +15471,7 @@ Namespace comp400_2012DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(7) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(8) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        inventory.inventoryNbr, inventory.tireCode, tire.manufacturer, tire"& _ 
@@ -15481,10 +15517,10 @@ Namespace comp400_2012DataSetTableAdapters
                 "E @Param1 + '%') OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (tire.manufacturer LIKE @Param1 + "& _ 
                 "'%') OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (tire.description LIKE '%' + @Param1 + '%') OR"& _ 
                 ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (tire.manufacturerSize LIKE @Param1 + '%')) AND"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"(inv"& _ 
-                "entory.storeNbr = @Param2)"
+                "entory.storeNbr = @storeNbr)"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.VarChar, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "tireCode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param2", Global.System.Data.SqlDbType.VarChar, 5, Global.System.Data.ParameterDirection.Input, 0, 0, "storeNbr", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@storeNbr", Global.System.Data.SqlDbType.VarChar, 5, Global.System.Data.ParameterDirection.Input, 0, 0, "storeNbr", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(5).Connection = Me.Connection
             Me._commandCollection(5).CommandText = "SELECT        tire.dealerPrice"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            inventory INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"           "& _ 
@@ -15494,18 +15530,25 @@ Namespace comp400_2012DataSetTableAdapters
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tireCode", Global.System.Data.SqlDbType.VarChar, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "tireCode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(6) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(6).Connection = Me.Connection
-            Me._commandCollection(6).CommandText = "SELECT        tire.wholesaleCost"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            inventory INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"         "& _ 
-                "                tire ON inventory.tireCode = tire.tireCode"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (tire.t"& _ 
+            Me._commandCollection(6).CommandText = "SELECT     tireQty"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         inventory"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (storeNbr = @storeNbr AND t"& _ 
                 "ireCode = @tireCode)"
             Me._commandCollection(6).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@storeNbr", Global.System.Data.SqlDbType.VarChar, 5, Global.System.Data.ParameterDirection.Input, 0, 0, "storeNbr", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tireCode", Global.System.Data.SqlDbType.VarChar, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "tireCode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(7) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(7).Connection = Me.Connection
-            Me._commandCollection(7).CommandText = "UPDATE    inventory"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET              tireQty = @qty"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (inventoryNbr = @"& _ 
-                "invNum)"
+            Me._commandCollection(7).CommandText = "SELECT        tire.wholesaleCost"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            inventory INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"         "& _ 
+                "                tire ON inventory.tireCode = tire.tireCode"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (tire.t"& _ 
+                "ireCode = @tireCode)"
             Me._commandCollection(7).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(7).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@qty", Global.System.Data.SqlDbType.[Decimal], 5, Global.System.Data.ParameterDirection.Input, 4, 0, "tireQty", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(7).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@invNum", Global.System.Data.SqlDbType.VarChar, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "inventoryNbr", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(7).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tireCode", Global.System.Data.SqlDbType.VarChar, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "tireCode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(8) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(8).Connection = Me.Connection
+            Me._commandCollection(8).CommandText = "UPDATE    inventory"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET              tireQty = @qty"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (inventoryNbr = @"& _ 
+                "invNum)"
+            Me._commandCollection(8).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(8).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@qty", Global.System.Data.SqlDbType.[Decimal], 5, Global.System.Data.ParameterDirection.Input, 4, 0, "tireQty", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(8).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@invNum", Global.System.Data.SqlDbType.VarChar, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "inventoryNbr", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -15614,17 +15657,17 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBySearchStoreNbr(ByVal dataTable As comp400_2012DataSet.invSearchDataTable, ByVal Param1 As String, ByVal Param2 As String) As Integer
+        Public Overloads Overridable Function FillBySearchStoreNbr(ByVal dataTable As comp400_2012DataSet.invSearchDataTable, ByVal Param1 As String, ByVal storeNbr As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(4)
             If (Param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Param1")
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
             End If
-            If (Param2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param2")
+            If (storeNbr Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("storeNbr")
             Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param2,String)
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(storeNbr,String)
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -15637,17 +15680,17 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBySearchStoreNbr(ByVal Param1 As String, ByVal Param2 As String) As comp400_2012DataSet.invSearchDataTable
+        Public Overloads Overridable Function GetDataBySearchStoreNbr(ByVal Param1 As String, ByVal storeNbr As String) As comp400_2012DataSet.invSearchDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(4)
             If (Param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Param1")
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
             End If
-            If (Param2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param2")
+            If (storeNbr Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("storeNbr")
             Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param2,String)
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(storeNbr,String)
             End If
             Dim dataTable As comp400_2012DataSet.invSearchDataTable = New comp400_2012DataSet.invSearchDataTable()
             Me.Adapter.Fill(dataTable)
@@ -15711,8 +15754,44 @@ Namespace comp400_2012DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function GetWholesaleCost(ByVal tireCode As String) As Global.System.Nullable(Of Decimal)
+        Public Overloads Overridable Function GetQtyByStoreNumTireCode(ByVal storeNbr As String, ByVal tireCode As String) As Global.System.Nullable(Of Decimal)
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(6)
+            If (storeNbr Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("storeNbr")
+            Else
+                command.Parameters(0).Value = CType(storeNbr,String)
+            End If
+            If (tireCode Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("tireCode")
+            Else
+                command.Parameters(1).Value = CType(tireCode,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Object
+            Try 
+                returnValue = command.ExecuteScalar
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            If ((returnValue Is Nothing)  _
+                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
+                Return New Global.System.Nullable(Of Decimal)()
+            Else
+                Return New Global.System.Nullable(Of Decimal)(CType(returnValue,Decimal))
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function GetWholesaleCost(ByVal tireCode As String) As Global.System.Nullable(Of Decimal)
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(7)
             If (tireCode Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("tireCode")
             Else
@@ -15744,7 +15823,7 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
         Public Overloads Overridable Function UpdateQuantity(ByVal qty As Decimal, ByVal invNum As String) As Integer
-            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(7)
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(8)
             command.Parameters(0).Value = CType(qty,Decimal)
             If (invNum Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("invNum")

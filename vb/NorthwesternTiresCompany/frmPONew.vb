@@ -3,8 +3,7 @@
     Dim vName As String ' get from Dialog frmVendors
     Dim orderDate As String = Date.Now.Date
     Dim storNum As String = "0001"
-    Dim tirCode As String ' get from Dialog frmSalesInvSearch
-    Dim invNbr As Integer ' get from Dialog frmSalesInvSearch
+    ' Dim invNbr As Integer ' get from Dialog frmSalesInvSearch
     Dim orderTotal As Decimal = 0
 
 
@@ -47,30 +46,42 @@
         Dim myVendorForm As New frmVendors
         Dim result = myVendorForm.ShowDialog()
         If result = Windows.Forms.DialogResult.OK Then
-            ' MessageBox.Show(myCustForm.custNum)
             vID = myVendorForm.vendorNum
             vName = myVendorForm.vName
             txtVendorID.Text = vID
             txtVendorName.Text = vName
             btnSelectTire.Enabled = True
-            btnSelectTire.Focus()
+            txtTireCode.ReadOnly = False
+            txtTireCode.Focus()
         End If
     End Sub
 
     Private Sub btnSelectTire_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSelectTire.Click
-        Dim myInvSearchForm As New frmSalesInvSearch
-        Dim result = myInvSearchForm.ShowDialog()
-        If result = Windows.Forms.DialogResult.OK Then
-            tirCode = myInvSearchForm.tCode
-            invNbr = myInvSearchForm.invID
-            txtTireCode.Text = tirCode
-            txtPrice.Text = myInvSearchForm.vPrice
-            txtOnHand.Text = myInvSearchForm.tQuant
+        'Dim myInvSearchForm As New frmSalesInvSearch
+        'Dim result = myInvSearchForm.ShowDialog()
+        'If result = Windows.Forms.DialogResult.OK Then
+        '    tirCode = myInvSearchForm.tCode
+        '    invNbr = myInvSearchForm.invID
+        '    txtTireCode.Text = tirCode
+        '    txtPrice.Text = myInvSearchForm.vPrice
+        '    txtOnHand.Text = myInvSearchForm.tQuant
+        'End If
+        Dim wCost As Decimal = Me.TireTableAdapter.GetWholesaleCostByTireCode(txtTireCode.Text)
+        If wCost <> Nothing Then
+            txtPrice.Text = wCost
+            Dim invNumberTable = Me.InventoryTableAdapter.GetDataByStoreNbrAndTireCode("0001", txtTireCode.Text)
+            If invNumberTable.Rows.Count > 0 Then
+                Dim invNumberTableRow = invNumberTable.Rows(0)
+                Dim onHandQty = invNumberTableRow.Item("tireQty")
+                txtOnHand.Text = onHandQty
+            Else
+                txtOnHand.Text = "0"
+            End If
             txtNeeded.ReadOnly = False
             btnUpdate.Enabled = True
             txtNeeded.Focus()
         End If
-    End Sub
+        End Sub
 
     Private Sub btnUpdate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpdate.Click
         If txtNeeded.Text = "" Then
@@ -98,7 +109,7 @@
 
     Private Sub btnSaveOrder_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSaveOrder.Click
         Try
-            PurchaseOrderTableAdapter.Insert(orderDate, vID, "", False, orderTotal, tirCode, txtNeeded.Text)
+            PurchaseOrderTableAdapter.Insert(orderDate, vID, "", False, orderTotal, txtTireCode.Text, txtNeeded.Text)
             MsgBox("Purchase Order entered.", MsgBoxStyle.OkOnly)
             Dim myPOForm As New frmPO2
             myPOForm.Show()

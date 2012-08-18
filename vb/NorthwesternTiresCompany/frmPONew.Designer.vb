@@ -48,6 +48,8 @@ Partial Class frmPONew
         Me.PurchaseOrderTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.purchaseOrderTableAdapter()
         Me.TableAdapterManager = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager()
         Me.InvSearchTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.invSearchTableAdapter()
+        Me.InventoryTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.inventoryTableAdapter()
+        Me.TireTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.tireTableAdapter()
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -118,7 +120,7 @@ Partial Class frmPONew
         '
         Me.lblTireCode.AutoSize = True
         Me.lblTireCode.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTireCode.Location = New System.Drawing.Point(268, 182)
+        Me.lblTireCode.Location = New System.Drawing.Point(126, 182)
         Me.lblTireCode.Name = "lblTireCode"
         Me.lblTireCode.Size = New System.Drawing.Size(81, 18)
         Me.lblTireCode.TabIndex = 62
@@ -171,6 +173,7 @@ Partial Class frmPONew
         Me.txtOnHand.ReadOnly = True
         Me.txtOnHand.Size = New System.Drawing.Size(129, 26)
         Me.txtOnHand.TabIndex = 56
+        Me.txtOnHand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtPrice
         '
@@ -180,15 +183,17 @@ Partial Class frmPONew
         Me.txtPrice.ReadOnly = True
         Me.txtPrice.Size = New System.Drawing.Size(129, 26)
         Me.txtPrice.TabIndex = 58
+        Me.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtTireCode
         '
         Me.txtTireCode.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTireCode.Location = New System.Drawing.Point(240, 203)
+        Me.txtTireCode.Location = New System.Drawing.Point(99, 206)
         Me.txtTireCode.Name = "txtTireCode"
         Me.txtTireCode.ReadOnly = True
         Me.txtTireCode.Size = New System.Drawing.Size(129, 26)
         Me.txtTireCode.TabIndex = 60
+        Me.txtTireCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtVendorID
         '
@@ -203,11 +208,11 @@ Partial Class frmPONew
         '
         Me.btnSelectTire.Enabled = False
         Me.btnSelectTire.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSelectTire.Location = New System.Drawing.Point(54, 199)
+        Me.btnSelectTire.Location = New System.Drawing.Point(234, 203)
         Me.btnSelectTire.Name = "btnSelectTire"
-        Me.btnSelectTire.Size = New System.Drawing.Size(139, 30)
+        Me.btnSelectTire.Size = New System.Drawing.Size(75, 30)
         Me.btnSelectTire.TabIndex = 54
-        Me.btnSelectTire.Text = "Search for Tire"
+        Me.btnSelectTire.Text = "Select"
         Me.btnSelectTire.UseVisualStyleBackColor = True
         '
         'btnSelectVendor
@@ -304,6 +309,14 @@ Partial Class frmPONew
         '
         Me.InvSearchTableAdapter.ClearBeforeFill = True
         '
+        'InventoryTableAdapter
+        '
+        Me.InventoryTableAdapter.ClearBeforeFill = True
+        '
+        'TireTableAdapter
+        '
+        Me.TireTableAdapter.ClearBeforeFill = True
+        '
         'frmPONew
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -369,4 +382,6 @@ Partial Class frmPONew
     Friend WithEvents PurchaseOrderTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.purchaseOrderTableAdapter
     Friend WithEvents TableAdapterManager As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager
     Friend WithEvents InvSearchTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.invSearchTableAdapter
+    Friend WithEvents InventoryTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.inventoryTableAdapter
+    Friend WithEvents TireTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.tireTableAdapter
 End Class
