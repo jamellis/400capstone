@@ -23,8 +23,13 @@ Partial Class frmPO2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPO2))
-        Me.lblStep1 = New System.Windows.Forms.Label()
+        Dim lblVendorID As System.Windows.Forms.Label
+        Dim lblComments As System.Windows.Forms.Label
+        Dim lblPurchaseOrderNbr As System.Windows.Forms.Label
+        Dim lblTireQty As System.Windows.Forms.Label
+        Dim lblPoTotal As System.Windows.Forms.Label
+        Dim lblTireCode As System.Windows.Forms.Label
+        Dim lblPODate As System.Windows.Forms.Label
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
@@ -32,59 +37,113 @@ Partial Class frmPO2
         Me.PurchaseOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PurchaseOrderTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.purchaseOrderTableAdapter()
         Me.TableAdapterManager = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager()
-        Me.PurchaseOrderBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.PurchaseOrderBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.PODataGridView = New System.Windows.Forms.DataGridView()
-        Me.PurchaseOrderDetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PODetailDataGridView = New System.Windows.Forms.DataGridView()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.poDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.vendorID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tireQtyOrdered = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tireQtyReceived = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.comments = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtSalesDate = New System.Windows.Forms.TextBox()
+        Me.btnSaveComments = New System.Windows.Forms.Button()
+        Me.btnCloseOrder = New System.Windows.Forms.Button()
+        Me.txtDealerID = New System.Windows.Forms.TextBox()
+        Me.txtComment = New System.Windows.Forms.TextBox()
+        Me.txtWhlslOrderTotal = New System.Windows.Forms.TextBox()
+        Me.txtWhlslOrderNbr = New System.Windows.Forms.TextBox()
+        Me.txtTireQty = New System.Windows.Forms.TextBox()
+        Me.txtTireCode = New System.Windows.Forms.TextBox()
+        Me.WholesaleOrderDataGridView = New System.Windows.Forms.DataGridView()
+        Me.PoNbrDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VendorIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PoDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TireCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TireQtyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PoTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CommentsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnCreateNewOrder = New System.Windows.Forms.Button()
+        lblVendorID = New System.Windows.Forms.Label()
+        lblComments = New System.Windows.Forms.Label()
+        lblPurchaseOrderNbr = New System.Windows.Forms.Label()
+        lblTireQty = New System.Windows.Forms.Label()
+        lblPoTotal = New System.Windows.Forms.Label()
+        lblTireCode = New System.Windows.Forms.Label()
+        lblPODate = New System.Windows.Forms.Label()
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PurchaseOrderBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PurchaseOrderBindingNavigator.SuspendLayout()
-        CType(Me.PODataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PurchaseOrderDetailBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PODetailDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.WholesaleOrderDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'lblStep1
+        'lblVendorID
         '
-        Me.lblStep1.AutoSize = True
-        Me.lblStep1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStep1.ForeColor = System.Drawing.Color.Blue
-        Me.lblStep1.Location = New System.Drawing.Point(183, 134)
-        Me.lblStep1.Name = "lblStep1"
-        Me.lblStep1.Size = New System.Drawing.Size(322, 19)
-        Me.lblStep1.TabIndex = 29
-        Me.lblStep1.Text = "Double Click PO to see details for that PO"
+        lblVendorID.AutoSize = True
+        lblVendorID.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblVendorID.Location = New System.Drawing.Point(25, 51)
+        lblVendorID.Name = "lblVendorID"
+        lblVendorID.Size = New System.Drawing.Size(81, 18)
+        lblVendorID.TabIndex = 65
+        lblVendorID.Text = "Vendor ID:"
+        '
+        'lblComments
+        '
+        lblComments.AutoSize = True
+        lblComments.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblComments.Location = New System.Drawing.Point(348, 54)
+        lblComments.Name = "lblComments"
+        lblComments.Size = New System.Drawing.Size(88, 18)
+        lblComments.TabIndex = 79
+        lblComments.Text = "Comments:"
+        '
+        'lblPurchaseOrderNbr
+        '
+        lblPurchaseOrderNbr.AutoSize = True
+        lblPurchaseOrderNbr.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblPurchaseOrderNbr.Location = New System.Drawing.Point(25, 23)
+        lblPurchaseOrderNbr.Name = "lblPurchaseOrderNbr"
+        lblPurchaseOrderNbr.Size = New System.Drawing.Size(48, 18)
+        lblPurchaseOrderNbr.TabIndex = 67
+        lblPurchaseOrderNbr.Text = "PO #:"
+        '
+        'lblTireQty
+        '
+        lblTireQty.AutoSize = True
+        lblTireQty.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblTireQty.Location = New System.Drawing.Point(25, 135)
+        lblTireQty.Name = "lblTireQty"
+        lblTireQty.Size = New System.Drawing.Size(65, 18)
+        lblTireQty.TabIndex = 75
+        lblTireQty.Text = "Tire Qty:"
+        '
+        'lblPoTotal
+        '
+        lblPoTotal.AutoSize = True
+        lblPoTotal.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblPoTotal.Location = New System.Drawing.Point(348, 23)
+        lblPoTotal.Name = "lblPoTotal"
+        lblPoTotal.Size = New System.Drawing.Size(71, 18)
+        lblPoTotal.TabIndex = 69
+        lblPoTotal.Text = "PO Total:"
+        '
+        'lblTireCode
+        '
+        lblTireCode.AutoSize = True
+        lblTireCode.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblTireCode.Location = New System.Drawing.Point(25, 107)
+        lblTireCode.Name = "lblTireCode"
+        lblTireCode.Size = New System.Drawing.Size(81, 18)
+        lblTireCode.TabIndex = 73
+        lblTireCode.Text = "Tire Code:"
+        '
+        'lblPODate
+        '
+        lblPODate.AutoSize = True
+        lblPODate.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblPODate.Location = New System.Drawing.Point(25, 79)
+        lblPODate.Name = "lblPODate"
+        lblPODate.Size = New System.Drawing.Size(73, 18)
+        lblPODate.TabIndex = 71
+        lblPODate.Text = "PO Date:"
         '
         'btnExit
         '
         Me.btnExit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.Red
-        Me.btnExit.Location = New System.Drawing.Point(579, 487)
+        Me.btnExit.Location = New System.Drawing.Point(592, 446)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(90, 30)
         Me.btnExit.TabIndex = 27
@@ -95,7 +154,7 @@ Partial Class frmPO2
         '
         Me.btnBack.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnBack.Location = New System.Drawing.Point(12, 487)
+        Me.btnBack.Location = New System.Drawing.Point(3, 446)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(90, 30)
         Me.btnBack.TabIndex = 26
@@ -106,7 +165,7 @@ Partial Class frmPO2
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(221, 93)
+        Me.lblTitle.Location = New System.Drawing.Point(219, 9)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(247, 34)
         Me.lblTitle.TabIndex = 28
@@ -144,255 +203,196 @@ Partial Class frmPO2
         Me.TableAdapterManager.vendorTableAdapter = Nothing
         Me.TableAdapterManager.wholesaleOrderTableAdapter = Nothing
         '
-        'PurchaseOrderBindingNavigator
+        'GroupBox1
         '
-        Me.PurchaseOrderBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.PurchaseOrderBindingNavigator.BindingSource = Me.PurchaseOrderBindingSource
-        Me.PurchaseOrderBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.PurchaseOrderBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.PurchaseOrderBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
-        Me.PurchaseOrderBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.PurchaseOrderBindingNavigatorSaveItem})
-        Me.PurchaseOrderBindingNavigator.Location = New System.Drawing.Point(187, 484)
-        Me.PurchaseOrderBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.PurchaseOrderBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.PurchaseOrderBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.PurchaseOrderBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.PurchaseOrderBindingNavigator.Name = "PurchaseOrderBindingNavigator"
-        Me.PurchaseOrderBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.PurchaseOrderBindingNavigator.Size = New System.Drawing.Size(278, 25)
-        Me.PurchaseOrderBindingNavigator.TabIndex = 30
-        Me.PurchaseOrderBindingNavigator.Text = "BindingNavigator1"
-        Me.PurchaseOrderBindingNavigator.Visible = False
+        Me.GroupBox1.Controls.Add(Me.txtSalesDate)
+        Me.GroupBox1.Controls.Add(Me.btnSaveComments)
+        Me.GroupBox1.Controls.Add(Me.btnCloseOrder)
+        Me.GroupBox1.Controls.Add(Me.txtDealerID)
+        Me.GroupBox1.Controls.Add(lblVendorID)
+        Me.GroupBox1.Controls.Add(Me.txtComment)
+        Me.GroupBox1.Controls.Add(lblComments)
+        Me.GroupBox1.Controls.Add(lblPurchaseOrderNbr)
+        Me.GroupBox1.Controls.Add(Me.txtWhlslOrderTotal)
+        Me.GroupBox1.Controls.Add(Me.txtWhlslOrderNbr)
+        Me.GroupBox1.Controls.Add(lblTireQty)
+        Me.GroupBox1.Controls.Add(lblPoTotal)
+        Me.GroupBox1.Controls.Add(Me.txtTireQty)
+        Me.GroupBox1.Controls.Add(lblTireCode)
+        Me.GroupBox1.Controls.Add(lblPODate)
+        Me.GroupBox1.Controls.Add(Me.txtTireCode)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 58)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(745, 205)
+        Me.GroupBox1.TabIndex = 82
+        Me.GroupBox1.TabStop = False
         '
-        'BindingNavigatorAddNewItem
+        'txtSalesDate
         '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        Me.txtSalesDate.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSalesDate.Location = New System.Drawing.Point(444, 19)
+        Me.txtSalesDate.Name = "txtSalesDate"
+        Me.txtSalesDate.ReadOnly = True
+        Me.txtSalesDate.Size = New System.Drawing.Size(199, 26)
+        Me.txtSalesDate.TabIndex = 83
         '
-        'BindingNavigatorCountItem
+        'btnSaveComments
         '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        Me.btnSaveComments.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSaveComments.Location = New System.Drawing.Point(506, 161)
+        Me.btnSaveComments.Name = "btnSaveComments"
+        Me.btnSaveComments.Size = New System.Drawing.Size(137, 30)
+        Me.btnSaveComments.TabIndex = 82
+        Me.btnSaveComments.Text = "Save Comments"
+        Me.btnSaveComments.UseVisualStyleBackColor = True
         '
-        'BindingNavigatorDeleteItem
+        'btnCloseOrder
         '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.btnCloseOrder.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCloseOrder.Location = New System.Drawing.Point(343, 161)
+        Me.btnCloseOrder.Name = "btnCloseOrder"
+        Me.btnCloseOrder.Size = New System.Drawing.Size(137, 30)
+        Me.btnCloseOrder.TabIndex = 82
+        Me.btnCloseOrder.Text = "Close This Order"
+        Me.btnCloseOrder.UseVisualStyleBackColor = True
         '
-        'BindingNavigatorMoveFirstItem
+        'txtDealerID
         '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
+        Me.txtDealerID.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDealerID.Location = New System.Drawing.Point(120, 19)
+        Me.txtDealerID.Name = "txtDealerID"
+        Me.txtDealerID.ReadOnly = True
+        Me.txtDealerID.Size = New System.Drawing.Size(200, 26)
+        Me.txtDealerID.TabIndex = 66
         '
-        'BindingNavigatorMovePreviousItem
+        'txtComment
         '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
+        Me.txtComment.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtComment.Location = New System.Drawing.Point(443, 51)
+        Me.txtComment.Multiline = True
+        Me.txtComment.Name = "txtComment"
+        Me.txtComment.Size = New System.Drawing.Size(200, 96)
+        Me.txtComment.TabIndex = 80
         '
-        'BindingNavigatorSeparator
+        'txtWhlslOrderTotal
         '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.txtWhlslOrderTotal.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtWhlslOrderTotal.Location = New System.Drawing.Point(120, 131)
+        Me.txtWhlslOrderTotal.Name = "txtWhlslOrderTotal"
+        Me.txtWhlslOrderTotal.ReadOnly = True
+        Me.txtWhlslOrderTotal.Size = New System.Drawing.Size(200, 26)
+        Me.txtWhlslOrderTotal.TabIndex = 76
         '
-        'BindingNavigatorPositionItem
+        'txtWhlslOrderNbr
         '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        Me.txtWhlslOrderNbr.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtWhlslOrderNbr.Location = New System.Drawing.Point(120, 47)
+        Me.txtWhlslOrderNbr.Name = "txtWhlslOrderNbr"
+        Me.txtWhlslOrderNbr.ReadOnly = True
+        Me.txtWhlslOrderNbr.Size = New System.Drawing.Size(200, 26)
+        Me.txtWhlslOrderNbr.TabIndex = 68
         '
-        'BindingNavigatorSeparator1
+        'txtTireQty
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.txtTireQty.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTireQty.Location = New System.Drawing.Point(120, 103)
+        Me.txtTireQty.Name = "txtTireQty"
+        Me.txtTireQty.ReadOnly = True
+        Me.txtTireQty.Size = New System.Drawing.Size(200, 26)
+        Me.txtTireQty.TabIndex = 74
         '
-        'BindingNavigatorMoveNextItem
+        'txtTireCode
         '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        Me.txtTireCode.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTireCode.Location = New System.Drawing.Point(120, 75)
+        Me.txtTireCode.Name = "txtTireCode"
+        Me.txtTireCode.ReadOnly = True
+        Me.txtTireCode.Size = New System.Drawing.Size(200, 26)
+        Me.txtTireCode.TabIndex = 72
         '
-        'BindingNavigatorMoveLastItem
+        'WholesaleOrderDataGridView
         '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        Me.WholesaleOrderDataGridView.AllowUserToAddRows = False
+        Me.WholesaleOrderDataGridView.AllowUserToDeleteRows = False
+        Me.WholesaleOrderDataGridView.AutoGenerateColumns = False
+        Me.WholesaleOrderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.WholesaleOrderDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PoNbrDataGridViewTextBoxColumn, Me.VendorIDDataGridViewTextBoxColumn, Me.PoDateDataGridViewTextBoxColumn, Me.TireCodeDataGridViewTextBoxColumn, Me.TireQtyDataGridViewTextBoxColumn, Me.PoTotalDataGridViewTextBoxColumn, Me.CommentsDataGridViewTextBoxColumn})
+        Me.WholesaleOrderDataGridView.DataSource = Me.PurchaseOrderBindingSource
+        Me.WholesaleOrderDataGridView.Location = New System.Drawing.Point(3, 269)
+        Me.WholesaleOrderDataGridView.Name = "WholesaleOrderDataGridView"
+        Me.WholesaleOrderDataGridView.ReadOnly = True
+        Me.WholesaleOrderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.WholesaleOrderDataGridView.Size = New System.Drawing.Size(745, 171)
+        Me.WholesaleOrderDataGridView.TabIndex = 83
         '
-        'BindingNavigatorSeparator2
+        'PoNbrDataGridViewTextBoxColumn
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.PoNbrDataGridViewTextBoxColumn.DataPropertyName = "poNbr"
+        Me.PoNbrDataGridViewTextBoxColumn.HeaderText = "poNbr"
+        Me.PoNbrDataGridViewTextBoxColumn.Name = "PoNbrDataGridViewTextBoxColumn"
+        Me.PoNbrDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'PurchaseOrderBindingNavigatorSaveItem
+        'VendorIDDataGridViewTextBoxColumn
         '
-        Me.PurchaseOrderBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PurchaseOrderBindingNavigatorSaveItem.Image = CType(resources.GetObject("PurchaseOrderBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.PurchaseOrderBindingNavigatorSaveItem.Name = "PurchaseOrderBindingNavigatorSaveItem"
-        Me.PurchaseOrderBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
-        Me.PurchaseOrderBindingNavigatorSaveItem.Text = "Save Data"
+        Me.VendorIDDataGridViewTextBoxColumn.DataPropertyName = "vendorID"
+        Me.VendorIDDataGridViewTextBoxColumn.HeaderText = "vendorID"
+        Me.VendorIDDataGridViewTextBoxColumn.Name = "VendorIDDataGridViewTextBoxColumn"
+        Me.VendorIDDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'PODataGridView
+        'PoDateDataGridViewTextBoxColumn
         '
-        Me.PODataGridView.AllowUserToAddRows = False
-        Me.PODataGridView.AllowUserToDeleteRows = False
-        Me.PODataGridView.AutoGenerateColumns = False
-        Me.PODataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.PODataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.poDate, Me.DataGridViewTextBoxColumn1, Me.vendorID, Me.DataGridViewTextBoxColumn3})
-        Me.PODataGridView.DataSource = Me.PurchaseOrderBindingSource
-        Me.PODataGridView.Location = New System.Drawing.Point(12, 179)
-        Me.PODataGridView.Name = "PODataGridView"
-        Me.PODataGridView.ReadOnly = True
-        Me.PODataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.PODataGridView.Size = New System.Drawing.Size(657, 161)
-        Me.PODataGridView.TabIndex = 30
+        Me.PoDateDataGridViewTextBoxColumn.DataPropertyName = "poDate"
+        Me.PoDateDataGridViewTextBoxColumn.HeaderText = "poDate"
+        Me.PoDateDataGridViewTextBoxColumn.Name = "PoDateDataGridViewTextBoxColumn"
+        Me.PoDateDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'PurchaseOrderDetailBindingSource
+        'TireCodeDataGridViewTextBoxColumn
         '
-        Me.PurchaseOrderDetailBindingSource.DataMember = "purchaseOrderDetail"
-        Me.PurchaseOrderDetailBindingSource.DataSource = Me.Comp400_2012DataSet
+        Me.TireCodeDataGridViewTextBoxColumn.DataPropertyName = "tireCode"
+        Me.TireCodeDataGridViewTextBoxColumn.HeaderText = "tireCode"
+        Me.TireCodeDataGridViewTextBoxColumn.Name = "TireCodeDataGridViewTextBoxColumn"
+        Me.TireCodeDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'PODetailDataGridView
+        'TireQtyDataGridViewTextBoxColumn
         '
-        Me.PODetailDataGridView.AllowUserToAddRows = False
-        Me.PODetailDataGridView.AllowUserToDeleteRows = False
-        Me.PODetailDataGridView.AutoGenerateColumns = False
-        Me.PODetailDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.PODetailDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.tireQtyOrdered, Me.tireQtyReceived, Me.comments})
-        Me.PODetailDataGridView.DataSource = Me.PurchaseOrderDetailBindingSource
-        Me.PODetailDataGridView.Location = New System.Drawing.Point(12, 346)
-        Me.PODetailDataGridView.Name = "PODetailDataGridView"
-        Me.PODetailDataGridView.ReadOnly = True
-        Me.PODetailDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.PODetailDataGridView.Size = New System.Drawing.Size(659, 135)
-        Me.PODetailDataGridView.TabIndex = 30
+        Me.TireQtyDataGridViewTextBoxColumn.DataPropertyName = "tireQty"
+        Me.TireQtyDataGridViewTextBoxColumn.HeaderText = "tireQty"
+        Me.TireQtyDataGridViewTextBoxColumn.Name = "TireQtyDataGridViewTextBoxColumn"
+        Me.TireQtyDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'PictureBox1
+        'PoTotalDataGridViewTextBoxColumn
         '
-        Me.PictureBox1.Image = Global.NorthwesternTiresCompany.My.Resources.Resources.nwtires_logo_sm
-        Me.PictureBox1.Location = New System.Drawing.Point(229, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(230, 74)
-        Me.PictureBox1.TabIndex = 31
-        Me.PictureBox1.TabStop = False
+        Me.PoTotalDataGridViewTextBoxColumn.DataPropertyName = "poTotal"
+        Me.PoTotalDataGridViewTextBoxColumn.HeaderText = "poTotal"
+        Me.PoTotalDataGridViewTextBoxColumn.Name = "PoTotalDataGridViewTextBoxColumn"
+        Me.PoTotalDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'poDate
+        'CommentsDataGridViewTextBoxColumn
         '
-        Me.poDate.DataPropertyName = "poDate"
-        Me.poDate.HeaderText = "PO Date"
-        Me.poDate.Name = "poDate"
-        Me.poDate.ReadOnly = True
-        Me.poDate.Width = 80
+        Me.CommentsDataGridViewTextBoxColumn.DataPropertyName = "comments"
+        Me.CommentsDataGridViewTextBoxColumn.HeaderText = "comments"
+        Me.CommentsDataGridViewTextBoxColumn.Name = "CommentsDataGridViewTextBoxColumn"
+        Me.CommentsDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn1
+        'btnCreateNewOrder
         '
-        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "poNbr"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "PO Number"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'vendorID
-        '
-        Me.vendorID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.vendorID.DataPropertyName = "vendorID"
-        Me.vendorID.HeaderText = "Vendor ID"
-        Me.vendorID.Name = "vendorID"
-        Me.vendorID.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "storeNbr"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Store Number"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "poDtlLineID"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "poDtlLineID"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        Me.DataGridViewTextBoxColumn4.Visible = False
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "poNbr"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "poNbr"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        Me.DataGridViewTextBoxColumn5.Visible = False
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "tireCode"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Tire Code"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Width = 90
-        '
-        'tireQtyOrdered
-        '
-        Me.tireQtyOrdered.DataPropertyName = "tireQtyOrdered"
-        Me.tireQtyOrdered.HeaderText = "# Ordered"
-        Me.tireQtyOrdered.Name = "tireQtyOrdered"
-        Me.tireQtyOrdered.ReadOnly = True
-        Me.tireQtyOrdered.Width = 90
-        '
-        'tireQtyReceived
-        '
-        Me.tireQtyReceived.DataPropertyName = "tireQtyReceived"
-        Me.tireQtyReceived.HeaderText = "# Received"
-        Me.tireQtyReceived.Name = "tireQtyReceived"
-        Me.tireQtyReceived.ReadOnly = True
-        Me.tireQtyReceived.Width = 90
-        '
-        'comments
-        '
-        Me.comments.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.comments.DataPropertyName = "comments"
-        Me.comments.FillWeight = 150.0!
-        Me.comments.HeaderText = "Comments"
-        Me.comments.Name = "comments"
-        Me.comments.ReadOnly = True
+        Me.btnCreateNewOrder.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCreateNewOrder.Location = New System.Drawing.Point(238, 446)
+        Me.btnCreateNewOrder.Name = "btnCreateNewOrder"
+        Me.btnCreateNewOrder.Size = New System.Drawing.Size(184, 30)
+        Me.btnCreateNewOrder.TabIndex = 84
+        Me.btnCreateNewOrder.Text = "Create New Order"
+        Me.btnCreateNewOrder.UseVisualStyleBackColor = True
         '
         'frmPO2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(684, 524)
+        Me.ClientSize = New System.Drawing.Size(752, 487)
         Me.ControlBox = False
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.PODetailDataGridView)
-        Me.Controls.Add(Me.PODataGridView)
-        Me.Controls.Add(Me.PurchaseOrderBindingNavigator)
-        Me.Controls.Add(Me.lblStep1)
+        Me.Controls.Add(Me.btnCreateNewOrder)
+        Me.Controls.Add(Me.WholesaleOrderDataGridView)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.lblTitle)
@@ -404,18 +404,13 @@ Partial Class frmPO2
         Me.Text = "Purchase Orders"
         CType(Me.Comp400_2012DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PurchaseOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PurchaseOrderBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PurchaseOrderBindingNavigator.ResumeLayout(False)
-        Me.PurchaseOrderBindingNavigator.PerformLayout()
-        CType(Me.PODataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PurchaseOrderDetailBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PODetailDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.WholesaleOrderDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents lblStep1 As System.Windows.Forms.Label
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents btnBack As System.Windows.Forms.Button
     Friend WithEvents lblTitle As System.Windows.Forms.Label
@@ -423,32 +418,25 @@ Partial Class frmPO2
     Friend WithEvents PurchaseOrderBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents PurchaseOrderTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.purchaseOrderTableAdapter
     Friend WithEvents TableAdapterManager As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager
-    Friend WithEvents PurchaseOrderBindingNavigator As System.Windows.Forms.BindingNavigator
-    Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents BindingNavigatorDeleteItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMoveFirstItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMovePreviousItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents BindingNavigatorPositionItem As System.Windows.Forms.ToolStripTextBox
-    Friend WithEvents BindingNavigatorSeparator1 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents BindingNavigatorMoveNextItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents PurchaseOrderBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents PODataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents PurchaseOrderDetailBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents PODetailDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents poDate As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents vendorID As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tireQtyOrdered As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tireQtyReceived As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents comments As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents txtSalesDate As System.Windows.Forms.TextBox
+    Friend WithEvents btnSaveComments As System.Windows.Forms.Button
+    Friend WithEvents btnCloseOrder As System.Windows.Forms.Button
+    Friend WithEvents txtDealerID As System.Windows.Forms.TextBox
+    Friend WithEvents txtComment As System.Windows.Forms.TextBox
+    Friend WithEvents txtWhlslOrderTotal As System.Windows.Forms.TextBox
+    Friend WithEvents txtWhlslOrderNbr As System.Windows.Forms.TextBox
+    Friend WithEvents txtTireQty As System.Windows.Forms.TextBox
+    Friend WithEvents txtTireCode As System.Windows.Forms.TextBox
+    Friend WithEvents WholesaleOrderDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents PoNbrDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents VendorIDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PoDateDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TireCodeDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TireQtyDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PoTotalDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CommentsDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnCreateNewOrder As System.Windows.Forms.Button
 End Class
