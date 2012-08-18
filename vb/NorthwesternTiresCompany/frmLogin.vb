@@ -52,15 +52,15 @@
     End Sub
 
     Private Sub GeneralLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GeneralLogin.Click
-        Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString("bmason", "bm1234")
+        Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString("sharris", "sh1234")
 
         If Login Is Nothing Then
             MsgBox("Incorrect Username or Password")
         Else
-            Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("bmason")
+            Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("sharris")
             userInfo.Clearance = ClearanceString
-            userInfo.EmployeeID = Me.EmployeeTableAdapter1.EmployeeNumber("bmason")
-            userInfo.StoreNumber = Me.EmployeeTableAdapter1.StoreNumber("bmason")
+            userInfo.EmployeeID = Me.EmployeeTableAdapter1.EmployeeNumber("sharris")
+            userInfo.StoreNumber = Me.EmployeeTableAdapter1.StoreNumber("sharris")
             frmMainMenu.Show()
             Me.Close()
         End If
@@ -97,15 +97,15 @@
     End Sub
 
     Private Sub WarehouseLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WarehouseLogin.Click
-        Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString("sharris", "sh1234")
+        Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString("bmason", "bm1234")
 
         If Login Is Nothing Then
             MsgBox("Incorrect Username or Password")
         Else
-            Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("sharris")
+            Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("bmason")
             userInfo.Clearance = ClearanceString
-            userInfo.EmployeeID = Me.EmployeeTableAdapter1.EmployeeNumber("sharris")
-            userInfo.StoreNumber = Me.EmployeeTableAdapter1.StoreNumber("sharris")
+            userInfo.EmployeeID = Me.EmployeeTableAdapter1.EmployeeNumber("bmason")
+            userInfo.StoreNumber = Me.EmployeeTableAdapter1.StoreNumber("bmason")
             frmMainMenu.Show()
             Me.Close()
         End If
