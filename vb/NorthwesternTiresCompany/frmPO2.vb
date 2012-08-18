@@ -15,19 +15,10 @@
         Me.Close()
     End Sub
 
-    Private Sub PurchaseOrderBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.Validate()
-        Me.PurchaseOrderBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.Comp400_2012DataSet)
-
-    End Sub
-
     Private Sub frmPO2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Comp400_2012DataSet1.dealer' table. You can move, or remove it, as needed.
-        Me.PurchaseOrderTableAdapter.Fill(Me.Comp400_2012DataSet.purchaseOrder)
+        Me.PurchaseOrderTableAdapter.FillByOpenOrders(Me.Comp400_2012DataSet.purchaseOrder)
         'TODO: This line of code loads data into the 'Comp400_2012DataSet.wholesaleOrder' table. You can move, or remove it, as needed.
-        'Me.WholesaleOrderTableAdapter.FillByOpenOrders(Me.Comp400_2012DataSet.wholesaleOrder)
-
     End Sub
 
     Private Sub btnSaveComments_Click(sender As System.Object, e As System.EventArgs) Handles btnSaveComments.Click
@@ -43,23 +34,45 @@
         End If
     End Sub
 
-    Private Sub btnCloseOrder_Click(sender As System.Object, e As System.EventArgs) Handles btnCloseOrder.Click
+    Private Sub btnCloseOrder_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim rowview As DataRowView = PurchaseOrderBindingSource.Current
         If rowview IsNot Nothing Then
-            Dim row As comp400_2012DataSet.wholesaleOrderRow = rowview.Row
+            Dim row As comp400_2012DataSet.purchaseOrderRow = rowview.Row
             Try
-                PurchaseOrderTableAdapter.CloseDealerOrder(True, row.whlslOrderNbr)
-                Me.PurchaseOrderTableAdapter.FillByOpenOrders(Comp400_2012DataSet.wholesaleOrder)
+                PurchaseOrderTableAdapter.ClosePO(row.poNbr)
+                Me.PurchaseOrderTableAdapter.FillByOpenOrders(Comp400_2012DataSet.purchaseOrder)
             Catch ex As Exception
                 MsgBox("Could not close Order.", MsgBoxStyle.OkOnly)
             End Try
         End If
     End Sub
 
-    Private Sub btnCreateNewOrder_Click(sender As System.Object, e As System.EventArgs) Handles btnCreateNewOrder.Click
-        Dim myPurchaseOrderForm As New frmPO2
+    Private Sub btnCreateNewOrder_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCreateNewOrder.Click
+        Dim myPurchaseOrderForm As New frmPONew
         myPurchaseOrderForm.Show()
         Me.Close()
     End Sub
 
+    Private Sub btnReceive_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReceive.Click
+        Dim rowview As DataRowView = PurchaseOrderBindingSource.Current
+        If rowview IsNot Nothing Then
+            Dim row As comp400_2012DataSet.purchaseOrderRow = rowview.Row
+            Dim myReceivePOTiresForm As New frmPOReceiveTires
+            myReceivePOTiresForm.txtPONum.Text = row.poNbr
+            myReceivePOTiresForm.txtQtyOrdered.Text = row.tireQty
+            myReceivePOTiresForm.txtVendorID.Text = row.vendorID
+            ' myReceivePOTiresForm.txtTireCode.Text = row.tireCode
+            myReceivePOTiresForm.tireCode = row.tireCode
+            myReceivePOTiresForm.ShowDialog()
+            If Windows.Forms.DialogResult.OK Then
+                Try
+                    Me.PurchaseOrderTableAdapter.FillByOpenOrders(Me.Comp400_2012DataSet.purchaseOrder)
+                    ' PurchaseOrderDataGridView.Update()
+                Catch ex As Exception
+                    MsgBox("Could not update file. Please contact your systems administrator.", MsgBoxStyle.OkOnly)
+                End Try
+            End If
+
+        End If
+    End Sub
 End Class

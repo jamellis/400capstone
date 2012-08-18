@@ -52,6 +52,9 @@
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NorthwesternTiresCompany, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <ExecutableExtension>.exe</ExecutableExtension>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -94,6 +97,18 @@
       <DependentUpon>frmDealers.vb</DependentUpon>
     </Compile>
     <Compile Include="frmDealers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPONew.Designer.vb">
+      <DependentUpon>frmPONew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPONew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPOReceiveTires.Designer.vb">
+      <DependentUpon>frmPOReceiveTires.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPOReceiveTires.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmReportGlobalInventory.Designer.vb">
@@ -211,6 +226,12 @@
     <Compile Include="frmTransfers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmVendors.Designer.vb">
+      <DependentUpon>frmVendors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendors.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -241,6 +262,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDealers.resx">
       <DependentUpon>frmDealers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPONew.resx">
+      <DependentUpon>frmPONew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPOReceiveTires.resx">
+      <DependentUpon>frmPOReceiveTires.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportGlobalInventory.resx">
       <DependentUpon>frmReportGlobalInventory.vb</DependentUpon>
@@ -298,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTransfers.resx">
       <DependentUpon>frmTransfers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendors.resx">
+      <DependentUpon>frmVendors.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

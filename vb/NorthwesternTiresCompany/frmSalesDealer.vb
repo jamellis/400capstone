@@ -27,7 +27,7 @@
         If rowview IsNot Nothing Then
             Dim row As comp400_2012DataSet.wholesaleOrderRow = rowview.Row
             Try
-                WholesaleOrderTableAdapter.CloseDealerOrder(True, row.whlslOrderNbr)
+                WholesaleOrderTableAdapter.CloseDealerOrder(row.whlslOrderNbr)
                 Me.WholesaleOrderTableAdapter.FillByOpenOrders(Comp400_2012DataSet.wholesaleOrder)
             Catch ex As Exception
                 MsgBox("Could not close Order.", MsgBoxStyle.OkOnly)
