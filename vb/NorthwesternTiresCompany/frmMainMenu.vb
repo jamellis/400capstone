@@ -88,6 +88,7 @@
         If userInfo.Clearance IsNot Nothing Then
 
             If userInfo.Clearance = "Warehouse" Then
+                btnPO.Enabled = True
                 btnInventoryMaintain.Enabled = True
                 btnLogOut.Text = "&Log Out"
             End If
