@@ -2400,10 +2400,6 @@ FROM            purchaseOrder INNER JOIN
       <msdata:Relationship name="fkTrnShipStore1" msdata:parent="recStore" msdata:child="transferOrder" msdata:parentkey="storeNbr" msdata:childkey="shipStore" msprop:Generator_UserChildTable="transferOrder" msprop:Generator_ChildPropName="GettransferOrderRowsByfkTrnShipStore1" msprop:Generator_UserParentTable="recStore" msprop:Generator_UserRelationName="fkTrnShipStore1" msprop:Generator_RelationVarName="relationfkTrnShipStore1" msprop:Generator_ParentPropName="recStoreRowByfkTrnShipStore1" />
       <msdata:Relationship name="fkRtlOrderStore" msdata:parent="recStore" msdata:child="retailOrder" msdata:parentkey="storeNbr" msdata:childkey="storeNbr" msprop:Generator_UserChildTable="retailOrder" msprop:Generator_ChildPropName="GetretailOrderRows" msprop:Generator_UserParentTable="recStore" msprop:Generator_UserRelationName="fkRtlOrderStore" msprop:Generator_RelationVarName="relationfkRtlOrderStore" msprop:Generator_ParentPropName="recStoreRow" />
       <msdata:Relationship name="fkPoTireCode" msdata:parent="tire" msdata:child="purchaseOrder" msdata:parentkey="tireCode" msdata:childkey="tireCode" msprop:Generator_UserChildTable="purchaseOrder" msprop:Generator_ChildPropName="GetpurchaseOrderRows" msprop:Generator_ParentPropName="tireRow" msprop:Generator_UserRelationName="fkPoTireCode" msprop:Generator_RelationVarName="relationfkPoTireCode" msprop:Generator_UserParentTable="tire" />
-<<<<<<< HEAD
-=======
-      <msdata:Relationship name="fkPoTireCode1" msdata:parent="tire" msdata:child="MFPOTableAdapter" msdata:parentkey="tireCode" msdata:childkey="tireCode" msprop:Generator_UserChildTable="MFPOTableAdapter" msprop:Generator_ChildPropName="GetMFPOTableAdapterRows" msprop:Generator_ParentPropName="tireRow" msprop:Generator_UserRelationName="fkPoTireCode1" msprop:Generator_RelationVarName="relationfkPoTireCode1" msprop:Generator_UserParentTable="tire" />
->>>>>>> PO report for Manufacturer Order
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
