@@ -23,7 +23,7 @@
         End If
     End Sub
 
-    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
         DialogResult = Windows.Forms.DialogResult.Cancel
     End Sub
 
@@ -134,4 +134,6 @@
         btnUse.Enabled = True
         btnExit.Enabled = True
     End Sub
+
+
 End Class
