@@ -32,6 +32,7 @@
         Else
             Dim result = MessageBox.Show("Are you sure you want to Log Out?", "Log Out", MessageBoxButtons.YesNo)
             If result = Windows.Forms.DialogResult.Yes Then
+                userInfo.Clearance = ""
                 frmLogin.Show()
                 Me.Close()
             Else
