@@ -147,12 +147,6 @@
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPo.Designer.vb">
-      <DependentUpon>frmPo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmPo.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmPO2.Designer.vb">
       <DependentUpon>frmPO2.vb</DependentUpon>
     </Compile>
@@ -292,9 +286,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPo.resx">
-      <DependentUpon>frmPo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPO2.resx">
       <DependentUpon>frmPO2.vb</DependentUpon>
