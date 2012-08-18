@@ -51,7 +51,7 @@
         Me.Close()
     End Sub
 
-    Private Sub GeneralLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GeneralLogin.Click
+    Private Sub GeneralLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString("sharris", "sh1234")
 
         If Login Is Nothing Then

@@ -29,12 +29,11 @@ Partial Class frmLogin
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.EmployeeTableAdapter1 = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.employeeTableAdapter()
         Me.AdminLogin = New System.Windows.Forms.Button()
         Me.WarehouseLogin = New System.Windows.Forms.Button()
         Me.ManagerLogin = New System.Windows.Forms.Button()
         Me.SalesLogin = New System.Windows.Forms.Button()
-        Me.GeneralLogin = New System.Windows.Forms.Button()
+        Me.EmployeeTableAdapter1 = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.employeeTableAdapter()
         Me.SuspendLayout()
         '
         'lblInstructions
@@ -107,10 +106,6 @@ Partial Class frmLogin
         Me.btnCancel.Text = "&Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'EmployeeTableAdapter1
-        '
-        Me.EmployeeTableAdapter1.ClearBeforeFill = True
-        '
         'AdminLogin
         '
         Me.AdminLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
@@ -148,14 +143,9 @@ Partial Class frmLogin
         Me.SalesLogin.Text = "Sales Login"
         Me.SalesLogin.UseVisualStyleBackColor = True
         '
-        'GeneralLogin
+        'EmployeeTableAdapter1
         '
-        Me.GeneralLogin.Location = New System.Drawing.Point(130, 155)
-        Me.GeneralLogin.Name = "GeneralLogin"
-        Me.GeneralLogin.Size = New System.Drawing.Size(113, 23)
-        Me.GeneralLogin.TabIndex = 8
-        Me.GeneralLogin.Text = "General Login"
-        Me.GeneralLogin.UseVisualStyleBackColor = True
+        Me.EmployeeTableAdapter1.ClearBeforeFill = True
         '
         'frmLogin
         '
@@ -165,7 +155,6 @@ Partial Class frmLogin
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(373, 287)
         Me.ControlBox = False
-        Me.Controls.Add(Me.GeneralLogin)
         Me.Controls.Add(Me.SalesLogin)
         Me.Controls.Add(Me.ManagerLogin)
         Me.Controls.Add(Me.WarehouseLogin)
@@ -199,5 +188,4 @@ Partial Class frmLogin
     Friend WithEvents WarehouseLogin As System.Windows.Forms.Button
     Friend WithEvents ManagerLogin As System.Windows.Forms.Button
     Friend WithEvents SalesLogin As System.Windows.Forms.Button
-    Friend WithEvents GeneralLogin As System.Windows.Forms.Button
 End Class
