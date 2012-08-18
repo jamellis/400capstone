@@ -1525,6 +1525,29 @@ FROM            store</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MFPOTableAdapter" GeneratorDataComponentClassName="MFPOTableAdapter" Name="MFPOTableAdapter" UserDataComponentName="MFPOTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="comp400_2012ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        purchaseOrder.poNbr, purchaseOrder.poDate, purchaseOrder.tireCode, purchaseOrder.tireQty, vendor.vendorID AS Expr1, vendor.vendorName
+FROM            purchaseOrder INNER JOIN
+                         vendor ON purchaseOrder.vendorID = vendor.vendorID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="poNbr" DataSetColumn="poNbr" />
+              <Mapping SourceColumn="poDate" DataSetColumn="poDate" />
+              <Mapping SourceColumn="tireCode" DataSetColumn="tireCode" />
+              <Mapping SourceColumn="tireQty" DataSetColumn="tireQty" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="vendorName" DataSetColumn="vendorName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -2246,6 +2269,30 @@ FROM            store</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="MFPOTableAdapter" msprop:Generator_TableClassName="MFPOTableAdapterDataTable" msprop:Generator_TableVarName="tableMFPOTableAdapter" msprop:Generator_TablePropName="MFPOTableAdapter" msprop:Generator_RowDeletingName="MFPOTableAdapterRowDeleting" msprop:Generator_UserTableName="MFPOTableAdapter" msprop:Generator_RowChangingName="MFPOTableAdapterRowChanging" msprop:Generator_RowEvHandlerName="MFPOTableAdapterRowChangeEventHandler" msprop:Generator_RowDeletedName="MFPOTableAdapterRowDeleted" msprop:Generator_RowEvArgName="MFPOTableAdapterRowChangeEvent" msprop:Generator_RowChangedName="MFPOTableAdapterRowChanged" msprop:Generator_RowClassName="MFPOTableAdapterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="poNbr" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpoNbr" msprop:Generator_ColumnPropNameInRow="poNbr" msprop:Generator_ColumnPropNameInTable="poNbrColumn" msprop:Generator_UserColumnName="poNbr" type="xs:int" />
+              <xs:element name="poDate" msprop:Generator_ColumnVarNameInTable="columnpoDate" msprop:Generator_ColumnPropNameInRow="poDate" msprop:Generator_ColumnPropNameInTable="poDateColumn" msprop:Generator_UserColumnName="poDate" type="xs:dateTime" />
+              <xs:element name="tireCode" msprop:Generator_ColumnVarNameInTable="columntireCode" msprop:Generator_ColumnPropNameInRow="tireCode" msprop:Generator_ColumnPropNameInTable="tireCodeColumn" msprop:Generator_UserColumnName="tireCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tireQty" msprop:Generator_ColumnVarNameInTable="columntireQty" msprop:Generator_ColumnPropNameInRow="tireQty" msprop:Generator_ColumnPropNameInTable="tireQtyColumn" msprop:Generator_UserColumnName="tireQty" type="xs:int" minOccurs="0" />
+              <xs:element name="Expr1" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" />
+              <xs:element name="vendorName" msprop:Generator_ColumnVarNameInTable="columnvendorName" msprop:Generator_ColumnPropNameInRow="vendorName" msprop:Generator_ColumnPropNameInTable="vendorNameColumn" msprop:Generator_UserColumnName="vendorName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint2" msdata:PrimaryKey="true">
@@ -2319,6 +2366,11 @@ FROM            store</CommandText>
       <xs:selector xpath=".//mstns:recStore" />
       <xs:field xpath="mstns:storeNbr" />
     </xs:unique>
+    <xs:unique name="MFPOTableAdapter_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MFPOTableAdapter" />
+      <xs:field xpath="mstns:poNbr" />
+      <xs:field xpath="mstns:Expr1" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
@@ -2348,6 +2400,10 @@ FROM            store</CommandText>
       <msdata:Relationship name="fkTrnShipStore1" msdata:parent="recStore" msdata:child="transferOrder" msdata:parentkey="storeNbr" msdata:childkey="shipStore" msprop:Generator_UserChildTable="transferOrder" msprop:Generator_ChildPropName="GettransferOrderRowsByfkTrnShipStore1" msprop:Generator_UserParentTable="recStore" msprop:Generator_UserRelationName="fkTrnShipStore1" msprop:Generator_RelationVarName="relationfkTrnShipStore1" msprop:Generator_ParentPropName="recStoreRowByfkTrnShipStore1" />
       <msdata:Relationship name="fkRtlOrderStore" msdata:parent="recStore" msdata:child="retailOrder" msdata:parentkey="storeNbr" msdata:childkey="storeNbr" msprop:Generator_UserChildTable="retailOrder" msprop:Generator_ChildPropName="GetretailOrderRows" msprop:Generator_UserParentTable="recStore" msprop:Generator_UserRelationName="fkRtlOrderStore" msprop:Generator_RelationVarName="relationfkRtlOrderStore" msprop:Generator_ParentPropName="recStoreRow" />
       <msdata:Relationship name="fkPoTireCode" msdata:parent="tire" msdata:child="purchaseOrder" msdata:parentkey="tireCode" msdata:childkey="tireCode" msprop:Generator_UserChildTable="purchaseOrder" msprop:Generator_ChildPropName="GetpurchaseOrderRows" msprop:Generator_ParentPropName="tireRow" msprop:Generator_UserRelationName="fkPoTireCode" msprop:Generator_RelationVarName="relationfkPoTireCode" msprop:Generator_UserParentTable="tire" />
+<<<<<<< HEAD
+=======
+      <msdata:Relationship name="fkPoTireCode1" msdata:parent="tire" msdata:child="MFPOTableAdapter" msdata:parentkey="tireCode" msdata:childkey="tireCode" msprop:Generator_UserChildTable="MFPOTableAdapter" msprop:Generator_ChildPropName="GetMFPOTableAdapterRows" msprop:Generator_ParentPropName="tireRow" msprop:Generator_UserRelationName="fkPoTireCode1" msprop:Generator_RelationVarName="relationfkPoTireCode1" msprop:Generator_UserParentTable="tire" />
+>>>>>>> PO report for Manufacturer Order
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
