@@ -4,7 +4,11 @@
     Private Sub frmReportInventoryReport_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         'TODO: This line of code loads data into the 'comp400_2012DataSet.InventoryReportTable' table. You can move, or remove it, as needed.
-        Me.InventoryReportTableAdapter.FillByStoreNumber(Me.comp400_2012DataSet.InventoryReportTable, StoreNumber)
+        If userInfo.Clearance = "Admin" Then
+            Me.InventoryReportTableAdapter.Fill(Me.comp400_2012DataSet.InventoryReportTable)
+        Else
+            Me.InventoryReportTableAdapter.FillByStoreNumber(Me.comp400_2012DataSet.InventoryReportTable, StoreNumber)
+        End If
 
         Me.rvInventoryReport.RefreshReport()
     End Sub
