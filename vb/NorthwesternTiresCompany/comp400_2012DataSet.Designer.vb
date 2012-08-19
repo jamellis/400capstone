@@ -5754,7 +5754,7 @@ Partial Public Class comp400_2012DataSet
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnClearance}, true))
             Me.columnClearance.AllowDBNull = false
             Me.columnClearance.Unique = true
-            Me.columnClearance.MaxLength = 15
+            Me.columnClearance.MaxLength = 20
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
