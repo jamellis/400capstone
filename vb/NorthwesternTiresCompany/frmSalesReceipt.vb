@@ -19,7 +19,7 @@
         'TODO: This line of code loads data into the 'comp400_2012DataSet.salesReceiptTableAdapter' table. You can move, or remove it, as needed.
         Me.SalesReceiptTableAdapter.FillbyRetailOrderNbr(Me.comp400_2012DataSet.salesReceiptTableAdapter, retailOrderNbr)
 
-        Me.rvSaleReceipt.RefreshReport()
+        'Me.rvSaleReceipt.RefreshReport()
     End Sub
 
     Private Sub btnOk_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOk.Click

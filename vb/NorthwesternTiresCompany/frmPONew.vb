@@ -114,9 +114,8 @@
 
             ' enter code for print report
             Dim myPOMFG As New frmReportMfgPO
-            myPOMFG.poMFGnumber = Me.PurchaseOrderTableAdapter.LastPONbr
+            myPOMFG.poNumber = Me.PurchaseOrderTableAdapter.LastPOnbr
             Dim result = myPOMFG.ShowDialog()
-
 
             Dim myPOForm As New frmPO2
             myPOForm.Show()

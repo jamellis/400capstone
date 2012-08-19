@@ -115,6 +115,8 @@ Partial Public Class comp400_2012DataSet
     
     Private relationfkPoTireCode As Global.System.Data.DataRelation
     
+    Private relationfkPoTireCode1 As Global.System.Data.DataRelation
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -704,6 +706,7 @@ Partial Public Class comp400_2012DataSet
         Me.relationfkTrnShipStore1 = Me.Relations("fkTrnShipStore1")
         Me.relationfkRtlOrderStore = Me.Relations("fkRtlOrderStore")
         Me.relationfkPoTireCode = Me.Relations("fkPoTireCode")
+        Me.relationfkPoTireCode1 = Me.Relations("fkPoTireCode1")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -804,6 +807,8 @@ Partial Public Class comp400_2012DataSet
         Me.Relations.Add(Me.relationfkRtlOrderStore)
         Me.relationfkPoTireCode = New Global.System.Data.DataRelation("fkPoTireCode", New Global.System.Data.DataColumn() {Me.tabletire.tireCodeColumn}, New Global.System.Data.DataColumn() {Me.tablepurchaseOrder.tireCodeColumn}, false)
         Me.Relations.Add(Me.relationfkPoTireCode)
+        Me.relationfkPoTireCode1 = New Global.System.Data.DataRelation("fkPoTireCode1", New Global.System.Data.DataColumn() {Me.tabletire.tireCodeColumn}, New Global.System.Data.DataColumn() {Me.tableMFPOTableAdapter.tireCodeColumn}, false)
+        Me.Relations.Add(Me.relationfkPoTireCode1)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7561,9 +7566,12 @@ Partial Public Class comp400_2012DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddMFPOTableAdapterRow(ByVal poDate As Date, ByVal tireCode As String, ByVal tireQty As Integer, ByVal vendorName As String) As MFPOTableAdapterRow
+        Public Overloads Function AddMFPOTableAdapterRow(ByVal poDate As Date, ByVal parenttireRowByfkPoTireCode1 As tireRow, ByVal tireQty As Integer, ByVal vendorName As String) As MFPOTableAdapterRow
             Dim rowMFPOTableAdapterRow As MFPOTableAdapterRow = CType(Me.NewRow,MFPOTableAdapterRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, poDate, tireCode, tireQty, Nothing, vendorName}
+            Dim columnValuesArray() As Object = New Object() {Nothing, poDate, Nothing, tireQty, Nothing, vendorName}
+            If (Not (parenttireRowByfkPoTireCode1) Is Nothing) Then
+                columnValuesArray(2) = parenttireRowByfkPoTireCode1(0)
+            End If
             rowMFPOTableAdapterRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowMFPOTableAdapterRow)
             Return rowMFPOTableAdapterRow
@@ -8175,6 +8183,16 @@ Partial Public Class comp400_2012DataSet
                 Return New purchaseOrderRow(-1) {}
             Else
                 Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("fkPoTireCode")),purchaseOrderRow())
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function GetMFPOTableAdapterRows() As MFPOTableAdapterRow()
+            If (Me.Table.ChildRelations("fkPoTireCode1") Is Nothing) Then
+                Return New MFPOTableAdapterRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("fkPoTireCode1")),MFPOTableAdapterRow())
             End If
         End Function
     End Class
@@ -10279,6 +10297,17 @@ Partial Public Class comp400_2012DataSet
             End Get
             Set
                 Me(Me.tableMFPOTableAdapter.vendorNameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property tireRow() As tireRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("fkPoTireCode1")),tireRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("fkPoTireCode1"))
             End Set
         End Property
         
@@ -18624,16 +18653,18 @@ Namespace comp400_2012DataSetTableAdapters
             Me._commandCollection(0).CommandText = "SELECT        purchaseOrder.poNbr, purchaseOrder.poDate, purchaseOrder.tireCode, "& _ 
                 "purchaseOrder.tireQty, vendor.vendorID AS Expr1, vendor.vendorName"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM        "& _ 
                 "    purchaseOrder INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         vendor ON purchaseOrder.v"& _ 
-                "endorID = vendor.vendorID"
+                "endorID = vendor.vendorID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (purchaseOrder.poNbr = @Param1)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "poNbr", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As comp400_2012DataSet.MFPOTableAdapterDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As comp400_2012DataSet.MFPOTableAdapterDataTable, ByVal Param1 As Integer) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -18645,8 +18676,9 @@ Namespace comp400_2012DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As comp400_2012DataSet.MFPOTableAdapterDataTable
+        Public Overloads Overridable Function GetData(ByVal Param1 As Integer) As comp400_2012DataSet.MFPOTableAdapterDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
             Dim dataTable As comp400_2012DataSet.MFPOTableAdapterDataTable = New comp400_2012DataSet.MFPOTableAdapterDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable

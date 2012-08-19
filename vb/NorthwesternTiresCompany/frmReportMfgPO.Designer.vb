@@ -28,7 +28,7 @@ Partial Class frmReportMfgPO
         Me.comp400_2012DataSet = New NorthwesternTiresCompany.comp400_2012DataSet()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.rvReportMfgPO = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.MFPOTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.MFPOTableAdapter()
         CType(Me.MFPOTableAdapterBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.comp400_2012DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,16 +66,16 @@ Partial Class frmReportMfgPO
         Me.btnBack.Text = "&Back"
         Me.btnBack.UseVisualStyleBackColor = True
         '
-        'ReportViewer1
+        'rvReportMfgPO
         '
         ReportDataSource1.Name = "MFPO"
         ReportDataSource1.Value = Me.MFPOTableAdapterBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "NorthwesternTiresCompany.rptMFPO.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 12)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(520, 465)
-        Me.ReportViewer1.TabIndex = 20
+        Me.rvReportMfgPO.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.rvReportMfgPO.LocalReport.ReportEmbeddedResource = "NorthwesternTiresCompany.rptMFPO.rdlc"
+        Me.rvReportMfgPO.Location = New System.Drawing.Point(12, 12)
+        Me.rvReportMfgPO.Name = "rvReportMfgPO"
+        Me.rvReportMfgPO.Size = New System.Drawing.Size(520, 465)
+        Me.rvReportMfgPO.TabIndex = 20
         '
         'MFPOTableAdapter
         '
@@ -86,7 +86,7 @@ Partial Class frmReportMfgPO
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(547, 539)
-        Me.Controls.Add(Me.ReportViewer1)
+        Me.Controls.Add(Me.rvReportMfgPO)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnBack)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -100,7 +100,7 @@ Partial Class frmReportMfgPO
     End Sub
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents btnBack As System.Windows.Forms.Button
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents rvReportMfgPO As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents comp400_2012DataSet As NorthwesternTiresCompany.comp400_2012DataSet
     Friend WithEvents MFPOTableAdapterBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents MFPOTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.MFPOTableAdapter
