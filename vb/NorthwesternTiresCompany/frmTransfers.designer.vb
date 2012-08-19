@@ -68,6 +68,8 @@ Partial Class frmTransfers
         Me.InventoryTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.inventoryTableAdapter()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.StoreTableAdapter1 = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.storeTableAdapter()
+        Me.InventoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         StoreNbrLabel = New System.Windows.Forms.Label()
         StoreNbrLabel1 = New System.Windows.Forms.Label()
         TireCodeLabel = New System.Windows.Forms.Label()
@@ -79,6 +81,7 @@ Partial Class frmTransfers
         CType(Me.InvSearchBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gdvAvailableInv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TireBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InventoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StoreNbrLabel
@@ -180,14 +183,14 @@ Partial Class frmTransfers
         Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
         Me.BindingNavigatorAddNewItem.Visible = False
         '
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         Me.BindingNavigatorCountItem.Visible = False
@@ -198,7 +201,7 @@ Partial Class frmTransfers
         Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorDeleteItem.Text = "Delete"
         Me.BindingNavigatorDeleteItem.Visible = False
         '
@@ -250,7 +253,7 @@ Partial Class frmTransfers
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         Me.BindingNavigatorMoveNextItem.Visible = False
         '
@@ -260,7 +263,7 @@ Partial Class frmTransfers
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         Me.BindingNavigatorMoveLastItem.Visible = False
         '
@@ -276,7 +279,7 @@ Partial Class frmTransfers
         Me.RecStoreBindingNavigatorSaveItem.Enabled = False
         Me.RecStoreBindingNavigatorSaveItem.Image = CType(resources.GetObject("RecStoreBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.RecStoreBindingNavigatorSaveItem.Name = "RecStoreBindingNavigatorSaveItem"
-        Me.RecStoreBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 20)
+        Me.RecStoreBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.RecStoreBindingNavigatorSaveItem.Text = "Save Data"
         Me.RecStoreBindingNavigatorSaveItem.Visible = False
         '
@@ -286,7 +289,7 @@ Partial Class frmTransfers
         Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 20)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton1.Text = "ToolStripButton1"
         Me.ToolStripButton1.Visible = False
         '
@@ -343,10 +346,12 @@ Partial Class frmTransfers
         Me.gdvAvailableInv.AutoGenerateColumns = False
         Me.gdvAvailableInv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.gdvAvailableInv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn6})
-        Me.gdvAvailableInv.DataSource = Me.InvSearchBindingSource
+        Me.gdvAvailableInv.DataSource = Me.InventoryBindingSource
         Me.gdvAvailableInv.Location = New System.Drawing.Point(171, 275)
+        Me.gdvAvailableInv.MultiSelect = False
         Me.gdvAvailableInv.Name = "gdvAvailableInv"
         Me.gdvAvailableInv.ReadOnly = True
+        Me.gdvAvailableInv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.gdvAvailableInv.Size = New System.Drawing.Size(343, 103)
         Me.gdvAvailableInv.TabIndex = 9
         '
@@ -382,14 +387,11 @@ Partial Class frmTransfers
         '
         'cboShipStore
         '
-        Me.cboShipStore.DataSource = Me.StoreBindingSource
-        Me.cboShipStore.DisplayMember = "storeNbr"
         Me.cboShipStore.FormattingEnabled = True
         Me.cboShipStore.Location = New System.Drawing.Point(171, 119)
         Me.cboShipStore.Name = "cboShipStore"
         Me.cboShipStore.Size = New System.Drawing.Size(121, 26)
         Me.cboShipStore.TabIndex = 12
-        Me.cboShipStore.ValueMember = "storeNbr"
         '
         'cboRecStore
         '
@@ -466,6 +468,15 @@ Partial Class frmTransfers
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
+        'StoreTableAdapter1
+        '
+        Me.StoreTableAdapter1.ClearBeforeFill = True
+        '
+        'InventoryBindingSource
+        '
+        Me.InventoryBindingSource.DataMember = "inventory"
+        Me.InventoryBindingSource.DataSource = Me.Comp400_2012DataSet
+        '
         'frmTransfers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -502,6 +513,7 @@ Partial Class frmTransfers
         CType(Me.InvSearchBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gdvAvailableInv, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TireBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InventoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -547,4 +559,6 @@ Partial Class frmTransfers
     Friend WithEvents InventoryTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.inventoryTableAdapter
     Friend WithEvents btnBack As System.Windows.Forms.Button
     Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents StoreTableAdapter1 As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.storeTableAdapter
+    Friend WithEvents InventoryBindingSource As System.Windows.Forms.BindingSource
 End Class
