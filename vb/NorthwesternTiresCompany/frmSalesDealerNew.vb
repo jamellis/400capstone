@@ -106,7 +106,7 @@
             WholesaleOrderTableAdapter.Insert(dID, "", False, orderDate, tirCode, txtNeeded.Text, orderTotal)
             InvSearchTableAdapter.UpdateQuantity((CInt(txtOnHand.Text) - CInt(txtNeeded.Text)), invNbr)
             Dim myDealerReceipt As New frmDealerReceipt
-            myDealerReceipt.detailOrderNbr = Me.WholesaleOrderTableAdapter.LastWhlslOrderNbr
+            myDealerReceipt.dealerOrderNbr = Me.WholesaleOrderTableAdapter.LastWhlslOrderNbr
             Dim result = myDealerReceipt.ShowDialog()
             If result = DialogResult.OK Then
                 frmMainMenu.Show()
