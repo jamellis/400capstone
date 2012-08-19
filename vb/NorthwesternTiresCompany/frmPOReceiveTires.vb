@@ -43,12 +43,14 @@
     End Sub
 
     Private Sub frmPOReceiveTires_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim invNbr As Integer = InventoryTableAdapter.GetInvNumber(tireCode, "0001")
-        Dim invCurQty As Integer = InventoryTableAdapter.GetCurrentQuantityByInvNbr(invNbr)
-        txtInvNum.Text = invNbr
-        txtOnHand.Text = invCurQty
-        txtTireCode.Text = tireCode
-        txtOnHand.Text = invCurQty
+        Dim invNbr As Integer
+        If InventoryTableAdapter.GetInvNumber(tireCode, "0001") IsNot Nothing Then
+            invNbr = InventoryTableAdapter.GetInvNumber(tireCode, "0001")
+            Dim invCurQty As Integer = InventoryTableAdapter.GetCurrentQuantityByInvNbr(invNbr)
+            txtInvNum.Text = invNbr
+            txtOnHand.Text = invCurQty
+            txtTireCode.Text = tireCode
+        End If
     End Sub
 
     Private Sub txtQtyReceived_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtQtyReceived.TextChanged

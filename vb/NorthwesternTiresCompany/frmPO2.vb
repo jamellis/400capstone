@@ -64,7 +64,7 @@
             myReceivePOTiresForm.txtPONum.Text = row.poNbr
             myReceivePOTiresForm.txtQtyOrdered.Text = row.tireQty
             myReceivePOTiresForm.txtVendorID.Text = row.vendorID
-            ' myReceivePOTiresForm.txtTireCode.Text = row.tireCode
+            myReceivePOTiresForm.txtTireCode.Text = row.tireCode
             myReceivePOTiresForm.tireCode = row.tireCode
             myReceivePOTiresForm.ShowDialog()
             If Windows.Forms.DialogResult.OK Then
