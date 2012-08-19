@@ -111,7 +111,12 @@
         Try
             PurchaseOrderTableAdapter.Insert(orderDate, vID, "", False, orderTotal, txtTireCode.Text, txtNeeded.Text)
             MsgBox("Purchase Order entered.", MsgBoxStyle.OkOnly)
+
             ' enter code for print report
+            Dim myPOMFG As New frmReportMfgPO
+            myPOMFG.poMFGnumber = Me.PurchaseOrderTableAdapter.LastPONbr
+            Dim result = myPOMFG.ShowDialog()
+
 
             Dim myPOForm As New frmPO2
             myPOForm.Show()

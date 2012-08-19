@@ -1,4 +1,5 @@
 ﻿Public Class frmReportMfgPO
+    Public poMFGnumber As Integer
 
     Private Sub btnBack_Click(sender As System.Object, e As System.EventArgs) Handles btnBack.Click
         frmReport.Show()
