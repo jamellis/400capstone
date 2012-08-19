@@ -61,6 +61,7 @@ Partial Class frmSalesDealer
         Me.btnCloseOrder = New System.Windows.Forms.Button()
         Me.btnCreateNewOrder = New System.Windows.Forms.Button()
         Me.DealerTableAdapter = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.dealerTableAdapter()
+        Me.btnReprint = New System.Windows.Forms.Button()
         lblDealerID = New System.Windows.Forms.Label()
         lblWhlslOrderNbr = New System.Windows.Forms.Label()
         lblSalesDate = New System.Windows.Forms.Label()
@@ -427,9 +428,9 @@ Partial Class frmSalesDealer
         'btnCreateNewOrder
         '
         Me.btnCreateNewOrder.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCreateNewOrder.Location = New System.Drawing.Point(255, 480)
+        Me.btnCreateNewOrder.Location = New System.Drawing.Point(148, 480)
         Me.btnCreateNewOrder.Name = "btnCreateNewOrder"
-        Me.btnCreateNewOrder.Size = New System.Drawing.Size(184, 30)
+        Me.btnCreateNewOrder.Size = New System.Drawing.Size(165, 30)
         Me.btnCreateNewOrder.TabIndex = 82
         Me.btnCreateNewOrder.Text = "Create New Order"
         Me.btnCreateNewOrder.UseVisualStyleBackColor = True
@@ -438,12 +439,23 @@ Partial Class frmSalesDealer
         '
         Me.DealerTableAdapter.ClearBeforeFill = True
         '
+        'btnReprint
+        '
+        Me.btnReprint.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReprint.Location = New System.Drawing.Point(363, 480)
+        Me.btnReprint.Name = "btnReprint"
+        Me.btnReprint.Size = New System.Drawing.Size(165, 30)
+        Me.btnReprint.TabIndex = 83
+        Me.btnReprint.Text = "Reprint Order"
+        Me.btnReprint.UseVisualStyleBackColor = True
+        '
         'frmSalesDealer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(694, 522)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnReprint)
         Me.Controls.Add(Me.btnCreateNewOrder)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnExit)
@@ -499,4 +511,5 @@ Partial Class frmSalesDealer
     Friend WithEvents Comp400_2012DataSet1 As NorthwesternTiresCompany.comp400_2012DataSet
     Friend WithEvents DealerBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents DealerTableAdapter As NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.dealerTableAdapter
+    Friend WithEvents btnReprint As System.Windows.Forms.Button
 End Class

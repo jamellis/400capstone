@@ -2296,7 +2296,7 @@ Partial Public Class comp400_2012DataSet
             Me.columnstoreNbr.AllowDBNull = false
             Me.columnstoreNbr.MaxLength = 5
             Me.columnuserSecurityLevel.AllowDBNull = false
-            Me.columnuserSecurityLevel.MaxLength = 15
+            Me.columnuserSecurityLevel.MaxLength = 20
             Me.columnemployeeID.AutoIncrement = true
             Me.columnemployeeID.AutoIncrementSeed = -1
             Me.columnemployeeID.AutoIncrementStep = -1
@@ -17356,7 +17356,7 @@ Namespace comp400_2012DataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT        Clearance"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            securityClearance"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY Clearance"
+            Me._commandCollection(1).CommandText = "SELECT Clearance FROM securityClearance ORDER BY Clearance"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

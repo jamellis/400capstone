@@ -111,4 +111,18 @@
         End If
     End Sub
 
+    Private Sub WarehouseManagerLogin_Click(sender As System.Object, e As System.EventArgs) Handles WarehouseManagerLogin.Click
+        Dim Login = Me.EmployeeTableAdapter1.UserIDPasswordString("fsmith", "fs1234")
+
+        If Login Is Nothing Then
+            MsgBox("Incorrect Username or Password")
+        Else
+            Dim ClearanceString = Me.EmployeeTableAdapter1.ClearanceString("fsmith")
+            userInfo.Clearance = ClearanceString
+            userInfo.EmployeeID = Me.EmployeeTableAdapter1.EmployeeNumber("fsmith")
+            userInfo.StoreNumber = Me.EmployeeTableAdapter1.StoreNumber("fsmith")
+            frmMainMenu.Show()
+            Me.Close()
+        End If
+    End Sub
 End Class

@@ -54,4 +54,17 @@
         Me.Close()
     End Sub
 
+    Private Sub btnReprint_Click(sender As System.Object, e As System.EventArgs) Handles btnReprint.Click
+        Dim rowview As DataRowView = WholesaleOrderBindingSource.Current
+        If rowview IsNot Nothing Then
+            Dim row As comp400_2012DataSet.wholesaleOrderRow = rowview.Row
+            Try
+                ' Dealer Receipt Report code goes here
+
+            Catch ex As Exception
+                MsgBox("Could print order. Contact your systems administrator." & _
+                       vbNewLine & ex.Message, MsgBoxStyle.OkOnly)
+            End Try
+        End If
+    End Sub
 End Class

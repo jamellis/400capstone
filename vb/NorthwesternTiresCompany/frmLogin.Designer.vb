@@ -34,6 +34,7 @@ Partial Class frmLogin
         Me.ManagerLogin = New System.Windows.Forms.Button()
         Me.SalesLogin = New System.Windows.Forms.Button()
         Me.EmployeeTableAdapter1 = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.employeeTableAdapter()
+        Me.WarehouseManagerLogin = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblInstructions
@@ -147,6 +148,15 @@ Partial Class frmLogin
         '
         Me.EmployeeTableAdapter1.ClearBeforeFill = True
         '
+        'WarehouseManagerLogin
+        '
+        Me.WarehouseManagerLogin.Location = New System.Drawing.Point(130, 155)
+        Me.WarehouseManagerLogin.Name = "WarehouseManagerLogin"
+        Me.WarehouseManagerLogin.Size = New System.Drawing.Size(113, 23)
+        Me.WarehouseManagerLogin.TabIndex = 9
+        Me.WarehouseManagerLogin.Text = "WH Manager"
+        Me.WarehouseManagerLogin.UseVisualStyleBackColor = True
+        '
         'frmLogin
         '
         Me.AcceptButton = Me.btnLogin
@@ -155,6 +165,7 @@ Partial Class frmLogin
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(373, 287)
         Me.ControlBox = False
+        Me.Controls.Add(Me.WarehouseManagerLogin)
         Me.Controls.Add(Me.SalesLogin)
         Me.Controls.Add(Me.ManagerLogin)
         Me.Controls.Add(Me.WarehouseLogin)
@@ -188,4 +199,5 @@ Partial Class frmLogin
     Friend WithEvents WarehouseLogin As System.Windows.Forms.Button
     Friend WithEvents ManagerLogin As System.Windows.Forms.Button
     Friend WithEvents SalesLogin As System.Windows.Forms.Button
+    Friend WithEvents WarehouseManagerLogin As System.Windows.Forms.Button
 End Class

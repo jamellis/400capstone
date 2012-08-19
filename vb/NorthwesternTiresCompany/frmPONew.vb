@@ -75,7 +75,7 @@
                 Dim onHandQty = invNumberTableRow.Item("tireQty")
                 txtOnHand.Text = onHandQty
             Else
-                txtPrice.Text = "0"
+                txtOnHand.Text = "0"
             End If
             txtNeeded.ReadOnly = False
             btnUpdate.Enabled = True
