@@ -75,11 +75,15 @@
                 Dim onHandQty = invNumberTableRow.Item("tireQty")
                 txtOnHand.Text = onHandQty
             Else
-                txtOnHand.Text = "0"
+                txtPrice.Text = "0"
             End If
             txtNeeded.ReadOnly = False
             btnUpdate.Enabled = True
             txtNeeded.Focus()
+        Else
+            txtPrice.Text = ""
+            txtOnHand.Text = ""
+            MsgBox("Tire does not exist, please check the tire code.", MsgBoxStyle.OkOnly)
         End If
         End Sub
 

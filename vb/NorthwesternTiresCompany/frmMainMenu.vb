@@ -112,7 +112,13 @@
                 btnTires.Enabled = True
                 btnLogOut.Text = "&Log Out"
             End If
-
+            If userInfo.Clearance = "Warehouse Manager" Then
+                btnReports.Enabled = True
+                btnSales.Enabled = True
+                btnInventoryMaintain.Enabled = True
+                btnPO.Enabled = True
+                btnLogOut.Text = "&Log Out"
+            End If
         End If
     End Sub
 End Class

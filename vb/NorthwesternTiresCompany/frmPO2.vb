@@ -19,7 +19,7 @@
         'TODO: This line of code loads data into the 'Comp400_2012DataSet1.dealer' table. You can move, or remove it, as needed.
         Me.PurchaseOrderTableAdapter.FillByOpenOrders(Me.Comp400_2012DataSet.purchaseOrder)
         'TODO: This line of code loads data into the 'Comp400_2012DataSet.wholesaleOrder' table. You can move, or remove it, as needed.
-        If userInfo.Clearance = "Warehouse" Then
+        If userInfo.Clearance = "Warehouse" Or userInfo.Clearance = "Warehouse Manager" Then
             btnCreateNewOrder.Enabled = False
         End If
     End Sub
