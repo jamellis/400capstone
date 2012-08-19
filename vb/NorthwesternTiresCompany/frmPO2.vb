@@ -88,7 +88,8 @@
                 myPOReport.poNumber = row.poNbr
                 myPOReport.ShowDialog()
             Catch ex As Exception
-                MsgBox("Could print Order.", MsgBoxStyle.OkOnly)
+                MsgBox("Could print order. Contact your systems administrator." & _
+                       vbNewLine & ex.Message, MsgBoxStyle.OkOnly)
             End Try
         End If
     End Sub

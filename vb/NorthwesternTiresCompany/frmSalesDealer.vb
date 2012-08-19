@@ -60,7 +60,9 @@
             Dim row As comp400_2012DataSet.wholesaleOrderRow = rowview.Row
             Try
                 ' Dealer Receipt Report code goes here
-
+                'Dim myPOReport As New frmReportMfgPO
+                'myPOReport.poNumber = row.poNbr
+                'myPOReport.ShowDialog()
             Catch ex As Exception
                 MsgBox("Could print order. Contact your systems administrator." & _
                        vbNewLine & ex.Message, MsgBoxStyle.OkOnly)
