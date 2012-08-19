@@ -78,4 +78,18 @@
 
         End If
     End Sub
+
+    Private Sub btnReprint_Click(sender As System.Object, e As System.EventArgs) Handles btnReprint.Click
+        Dim rowview As DataRowView = PurchaseOrderBindingSource.Current
+        If rowview IsNot Nothing Then
+            Dim row As comp400_2012DataSet.purchaseOrderRow = rowview.Row
+            Try
+                Dim myPOReport As New frmReportMfgPO
+                myPOReport.poNumber = row.poNbr
+                myPOReport.ShowDialog()
+            Catch ex As Exception
+                MsgBox("Could print Order.", MsgBoxStyle.OkOnly)
+            End Try
+        End If
+    End Sub
 End Class

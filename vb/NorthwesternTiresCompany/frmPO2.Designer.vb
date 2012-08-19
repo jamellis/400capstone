@@ -56,6 +56,7 @@ Partial Class frmPO2
         Me.TableAdapterManager = New NorthwesternTiresCompany.comp400_2012DataSetTableAdapters.TableAdapterManager()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnReceive = New System.Windows.Forms.Button()
+        Me.btnReprint = New System.Windows.Forms.Button()
         lblVendorID = New System.Windows.Forms.Label()
         lblComments = New System.Windows.Forms.Label()
         lblPurchaseOrderNbr = New System.Windows.Forms.Label()
@@ -348,9 +349,9 @@ Partial Class frmPO2
         'btnCreateNewOrder
         '
         Me.btnCreateNewOrder.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCreateNewOrder.Location = New System.Drawing.Point(152, 480)
+        Me.btnCreateNewOrder.Location = New System.Drawing.Point(115, 480)
         Me.btnCreateNewOrder.Name = "btnCreateNewOrder"
-        Me.btnCreateNewOrder.Size = New System.Drawing.Size(184, 30)
+        Me.btnCreateNewOrder.Size = New System.Drawing.Size(150, 30)
         Me.btnCreateNewOrder.TabIndex = 84
         Me.btnCreateNewOrder.Text = "Create New Order"
         Me.btnCreateNewOrder.UseVisualStyleBackColor = True
@@ -390,12 +391,22 @@ Partial Class frmPO2
         'btnReceive
         '
         Me.btnReceive.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReceive.Location = New System.Drawing.Point(359, 480)
+        Me.btnReceive.Location = New System.Drawing.Point(272, 480)
         Me.btnReceive.Name = "btnReceive"
-        Me.btnReceive.Size = New System.Drawing.Size(184, 30)
+        Me.btnReceive.Size = New System.Drawing.Size(150, 30)
         Me.btnReceive.TabIndex = 84
         Me.btnReceive.Text = "Receive Tires"
         Me.btnReceive.UseVisualStyleBackColor = True
+        '
+        'btnReprint
+        '
+        Me.btnReprint.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReprint.Location = New System.Drawing.Point(429, 480)
+        Me.btnReprint.Name = "btnReprint"
+        Me.btnReprint.Size = New System.Drawing.Size(150, 30)
+        Me.btnReprint.TabIndex = 86
+        Me.btnReprint.Text = "Reprint Order"
+        Me.btnReprint.UseVisualStyleBackColor = True
         '
         'frmPO2
         '
@@ -403,6 +414,7 @@ Partial Class frmPO2
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(694, 522)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnReprint)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.btnReceive)
         Me.Controls.Add(Me.btnCreateNewOrder)
@@ -453,4 +465,5 @@ Partial Class frmPO2
     Friend WithEvents CommentsDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents lblTitle As System.Windows.Forms.Label
     Friend WithEvents btnReceive As System.Windows.Forms.Button
+    Friend WithEvents btnReprint As System.Windows.Forms.Button
 End Class
