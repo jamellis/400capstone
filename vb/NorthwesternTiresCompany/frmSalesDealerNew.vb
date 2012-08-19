@@ -105,12 +105,13 @@
         Try
             WholesaleOrderTableAdapter.Insert(dID, "", False, orderDate, tirCode, txtNeeded.Text, orderTotal)
             InvSearchTableAdapter.UpdateQuantity((CInt(txtOnHand.Text) - CInt(txtNeeded.Text)), invNbr)
-            ' Dim myDealerReceipt As New frmDealerReceipt
-            ' Dim result = myDealerReceipt.ShowDialog()
-            ' If result = DialogResult.OK Then
-            frmMainMenu.Show()
-            Me.Close()
-            ' End If
+            Dim myDealerReceipt As New frmDealerReceipt
+            myDealerReceipt.detailOrderNbr = Me.WholesaleOrderTableAdapter.LastWhlslOrderNbr
+            Dim result = myDealerReceipt.ShowDialog()
+            If result = DialogResult.OK Then
+                frmMainMenu.Show()
+                Me.Close()
+            End If
         Catch ex As Exception
             MsgBox("There was a problem saving this order. Please contact your systems administrator." & vbNewLine & ex.Message, MsgBoxStyle.OkOnly)
         End Try
