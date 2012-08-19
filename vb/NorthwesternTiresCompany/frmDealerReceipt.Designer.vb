@@ -51,14 +51,14 @@ Partial Class frmDealerReceipt
         Me.rvDealerReceipt.LocalReport.ReportEmbeddedResource = "NorthwesternTiresCompany.rptDealerReceipt.rdlc"
         Me.rvDealerReceipt.Location = New System.Drawing.Point(12, 12)
         Me.rvDealerReceipt.Name = "rvDealerReceipt"
-        Me.rvDealerReceipt.Size = New System.Drawing.Size(637, 646)
+        Me.rvDealerReceipt.Size = New System.Drawing.Size(637, 550)
         Me.rvDealerReceipt.TabIndex = 0
         '
         'btnOk
         '
         Me.btnOk.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnOk.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnOk.Location = New System.Drawing.Point(285, 679)
+        Me.btnOk.Location = New System.Drawing.Point(285, 587)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(90, 30)
         Me.btnOk.TabIndex = 1
@@ -73,7 +73,7 @@ Partial Class frmDealerReceipt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(661, 719)
+        Me.ClientSize = New System.Drawing.Size(661, 627)
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.rvDealerReceipt)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
