@@ -6,6 +6,10 @@
     End Sub
 
     Private Sub btnOK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOK.Click
+
+        Dim invDestinationTable = Me.InventoryTableAdapter.GetDataByStoreNbrAndTireCode _
+                                          (txtTireCode.Text, "0001")
+
         If CInt(txtQtyReceived.Text) > CInt(txtQtyOrdered.Text) Then
             ' Number entered is too large
             MsgBox("You cannot receive more than you ordered.", MsgBoxStyle.OkOnly)
@@ -16,9 +20,24 @@
                 InventoryTableAdapter.ReceivePOTires((CInt(txtOnHand.Text) + CInt(txtQtyReceived.Text)), txtInvNum.Text)
                 DialogResult = Windows.Forms.DialogResult.OK
             Else
-                PurchaseOrderTableAdapter.UpdateQuantity((CInt(txtQtyOrdered.Text) - CInt(txtQtyReceived.Text)), txtPONum.Text)
-                InventoryTableAdapter.ReceivePOTires((CInt(txtOnHand.Text) + CInt(txtQtyReceived.Text)), txtInvNum.Text)
-                DialogResult = Windows.Forms.DialogResult.OK
+                If txtInvNum.Text <> "" Then
+
+                    PurchaseOrderTableAdapter.UpdateQuantity((CInt(txtQtyOrdered.Text) - CInt(txtQtyReceived.Text)), txtPONum.Text)
+                    InventoryTableAdapter.ReceivePOTires((CInt(txtOnHand.Text) + CInt(txtQtyReceived.Text)), CStr(txtInvNum.Text))
+                    DialogResult = Windows.Forms.DialogResult.OK
+                Else
+
+
+                    If invDestinationTable.Rows.Count = 0 Then
+
+                        Dim addRow As comp400_2012DataSet.inventoryRow = invDestinationTable.NewRow
+
+                        PurchaseOrderTableAdapter.UpdateQuantity((CInt(txtQtyOrdered.Text) - CInt(txtQtyReceived.Text)), txtPONum.Text)
+                        InventoryTableAdapter.InsertPOLine(txtTireCode.Text, CDec(txtQtyReceived.Text))
+                        MessageBox.Show("An inventory record has been added")
+                        DialogResult = Windows.Forms.DialogResult.OK
+                    End If
+                End If
             End If
         End If
     End Sub
