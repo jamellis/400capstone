@@ -23,7 +23,7 @@ Partial Class frmSalesReceipt
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.salesReceiptTableAdapterBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.comp400_2012DataSet = New NorthwesternTiresCompany.comp400_2012DataSet()
         Me.btnOk = New System.Windows.Forms.Button()
@@ -47,7 +47,7 @@ Partial Class frmSalesReceipt
         '
         Me.btnOk.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnOk.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnOk.Location = New System.Drawing.Point(280, 734)
+        Me.btnOk.Location = New System.Drawing.Point(280, 705)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(90, 30)
         Me.btnOk.TabIndex = 17
@@ -56,9 +56,9 @@ Partial Class frmSalesReceipt
         '
         'rvSaleReceipt
         '
-        ReportDataSource2.Name = "Customer"
-        ReportDataSource2.Value = Me.salesReceiptTableAdapterBindingSource
-        Me.rvSaleReceipt.LocalReport.DataSources.Add(ReportDataSource2)
+        ReportDataSource1.Name = "Customer"
+        ReportDataSource1.Value = Me.salesReceiptTableAdapterBindingSource
+        Me.rvSaleReceipt.LocalReport.DataSources.Add(ReportDataSource1)
         Me.rvSaleReceipt.LocalReport.ReportEmbeddedResource = "NorthwesternTiresCompany.rptSalesReceipt.rdlc"
         Me.rvSaleReceipt.Location = New System.Drawing.Point(10, 10)
         Me.rvSaleReceipt.Margin = New System.Windows.Forms.Padding(2)
@@ -74,7 +74,7 @@ Partial Class frmSalesReceipt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(651, 776)
+        Me.ClientSize = New System.Drawing.Size(651, 750)
         Me.ControlBox = False
         Me.Controls.Add(Me.rvSaleReceipt)
         Me.Controls.Add(Me.btnOk)

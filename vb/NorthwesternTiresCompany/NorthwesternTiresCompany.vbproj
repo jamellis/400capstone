@@ -111,6 +111,12 @@
     <Compile Include="frmPOReceiveTires.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReportDealerSales.Designer.vb">
+      <DependentUpon>frmReportDealerSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportDealerSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmReportGlobalInventory.Designer.vb">
       <DependentUpon>frmReportGlobalInventory.vb</DependentUpon>
     </Compile>
@@ -269,6 +275,9 @@
     <EmbeddedResource Include="frmPOReceiveTires.resx">
       <DependentUpon>frmPOReceiveTires.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportDealerSales.resx">
+      <DependentUpon>frmReportDealerSales.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReportGlobalInventory.resx">
       <DependentUpon>frmReportGlobalInventory.vb</DependentUpon>
     </EmbeddedResource>
@@ -338,6 +347,7 @@
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptDealerReceipt.rdlc" />
     <EmbeddedResource Include="rptGlobalInventoryReport.rdlc" />
     <EmbeddedResource Include="rptMFPO.rdlc" />
     <EmbeddedResource Include="rptSalesReceipt.rdlc" />
